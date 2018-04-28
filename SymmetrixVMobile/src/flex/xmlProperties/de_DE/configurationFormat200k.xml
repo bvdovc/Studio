@@ -1,0 +1,30 @@
+<html>
+	<title>VMAX 200K</title>
+	<span>
+		<h>Details zur Konfiguration:</h>
+		<ul>
+			<li>Nutzbare Kapazität (TB) Betriebssystem: {0}</li>
+			<li>Nutzbare Kapazität (TB) MF: {4}</li>
+			<li>Anzahl der Engines: {1}</li>
+			<li>Anzahl der DAEs: {2}</li>
+			<li>Maximale Anzahl an Laufwerken pro System: {3}</li>
+			<li>Tatsächliche Anzahl von Laufwerken: {5}</li>
+			<li>Anzahl der FE-Ports: {6}</li>
+		</ul>
+	</span>
+	<span><h>Beschreibung:</h></span>
+	<span>
+		<p>Die VMAX 200K ist mit bis zu vier Ivy Bridge (IVB)-Engines mit 2,6 GHz und 32 Kernen und mit 512, 1024 oder 2048 GB Arbeitsspeicher je Engine konfiguriert. Mit der maximalen Konfiguration mit 4 Engines unterstützt die VMAX 200K bis (2.880) 2,5-Zoll-Laufwerke oder bis zu (1.440) 3,5-Zoll-Laufwerke und stellt bei Verwendung von 4-TB-Laufwerken bis zu 2,28 PB nutzbarer Kapazität bereit. Die Engines befinden sich in System-Bays mit einer oder zwei Engines.
+		</p>
+	</span>
+	<span>
+		<p>
+ Bei vollständiger Konfiguration bietet die 200K bis zu 128 Front-end-Ports für Host-Konnektivität. Die interne Virtual-Matrix-Verbindung nutzt zwei Infiniband-Switches mit 12 Ports für Redundanz und Verfügbarkeit.
+		</p>
+	</span>
+	<span>
+		<p>
+ Die 200K unterstützt für EFT, Performance und Kapazität optimierte Festplatten und maximiert damit die Arrayperformance für sämtliche Laufwerkstypen. Damit die EMC Fully Automated Storage Tiering (FAST)-Technologie eine Feinabstimmung der Performance der 200K vornehmen und mit den blitzschnellen Flash-Laufwerken und den kostengünstigen NL-SAS-Laufwerken Kosten reduzieren kann, muss das Array für die jeweiligen Workload-Anforderungen Ihrer Anwendung mit Laufwerken unterschiedlicher Technologien ausgestattet werden.
+		</p>
+	</span>
+</html>

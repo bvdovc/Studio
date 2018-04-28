@@ -1,0 +1,15 @@
+<html>
+	<title>UNITÉ D'ALIMENTATION</title>
+	<span>
+		<p>
+			Les baies système comportent deux unités d'alimentation, une pour chaque zone d'alimentation. L'unité d'alimentation A est l'unité principale et l'unité d'alimentation B est l'unité redondante. Les deux unités d'alimentation sont reliées mécaniquement, notamment avec des supports de montage, pour créer une structure unique 2U. Les unités d'alimentation sont intégrées pour prendre en charge la connectivité d'entrée de ligne CA et pour fournir des prises d'alimentation pour chaque composant de la baie. </p>
+	</span>
+	<span>
+		<p>Une unité d'alimentation inclut les composants suivants:</p>
+		<ul>
+			<li>24 prises de courant pour les pièces de remplacement sur site (FRU). Les prises de courant sont divisées en six groupes, chacun se composant de quatre prises CA individuelles IEC 60320 C13.</li>
+			<li>Chaque groupe de prises de courant est connecté à différents circuits de dérivation protégés par un disjoncteur bipolaire de 20 A. </li>
+			<li>Selon l'option d'unité d'alimentation choisie, un connecteur d'entrée différent est associé à chaque unité.</li>
+		</ul>
+	</span>
+</html>

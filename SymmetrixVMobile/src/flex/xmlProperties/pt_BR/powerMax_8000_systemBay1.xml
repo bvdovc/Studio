@@ -1,0 +1,31 @@
+<html>
+	<title>Gabinete do sistema 1</title>
+	
+	<span>
+		<p>O gabinete do sistema 1 abriga de 1 a um máximo de 4 Bricks/zBricks nos arrays do PowerMax 8000. Um Brick/zBrick consiste em um mecanismo, DAEs e um par de SPSs.</p>
+	</span>
+	<span>
+		<p>A diferença entre Bricks e zBricks são as seguintes:</p>
+	</span>
+	<span>
+		<ul>
+			<li>A capacidade de armazenamento de base é de 53 TBu para Brick e de 13 TBu para zBricks</li>
+			<li>Os módulos de I/O que fornecem conectividade de host são Fibre Channel, iSCSI e/ou FICON (apenas sistemas mistos) para Bricks e apenas FICON para zBricks.</li>
+	   </ul>
+	</span>
+	 <span>
+		<p>Além dos componentes de Brick/zBrick, o gabinete do sistema 1 abriga a interconexão InfiniBand e os switches Ethernet. Esses são os componentes específicos para o gabinete do sistema 1.</p>
+	 </span>
+	 <span>
+		<p>Acessível a partir da parte traseira, há uma PDU (Power Distribution Unit, unidade de distribuição de energia) vertical com altura total em cada lado do rack.</p>
+	</span>
+	<span>
+		<p>O preenchimento do gabinete do sistema 1 é iniciado na parte inferior com SPSs para o Mecanismo 1, seguidos de DAEs, Mecanismo 1, SPSs para o Mecanismo 2 e o Mecanismo 2. O preenchimento da metade superior espelha-se no preenchimento da parte inferior, sendo iniciado com o Mecanismo 3, SPSs para o Mecanismo 3, Mecanismo 4, DAEs, e SPSs para o Mecanismo 4 na parte superior do rack.</p>
+	</span>
+	<span>
+		<p>Cada Brick/zBrick possui uma e compartilha uma DAE. Três DAEs totalmente preenchidas, no entanto, fornecem a capacidade de armazenamento para dois Bricks/zBricks. As DAEs compartilhadas abrigam unidades sobressalentes universais nos slots dedicados das unidades.</p>	
+	</span>	
+
+</html>
+
+

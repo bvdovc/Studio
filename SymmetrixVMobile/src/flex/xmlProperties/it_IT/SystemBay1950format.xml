@@ -1,0 +1,14 @@
+<html>
+	<title>SYSTEM BAY 1</title>
+	<span><p> I system bay all-flash ospitano uno o due V-Brick/zBrick, ciascuno composto da un engine, due Disk Array Enclosure (DAE) da 120 unità ad alta densità, due alimentatori di standby (SPS) agli ioni di litio per fornire alimentazione di backup per gli engine e due PDU (Power Distribution Unit) che forniscono alimentazione a due power zone ridondanti (zona A e zona B).</p></span>
+	<span><p>I seguenti componenti sono peculiari del system bay 1: </p>
+		<ul>
+			<li>Due alimentatori di standby (SPS) agli ioni di litio posizionati nella parte inferiore del bay, che forniscono alimentazione di backup per l'interconnessione InfiniBand (IB) di Virtual Matrix se l'array è configurato con più V-Brick/zBrick </li>
+			<li>Interconnessione InfiniBand (IB) se l'array è configurato con più V-Brick/zBrick </li>
+			<li>Switch Ethernet </li>
+			<li>KVM (tastiera, video e mouse) </li>
+		</ul>
+	</span>
+</html>
+
+

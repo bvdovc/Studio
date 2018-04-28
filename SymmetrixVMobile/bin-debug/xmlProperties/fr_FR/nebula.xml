@@ -1,0 +1,15 @@
+<html>
+	<title>Boîtier DAE à 24 emplacements </title>
+	<span><p>Le boîtier DAE 24 est un boîtier d’une hauteur de 2U et d’une profondeur de 19 po accueillant un maximum de 24 disques Flash PCIe NVMe.
+	
+	</p></span>	
+	<span>
+	<p>Les fonctions principales sont les suivantes :</p>
+		<ul>
+			<li>Cartes LCC redondantes, remplaçables à chaud</li>
+			<li>2 alimentations distinctes fournissent 25 W par emplacement de disque et une redondance d’alimentation N+1 </li>
+			<li>Refroidissement N+1 évolutif</li>
+			<li>16 connecteurs HD PCIe à 4 voies mini-SAS</li>
+		</ul>
+	</span>
+</html> 

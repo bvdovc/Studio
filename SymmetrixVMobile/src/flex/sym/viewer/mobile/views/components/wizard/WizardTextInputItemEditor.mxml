@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:GridItemEditor xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				  xmlns:s="library://ns.adobe.com/flex/spark" 
+				  xmlns:validation="sym.viewer.mobile.validation.*" 
+				  xmlns:utils="sym.objectmodel.utils.*" >
+ 
+	<fx:Declarations>
+
+        <validation:NumberModuloValidator id="driveCountModuloValidator"
+                                          required="true" 
+                                          requiredFieldError="{getResString('main', 'VALIDATION_REQUIRED_FIELD')}"
+                                          source="{driveCountField}"
+										  valid="driveCountModuloValidationHandler(event)"
+										  invalid="driveCountModuloValidationHandler(event)"
+                                          property="text"
+                                          triggerEvent="change"/>
+		
+		<utils:CapacityNumberFormatter id="capacityFormatter" />
+        
+    </fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.events.FlexEvent;
+			import mx.events.ValidationResultEvent;
+			import mx.utils.StringUtil;
+			
+			import sym.configurationmodel.common.ConfigurationFactoryBase_VG3R;
+			import sym.controller.SymmController;
+			import sym.objectmodel.common.DriveGroup;
+			import sym.viewer.mobile.validation.CustomToolTip;
+			import sym.viewer.mobile.views.components.popups.MessagePopup;
+			
+			private var _errorTip:CustomToolTip;
+			
+			// gets wizardTierComponent - component in which DataGrid resides
+			public function get wizardTier():WizardTierComponent
+			{
+				return this.owner.parent as WizardTierComponent;
+			}
+			
+			override public function prepare():void
+			{
+				super.prepare();
+				// hide errorTip if there is one on wizardTier drive count field
+				wizardTier.errorTip.hide(wizardTier.driveCountField);
+				
+				// create error toolTip instance
+				_errorTip = new CustomToolTip(driveCountField.errorString, 
+					driveCountField, 
+					CustomToolTip.ERROR_TIP_ABOVE,
+					this);
+				
+				CustomToolTip.positionChanged = false;
+			}
+			
+			// Initialize the TextInput control with the cell data
+			override public function set value(newValue:Object):void 
+			{
+				driveCountField.text = String(newValue);
+			}
+			
+			// Returns the current value of the TextInput control
+			override public function get value():Object 
+			{
+				return driveCountField.text;
+			}
+			
+			override public function save():Boolean
+			{
+				var tiersTemp:ArrayCollection = new ArrayCollection();
+				for each (var tierLine:DriveGroup in this.dataGrid.dataProvider)
+				{
+					var newDriveGroup:DriveGroup = new DriveGroup();
+					newDriveGroup.driveDef = tierLine.driveDef;
+					newDriveGroup.activeCount = tierLine == data ? int(value) : tierLine.activeCount;
+					
+					tiersTemp.addItem(newDriveGroup);
+				}
+				
+                var resultEvent:ValidationResultEvent = driveCountModuloValidator.validate();
+                if(resultEvent && resultEvent.results && resultEvent.results.length > 0) return false;
+                
+                if(!wizardTier.validateDriveCount(tiersTemp))
+                {
+                    var modifiedTier:DriveGroup = tiersTemp.getItemAt(this.rowIndex) as DriveGroup;
+                    var confFactory:ConfigurationFactoryBase_VG3R = SymmController.instance.configFactory as ConfigurationFactoryBase_VG3R;
+                    var minValidCount:int = confFactory.calculateMinValidDriveCount(tiersTemp.toArray(), this.rowIndex);
+					
+					var currentCapacity:Number = confFactory.calculateCapacity(tiersTemp);
+					var supportsCurrentCapacity:Boolean = currentCapacity <= confFactory.totCapacity;
+                    
+                    if(minValidCount == 0) //no space
+                    { 
+                        MessagePopup.open(getResString("main", "STATE_TIER_NO_MORE_PLACE_FOR_ACTIVE_DRIVES"), 
+                            getResString("main", "STATE_TIER"), 
+                            this, 
+                            MessagePopup.ERROR_MESSAGE,
+                            MessagePopup.BUTTON_OK);
+                        
+                        return false;
+                    }
+                    else if(modifiedTier.activeCount < minValidCount && supportsCurrentCapacity)
+                    {
+                        MessagePopup.open(StringUtil.substitute(getResString("main", "STATE_TIER_DRIVE_COUNT_MINIMUM_QUESTION"), minValidCount), 
+                            getResString("main", "STATE_TIER"), 
+                            this, 
+                            MessagePopup.ERROR_MESSAGE,
+                            MessagePopup.BUTTON_OK);
+                         
+                        return false;
+                    }
+                    
+                    var maxValidCount:int = confFactory.calculateMaxValidDriveCount(tiersTemp.toArray(), this.rowIndex);
+                    var supportsGreaterAmount:Boolean = confFactory.testGreaterAmountOfDrives(tiersTemp.toArray(), this.rowIndex);
+					
+					if (!supportsCurrentCapacity)
+					{
+						// current usable capacity has reached maximum capacity limit for current VMAX array 
+						var capacityLimitDriveCount:int =  confFactory.calculateCapacityLimitMaxDrives(tiersTemp, this.rowIndex);
+						
+						MessagePopup.open(StringUtil.substitute(getResString("main", "STATE_TIER_CAPACITY_OVERFLOW"), capacityFormatter.format(currentCapacity), capacityFormatter.format(confFactory.totCapacity), capacityLimitDriveCount),
+							getResString("main", "STATE_TIER"),
+							this, 
+							MessagePopup.ERROR_MESSAGE,
+							MessagePopup.BUTTON_OK);
+						
+						return false;
+					}
+                    if(maxValidCount > 0 && maxValidCount < modifiedTier.activeCount && supportsGreaterAmount)
+                    {
+                        MessagePopup.open(StringUtil.substitute(getResString("main", "STATE_TIER_DRIVE_COUNT_OVERFLOW"), maxValidCount),
+                            getResString("main", "STATE_TIER"), 
+                            this,
+                            MessagePopup.ERROR_MESSAGE,
+                            MessagePopup.BUTTON_OK); 
+                    }
+                    else if(maxValidCount == 0 && supportsGreaterAmount)
+                    {
+                        var fullMaxCount:int = confFactory.calculateAdaptableMaxDriveCount(tiersTemp.toArray(), this.rowIndex);
+                        var message:MessagePopup = MessagePopup.open(StringUtil.substitute(getResString("main", "STATE_TIER_DRIVE_COUNT_OVERFLOW_QUESTION"), fullMaxCount),
+                            getResString("main", "STATE_TIER"), 
+                            this, 
+                            MessagePopup.ERROR_MESSAGE,
+                            MessagePopup.BUTTON_OK);
+                        
+                        return false;
+                    }
+                    else if(!supportsGreaterAmount)
+                    {
+                        var fullMaxCount:int = confFactory.calculateAdaptableMaxDriveCount(tiersTemp.toArray(), this.rowIndex);
+                        MessagePopup.open(StringUtil.substitute(getResString("main", "STATE_TIER_DRIVE_COUNT_DEFINIT_OVERFLOW"), fullMaxCount),
+                            getResString("main", "STATE_TIER"), 
+                            this,
+                            MessagePopup.ERROR_MESSAGE,
+                            MessagePopup.BUTTON_OK);
+                    }
+                    else
+                    {
+                        MessagePopup.open(getResString("main", "STATE_TIER_INCORRECT_ACTIVE_DRIVE_COUNT"),
+                            getResString("main", "STATE_TIER"),
+                            this,
+                            MessagePopup.ERROR_MESSAGE,
+                            MessagePopup.BUTTON_OK);
+                    }
+                    
+					return false;
+                }
+				
+				return super.save();
+			}
+			
+			// Shift focus to the TextInput
+			override public function setFocus():void 
+			{
+                var dg:DriveGroup = data as DriveGroup;
+                if(dg)
+                {
+                    driveCountModuloValidator.modulo = dg.driveDef.raid.raidGroupSize;
+                    driveCountModuloValidator.errorMessage = 
+                        driveCountModuloValidator.errorMessage = StringUtil.substitute(getResString("main", "VALIDATION_DRIVE_GROUP_MODULO_FORMAT"), dg.driveDef.raid.raidGroupSize);
+                }
+				driveCountField.setFocus();	
+                driveCountModuloValidator.validate();
+			}
+			
+			override public function discard():void
+			{
+				super.discard();
+				// destroy editor errorTip
+				_errorTip.destroy();
+				
+				CustomToolTip.positionChanged = true;
+			}
+			
+			protected function driveCountModuloValidationHandler(event:ValidationResultEvent):void
+			{
+				if (event.results && event.results.length > 0 &&
+					event.results[0].errorMessage)
+				{
+					_errorTip.display(driveCountField, event.results[0].errorMessage);
+				}
+				else
+				{
+					_errorTip.hide();
+				}
+			}
+			
+			protected function driveCountField_enterHandler(event:FlexEvent):void
+			{
+				// If we can't save the data, because the data was invalid, cancel the save
+				// and close the editor
+				if (!dataGrid.endItemEditorSession() && !_errorTip.currentToolTip.visible)
+				{
+					dataGrid.endItemEditorSession(true);
+				}
+			}
+			
+		]]>
+	</fx:Script>
+    
+    
+	
+	<s:layout >
+		<s:HorizontalLayout paddingLeft="5"
+							paddingRight="5"
+							paddingBottom="5"
+							paddingTop="5"
+							horizontalAlign="center"
+							verticalAlign="middle"  />
+	</s:layout>
+		
+	<s:TextInput id="driveCountField"
+				 width="100%"
+				 height="100%"
+				 restrict="0-9"
+				 maxChars="4"
+				 enter="driveCountField_enterHandler(event)"
+				 toolTipShown="{CustomToolTip.hideCurrent()}"
+				 styleName="wizardTextInputStyle"/>
+	
+	
+</s:GridItemEditor>

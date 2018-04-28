@@ -1,0 +1,17 @@
+<html>
+	<title>Stanby Power Supply (SPS) Li-Ion</title>
+	<span>
+		<p>Gli SPS agli ioni di litio forniscono alimentazione CC ridondante agli engine e alle interconnessioni InfiniBand (IB) e risiedono unicamente nei system bay. Ciascun SPS è costituito dai seguenti componenti: </p>
+		<ul>
+			<li>Ingresso di linea CA </li>
+			<li>Batterie </li>
+			<li>Caricatore batteria</li>
+			<li>Convertitore DC-DC</li>
+			<li>Porta RS232</li>
+			<li>4 prese CA </li>
+		</ul>
+	</span>
+	<span>
+		<p> Durante l'operazione online, l'alimentatore SPS fornisce il carico di uscita CC direttamente dall'ingresso linea CA. Il caricatore mantiene una carica &quot;float&quot; sulle batterie e le ricarica se necessario. Se l'ingresso di linea CA non funziona, l'uscita viene scollegata dall'ingresso di linea CA e viene alimentata invece dalle batterie interne e dal convertitore DC-CC (operazione a batteria). </p>
+	</span>
+</html>

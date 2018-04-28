@@ -1,0 +1,85 @@
+<html>
+	<title>ENGINE</title>
+	<span>
+		<p> L'engine è l'unità di elaborazione I/O centrale, costruito in modo ridondante per la disponibilità elevata. È costituito da director ridondanti (director A e director B), ciascuno dei quali contiene CPU multi-core, moduli di memoria e interfacce di collegamento a moduli universali I/O, come i moduli front-end, back-end, InfiniBand, compressione e i moduli Flash di I/O.</p>
+	</span>
+	<span>
+		<p> Le ventole di raffreddamento e gli alimentatori dell'engine sono accessibili dalla parte anteriore, mentre i moduli I/O, il modulo di gestione e la control station sono accessibili dalla parte posteriore. Dato che il numero di moduli I/O universali utilizzati nell'engine dipende dalla funzionalità richiesta e dalla capacità di storage del sistema, alcuni slot possono rimanere inutilizzati.</p>
+	</span>
+	<span>
+		<p> Di seguito sono illustrati la vista posteriore dell'engine, gli slot del modulo I/O e la numerazione della porta fisica e logica.</p>
+	</span>
+	<span>
+		<p>Numeri delle porte fisiche</p>
+	</span>
+	<span><img src="phy_eng_ports.gif" ratio="0.41"/></span>
+	<span>
+		<p>Numeri delle porte logiche</p>
+	</span>
+	<span><img src="logical_eng_phy_ports.gif" ratio="0.398"/></span>
+	<span>
+		<p> La tabella seguente descrive le regole di popolazione degli slot dell'engine:</p>
+		<table>
+			<tr>
+				<td>Numero di slot dell'engine</td>
+				<td>Componente</td>
+				<td>Descrizione</td>
+			</tr>
+			<tr>
+				<td>0</td>
+				<td>Modulo Flash</td>
+				<td>Sempre popolato, riservato per flash.</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Modulo Flash</td>
+				<td>Opzionale, dipende dalla capacità di storage dell'array. Riservato per flash. Se è popolato, anche lo slot 7 è popolato.</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Modulo front-end universale</td>
+				<td>Qualsiasi modulo Fibre Channel, Ethernet o I/O a compressione può occupare lo slot.</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Modulo front-end universale</td>
+				<td>Opzionale. Qualsiasi modulo Fibre Channel, Ethernet o I/O a compressione può occupare lo slot.</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Modulo I/O back-end</td>
+				<td>Sempre popolato, riservato per back-end.</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Modulo I/O back-end</td>
+				<td>Sempre popolato, riservato per back-end.</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Modulo Flash</td>
+				<td>Sempre popolato, riservato per flash.</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>Modulo Flash</td>
+				<td>Opzionale, dipende dalla capacità di storage dell'array, riservato per flash. Popolato se lo slot 1 è popolato.</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>Modulo front-end universale</td>
+				<td>Opzionale. Qualsiasi modulo Fibre Channel, Ethernet o I/0 a compressione può occupare lo slot.</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>Modulo front-end universale</td>
+				<td>Qualsiasi modulo Fibre Channel, Ethernet o I/O a compressione può occupare lo slot.</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>Modulo I/O InfiniBand</td>
+				<td>Sempre popolato in un sistema a più engine, altrimenti vuoto. Riservato per il modulo IB.</td>
+			</tr>
+		</table>
+	</span>
+</html>

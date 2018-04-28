@@ -1,0 +1,14 @@
+<html>
+	<title>BAHÍA DE SISTEMA 1</title>
+	<span><p> Todas las bahías de sistema todo flash contienen uno o dos V-Bricks/zBricks; cada uno consta de un motor, dos gabinetes de arreglos de discos (DAE) de 120 unidades de alta densidad, dos suministros de energía en espera (SPS) de iones de litio para proporcionar alimentación de respaldo al motor y dos unidades de distribución de alimentación (PDU) que proporcionan alimentación a las zonas de alimentación redundante (zona A y zona B).</p></span>
+	<span><p>Los siguientes componentes son únicos de la bahía de sistema 1: </p>
+		<ul>
+			<li>Si el arreglo está configurado con varios V-Bricks/zBricks, se interconectan las dos unidades de suministro de energía en espera (SPS) de iones de litio ubicadas en la parte inferior de la bahía que proporcionan alimentación de respaldo para la matriz virtual InfiniBand (IB). </li>
+			<li>Interconexión de InfiniBand (IB) si el arreglo está configurado con varios V-Bricks/zBricks </li>
+			<li>Switch Ethernet </li>
+			<li>KVM (clave, video, mouse) </li>
+		</ul>
+	</span>
+</html>
+
+

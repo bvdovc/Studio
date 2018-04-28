@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                xmlns:s="library://ns.adobe.com/flex/spark"
+                xmlns:mx="library://ns.adobe.com/flex/mx"
+                xmlns:components="sym.controller.components.*"
+                useHandCursor="true"
+                buttonMode="true" 
+				autoDrawBackground="false"
+                click="onClick(event)"
+                height="100%"
+				creationComplete="onCreationCompleted(event)"
+                mouseUp="mouseUpHandler(event)"
+                mouseDown="mouseDownHandler(event)"
+                mouseMove="mouseMoveHandler(event)">
+    <!--  -->
+	<fx:Script>
+		<![CDATA[
+			import mx.core.FlexGlobals;
+			import mx.events.FlexEvent;
+			import mx.events.ResizeEvent;
+			
+			import sym.viewer.mobile.script.ViewConstants;
+			import sym.viewer.mobile.utils.CommonUtility;
+		]]>
+	</fx:Script>
+
+    <fx:Declarations>
+        <!-- Place non-visual elements (e.g., services, value objects) here -->
+			<s:DropShadowFilter id="shadow"
+								alpha="0.3"
+							    inner="true"
+							    distance="-5"
+								angle="90"/>
+    </fx:Declarations>
+	<s:states>
+		<s:State name="selected" />
+		<s:State name="normal" />
+	</s:states>
+
+    <fx:Script source="../../../script/components/selectionList/selectionComponentItemRenderer.as"/>
+    
+    <s:BorderContainer height="100%"
+                       width="100%"
+                       id="vG"
+                       borderVisible="{_borderVisible}"
+					   borderColor="#bcbcbd"
+					   cornerRadius="8"
+					   borderWeight="2"
+					   filters.selected="{[shadow]}">
+        <s:layout>
+            <s:VerticalLayout id="itemContainer"
+                              horizontalAlign="center"
+                              verticalAlign="bottom"
+                              paddingLeft="2"
+                              paddingBottom="5"
+                              paddingRight="2"
+                              paddingTop="2"/>
+        </s:layout>
+ 
+    	<s:Image id="iconImage"
+               	 scaleMode="letterbox"
+                 smooth="true"
+                 smoothingQuality="default"
+                 horizontalAlign="center"
+                 verticalAlign="middle"
+				 click="onConfigurationVG3RClicked(event)"
+				 resize="onIconImageResized(event)"/>
+        
+        <s:Label id="confName"
+                 text="{(_model is Configuration_VG3R &amp;&amp; !(_model as Configuration_VG3R).saved ? '*' : '') + _label}"
+                 verticalAlign="middle" 
+                 textAlign="center"
+                 fontWeight="bold"
+				 fontSize="{10 * FlexGlobals.topLevelApplication.height/ViewConstants.DEFAULT_APP_HEIGHT}"
+                 width="100%"/>
+    </s:BorderContainer> 
+</s:ItemRenderer>

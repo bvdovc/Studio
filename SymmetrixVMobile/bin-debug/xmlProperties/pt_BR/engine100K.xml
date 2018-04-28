@@ -1,0 +1,86 @@
+<html>
+	<title>MECANISMO</title>
+
+	<span>
+		<p> O mecanismo é a unidade central de processamento de I/O, com redundância incorporada para alta disponibilidade. Ele consiste em directors redundantes (director A e director B) e cada um deles contém CPUs multi-core, módulos de memória e interfaces de conexão a módulos universais de I/O, como os módulos front-end, back-end, InfiniBand, de compactação e de I/O flash.</p>
+	</span>
+	<span>
+		<p> Os ventiladores de refrigeração e as fontes de alimentação do mecanismo podem ser acessados pela parte frontal, os módulos de I/O, o módulo de gerenciamento e a Control Station podem ser acessados pela parte traseira. Considerando que o número de módulos universais de I/O usados no mecanismo depende da funcionalidade e da capacidade de armazenamento do sistema que são exigidas, alguns slots podem permanecer não utilizados.</p>
+	</span>
+	<span>
+		<p> A visão posterior do mecanismo, os slots do módulo de I/O, a numeração das portas físicas e das portas lógicas são descritos a seguir.</p>
+	</span>
+	<span>
+		<p>Números das portas físicas</p>
+	</span>
+	<span><img src="phy_eng_ports.gif" ratio="0.41"/></span>
+	<span>
+		<p>Números das portas lógicas</p>
+	</span>
+	<span><img src="logical_eng_phy_ports.gif" ratio="0.398"/></span>
+	<span>
+		<p> A tabela a seguir explica as regras de preenchimento do slot do mecanismo:</p>
+		<table>
+			<tr>
+				<td>Número de slot do mecanismo</td>
+				<td>Componente</td>
+				<td>Descrição</td>
+			</tr>
+			<tr>
+				<td>0</td>
+				<td>Módulo Flash</td>
+				<td>Preenchido sempre, reservado para o Flash.</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Módulo Flash</td>
+				<td>Opcional, depende da capacidade de armazenamento do array. Reservado para o Flash. Se preenchido, o slot 7 está sendo preenchido também.</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Módulo de front-end universal</td>
+				<td>Qualquer módulo Fibre Channel, FICON, Ethernet ou módulo de I/O de compactação pode ocupar esse slot.</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Módulo de front-end universal</td>
+				<td>Opcional. Qualquer módulo Fibre Channel, FICON, Ethernet ou módulo de I/O de compactação pode ocupar esse slot.</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Módulo de I/O de back-end</td>
+				<td>Ocupado sempre, reservado para o back-end.</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Módulo de I/O de back-end</td>
+				<td>Ocupado sempre, reservado para o back-end.</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Módulo Flash</td>
+				<td>Preenchido sempre, reservado para o Flash.</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>Módulo Flash</td>
+				<td>Opcional, depende da capacidade de armazenamento do array, reservada para o Flash. Ocupado, se o slot 1 for preenchido.</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>Módulo de front-end universal</td>
+				<td>Opcional. Qualquer módulo Fibre Channel, FICON, Ethernet ou módulo de I/O de compactação pode ocupar esse slot.</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>Módulo de front-end universal</td>
+				<td>Qualquer módulo Fibre Channel, FICON, Ethernet ou módulo de I/O de compactação pode ocupar esse slot.</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>Módulo de I/O de InfiniBand</td>
+				<td>Sempre ocupado em um sistema com vários mecanismos, senão, está vazio. Reservado para o módulo de IB.</td>
+			</tr>
+		</table>
+	</span>
+</html>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        xmlns:breadcrumb="sym.viewer.mobile.views.components.breadcrumb.*"
+        xmlns:selectionList="sym.viewer.mobile.views.components.selectionList.*"
+        preinitialize="preinitializeHandler(event)"
+		creationComplete="creationCompleteHandler(event)"
+		destructionPolicy="never"
+		styleName="home" 
+        xmlns:mx="library://ns.adobe.com/flex/mx"
+		xmlns:properties="sym.viewer.mobile.views.components.properties.*" 
+		xmlns:titleBar="sym.viewer.mobile.views.components.titleBar.*"
+        xmlns:toolbar="sym.viewer.mobile.views.components.toolbar.*" 
+		xmlns:filter="sym.viewer.mobile.views.components.filter.*" 
+		resize="onResize(event)" >
+	
+    <fx:Declarations>
+        <!-- Place non-visual elements (e.g., services, value objects) here -->
+        <s:Resize id="resize"/>
+
+        <s:DropShadowFilter id="shadowFilter" 
+                            alpha="0.3"
+                            distance="5"
+                            angle="90"/>
+		
+		<s:Fade id="mainViewFade"
+				target="{mainGroup}"
+				duration="500" />
+		<s:Fade id="trashCanFade"
+				target="{configTrashCan}"
+				alphaFrom="0"
+				alphaTo="1"
+				duration="1000" />
+		
+    </fx:Declarations>
+    <fx:Metadata>
+		[ResourceBundle("main")]
+		[ResourceBundle("component")]
+	</fx:Metadata>
+
+    <fx:Script source="../script/configurationView.as"/>
+	
+    <s:titleContent>
+		
+		
+		<titleBar:TitleBar  id="titleBarComponent"    currentView="{this}"/> 
+		
+		<toolbar:ToolBarComponent horizontalAlign="left" id="toolBarComponent">
+			
+			<breadcrumb:ArrowBreadCrumb id="breadcrumbComponent"
+										enabled="{!_displayHelp}"
+										width="100%"
+										height="98%"
+										configView="{this}"
+										creationComplete="onBreadCrumbCreated(event)"/>
+			<toolbar:ToolBarImage id="importSizerXML"
+								  source="{ImportXMLIcon}"
+								  click="importXml(event)"
+								  enabled="{!_displayHelp}" 
+								  toolTip="{getResString('main', 'BUTTON_TOOLS_IMPORT_XML')}"
+								  includeInLayout="{isDesktopVersion}" 
+								  visible = "{isDesktopVersion}"/>
+			<toolbar:ToolBarImage id="saveConfig"
+								  source="{SaveConfgPictureIcon}"
+								  click="saveAsXml(event)"
+								  enabled="{_isSaveCfgButtonEnabled &amp;&amp; !_displayHelp}" 
+								  toolTip="{getResString('main', 'BUTTON_TOOLS_SAVE_CFG')}"
+								  includeInLayout="{_includeSaveCfgButton}"
+								  visible="{_includeSaveCfgButton}" />
+            <toolbar:ToolBarImage id="copyToClipboardButton"
+                                  source="{CopyPicture2ClipboardIcon}"
+                                  click="copyImageToClipboard(event)"
+                                  toolTip="{getResString('main', 'BUTTON_TOOLS_COPY_2_CLIPBOARD')}"
+                                  includeInLayout="{_includeSaveImageButtons}"
+                                  visible="{_includeSaveImageButtons}"/> 
+            <toolbar:ToolBarImage id="saveFileButton"
+                                  source="{ExportPictureIcon}"
+                                  click="saveFile(event)"
+                                  enabled="{_isImageSaveButtonEnabled &amp;&amp; !_displayHelp}"
+                                  toolTip="{getResString('main', 'BUTTON_TOOLS_EXPORT_PIC')}"
+								  includeInLayout="{_includeSaveImageButtons}"
+								  visible="{_includeSaveImageButtons}"/> 
+            <toolbar:ToolBarImage id="exportAsXML"
+                                  source="{ExportXMLIcon}"
+                                  click="exportAsXml(event)"
+								  enabled="{_isExportXmlButtonEnabled &amp;&amp; !_displayHelp}"
+                                  toolTip="{getResString('main', 'BUTTON_TOOLS_EXPORT_XML')}"
+								  includeInLayout="{_includeImportExportButtons}"
+								  visible="{_includeImportExportButtons}"/>
+            <toolbar:ToolBarImage id="importXML"
+                                  source="{ImportXMLIcon}"
+                                  click="importXml(event)"
+                                  enabled="{_isImportXmlButtonEnabled &amp;&amp; !_displayHelp}"
+                                  toolTip="{getResString('main', 'BUTTON_TOOLS_IMPORT_XML')}"
+								  includeInLayout="{_includeImportExportButtons}"
+								  visible="{_includeImportExportButtons}"/>
+            <toolbar:ToolBarImage id="engineConnButton"
+                                  source="{LoopsIcon}"
+                                  enableToggling="true"
+                                  toggleImages="{[LoopsIcon, LoopsIcon2]}"
+                                  click="{engineConnButtom_Toggle(event)}"
+								  enabled="{_isToggleConnButtonEnabled &amp;&amp; !_displayHelp}"
+								  toolTip="{getResString('main', (SymmController.instance.isAFA() ||SymmController.instance.isPM()) ? 'BUTTON_TOOLS_LOOP_M_FAMILY' : 'BUTTON_TOOLS_LOOP')}"
+								  toolTipShow="{(ToolTipManager.currentToolTip as ToolTip).setStyle('textAlign', 'left')}" />
+            <toolbar:ToolBarImage id="diagramButton"
+                                  source="{DiagramViewIcon}"
+                                  enableToggling="true"
+                                  toggleImages="{[DiagramViewIcon, DiagramViewIcon]}"
+                                  click="{diagramButtom_Toggle(event)}"
+								  enabled="{_isDiagramButtonEnabled &amp;&amp; !_displayHelp}"
+                                  toolTip="{getResString('main', 'BUTTON_TOOLS_DIAGRAM')}"
+								  visible="{_includeDiagramButton}" 
+								  includeInLayout="{_includeDiagramButton}"/>
+            <toolbar:ToolBarImage id="flipButton" 
+                                  source="{FlipIcon2}"
+                                  enableToggling="true"
+                                  toggleImages="{[FlipIcon2, FlipIcon]}"
+                                  click="{flipButtom_Toggle(event)}"
+								  enabled="{_propertiesEnabled &amp;&amp; !_displayHelp}"
+                                  toolTip="{getResString('main', 'BUTTON_TOOLS_VIEW_PERSPECTIVE')}"/>
+            <toolbar:ToolBarImage id="propertiesButton"
+                                  source="{PropertiesIcon}"
+                                  enableToggling="true"
+                                  click="{propertiesButtom_Toggle(event)}" 
+                                  enabled="{_propertiesEnabled &amp;&amp; !_displayHelp}"
+                                  toolTip="{getResString('main', 'BUTTON_TOOLS_PROPERTIES')}"
+								  initialize="onPropertyButtonInit(event)"/> 
+            <toolbar:ToolBarImage id="helpButton"
+                                  source="{HelpIcon}"
+                                  enableToggling="true"
+								  enabled="{SymmController.instance.isAFA() || SymmController.instance.isPM()}"
+                                  click="{helpButton_Click(event)}"/> 
+		</toolbar:ToolBarComponent>
+    </s:titleContent>	
+	
+    <s:VGroup id="mainGroup" width="100%" height="100%" gap="0">
+            
+        <s:HGroup id="helpContainer"
+                  horizontalAlign="center"
+                  verticalAlign="middle"
+                  height="100%"
+                  width="100%"
+                  paddingTop="{MAIN_CONTAINER_PADDING_TOP}"
+                  paddingLeft="{MAIN_CONTAINER_PADDING_LEFT}"
+                  paddingBottom="{MAIN_CONTAINER_PADDING_BOTTOM}"
+                  paddingRight="{MAIN_CONTAINER_PADDING_RIGHT_BIG}"
+                  visible="{_displayHelp}"
+                  includeInLayout="{_displayHelp}">
+            <properties:PropertyRichList id="helpPanel"
+                                         height="100%"
+                                         width="100%"
+                                         enableEvents="false"/>
+        </s:HGroup>
+        <s:HGroup id="mainContainer"
+                  horizontalAlign="center"
+                  verticalAlign="middle"
+                  height="100%"
+                  width="100%"
+                  paddingTop="{MAIN_CONTAINER_PADDING_TOP}"
+                  paddingLeft="{MAIN_CONTAINER_PADDING_LEFT}"
+                  paddingBottom="{MAIN_CONTAINER_PADDING_BOTTOM}"
+                  paddingRight="{MAIN_CONTAINER_PADDING_RIGHT_SMALL}"
+    			  gap="30"
+                  visible="{!_displayHelp}"
+                  includeInLayout="{!_displayHelp}">
+    		
+            <mx:UIComponent id="parentContainer" 
+                            height="100%"
+                            width="70%"
+                            resizeEffect="{resize}"
+                            resize="{parentContainer_resizeHandler(event)}"/>
+            <s:VGroup id="propertiesText" 
+                      height="100%"
+					  maxHeight="{mainContainer.height - MAIN_CONTAINER_PADDING_TOP - MAIN_CONTAINER_PADDING_BOTTOM}"
+                      width="30%"
+                      visible="false" 
+                      includeInLayout="false"
+                      showEffect="Fade"
+                      hideEffect="Fade" 
+					  effectEnd="onEffectEnd(event)">
+                <properties:PropertyRichList maxHeight="{propertiesText.height}"
+                                             width="100%"/>
+			
+            </s:VGroup>
+			
+        </s:HGroup>
+    	
+		<s:BorderContainer id="filterContainer"
+						   width="100%"
+						   height="13%"
+						   enabled="{!_displayHelp}">
+            <s:backgroundFill>
+                <s:LinearGradient rotation="90">
+                    <s:GradientEntry color="#2483c2"/>
+                    <s:GradientEntry color="#2896de"/>
+                </s:LinearGradient>
+            </s:backgroundFill> 
+    		<s:layout>
+    			<s:HorizontalLayout paddingBottom="3"
+    								paddingTop="3" />
+    		</s:layout>
+    			
+            <s:HGroup id="filterButtonsGroup"
+                      width="100%"
+                      height="100%"
+                      columnWidth="{(width - refreshImageBox.width - (filterButtonsGroup.paddingRight + filterButtonsGroup.paddingLeft + _filterComponents * filterButtonsGroup.gap)) / _filterComponents}"
+                      gap="8"
+                      paddingLeft="7"
+                      paddingRight="7"
+                      variableColumnWidth="false"
+    				  fontSize="{14 * FlexGlobals.topLevelApplication.height/ViewConstants.DEFAULT_APP_HEIGHT}" >
+    			<filter:FilterComponent id="noEngines"
+    									name="{ConfigurationFilter.FILTER_ENGINES}"
+    									width="100%" 
+    									height="100%"
+    									filterName="{getResString('main', SymmController.instance.isAFA() ? 'FILTER_ENGINES_V_BRICKS' : 'FILTER_ENGINES_POWER_BRICKS')}"
+    									filterValue="{getResString('main', 'FILTER_ENGINES_ANY')}"
+    									click="onFilterButtonClicked(event)"
+    									enabled="{!wizardToggleButton.selected}"
+    									toolTip="{getResString('main', SymmController.instance.isAFA() ? 'BUTTON_FILTER_V_BRICKS' : 'BUTTON_FILTER_POWER_BRICKS')}"
+    									useHandCursor="true"
+    									buttonMode="true"/>
+    			<filter:FilterComponent id="noSystemBays"
+    									name="{ConfigurationFilter.FILTER_SYSTEM_BAYS}"
+    									width="100%"
+    									height="100%"
+    									filterName="{getResString('main', 'FILTER_SYSTEM_BAYS')}"
+    									filterValue="{getResString('main', is250F() ? 'FILTER_SYSTEM_BAYS_250F_DEFAULT_VALUE' : 'FILTER_SYSTEM_BAYS_ANY')}"
+    									click="onFilterButtonClicked(event)"
+    									enabled="{!(wizardToggleButton.selected || is250F() || isPM2000())}"
+    									toolTip="{getResString('main', 'BUTTON_FILTER_SYSTEM_BAYS')}"
+    									visible="{SymmController.instance.isAFA() || SymmController.instance.isPM()}"
+    									includeInLayout="{SymmController.instance.isAFA() || SymmController.instance.isPM()}"
+    									useHandCursor="true"
+    									buttonMode="true"/>
+                <filter:FilterComponent id="daeType"
+    									width="100%" height="100%"
+    									filterName="{getResString('main', (SymmController.instance.isAFA()) ? 'FILTER_DAE_TYPE_VG3R' : 'FILTER_DAE_TYPE_PM')}"
+    									filterValue="{getResString('main','FILTER_DAE_TYPE_ANY')}"
+    									click="onFilterButtonClicked(event)"
+										enabled="{!wizardToggleButton.selected}"
+    									name="{ConfigurationFilter.FILTER_DRIVE_TYPE}"
+    									toolTip="{getResString('main', 'BUTTON_FILTER_DRIVE_TYPE')}"
+    									buttonMode="true"
+    									useHandCursor="true"/>
+                <filter:FilterComponent id="tier"
+    									name="{ConfigurationFilter.FILTER_DRIVES}"
+    									width="100%" 
+    									height="100%"
+    									filterName="{getResString('main', 'FILTER_NUMBER_OF_DRIVES')}"
+    									filterValue="{getResString('main','FILTER_NUMBER_OF_DRIVES_ANY')}"
+    									enabled="{!(wizardToggleButton.selected)}"
+    									visible="{SymmController.instance.isAFA() || SymmController.instance.isPM()}"
+    									includeInLayout="{SymmController.instance.isAFA() || SymmController.instance.isPM()}"
+    									click="onFilterButtonClicked(event);"
+    									toolTip="{getResString('main', 'BUTTON_FILTER_NUMBER_OF_DRIVES')}"
+    									buttonMode="true" 
+    									useHandCursor="true"/>
+                <filter:FilterComponent id="dispersion"
+    									name="{ConfigurationFilter.FILTER_DISPERSED}"
+    									width="100%" 
+    									height="100%"
+    									filterName="{getResString('main', 'FILTER_DISPERSED')}"
+    									filterValue="{getResString('main', is250F() ? 'FILTER_DISPERSED_VALUE_250F' : (SymmController.instance.isAFA() || SymmController.instance.isPM()) ? 'FILTER_DISPERSED_NO_VG3R' : 'FILTER_DISPERSED_NO')}"
+    									enabled="{!(wizardToggleButton.selected || (is250F() || isPM2000()))}"
+    									visible="{ SymmController.instance.isAFA() || SymmController.instance.isPM()}"
+    									includeInLayout="{ SymmController.instance.isAFA() || SymmController.instance.isPM()}"
+    									click="onFilterButtonClicked(event);"
+    									toolTip="{getResString('main', 'BUTTON_FILTER_DISPERSE')}"
+    									buttonMode="true" 
+    									useHandCursor="true"/>
+    		</s:HGroup>
+    		<s:HGroup id="refreshImageBox"  
+    				  height="100%"
+    				  paddingRight="5">
+    			<s:Image id="refreshIcon"
+    					 source="@Embed('/images/toolbar/reset_icon.png')"
+    					 height="100%"
+    					 width="{refreshIcon.height}"
+    					 smooth="true"
+    					 buttonMode="true"
+    					 useHandCursor="true"
+    					 scaleMode="letterbox"
+    					 enabled="{!wizardToggleButton.selected}"
+    					 toolTip="{getResString('main', 'BUTTON_RESET_FILTERS')}"
+    					 click="{resetAllFilters(event)}"/>
+    		</s:HGroup>
+        </s:BorderContainer>
+        <s:BorderContainer width="100%"
+                           height="18%"
+                           id="selectionContainer"
+                           borderVisible="false"
+                           enabled="{!_displayHelp}">
+            <s:layout>
+                <s:HorizontalLayout gap="10" paddingTop="5" paddingBottom="5"/>
+            </s:layout> 
+            <s:HGroup id="wizPlaceHolder"
+                      paddingBottom="0"
+    				  paddingTop="0"
+                      paddingLeft="5"
+                      width="{wizPlaceHolder.height}"
+                      height="100%">
+                <toolbar:ToolBarImage id="wizardToggleButton"
+                                      source="{WizardOff}"
+                                      enableToggling="true"
+                                      toggleImages="{[WizardOff, WizardOn]}"
+                                      click="{wizardToggleButton_clickHandler(event)}"
+                                      toolTip="{!wizardToggleButton.selected ? _wizardToolTIp : getResString('main', 'BUTTON_FILTER_WIZARD_OFF')}"/>
+            </s:HGroup>
+            <selectionList:SelectionComponent id="selectionComponent" 
+                                              width="100%"
+                                              height="100%"/>
+        </s:BorderContainer>
+            
+    </s:VGroup>
+    
+	<s:Group id="dragContainer"
+			 width="100%"
+			 height="100%" />
+	
+		<s:Image id="configTrashCan"
+				 alpha="0"
+				 horizontalCenter="0"
+				 verticalCenter="0"
+				 source="{TrashCan}"
+				 smooth="true"
+				 includeInLayout="{_isConfigTrashCanVisible}"
+				 visible="{_isConfigTrashCanVisible}"
+				 width="{wizPlaceHolder.width}"
+				 height="{wizPlaceHolder.height}" 
+				 depth="-1" />
+	
+</s:View>

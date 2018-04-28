@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009"
+							xmlns:s="library://ns.adobe.com/flex/spark"
+							firstView="sym.viewer.mobile.views.HomeView"
+                            preinitialize="onAppPreinitialize(event)"
+							splashScreenImage="@Embed('/images/symIntro.png')"
+							splashScreenScaleMode="stretch" 
+							splashScreenMinimumDisplayTime="500"
+                            applicationDPI="160" >
+	
+	<fx:Style source="styles/main.css" />
+	<fx:Script>
+		<![CDATA[  
+			import mx.events.FlexEvent;
+			
+			import sym.controller.SymmController;
+			import sym.viewer.mobile.utils.CommonUtility;
+            
+            protected function onAppPreinitialize(event:FlexEvent):void
+            {
+                CommonUtility.OPERATING_SYSTEM = CommonUtility.getOS();
+                SymmController.instance.initialize();
+            }
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>    
+	
+</s:ViewNavigatorApplication>

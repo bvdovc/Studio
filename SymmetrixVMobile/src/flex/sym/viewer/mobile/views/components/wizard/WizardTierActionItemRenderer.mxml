@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:GridItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					xmlns:s="library://ns.adobe.com/flex/spark" >
+	<fx:Script>
+		<![CDATA[
+            import mx.collections.ArrayCollection;
+            import mx.resources.ResourceManager;
+            
+            import spark.components.DataGrid;
+            
+            /**
+             * Deletes item from 
+             */
+            protected function deleteAction(event:MouseEvent):void
+            {
+                var dataPr:ArrayCollection = (owner as DataGrid).dataProvider as ArrayCollection;
+                if(dataPr && dataPr.length > 0 && dataPr.getItemIndex(data) > -1)
+                {
+                    (owner as DataGrid).endItemEditorSession(true);
+                    dataPr.removeItemAt(dataPr.getItemIndex(data));
+					
+					(owner as DataGrid).validateNow();
+                }
+            }
+            
+        ]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<s:HGroup width="80%"
+			  height="80%"
+			  verticalCenter="0"
+			  horizontalAlign="left"
+			  verticalAlign="middle"
+			  paddingLeft="4"
+			  toolTip="{ResourceManager.getInstance().getString('main', 'WIZARD_DELETE_TIER')}" >
+		
+		<s:Image id="deleteTierLine"
+				 width="100%"
+				 height="28"
+				 scaleMode="letterbox"
+                 smooth="true"
+				 buttonMode="true"
+				 useHandCursor="true" 
+				 click="deleteAction(event)"
+                 source="@Embed('/images/delete_tier.png')"/>
+		
+	</s:HGroup>
+	
+</s:GridItemRenderer>

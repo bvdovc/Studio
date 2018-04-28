@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
+						   xmlns:s="library://ns.adobe.com/flex/spark"
+						   xmlns:dropdown="sym.viewer.mobile.views.components.dropdown.*"
+						   xmlns:wizard="sym.viewer.mobile.views.components.wizard.*"
+						   styleName="popUpStyle"
+						   skinClass="sym.viewer.mobile.views.skins.FilterWizardPopUpSkin"
+						   preinitialize="onPreinitialize(event)"
+						   creationComplete="onCreationComplete(event)" 
+						   resize="wizardResizeHandler(event)"
+						   show="showHandler(event)" >
+	<fx:Declarations> 
+		
+	</fx:Declarations>
+	
+	<fx:Metadata>
+		[ResourceBundle("main")]
+	</fx:Metadata>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.core.FlexGlobals;
+			
+			import sym.viewer.mobile.script.ViewConstants;
+			import sym.viewer.mobile.utils.CommonUtility;
+			import sym.viewer.mobile.views.skins.FilterWizardPopUpSkin;
+			
+			[SkinPart(required="true")]
+			public var headerGroup:HGroup;
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Script source="../../../script/components/wizard/filterWizardPopUp.as"/>
+	<s:HGroup width="100%"
+			  height="100%"
+			  gap="3">
+		<s:BorderContainer id="stepsContainer" 
+						   backgroundColor="#B0C4DE" 
+						   height="100%" 
+						   minWidth="0"
+						   minHeight="0"
+						   borderVisible="false"
+						   resize="onStepsResize(event)"
+						   cornerRadius="{FilterWizardPopUpSkin.CORNER_RADIUS}">
+			<s:layout>
+				<s:VerticalLayout paddingLeft="15"
+								  paddingTop="30"
+								  paddingBottom="2"
+								  horizontalAlign="left"/>
+			</s:layout>
+			<s:DataGroup id="filterWizardStepGroup"
+						 dataProvider="{stepsDataProvider}"
+						 itemRenderer="sym.viewer.mobile.views.components.wizard.FilterWizardItemRenderer"
+						 contentBackgroundAlpha="0"
+						 minWidth="170">
+				<s:layout>
+					<s:VerticalLayout horizontalAlign="contentJustify"
+									  verticalAlign="middle"
+									  gap="5"
+									  variableRowHeight="false"
+									  rowHeight="{ViewConstants.WIZARD_STEP_DEFAULT_HEIGHT * FlexGlobals.topLevelApplication.height/ViewConstants.DEFAULT_APP_HEIGHT}"/>
+				</s:layout>
+			</s:DataGroup>
+		</s:BorderContainer>
+		<s:BorderContainer id="mainContainer"
+						   width="100%"
+						   height="100%"
+						   minWidth="200"
+						   minHeight="100"
+						   borderVisible="false"
+						   cornerRadius="{FilterWizardPopUpSkin.CORNER_RADIUS}">
+			<s:layout>
+				<s:VerticalLayout 
+					horizontalAlign="left"
+					verticalAlign="middle"/>
+			</s:layout>
+			<s:VGroup paddingLeft="10" 
+					  paddingTop="30"
+					  paddingBottom="10"
+					  paddingRight="10"
+					  width="100%"
+					  height="100%"
+					  gap="20" 
+					  visible="{!_gridSelectionStep &amp;&amp; !_isFirstStep}"
+					  includeInLayout="{!_gridSelectionStep &amp;&amp; !_isFirstStep}" >
+				<s:Label id="noResultLabel"
+						 includeInLayout="{_noResult}"
+						 visible="{_noResult}"
+						 width="100%"
+						 text="{_noResultDescription}"/>
+				<s:VGroup gap="20"
+						  width="100%">
+					<s:Label id="descriptionContent"
+							 text="{_desc}"
+							 width="100%"
+							 visible="{!noResultLabel.visible}"
+							 includeInLayout="{!noResultLabel.includeInLayout}"/>
+					<s:Scroller skinClass="sym.viewer.mobile.views.skins.grid.GridVScrollerSkin"
+								visible="{FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_SUMMARY}"
+								includeInLayout="{FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_SUMMARY}">			
+						<s:DataGroup id="summaryDescription"
+									 dataProvider="{_summaryDataProvider}"
+									 contentBackgroundAlpha="0"
+									 width="{mainContainer.width - 20}"
+									 maxHeight="{mainContainer.height  - actionBarGroup.height - 97}"									
+									 itemRenderer="sym.viewer.mobile.views.components.wizard.WizardSummaryItemRenderer"
+									 visible="{FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_SUMMARY}"
+									 includeInLayout="{FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_SUMMARY}"
+									 >					
+							<s:layout>
+								<s:VerticalLayout horizontalAlign="contentJustify"
+												  verticalAlign="top"
+												  gap="10"/>
+							</s:layout>							
+						</s:DataGroup>				
+					</s:Scroller>
+				</s:VGroup>
+			</s:VGroup>
+			<wizard:WizardTierComponent id="driveMixStep"
+										visible="{FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_TIER}"
+										includeInLayout="{FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_TIER}" />
+			
+			<wizard:WizardTierComponent id="capacityStep"
+										visible="{FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_USABLE_CAPACITY}"
+										includeInLayout="{FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_USABLE_CAPACITY}" 
+										allFlashArraysSelected="true" />
+			
+			<wizard:WizardEnginePortComponent id="enginePortStep"
+											  visible="{FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_ENGINE_PORTS}"
+											  includeInLayout="{FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_ENGINE_PORTS}"
+											  afaSelected="{SymmController.instance.isAFA() || SymmController.instance.isPM()}"/>
+			
+			<s:HGroup id="selectFilterGroup"
+					  verticalAlign="contentJustify"
+					  width="100%"
+					  height="100%"
+					  columnWidth="{(selectFilterGroup.width - selectFilterGroup.gap)/2}"
+					  gap="20"
+					  paddingLeft="10"
+					  visible="{!_gridSelectionStep &amp;&amp; !_isFirstStep}"
+					  includeInLayout="{!_gridSelectionStep &amp;&amp; !_isFirstStep}">
+				<s:VGroup width="60%"
+						  right="0" >
+								
+					<s:HGroup id="selectionHGroup1"
+							  verticalAlign="baseline"
+							  width="100%"
+							  height="40"
+							  columnWidth="{selectFilterGroup.columnWidth}"
+							  visible="{FilterController.instance.states[FilterController.instance.currentState] != FilterController.STATE_SUMMARY}"
+							  includeInLayout="{FilterController.instance.states[FilterController.instance.currentState] != FilterController.STATE_SUMMARY}" >
+						<s:Label id="selectionLabel1"
+								 text="{(FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_VNX) ? getResString('main','DATA_MOVER_LABEL') :_step}"
+								 fontWeight="bold"
+								 textAlign="left"
+								 minWidth="150"
+								 maxWidth="{selectFilterGroup.width - 240}"/>
+						<dropdown:DropDown id="drop1"
+										   dataProvider="{_filterDataProvider}"
+										   width="200"
+										   maxRowCount="{Constants.WIZARD_DROP_DOWN_MAX_ROWS}"
+										   change="onListChange(event)"
+										   allowMultipleSelection="{FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_DISPERSED &amp;&amp;
+										   		(SymmController.instance.isAFA() || SymmController.instance.isPM())}" />
+					</s:HGroup>
+							  
+					<s:HGroup id="selectionHGroup2"
+							  verticalAlign="baseline"
+							  width="100%"
+							  height="40"
+							  columnWidth="{selectFilterGroup.columnWidth}"
+							  visible="{FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_DAE_COUNT || 
+							  			(FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_ENGINES &amp;&amp;_customTierWizard)}"
+							  includeInLayout="{FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_DAE_COUNT || 
+							  			(FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_ENGINES &amp;&amp;_customTierWizard)}" >
+						<!--<s:HGroup width="100%"
+								  horizontalAlign="left">-->
+						<s:Label id="selectionLabel2"
+								 text="{getResString('main', FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_DAE_COUNT ? 'WIZARD_VANGUARD_COUNT' : 'STATE_ENGINES')}"
+								 fontWeight="bold"
+								 minWidth="{selectionLabel1.width > selectionLabel1.minWidth ? selectionLabel1.width : selectionLabel1.minWidth}"
+								 textAlign="left"
+								 maxWidth="{selectFilterGroup.width - 240}"/>
+						<!--</s:HGroup>	-->	
+						
+						<dropdown:DropDown id="drop2"
+										   dataProvider="{_filterDataProvider2}"
+										   width="200"
+										   maxRowCount="{Constants.WIZARD_DROP_DOWN_MAX_ROWS}"
+										   change="onListChange2(event)"/>
+						
+					</s:HGroup>
+						
+				</s:VGroup>
+			</s:HGroup>
+			<s:HGroup id="actionBarGroup"
+					  height="{mainContainer.height * 0.1}"
+					  width="100%"
+					  minWidth="380"
+					  paddingLeft="15"
+					  paddingRight="15"
+					  paddingBottom="10"
+					  verticalAlign="middle"
+					  gap="20"
+					  columnWidth="{(actionBarGroup.width - 50)/4}"
+					  fontSize="15">
+				
+				<s:Button id="btnCancel"
+						  label="{getResString('main', 'WIZARD_CANCEL_BTN')}"
+						  skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"
+						  width="100%"
+						  height="100%"
+						  useHandCursor="true"
+						  buttonMode="true"
+						  click="{cancelBtn_ClickHandler(event)}"/>
+				<s:Button id="bntPrev"
+						  label="{getResString('main', 'WIZARD_PREV_BTN')}"
+						  skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"
+						  width="100%"
+						  height="100%"
+						  buttonMode="true"
+						  useHandCursor="true"
+						  click="navigateToStep(FilterController.instance.currentState -1)"
+						  enabled="{FilterController.instance.currentState &gt; 0}"/>
+				<s:Button id="btnNext"
+						  label="{getResString('main', 'WIZARD_NEXT_BTN')}"
+						  skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"
+						  width="100%"
+						  height="100%"
+						  buttonMode="true"
+						  useHandCursor="true"
+						  click="navigateToStep(FilterController.instance.currentState + 1)"
+						  enabled="{FilterController.instance.currentState &lt; (FilterController.instance.states.length - 1)}"/>
+				<s:Button id="btnOK"
+						  label="{getResString('main', 'WIZARD_OK_BTN')}"
+						  skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"
+						  width="100%"
+						  height="100%"
+						  buttonMode="true"
+						  useHandCursor="true"
+						  enabled="{(FilterController.instance.states[FilterController.instance.currentState] == FilterController.STATE_SUMMARY)}"
+						  click="executeFilterWizardSelection(event)"/>
+			</s:HGroup>
+			
+		</s:BorderContainer>
+	</s:HGroup>
+</s:SkinnablePopUpContainer>

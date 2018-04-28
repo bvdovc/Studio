@@ -1,0 +1,12 @@
+<html> 
+    <title>
+		SPEICHER-BAY 
+	</title> 
+	<span><p>Speicher-Bays werden in standardmäßigen Arraykonfigurationen unterstützt. Sie enthalten 2-8 Disk Array Enclosures (DAEs) sowie NAS-Komponenten, die Zugriff auf Dateiebene auf Daten im Array bereitstellen. Die NAS-Komponenten verwenden dedizierte Stromkomponenten, die mit redundanten Stromquellen verbunden sind. </p></span> <span><p>Zu den Stromkomponenten eines Speicher-Bay gehören Power Distribution Units (PDUs) und Power Distribution Panels (PDPs). Im Gegensatz zu den System-Bays haben Speicher-Bays keine Stand-by-Netzteilmodule, die Reservestrom für die DAEs der Speicher-Bays liefern.</p></span> <span><p>Die PDPs und PDUs sind über die Rückseite zugänglich und verfügen über die zentrale Schnittstelle und Verteilungssteuerung für den eingehenden Wechselstrom. Die PDPs sind mit den Wechselstromeingängen verbunden und verfügen über den Hauptnetzschalter für die Stromversorgung. Darüber hinaus sind sie mit weiteren PDPs innerhalb desselben Stromversorgungsbereichs verbunden. Zudem verteilen die PDPs Strom an einzelne Komponenten und enthalten weitere Netzschalter. Stromkomponenten zu beiden Seiten des Bay gehören zu unabhängigen Stromversorgungsbereichen, die für eine redundante Stromversorgung mit unabhängigen Wechselstromleitungen verbunden sein müssen.</p></span> 
+</html>
+
+
+
+ 
+ 
+

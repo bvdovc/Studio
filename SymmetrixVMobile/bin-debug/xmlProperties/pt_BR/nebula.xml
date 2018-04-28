@@ -1,0 +1,15 @@
+<html>
+	<title>Gaveta disk array de 24 slots (DAE 24) </title>
+	<span><p>A DAE 24 é uma gaveta com 2U de altura e 19 polegadas de profundidade que acomoda um máximo de 24 unidades flash conectadas ao PCIe NVMe.
+	
+	</p></span>	
+	<span>
+	<p>Os principais recursos são:</p>
+		<ul>
+			<li>LCCs (Link Control Cards, placas de controle de link) redundantes com hot swap</li>
+			<li>2 fontes de alimentação com feeds de alimentação separados que fornecem 25 W por slot de unidade e redundância de alimentação N+1 </li>
+			<li>Resfriamento dimensionável N+1</li>
+			<li>16 conectores mini-SAS HD PCIe de 4 vias</li>
+		</ul>
+	</span>
+</html> 

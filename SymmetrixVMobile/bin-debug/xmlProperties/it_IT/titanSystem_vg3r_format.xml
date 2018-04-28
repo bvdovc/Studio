@@ -1,0 +1,12 @@
+<html>
+	<title>SYSTEM BAY {0}</title>
+	<span>
+		<p>I system bay 2-8 ospitano uno o due engine (a seconda del tipo di system bay), unità SPS (Standalone Power Supply) Li-ON per fornire alimentazione di backup per gli engine e un'area di lavoro al centro del bay per le attività di manutenzione. </p>
+	</span>
+	<span>
+		<p> I system bay a singolo engine ospitano un engine e fino a sei disk array enclosure (DAE). I system bay a doppio engine ospitano due engine e fino a quattro DAE.</p>
+	</span>
+	<span>
+		<p> Tutti i system bay includono unità PDU (Power Distribution Unit) che forniscono alimentazione a due power zone; zona A e zona B.</p>
+	</span>
+</html>

@@ -1,0 +1,15 @@
+<html>
+	<title>Moteur</title>
+
+	<span>
+		<p>Le moteur est l’unité de traitement d’E/S centrale conçue de manière redondante pour assurer une haute disponibilité. Des directeurs redondants (directeur A et directeur B) sont dotés chacun de cache, de deux processeurs à 12 cœurs Broadwell de 2,5 GHz, ainsi que des interfaces de connexion à des modules d’E/S, tels que les modules front-end et back-end universels, InfiniBand, de compression et de déduplication, ainsi que d’E/S NVMe Flash. Le moteur fournit 48 cœurs de CPU et un maximum de 2 To de cache.</p>
+	</span>
+	<span>
+		<p> Le schéma suivant présente une vue arrière d’un moteur PowerMax 2000 entièrement rempli illustrant les types de modules d’E/S, les désignations d’emplacements et la numérotation des ports. Tous les emplacements NVMe Flash et front-end universels ne sont pas remplis dans une configuration classique.</p>
+	</span>
+	<span><img src="PowerMax2000_Engine.jpg" ratio="0.57"/></span>
+	<span>
+		<p> La plupart des composants du moteur sont accessibles par l’arrière. Seuls les ventilateurs de refroidissement et les alimentations sont accessibles depuis l’avant.</p>
+	</span>
+	
+</html>

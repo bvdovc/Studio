@@ -1,0 +1,19 @@
+<html> 
+	<title>
+		CONFIGURAZIONE 
+	</title> 
+	<span>
+		<p>Dettagli configurazione corrente:</p>
+		<ul> 
+		<li>Numero di engine: {0}</li>
+		<li>Numero di DAE: {1}</li> 
+		<li>Numero massimo di unità: {2}</li> 
+		</ul>
+	</span> 
+	<span><p>Le configurazioni degli array vanno da sistemi con uno - sei bay e sistemi con uno - quattro engine. Gli engine sono le unità di elaborazione di I/O principali, ciascuna delle quali risiede nel proprio system bay. Ogni system bay contiene componenti di alimentazione, un minimo di quattro DAE (Disk Array Enclosure) e un numero massimo di otto DAE in configurazioni degli array standard e di dodici DAE in configurazioni degli array ad alta densità.</p></span> 
+	<span><p>Le configurazioni standard supportano DAE standard (15 unità) e DAE ad alta densità (25 unità). Le configurazioni degli array ad alta densità supportano solo DAE da 25 unità. La configurazione standard massima comprende quattro system bay e due storage bay, mentre la configurazione ad alta densità massima prevede solo quattro system bay. </p></span> 
+	<span><p>La configurazione degli array standard supporta uno o due storage bay (Storage Bay 1A e Storage Bay 1B) per ottimizzare la capacità di storage di ciascun engine. Gli storage bay contengono i DAE e i componenti di alimentazione.</p></span> 
+	<span><p>Ogni engine si connette a e controlla tutti i Disk Array Enclosure nel system bay. Se si utilizzano gli storage bay, l'Engine 1 e l'Engine 2 sono connessi ai DAE dedicati nello Storage Bay 1A, mentre l'Engine 3 e l'Engine 4 sono connessi ai DAE dedicati nello Storage Bay 1B.</p></span> 
+	<span><p>I componenti gateway NAS che forniscono accesso a livello di file ai dati nell'array risiedono sempre nel System Bay 1 nelle configurazioni degli array ad alta densità e nello Storage Bay 1A nelle configurazioni standard.</p></span> 
+	<span><p>La dispersione del system bay è disponibile per le configurazioni a tre e quattro engine. La dispersione del system bay è un'opzione di posizionamento del bay che consente la separazione fisica tra il System Bay 2 e il System Bay 3 rispondendo in questo modo a potenziali limitazioni di ingombro. La distanza massima tra il System Bay 2 e il System Bay 4 è 10,0 m.</p></span> 
+</html>

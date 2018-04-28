@@ -1,0 +1,12 @@
+<html>
+	<title> 		DAE DE ALTA DENSIDADE
+	</title> 	<span><p>As DAEs (Disk Array Enclosures) estão no centro do processamento de armazenamento de dados. Elas fornecem conectividade Fibre Channel de 4 Gb/s com módulos de I/O para back-end no mecanismo ou outras DAEs e com loops de drive nas gavetas DAE. As DAEs podem ser conectadas diretamente ao mecanismo ou encadeadas em série com outras DAEs.</p></span> 	<span><p>As DAEs estão disponíveis como padrão, com 15 drives, ou como alta densidade, tipos de DAE com 25 drives. As DAEs de alta densidade podem abrigar apenas drives de 2,5 pol. Já as DAEs padrão podem acomodar tanto drives de 2,5 pol. quanto de 3,5 pol.</p></span> 	<span>
+	<p>As DAEs incluem os seguintes componentes principais:</p>
+		<ul>
+			<li>Um máximo de 15 ou 25 drives por gaveta, dependendo do tipo de DAE</li>
+			<li>2 módulos redundantes de fonte de alimentação/refrigeração da DAE (acessíveis pela parte traseira)</li>
+			<li>2 LCCs (Link Control Cards, placas de controle de link) (acessíveis pela parte traseira) que fornecem o bypass do drive e a funcionalidade de failover em loop do Fibre Channel.</li>
+			<li>As DAEs podem ser conectadas diretamente ao mecanismo ou encadeadas em série com outras DAEs.</li>
+		</ul> 	
+	</span>
+</html> 

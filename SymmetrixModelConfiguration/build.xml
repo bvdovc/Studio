@@ -1,0 +1,31 @@
+<project name="SymmetrixModelConfiguration BUILD" default="compile">
+ 
+	<property file="../build.properties" />
+	<taskdef resource="flexTasks.tasks" classpath="${FLEX_TASKS}" />
+
+	<import file="../${MODEL_NAME}/build.xml" as="modelbuild"/>
+		
+	<target name="clean">
+		<echo>----------------------------------------------</echo>
+		<echo message="Cleaning configuration bin..." />
+		<delete dir="${CONFIG_BIN}" includeemptydirs="true" failonerror="false" />
+		<mkdir dir="${CONFIG_BIN}" /> 
+	</target>
+	
+	<target name="compile" depends="clean">
+		<echo>----------------------------------------------</echo>
+		<echo message="Starting configuration compilation..."/>
+		<antcall target="modelbuild.compile" />
+		<exec executable="${COMPC}" failonerror="true" failifexecutionfails="true">
+							<!-- Set the output path -->
+							<arg line="-output '${CONFIG_BIN}/${CONFIG_NAME}.swc'"/>
+							<!-- Include all of the AS3 files in LIBRARY -->
+							<arg line="-include-sources '${CONFIG_SRC}'" />
+							<arg line="-library-path '${MODEL_BIN}'"/>
+						</exec> 
+		<echo message="Finished compiling configuration ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	
+</project>

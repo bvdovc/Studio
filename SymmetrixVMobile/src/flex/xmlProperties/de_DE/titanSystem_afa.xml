@@ -1,0 +1,14 @@
+﻿<html>
+	<title>SYSTEM-BAY 1</title>
+	<span><p>Alle VMAX-All-Flash-System-Bays bringen ein oder zwei V-Brick-/zBrick-Bausteine unter, die jeweils aus einer Engine, zwei Laufwerks-Array-Gehäusen (DAEs) mit hoher Dichte und 120 Laufwerken bestehen, zwei Lithium-Ionen-Stand-by-Netzteilen (SPS) für die Notstromversorgung der Engine sowie zwei Stromverteilereinheiten (PDUs), die redundante Stromversorgungszonen (Zone A und Zone B) mit Strom versorgen.</p></span>
+	<span><p>Die folgenden Komponenten liegen ausschließlich in System-Bay 1 vor: </p>
+		<ul>
+			<li>Zwei Lithium-Ionen-Stand-by-Netzteile (SPS) am Boden des Bays, die die InfiniBand(IB)-Verbindung mit virtueller Matrix mit Notstrom versorgen, wenn das Array mit mehreren V-Bricks/zBricks konfiguriert ist. </li>
+			<li>InfiniBand(IB)-Verbindung, wenn das Array mit mehreren V-Bricks/zBricks konfiguriert ist </li>
+			<li>Ethernetswitch </li>
+			<li>KVM (Keyboard, Video, Mouse = Tastatur, Video, Maus) </li>
+		</ul>
+	</span>
+</html>
+
+

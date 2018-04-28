@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                xmlns:s="library://ns.adobe.com/flex/spark">
+
+    <fx:Script source="../../../script/components/breadcrumb/breadcrumbItemRenderer.as"/>
+    
+    <s:BorderContainer styleName="breadcrumbItemStyle"
+                       borderVisible="false" 
+                       backgroundAlpha="0"
+					   fontWeight="{14 * FlexGlobals.topLevelApplication.height/ViewConstants.DEFAULT_APP_HEIGHT}">
+        
+        <s:backgroundFill>
+            <s:LinearGradient rotation="90">
+                <s:GradientEntry color="#2483c2"/>
+                <s:GradientEntry color="#2896de"/>
+            </s:LinearGradient>
+        </s:backgroundFill>
+        <s:layout>
+            <s:HorizontalLayout
+                gap="5"
+                verticalAlign="middle"/>
+        </s:layout>
+        <s:Label id="breadcrumbItem"
+                 toolTip="{data.toolTip}"/>
+        <s:Label id="lblArrow" enabled="false"
+                 text=">"/>
+    </s:BorderContainer>
+</s:ItemRenderer>

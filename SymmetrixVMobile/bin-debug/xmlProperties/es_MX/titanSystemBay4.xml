@@ -1,0 +1,16 @@
+<html>
+    <title>         BAHÍA DE SISTEMA 4
+    </title>     <span>
+        <p>La bahía de sistema 3 y la bahía de sistema 4 alojan solamente los componentes básicos de las bahías de sistemas que residen en cualquier bahía de sistema.</p>     
+    </span>      <span>
+        <p>La bahía de sistema 3 aloja el motor 3 y la bahía de sistema 4 aloja el motor 4. Cada bahía de sistema puede alojar un máximo de 10 gabinetes de arreglos de discos (DAE) en las configuraciones de arreglos estándar o un máximo de 12 DAE en las de alta densidad. La cantidad de DAE en cualquier bahía de sistema es cuatro, independientemente del tipo de configuración del arreglo. Estos cuatro DAE son DAE 1, DAE 2, DAE 5 y DAE 6, también denominados DAE de vault.</p>     
+    </span>      <span>
+        <p>Los componentes de alimentación de las bahías de sistema incluyen módulos de fuente de alimentación en standby (SPS), unidades de distribución de alimentación (PDU) y paneles de distribución de alimentación (PDP).</p>     
+    </span>      <span>
+        <p>Los componentes de alimentación ubicados en cada lado de la bahía pertenecen a zonas de alimentación independientes que se deben conectar a líneas de alimentación de CA independientes, a fin de garantizar redundancia de alimentación.</p>     
+    </span>      <span>
+        <p>Dos módulos SPS ubicados en la parte inferior de la bahía de sistema proporcionan alimentación de respaldo a los DAE de vault. Dos módulos SPS ubicados en el medio de la bahía de sistema proporcionan alimentación de respaldo al motor.</p>     
+    </span>      <span>
+        <p>Desde la parte posterior, se puede acceder a los PDP y a las PDU que están instalados en cada lado de la bahía. Proporcionan control centralizado de distribución e interfaz para la alimentación de CA de entrada. Los PDP se conectan con las líneas de alimentación de CA de entrada, proporcionan el switch de encendido/apagado principal y también se conectan con los PDP dentro de la misma zona de alimentación. Los PDP, además, distribuyen la alimentación a componentes individuales y también contienen los switches de alimentación de encendido/apagado.</p>     
+    </span> 
+</html>

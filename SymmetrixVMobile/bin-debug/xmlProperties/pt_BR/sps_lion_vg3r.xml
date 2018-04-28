@@ -1,0 +1,19 @@
+﻿<html>
+	<title>SPS (Standby Power Supply, fonte de alimentação em standby) Li-Ion</title>
+
+	<span>
+		<p>A SPS-es Li-Ion fornece alimentação CC redundante aos mecanismos e às interconexões InfiniBand (IB) e reside somente em gabinetes do sistema. A SPS-es apresenta os componentes a seguir: 
+		</p>
+	<ul>
+		<li>Entrada de linha CA </li>
+		<li>Baterias </li>
+		<li>Carga da bateria</li>
+		<li>Conversor de CC-CC</li>
+		<li>Porta RS232</li>
+		<li>4 tomadas CA </li>
+	</ul>
+	</span>
+	<span>
+	<p> Durante a operação on-line, a SPS fornece a carga de saída CC diretamente da entrada de linha CA. O carregador mantém uma carga flutuante nas baterias e recarrega-as quando necessário. Se a entrada de linha CA falhar, a saída é desconectada da entrada de linha CA e, em vez disso, é abastecida pelas baterias internas e pelo conversor CC-CC (operação em bateria).
+	</p></span>
+</html>

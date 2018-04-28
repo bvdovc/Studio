@@ -1,0 +1,31 @@
+<html>
+	<title>系统机架 1</title>
+	
+	<span>
+		<p>系统机架 1 在 PowerMax 8000 阵列中包含 1 至多达 4 个 Brick/zBrick。Brick/zBrick 包含一个引擎、DAE 和一对 SPS。</p>
+	</span>
+	<span>
+		<p>Brick 和 zBrick 之间的区别是：</p>
+	</span>
+	<span>
+		<ul>
+			<li>Brick 的基本存储容量是 53 TBu，zBrick 则为 13 TBu</li>
+			<li>Brick 提供主机连接的 I/O 模块为光纤通道、iSCSI 和/或 FICON（仅限混合系统），zBrick 则仅为 FICON。</li>
+	   </ul>
+	</span>
+	 <span>
+		<p>除了 Brick/zBrick 组件外，系统机架 1 包含 InfiniBand 互连和以太网交换机。这些是系统机架 1 的专有组件。</p>
+	 </span>
+	 <span>
+		<p>可从背面访问，机架每侧分别带有一个全高、垂直的配电装置 (PDU)。</p>
+	</span>
+	<span>
+		<p>系统机架 1 填充从底部的引擎 1 的 SPS 开始，然后是 DAE、引擎 1、引擎 2 的 SPS，最后是引擎 2。上半部分的填充与下半部分相似，从底部开始依次为引擎 3、引擎 3 的 SPS、引擎 4、DAE，然后是机架顶部的引擎 4 的 SPS。</p>
+	</span>
+	<span>
+		<p>每个 Brick/zBrick 都有一个 DAE 并共享一个 DAE。因此，三个完全填充的 DAE 为两个 Brick/zBrick 提供存储容量。共享的 DAE 包含驻留在专用驱动器插槽的通用备盘驱动器。</p>	
+	</span>	
+
+</html>
+
+

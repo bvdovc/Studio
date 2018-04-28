@@ -1,0 +1,12 @@
+<html>
+	<title> 		DAE DE ALTA DENSIDAD
+	</title> 	<span><p>Los gabinetes de arreglos de discos (DAE) son el núcleo del procesamiento de almacenamiento de datos. Proporcionan conectividad Fibre Channel de 4 Gb/s con los módulos de I/O de back-end en el motor o en otros DAE y con los loops de unidades en los gabinetes DAE. Los DAE se pueden conectar directamente al motor o en serie a otros DAE.</p></span> 	<span><p>Hay dos tipos de DAE disponibles: DAE estándar (de 15 unidades) o DAE de alta densidad (de 25 unidades). Los DAE de alta densidad solo pueden alojar unidades de 2.5 in y los DAE estándar pueden alojar unidades de 2.5 in y 3.5 in.</p></span> 	<span>
+	<p>Los DAE incluyen los siguientes componentes principales:</p>
+		<ul>
+			<li>Un máximo de 15 o 25 unidades por gabinete, según el tipo de DAE</li>
+			<li>Dos módulos de fuente de alimentación/enfriamiento de DAE redundantes (a los que se accede desde la parte posterior)</li>
+			<li>Dos tarjetas LCC (Link Control Card) (a las que se accede desde la parte posterior) que proporcionan el desvío de la unidad y la funcionalidad de failover de loop Fibre Channel.</li>
+			<li>Los DAE se pueden conectar directamente al motor o en serie a otros DAE.</li>
+		</ul> 	
+	</span>
+</html> 

@@ -1,0 +1,10 @@
+<html>
+	<title> 		BAIE DE STOCKAGE STANDARD
+	</title> 	<span>
+		<p>Les baies de stockage standard hébergent au minimum huit et au maximum 16&nbsp;boîtiers DAE 15&nbsp;disques ainsi que des composants d’alimentation. Les boîtiers DAE peuvent héberger quatre disques au minimum et 15&nbsp;au maximum.</p> 	
+	</span> 	<span>
+		<p>Les composants d’alimentation de la baie de stockage comprennent des modules d’alimentation auxiliaire (SPS), des unités d’alimentation (PDU) et des panneaux de distribution de l’alimentation (PDP). Huit modules d’alimentation auxiliaire au centre de la baie assurent une alimentation de secours pour 16&nbsp;boîtiers DAE, soit deux modules SPS pour quatre boîtiers DAE.</p> 	
+	</span> 	<span>
+		<p>Il est possible d’accéder aux panneaux de distribution de l’alimentation et aux unités d’alimentation par l’arrière. Ils fournissent l’interface centralisée et assurent le contrôle de distribution de l’alimentation CA en entrée. Les panneaux de distribution de l’alimentation sont branchés sur les lignes d’alimentation CA en entrée. Ils comportent l’interrupteur marche/arrêt principal et sont reliés également aux panneaux de distribution de l’alimentation au sein de la même zone d’alimentation. Les panneaux de distribution de l’alimentation distribuent l’alimentation à chaque composant et comprennent également les interrupteurs marche/arrêt. Les composants d’alimentation situés de chaque côté de la baie appartiennent à des zones d’alimentation indépendantes, qui doivent être connectées à des lignes d’alimentation CA indépendantes dans le but d’assurer une redondance de l’alimentation.</p> 	
+	</span>
+</html>

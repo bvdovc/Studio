@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="sym.controller.SymmController"/>
+    <classEntry path="sym.controller.utils.ImageUtility"/>
+    <classEntry path="sym.controller.events.ComponentSelectionChangedEvent"/>
+    <classEntry path="sym.controller.events.ViewRefreshRequestEvent"/>
+    <classEntry path="sym.controller.components.UIComponentBase"/>
+    <classEntry path="sym.controller.utils.IRenderer"/>
+    <classEntry path="sym.controller.utils.RenderUtility"/>
+    <classEntry path="sym.controller.utils.DrawingRenderer"/>
+    <classEntry path="sym.controller.utils.ImageRenderer"/>
+    <classEntry path="sym.controller.utils.IToolTipProvider"/>
+    <classEntry path="sym.controller.utils.IPropertyTextProvider"/>
+    <classEntry path="sym.controller.utils.ToolTipProvider"/>
+    <classEntry path="sym.controller.utils.IComponentNameProvider"/>
+    <classEntry path="sym.controller.utils.ComponentNameProvider"/>
+    <classEntry path="sym.controller.events.RedrawEvent"/>
+    <classEntry path="sym.controller.utils.HtmlPropertyTextProvider"/>
+    <classEntry path="sym.controller.model.BulletItem"/>
+    <classEntry path="sym.controller.events.WizardDataGridEvent"/>
+    <classEntry path="sym.controller.model.DragDropController"/>
+    <classEntry path="sym.controller.events.ComponentDragDropEvent"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

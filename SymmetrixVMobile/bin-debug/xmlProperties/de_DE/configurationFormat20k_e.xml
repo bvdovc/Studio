@@ -1,0 +1,16 @@
+<html>
+	<title>
+ KONFIGURATION
+	</title>
+	<span>
+		<p>Details zur aktuellen Konfiguration:</p>
+		<ul>
+			<li>Anzahl der Engines: {0}</li>
+			<li>Anzahl der DAEs: {1}</li>
+			<li>Maximale Anzahl der Laufwerke: {2}</li>
+		</ul>
+	</span>
+	<span><p>Die VMAX-Arraykonfigurationen umfassen mindestens einen Systemschacht, der Platz für ein bis acht Engines und mehrere halb oder vollständig bestückte Speicherschächte bietet. Dies hängt von der Anzahl der Engines im Array ab. Engines sind die wichtigsten I/O-Verarbeitungseinheiten, die Cache, CPU-Leistung sowie eine Verbindung zum Front-end (Host) und Back-end für die Laufwerke im Array bereitstellen.</p></span>
+	<span><p>Die maximale Arraygröße umfasst immer den Systemschacht und 10 Speicherschächte (fünf auf jeder Seite des Systemschachts). DAEs (Disk Array Enclosures) aus dedizierten Speicherschächten und dedizierten DAE-Standorten sind mit einer dedizierten Engine im Systemschacht verbunden. Abhängig von der Art der Verbindung der DAEs mit der Engine werden sie entweder als DAEs mit direkter Verbindung oder DAEs in einer Reihenschaltung bezeichnet. Speicherschächte enthalten entweder DAEs mit direkter Verbindung oder DAEs in einer Reihenschaltung.</p></span>
+	<span><p>Erweiterte Laufwerkschleifenkonfigurationen unterstützen maximal vier Engines und höchstens vier Level von DAEs in einer Reihenschaltung, um die Konfiguration einer großen Speicherkapazität für eine einzige Engine zu ermöglichen. Das Produkt der VMAX-Serie unterstützt VMAX SE-Arrays mit einer einzigen Engine, für die kein Upgrade auf die VMAX-Arrays der Enterprise-Klasse durchgeführt werden kann. Die VMAX SE-Systeme können maximal zwei Schächte umfassen: einen Systemschacht, auf dem die Engine und die DAEs (Disk Array Enclosures) gehostet werden, und einen vollständig bestückten Speicherschacht.</p></span>
+</html>

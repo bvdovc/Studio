@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009"
+		xmlns:s="library://ns.adobe.com/flex/spark"
+		xmlns:toolbar="sym.viewer.mobile.views.components.toolbar.*"
+		xmlns:breadcrumb="sym.viewer.mobile.views.components.breadcrumb.*"
+		xmlns:dropdown="sym.viewer.mobile.views.components.dropdown.*"
+		xmlns:titleBar="sym.viewer.mobile.views.components.titleBar.*"
+		xmlns:mx="library://ns.adobe.com/flex/mx"
+		preinitialize="homeView_preinitializeHandler(event)" 
+		styleName="home"
+		destructionPolicy="never">
+	
+	<fx:Script>
+		<![CDATA[
+			import flashx.textLayout.formats.BackgroundColor;
+			
+			import sym.objectmodel.common.Constants;
+			import sym.viewer.mobile.utils.CommonUtility;
+			import sym.viewer.mobile.views.skins.FilterWizardButtonSkin;
+			
+			
+		]]>
+	</fx:Script>
+	
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<fx:Metadata>
+		[ResourceBundle("main")]
+	</fx:Metadata>
+	<fx:Script source="../script/homeView.as"/>
+	
+	<s:titleContent>
+		<titleBar:TitleBar currentView="{this}" />
+		
+		<toolbar:ToolBarComponent horizontalAlign="right">
+			
+			<s:Button id="importXML"
+					  skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"
+					  label="{getResString('main', 'IMPORT_SIZER_XML')}"
+					  width="20%"
+					  height="85%"
+					  useHandCursor="true"
+					  buttonMode="true"
+					  click="openFolder(event)">								
+			</s:Button>
+			
+			<dropdown:DropDown id="languageList"
+							   labelField="label"
+							   minWidth="200"
+							   height="80%"
+							   right="5"
+							   top="2"
+							   bottom="2"
+							   creationComplete="onLanguageListCreation(event)"
+							   change="onLanguageChange(event)"/>		
+			
+		</toolbar:ToolBarComponent>
+	</s:titleContent>
+	
+	<s:BorderContainer id="homeMainContainer"
+					   width="100%"
+					   height="100%"
+					   styleName="home">
+		
+		<s:Scroller height="100%"
+					width="100%" 
+					skinClass="sym.viewer.mobile.views.skins.HomeVScrollerSkin">
+			
+			<s:VGroup width="100%" >
+				
+				<s:HGroup id="familySeriesContent"
+						  width="100%"
+						  gap="50"
+						  paddingTop="50"
+						  paddingBottom="10"
+						  paddingLeft="-10" >
+					<s:VGroup id="familySeriesGroup"
+							  width="75%"
+							  height="60%"
+							  gap="50"
+							  horizontalAlign="center"
+							  verticalAlign="middle">
+						<s:VGroup id="vmax_250F"
+								  width="100%"
+								  height="100%"
+								  paddingLeft="40"
+								  horizontalAlign="center"
+								  paddingBottom="0"
+								  useHandCursor="true"
+								  buttonMode="true"
+								  click="changeVMax(Constants.VMAX_250F)"
+								  visible="{CommonUtility.INCLUDE_AFA_SERIES}"
+								  includeInLayout="{CommonUtility.INCLUDE_AFA_SERIES}">
+							<s:BitmapImage id="vmax_250F_image"
+										   width="30%"
+										   height="100"
+										   smooth="true"
+										   scaleMode="letterbox"
+										   source="@Embed('/images/vmax_250f.png')"/>
+							<s:Label width="100%"
+									 paddingLeft="185"
+									 paddingRight="10"
+									 paddingTop="0"
+									 paddingBottom="10"
+									 fontWeight="normal"
+									 fontSize="18"
+									 text="VMAX 250F">									
+							</s:Label>
+						</s:VGroup>
+						<s:VGroup id="vmax_950F"
+								  width="100%"
+								  height="100%"
+								  paddingLeft="40"
+								  horizontalAlign="center"
+								  paddingBottom="-80"
+								  useHandCursor="true"
+								  buttonMode="true"
+								  click="changeVMax(Constants.VMAX_950F)"
+								  visible="{CommonUtility.INCLUDE_AFA_SERIES}"
+								  includeInLayout="{CommonUtility.INCLUDE_AFA_SERIES}">
+							<s:BitmapImage id="vmax_950F_image"
+										   width="30%"
+										   height="100"
+										   smooth="true"
+										   scaleMode="letterbox"
+										   source="@Embed('/images/vmax_850f.png')"/>
+							<s:Label width="100%"
+									 paddingLeft="185"
+									 paddingRight="10"
+									 paddingTop="0"
+									 paddingBottom="10"
+									 fontWeight="normal"
+									 fontSize="18"
+									 text="VMAX 950F">									
+							</s:Label>
+						</s:VGroup>
+						<s:VGroup id="pm2000"
+								  width="100%"
+								  height="100%"
+								  paddingLeft="40"
+								  horizontalAlign="center"
+								  paddingBottom="0"
+								  paddingTop="100"
+								  useHandCursor="true"
+								  buttonMode="true"
+								  click="changeVMax(Constants.PowerMax_2000)"
+								  visible="{CommonUtility.INCLUDE_PM_SERIES}"
+								  includeInLayout="{CommonUtility.INCLUDE_PM_SERIES}">
+							<s:BitmapImage id="pm_2000_image"
+										   width="35%"
+										   height="100"
+										   smooth="true"
+										   scaleMode="letterbox"
+										   source="@Embed('/images/DellEMC_PowerMax2000.jpg')"/>
+							<s:Label width="100%"
+									 paddingLeft="170"
+									 paddingRight="10"
+									 paddingTop="-20"
+									 paddingBottom="10"
+									 fontWeight="normal"
+									 fontSize="18"
+									 text="PowerMax 2000">									
+							</s:Label>
+						</s:VGroup>
+						<s:VGroup id="pm8000"
+								  width="100%"
+								  height="100%"
+								  paddingLeft="40"
+								  horizontalAlign="center"
+								  paddingBottom="40"
+								  useHandCursor="true"
+								  buttonMode="true"
+								  click="changeVMax(Constants.PowerMax_8000)"
+								  visible="{CommonUtility.INCLUDE_PM_SERIES}"
+								  includeInLayout="{CommonUtility.INCLUDE_PM_SERIES}">
+							<s:BitmapImage id="pm_8000_image"
+										   width="40%"
+										   height="150"
+										   smooth="true"
+										   scaleMode="letterbox"
+										   source="@Embed('/images/DellEMC_PowerMax8000.jpg')"/>
+							<s:Label width="100%"
+									 paddingLeft="170"
+									 paddingRight="10"
+									 paddingTop="0"
+									 paddingBottom="10"
+									 fontWeight="normal"
+									 fontSize="18"
+									 text="PowerMax 8000">									
+							</s:Label>
+						</s:VGroup>
+					</s:VGroup>
+					<s:VGroup id="familySeriesProperties"
+							  width="70%"
+							  height="100%"
+							  gap="80"
+							  horizontalAlign="left" >
+						<s:VGroup id="vmax250FProperty"
+								  width="100%"
+								  height="100%"
+								  paddingTop="-10"
+								  useHandCursor="true"
+								  buttonMode="true"
+								  verticalAlign="middle"
+								  visible="{CommonUtility.INCLUDE_AFA_SERIES}"
+								  includeInLayout="{CommonUtility.INCLUDE_AFA_SERIES}">
+							<s:BorderContainer styleName="seriesProperty" 
+											   width="95%" >
+								<s:Label width="100%"
+										 paddingLeft="10"
+										 paddingRight="10"
+										 paddingTop="10"
+										 paddingBottom="10"
+										 fontWeight="normal"
+										 fontSize="16"
+										 click="changeVMax(Constants.VMAX_250F)"
+										 text="{ResourceManager.getInstance().getString('main', 'DESCRIPTION_250F')}"/>
+							</s:BorderContainer>
+							<s:RichEditableText id="readMoreForVmax250f" 
+												editable="false" 
+												paddingLeft="10"
+												focusEnabled="false">
+								<s:textFlow>
+									<s:TextFlow>
+										<s:p>
+											<s:a click="openReadMorePopUp(Constants.VMAX_250F)">Read more</s:a>
+										</s:p>
+									</s:TextFlow>
+								</s:textFlow>
+							</s:RichEditableText>
+							<s:Label styleName="homeSeriesTitle" />
+						</s:VGroup>
+						<s:VGroup id="vmax950FProperty"
+								  width="100%"
+								  height="100%"
+								  paddingTop="-50"
+								  useHandCursor="true"
+								  buttonMode="true"
+								  verticalAlign="middle"
+								  visible="{CommonUtility.INCLUDE_AFA_SERIES}"
+								  includeInLayout="{CommonUtility.INCLUDE_AFA_SERIES}">
+							<s:BorderContainer styleName="seriesProperty" 
+											   width="95%" >
+								<s:Label width="100%"
+										 paddingLeft="10"
+										 paddingRight="10"
+										 paddingTop="10"
+										 paddingBottom="10"
+										 fontWeight="normal"
+										 fontSize="16"
+										 click="changeVMax(Constants.VMAX_950F)"
+										 text="{ResourceManager.getInstance().getString('main', 'DESCRIPTION_850F')}"/>
+							</s:BorderContainer>
+							<s:RichEditableText id="readMoreForVmax950f" 
+												editable="false" 
+												paddingLeft="10"
+												focusEnabled="false">
+								<s:textFlow>
+									<s:TextFlow>
+										<s:p>
+											<s:a click="openReadMorePopUp(Constants.VMAX_950F)">Read more</s:a>
+										</s:p>
+									</s:TextFlow>
+								</s:textFlow>
+							</s:RichEditableText>
+							<s:Label styleName="homeSeriesTitle" />
+						</s:VGroup>
+						<s:VGroup id="pm2000Property"
+								  width="100%"
+								  height="100%"
+								  paddingTop="-80"
+								  useHandCursor="true"
+								  buttonMode="true"
+								  verticalAlign="middle"
+								  visible="{CommonUtility.INCLUDE_PM_SERIES}"
+								  includeInLayout="{CommonUtility.INCLUDE_PM_SERIES}">
+							<s:BorderContainer styleName="seriesProperty" 
+											   width="95%" >
+								<s:Label width="100%"
+										 paddingLeft="10"
+										 paddingRight="10"
+										 paddingTop="10"
+										 paddingBottom="10"
+										 click="changeVMax(Constants.PowerMax_2000)"
+										 fontWeight="normal"
+										 fontSize="16"
+										 text="{ResourceManager.getInstance().getString('main', 'DESCRIPTION_PM2000')}"/>
+							</s:BorderContainer>
+							<s:RichEditableText id="readMoreForPm2000" 
+												editable="false" 
+												paddingLeft="10"
+												focusEnabled="false">
+								<s:textFlow>
+									<s:TextFlow>
+										<s:p>
+											<s:a click="openReadMorePopUp(Constants.PowerMax_2000)">Read more</s:a>
+										</s:p>
+									</s:TextFlow>
+								</s:textFlow>
+							</s:RichEditableText>
+							<s:Label styleName="homeSeriesTitle" />
+						</s:VGroup>
+						<s:VGroup id="pm8000Property"
+								  width="100%"
+								  height="100%"
+								  paddingTop="-130"
+								  useHandCursor="true"
+								  buttonMode="true"
+								  verticalAlign="middle"
+								  visible="{CommonUtility.INCLUDE_PM_SERIES}"
+								  includeInLayout="{CommonUtility.INCLUDE_PM_SERIES}">
+							<s:BorderContainer styleName="seriesProperty" 
+											   width="95%" >
+								<s:Label width="100%"
+										 paddingLeft="10"
+										 paddingRight="10"
+										 paddingTop="10"
+										 paddingBottom="10"
+										 click="changeVMax(Constants.PowerMax_8000)"
+										 fontWeight="normal"
+										 fontSize="16"
+										 text="{ResourceManager.getInstance().getString('main', 'DESCRIPTION_PM8000')}"/>
+							</s:BorderContainer>
+							<s:RichEditableText id="readMoreForPm8000" 
+												editable="false" 
+												paddingLeft="10"
+												focusEnabled="false">
+								<s:textFlow>
+									<s:TextFlow>
+										<s:p>
+											<s:a click="openReadMorePopUp(Constants.PowerMax_8000)">Read more</s:a>
+										</s:p>
+									</s:TextFlow>
+								</s:textFlow>
+							</s:RichEditableText>
+							<s:Label styleName="homeSeriesTitle" />
+						</s:VGroup>	
+					</s:VGroup>
+				</s:HGroup>
+			</s:VGroup>
+		</s:Scroller>
+	</s:BorderContainer>
+</s:View>

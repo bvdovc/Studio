@@ -1,0 +1,17 @@
+<html>
+	<title>Fuente de alimentación en standby (SPS) de iones de litio</title>
+	<span>
+		<p>Las SPS de iones de litio proporcionan alimentación de CC redundante a los motores y a las interconexiones InfiniBand (IB), y residen solo en bahías del sistema. Cada SPS está compuesta por los siguientes elementos: </p>
+		<ul>
+			<li>Entrada de la línea de CA </li>
+			<li>Baterías </li>
+			<li>Cargador de baterías</li>
+			<li>Convertidor CC/CC</li>
+			<li>Puerto RS232</li>
+			<li>4 salidas de CA </li>
+		</ul>
+	</span>
+	<span>
+		<p> Durante la operación en línea, la SPS suministra carga de salida de CC directamente de la entrada de la línea de CA. El cargador mantiene un carga flotante en las baterías y las recarga cuando es necesario. Si la entrada de la línea de CA falla, la salida se desconecta de la entrada de la línea de CA y en su lugar la alimentación es suministrada por las baterías internas y el convertidor CC/CC (funcionamiento con baterías). </p>
+	</span>
+</html>

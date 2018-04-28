@@ -1,0 +1,14 @@
+<html>
+    <title>         BAHÍA DE SISTEMA 2
+    </title>     <span>
+        <p>La bahía de sistema 2 aloja el motor 2, un máximo de 10 gabinetes de arreglos de discos (DAE) en las configuraciones de arreglos estándar o un máximo de 12 DAE en las de alta densidad. La cantidad de DAE en cualquier bahía de sistema es cuatro, independientemente del tipo de configuración del arreglo. Estos cuatro DAE son DAE 1, DAE 2, DAE 5 y DAE 6, también denominados DAE de vault.</p>     
+    </span>      <span>
+        <p>Los componentes clave de hardware ubicados solo en la bahía de sistema 2 son dos gabinetes de placa de interfaz matriz (MIBE) que garantizan alta disponibilidad en arreglos con múltiples motores, ya que proporcionan conectividad entre los motores.</p>     
+    </span>      <span>
+        <p>Los componentes de alimentación de las bahías de sistema incluyen módulos de fuente de alimentación en standby (SPS), unidades de distribución de alimentación (PDU) y paneles de distribución de alimentación (PDP). Los componentes de alimentación ubicados en cada lado de la bahía pertenecen a zonas de alimentación independientes que se deben conectar a líneas de alimentación de CA independientes, a fin de garantizar redundancia de alimentación.</p>     
+    </span>      <span>
+        <p>Dos módulos SPS ubicados en la parte inferior de la bahía de sistema proporcionan alimentación de respaldo a los DAE de vault. Dos módulos SPS ubicados en el medio de la bahía de sistema proporcionan alimentación de respaldo al motor.</p>     
+    </span>      <span>
+        <p>Desde la parte posterior, se puede acceder a los PDP y a las PDU que están instalados en cada lado de la bahía. Proporcionan control centralizado de distribución e interfaz para la alimentación de CA de entrada. Los PDP se conectan con las líneas de alimentación de CA de entrada, proporcionan el switch de encendido/apagado principal y también se conectan con los PDP dentro de la misma zona de alimentación. Los PDP, además, distribuyen la alimentación a componentes individuales y también contienen los switches de alimentación de encendido/apagado.</p>     
+    </span> 
+</html>

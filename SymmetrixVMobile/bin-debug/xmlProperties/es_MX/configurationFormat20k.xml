@@ -1,0 +1,15 @@
+<html>
+	<title> 		CONFIGURACIÓN
+	</title>
+ 	<span>
+		<p>Detalles de la configuración actual:</p>
+		<ul>
+			<li>Cantidad de motores: {0}</li>
+			<li>Cantidad de DAE: {1}</li>
+			<li>Cantidad máxima de unidades: {2}</li>
+		</ul> 	
+	</span>
+	<span><p>Las configuraciones de arreglos están diseñadas para ambientes de almacenamiento empresarial. Las configuraciones de arreglos incluyen al menos una bahía de sistema que puede alojar de uno a ocho motores y una cantidad de bahías de almacenamiento pobladas a media capacidad o por completo, según la cantidad de motores del arreglo. Los motores son las unidades de procesamiento de I/O clave que proporcionan conectividad de caché, capacidad de CPU y conectividad de front-end (host) y back-end a las unidades del arreglo.</p></span> 	
+	<span><p>El tamaño máximo de configuración del arreglo depende del tipo de gabinetes de arreglos de disco (DAE) que se utiliza. Si solo se utilizan DAE estándar de 15 unidades, la configuración de arreglos máxima incluye una bahía de sistema con ocho motores y 10 bahías de almacenamiento. Si se configuran DAE de alta densidad de 25 unidades, las configuraciones máximas constan de una bahía de sistema y ocho bahías de almacenamiento. Se pueden utilizar los dos tipos de DAE dentro del arreglo, pero no dentro de la misma bahía de almacenamiento.</p></span> 	
+	<span><p>Los DAE de bahías de almacenamiento dedicadas y ubicaciones de DAE dedicadas se conectan con un motor dedicado de la bahía de sistema. Según la manera en que los DAE se conectan con el motor, se conocen como DAE de conexión directa o DAE en serie.</p></span> 	
+</html>

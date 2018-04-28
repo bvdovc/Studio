@@ -1,0 +1,49 @@
+﻿<html>
+	<title>
+ Guida principale 
+	</title>
+	<span><h>Informazioni su VMAX STUDIO</h></span>
+		<span>
+			<p>VMAX STUDIO è uno strumento di visualizzazione intuitivo che ti consente di:</p>
+			<ul>
+				<li> Visualizzare le configurazioni degli array VMAX 250F e VMAX 950F seguendo una breve procedura guidata di configurazione.</li>
+				<li> Salvare le configurazioni degli array internamente nel formato VMAX Studio. Le configurazioni salvate vengono visualizzate come icone nella parte inferiore del riquadro di filtraggio. </li>
+				<li> Salvare object quali configurazioni o singoli componenti nel formato di file grafico PNG.</li>
+				<li> Esplorare le configurazioni degli array e i componenti hardware utilizzando la guida sensibile al contesto e le visualizzazioni dei componenti drill-down.</li>
+			</ul>
+		</span>
+		<span>
+			<p> Strumenti</p>
+		</span>
+		<span>
+			<img src="Save.png" alt="pulsante" heigth="50"/>
+			<p> Salva configurazione: fai clic per salvare una configurazione appena creata. Le configurazioni salvate vengono visualizzate nel riquadro di filtraggio come icone con ID di configurazione univoci.</p>
+		</span>
+		<span>
+			<img src="Copy.png" alt="pulsante" heigth="50"/>
+			<p>Copia negli appunti: fai clic per copiare negli appunti il contenuto del riquadro di visualizzazione.</p>
+		</span>
+		<span>
+			<img src="Export.png" alt="pulsante" heigth="50"/>
+			<p>Esporta come immagine: fai clic per salvare il contenuto del riquadro di visualizzazione in un file *.PNG.</p>
+		</span>
+		<span>
+			<img src="Show.png" alt="pulsante" heigth="50"/>
+			<p>Evidenzia: fai clic per evidenziare i componenti di alimentazione principali nella vista della configurazione degli array.</p>
+		</span>
+		<span>
+			<img src="Toggle.png" alt="pulsante" heigth="50"/>
+			<p>Cambia vista: fai clic per cambiare visualizzazione (anteriore, posteriore, superiore).</p>
+		</span>
+		<span>
+			<img src="Property.png" alt="pulsante" heigth="50"/>
+			<p>Attiva/disattiva pannelli di proprietà: mostra o nascondi le informazioni di proprietà nel/dal riquadro di visualizzazione.</p>
+		</span>
+		<span>
+			<img src="ConfW.png" alt="pulsante" heigth="50"/>
+			<p>Procedura guidata di configurazione: fai clic per configurare un nuovo array VMAX All Flash.</p>
+		</span>
+    <span>
+		<p>Per qualsiasi domanda o commento su VMAX STUDIO, invia un'email a SymmSystemViewers@emc.com</p>
+	</span>
+</html>

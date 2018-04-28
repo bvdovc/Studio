@@ -1,0 +1,19 @@
+<html> 
+    <title>
+        BAHÍA DEL SISTEMA 1 
+    </title> 
+    <span><p>La bahía del sistema 1 aloja el motor 1, un mínimo de cuatro gabinetes de arreglos de discos (DAE), y un máximo de 10 DAE en las configuraciones estándares o de 12 DAE en las configuraciones de arreglos de alta densidad. La bahía del sistema 1 también aloja los componentes de NAS que proporcionan acceso a datos a nivel de archivo en el arreglo. </p></span> 
+    <span>
+        <p>La bahía del sistema 1, que forma parte de todas las configuraciones de arreglos, contiene el procesador de servicio que está dedicado al servicio y el mantenimiento de todo el arreglo. El procesador de servicio consta de los siguientes componentes:</p>
+        <ul> 
+            <li>Servidor que proporciona funcionalidades de monitoreo del sistema, soporte remoto y creación de informes de estado.</li> 
+            <li>KVM (teclado, video y mouse).</li> 
+            <li>Sistema de alimentación ininterrumpida (UPS) que brinda alimentación de respaldo al servidor y KVM.</li> 
+        </ul>
+    </span> <span>
+    	<p>Los componentes de alimentación de la bahía del sistema incluyen módulos de fuente de alimentación en standby (SPS), unidades de distribución de alimentación (PDU) y paneles de distribución de alimentación (PDP). Los componentes de alimentación ubicados a cada lado de la bahía pertenecen a zonas de alimentación independientes que deben estar conectadas a líneas de alimentación AC independientes a fin de garantizar la redundancia de la alimentación.</p>
+    </span> <span>
+        <p>Dos módulos de SPS ubicados en la parte inferior de la bahía del sistema proporcionan alimentación de respaldo a los DAE de vault. Dos módulos de SPS ubicados en la parte media de la bahía del sistema proporcionan alimentación de respaldo al motor.</p>
+    </span> <span>
+        <p>Desde la parte posterior, es posible acceder a las PDP y PDU instaladas a cada lado de la bahía. Estas proporcionan el control de distribución y la interfaz centralizados para la alimentación AC de entrada. Las PDP se conectan a las líneas de alimentación AC de entrada, proporcionan el switch principal de encendido y apagado de la alimentación y, además, se conectan a las PDP dentro de la misma zona de alimentación. Las PDP distribuyen la alimentación a los componentes individuales y también cuentan con switches de encendido y apagado de la alimentación.</p>
+    </span> </html>

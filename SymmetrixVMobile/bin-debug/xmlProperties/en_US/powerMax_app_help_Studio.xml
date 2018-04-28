@@ -1,0 +1,54 @@
+<html>
+	<title>
+		Main Help 
+	</title>
+	<span><h>About PowerMax Studio</h></span>
+		<span>
+			<p>PowerMax Studio is an intuitive visualization tool that enables you to:</p>
+			<ul>
+				<li> Visualize the PowerMax 2000 and PowerMax 8000 as well as VMAX 250F and VMAX950F array configurations by following a few-step Configuration Wizard.</li>
+				<li> Save array configurations internally in the PowerMax Studio format -  Saved configurations are displayed as icons at the bottom in the filtering pane. </li>
+				<li> Save objects such as configurations or individual components in the PNG graphics file format.</li>
+				<li> Display configurations exported from VMAX Sizer via XML.</li>
+				<li> Explore array configurations and hardware components by using the context-sensitive help and the drill-down component views.</li>
+			</ul>
+		</span>
+		<span>
+			<p> Tools</p>
+		</span>
+		<span>
+			<img src="importXML.png" alt="button" heigth="50"/>
+			<p> Import Sizer XML - Click to import XML output from VMAX Sizer. Available only for desktop version of the application .</p>
+		</span>
+		<span>
+			<img src="Save.png" alt="button" heigth="50"/>
+			<p> Save configuration - Click to save a newly created configuration. Saved configurations are displayed in the filtering pane as icons with unique configuration IDs.</p>
+		</span>
+		<span>
+			<img src="Copy.png" alt="button" heigth="50"/>
+			<p>Copy to Clipboard - Click to copy the contents of the display pane to Clipboard.</p>
+		</span>
+		<span>
+			<img src="Export.png" alt="button" heigth="50"/>
+			<p>Export as image - Click to save the contents of the display pane to a *.PNG file.</p>
+		</span>
+		<span>
+			<img src="Show.png" alt="button" heigth="50"/>
+			<p>Highlight - Click to highlight the engine and its power components in the array configuration view.</p>
+		</span>
+		<span>
+			<img src="Toggle.png" alt="button" heigth="50"/>
+			<p>Change view - Click to switch view (front, rear, top).</p>
+		</span>
+		<span>
+			<img src="Property.png" alt="button" heigth="50"/>
+			<p>Toggle property panels - Show or hide property information in/from the display pane.</p>
+		</span>
+		<span>
+			<img src="ConfW.png" alt="button" heigth="50"/>
+			<p>Configuration Wizard - Click to configure a new array.</p>
+		</span>
+    <span>
+		<p>Questions/comments? Send an e-mail to SymmSystemViewers@emc.com</p>
+	</span>
+</html>

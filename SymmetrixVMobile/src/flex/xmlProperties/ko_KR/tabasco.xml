@@ -1,0 +1,13 @@
+<html>
+	<title>25 드라이브 DAE</title>
+	<span><p>2U 크기의 25 드라이브 6.35cm(2.5") DAE(Disk Array Enclosure)는 VMAX 250F 엔진의 백엔드 입출력 모듈에 12Gb SAS 접속 구성을 제공합니다. V-Brick의 두 DAE는 엔진에 직접 연결됩니다.</p></span>
+	
+	<span>
+	<p>DAE의 주요 구성 요소는 다음과 같습니다.</p>
+		<ul>
+			<li>엔클로저당 최대 25개의 드라이브</li>
+			<li>이중화된 2개의 DAE 전원 공급 모듈(후면에서 접근할 수 있음)</li>
+			<li>LCC(Link Control Card) 2개(후면에서 접근할 수 있음)</li>
+		</ul>
+	</span>
+</html> 

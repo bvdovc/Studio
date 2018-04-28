@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:BorderContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark"
+				   backgroundColor="#FFFFFF"
+				   width="100%"
+				   height="80"
+				   preinitialize="preinitializeHandler(event)">	
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<fx:Metadata>
+		[ResourceBundle("main")]
+	</fx:Metadata>
+	
+	<fx:Script source="../../../script/components/titleBar/titleBar.as" />
+	
+	<s:layout>
+		<s:HorizontalLayout verticalAlign="middle"
+							horizontalAlign="left"
+							paddingLeft="20"
+							paddingRight="20"
+							gap="10"/>
+	</s:layout>
+	
+	<s:HGroup id="titleBarHGroup"
+		      width="100%"
+			  verticalAlign="bottom"
+			  paddingTop="0">
+		<s:Label id="lblMainTitle"
+				 text="{_mainTitle}"
+				 styleName="mainTitle"/>
+		<s:Label id = "seriesNameLabel"
+			     text="{_seriesName}"
+				 styleName="mainTitleSeria"
+				 paddingLeft="{titleBarHGroup.width / 2 - 230}"
+				 paddingBottom="1"
+				 visible="{_configView}"
+				 includeInLayout="{_configView}"/>
+	</s:HGroup>
+	<s:BitmapImage source="@Embed('/images/dell_emc_logo_blue_gray.png')"
+				   height="50%"
+				   smooth="true"
+				   scaleMode="letterbox"/>
+	
+</s:BorderContainer>

@@ -1,0 +1,9 @@
+﻿<html>
+	<title>GABINETE DO SISTEMA 1</title>
+	<span><p>O gabinete do sistema 1 contém um ou dois mecanismos (dependendo do tipo do gabinete do sistema), unidades de fonte de alimentação em standby (SPS) Li-ON para fornecer energia reserva para os mecanismos e para a interconexão InfiniBand (IB) da Virtual Matrix, se o array é configurado com mais de um mecanismo.</p></span>
+	<span><p>Os gabinetes do sistema contém todos os cabos de alimentação da gaveta DAE para as DAEs e para a conexão dos mecanismos à interconexão InfiniBand. </p></span>
+	<span><p>Os gabinetes do sistema de mecanismo único contém um mecanismo e até seis gavetas DAEs. Os gabinetes do sistema de mecanismo duplo contém dois mecanismos e até quatro DAEs. O switch Ethernet que fornece conexões Ethernet aos mecanismos e ao KVM (teclado, vídeo e mouse) são componentes exclusivos do gabinete do sistema 1.</p></span>
+    <span><p>Como outros gabinetes do sistema, o gabinete do sistema 1 inclui as unidades de distribuição de energia (PDUs) que fornecem alimentação a duas zonas de alimentação, a zona A e zona B.</p></span>
+</html>
+
+

@@ -1,0 +1,13 @@
+<html> <title>
+        SYSTEM BAY 1 </title> <span>
+        <p>Il System bay 1 ospita l'Engine 1, un minimo di quattro e un massimo di 10 Disk Array Enclosure (DAE) nella configurazione degli array standard o un massimo di 12 DAE nella configurazione a elevata densità. Il System Bay 1 ospita inoltre i componenti NAS che forniscono l'accesso a livello di file ai dati nell'array. </p>
+    </span> <span>
+        <p>Poiché fa parte di tutte le configurazioni di array, il System Bay 1 ospita il service processor dedicato all'assistenza e alla manutenzione dell'intero array. Il service processor è costituito dai seguenti componenti:</p>
+            <ul> <li>Server che offre funzionalità di monitoraggio del sistema, supporto remoto e generazione di report sullo stato</li> <li>KVM (Keyboard, Video, Mouse)</li> <li>Gruppo di continuità che fornisce l'alimentazione di backup a server e KVM</li> </ul>
+    </span> <span>
+    	<p>I componenti di alimentazione dei system bay comprendono moduli SPS (alimentatore di standby), PDU (Power Distribution Unit) e PDP (Power Distribution Panel). I componenti di alimentazione su ciascun lato del bay appartengono a power zone indipendenti che devono essere collegate a linee di alimentazione CA indipendenti per assicurare la ridondanza dell'alimentazione.</p>
+    </span> <span>
+        <p>Due moduli SPS nella parte inferiore del system bay garantiscono l'alimentazione di backup ai DAE del vault. Due moduli SPS al centro del system bay garantiscono l'alimentazione di backup all'engine.</p>
+    </span> <span>
+        <p>I moduli PDP e PDU installati su entrambi i lati del bay sono accessibili dalla parte posteriore. Entrambi i moduli forniscono l'interfaccia centralizzata e il controllo della distribuzione per l'alimentazione CA in ingresso. I PDP sono collegati alle linee di alimentazione CA in ingresso e ai PDP presenti all'interno della stessa power zone e dispongono dello switch di alimentazione principale. I PDP distribuiscono l'alimentazione ai singoli componenti e includono inoltre gli switch di alimentazione per l'accensione e lo spegnimento.</p>
+    </span> </html>

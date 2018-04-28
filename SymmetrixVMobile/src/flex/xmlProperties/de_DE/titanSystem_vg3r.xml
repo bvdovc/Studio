@@ -1,0 +1,15 @@
+<html>
+	<title>SYSTEM-BAY&#160;1</title>
+	<span>
+		<p>System-Bay 1 verfügt über ein oder zwei Engines (je nach Typ), Li-Ion-Stand-by-Netzteile für den Reservestrom für die Engines und für InfiniBand (IB)-Verbindung der virtuellen Matrix, wenn das Array mit mehreren Engines konfiguriert ist.</p>
+	</span>
+	<span>
+		<p>System-Bays enthalten sämtliche DAE-Netzkabel für DAEs und die Verbindung zu InfiniBand. </p>
+	</span>
+	<span>
+		<p>In System-Bays mit einer Engine ist Platz für bis zu sechs Disk Array Enclosures (DAEs). In System-Bays mit zwei Engines ist Platz für bis zu vier DAEs. Der Ethernet-Switch, der eine Ethernet-Verbindungen zu den Engines und zu KVM (Tastatur, Video und Maus) bereitstellt, wird nur für System-Bay 1 verwendet.</p>
+	</span>
+	<span>
+		<p>Wie andere System-Bays enthält System-Bay 1 Netzverteiler mit einer oder zwei Stromversorgungszonen: Zone A und Zone B.</p>
+	</span>
+</html>

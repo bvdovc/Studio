@@ -1,0 +1,34 @@
+<html>
+	<title>VMAX 450 All Flash</title>
+	<span>
+		<h>현재 구성 세부 정보</h>
+		<ul>
+		    <li>OS 가용 용량(TB): {0}</li>
+		    <li>MF 가용 용량(TB): {4}</li>
+			<li>v-Brick/z-Brick 수: {1}</li>
+			<li>DAE 수: {2} </li>
+			<li>최대 드라이브 수: {3}</li>
+			<li>실제 드라이브 수: {5}</li>
+			<li>FE 포트 수: {6}</li>
+		</ul>
+	</span>
+	<span><h>설명:</h></span>
+	<span><p> VMAX 450F의 크기는 v-Brick/z-Brick 시스템 1개~4개입니다. 기본 빌딩 블록인 v-Brick/z-Brick은 다음과 같이 구성됩니다.</p></span>
+	<span>
+		<ul>
+			<li>8 코어 Intel Xeon E5-2650-v2, 2.6GHz CPU를 사용한 엔진 하나(이중화된 데이터 스토리지 처리 장치)</li>
+			<li>53Tbu의 플래시 드라이브 기본 용량(각각 최대 120개의 6.35cm(2.5") 드라이브를 지원하는 고집적 DAE(Disk Array Enclosure) 2개에 걸쳐 분산되어 있음)</li>
+			<li>두 가지 간단한 오더 옵션으로 주문 가능한 소프트웨어: 오픈 시스템의 경우 F/FX, 메인프레임의 경우 zF/zFX </li>
+		</ul>
+	</span>
+		<span><p> 53TBu v-Brick/z-Brick은 다음과 같이 초기 구성할 수 있습니다 </p>
+			<ul>
+			<li>필요한 스토리지 용량과 소프트웨어가 번들로 구성된 13TB 플래시 용량(오픈 시스템)/zCapacity(메인프레임) 팩을 추가하여 스케일 업합니다.</li>
+				<li>v-Brick/z-Brick을 추가하여 성능, 접속 구성 및 처리량을 늘리는 방식으로 스케일 아웃합니다.</li>
+			</ul>
+		</span>
+		<span><p>
+ 용량과 성능을 개별적이고 선형적으로 확장함으로써 VMAX 450F 스토리지를 통해 매우 유연하게 다양한 워크로드를 처리할 수 있습니다.
+		</p></span>
+</html>
+

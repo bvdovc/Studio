@@ -1,0 +1,15 @@
+<html>
+	<title> 		CONFIGURAÇÃO
+	</title> 	
+	<span>
+		<p>Detalhes de configuração atual:</p>
+		<ul>
+			<li>Número de mecanismos: {0}</li>
+			<li>Número de DAEs: {1}</li>
+			<li>Número máximo de drives: {2}</li>
+		</ul> 	
+	</span>
+	<span><p>As configurações de array são projetadas para ambientes de armazenamento corporativo. As configurações de array incluem, pelo menos, 1 gabinete do sistema que pode abrigar de 1 a 8 mecanismos e um número de gabinetes de armazenamento totalmente preenchidos ou preenchidos pela metade, dependendo do número de mecanismos no array. Os mecanismos são as principais unidades de processamento de I/O que fornecem conectividade de cache, alimentação da CPU, front-end (host) e back-end com drives no array.</p></span> 	
+	<span><p>O tamanho máximo da configuração de array depende do tipo de DAEs (Disk Array Enclosures) em uso. Se forem usadas apenas DAEs padrão com 15 drives, a configuração máxima de array incluirá um gabinete do sistema com 8 mecanismos e 10 gabinetes de armazenamento. Se DAEs de alta densidade com 25 drives forem configuradas, as configurações máximas consistirão em um gabinete do sistema e 8 gabinetes de armazenamento. Os 2 tipos de DAE podem ser usados dentro do array, mas não dentro do mesmo gabinete de armazenamento.</p></span> 	
+	<span><p>As DAEs de gabinetes de armazenamento dedicado e locais de DAEs dedicadas se conectam a um mecanismo dedicado no gabinete do sistema. Dependendo da maneira de as DAEs se conectarem ao mecanismo, elas são chamadas de DAEs com conexão direta ou com encadeamento em série.</p></span> 	
+</html>

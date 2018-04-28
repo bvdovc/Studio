@@ -1,0 +1,13 @@
+<html>
+	<title>Boîtier DAE 25 disques</title>
+	<span><p>Les boîtiers DAE intégrant jusqu’à 25 disques 2U de 2,5 pouces fournissent une connectivité SAS de 12 Go aux modules d’E/S back-end dans le moteur VMAX 250F. Deux boîtiers DAE dans un module v-Brick sont directement connectés au moteur.</p></span>
+	
+	<span>
+	<p>Les boîtiers DAE incluent les principaux composants suivants :</p>
+		<ul>
+			<li>Jusqu’à 25 disques par boîtier</li>
+			<li>Deux modules de refroidissement de l’alimentation des boîtiers DAE redondants (accessibles par l’arrière)</li>
+			<li>Deux cartes LCC (Link Control Card) (accessibles par l’arrière)</li>
+		</ul>
+	</span>
+</html> 

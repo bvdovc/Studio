@@ -1,0 +1,19 @@
+<html>
+	<title>Li-Ion Stanby Power Supply (SPS)</title>
+
+	<span>
+		<p>The Li-Ion SPS-es provide redundant DC power to engines and to the InfiniBand (IB) interconnects and reside only in system bays. SPS-es consist of the following components:
+		</p>
+	<ul>
+		<li>AC-line inlet </li>
+		<li>Batteries </li>
+		<li>Battery charger</li>
+		<li>DC-DC converter</li>
+		<li>RS232 port</li>
+		<li>4 AC outlets </li>
+	</ul>
+	</span>
+	<span>
+	<p> During the online operation, the SPS supplies DC output load directly from the AC-line input. The charger maintains a float charge on the batteries and recharges them when necessary. If the AC-line input fails, the output is disconnected from the AC-line input and is instead supplied by the internal batteries and DC-DC converter (On-Battery operation).
+	</p></span>
+</html>

@@ -1,0 +1,14 @@
+<html> 
+    <title>
+		BAHÍA DE ALMACENAMIENTO 
+	</title> 
+	<span><p>Las configuraciones de arreglos estándares admiten bahías de almacenamiento. Estas alojan de dos a ocho gabinetes de arreglos de discos (DAE) y componentes de NAS que proporcionan acceso a datos a nivel de archivo en el arreglo. Los componentes de NAS utilizan componentes de alimentación dedicados que están conectados a fuentes de alimentación redundantes. </p></span>
+	<span><p>Los componentes de alimentación de la bahía de almacenamiento incluyen unidades de distribución de alimentación (PDU) y paneles de distribución de alimentación (PDP). A diferencia de las bahías del sistema, las bahías de almacenamiento no cuentan con módulos de fuente de alimentación en standby que proporcionen alimentación de respaldo a los DAE de la bahía de almacenamiento.</p></span> 
+	<span><p>Desde la parte posterior, es posible acceder a las PDP y PDU, las cuales proporcionan el control de distribución y la interfaz centralizados para la alimentación AC de entrada. Las PDP se conectan a las líneas de alimentación AC de entrada, proporcionan el switch principal de encendido y apagado de la alimentación y, además, se conectan a las PDP dentro de la misma zona de alimentación. Las PDP distribuyen la alimentación a los componentes individuales y también cuentan con switches de encendido y apagado de la alimentación. Los componentes de alimentación de cada lado de la bahía pertenecen a zonas de alimentación independientes que deben estar conectadas a líneas de alimentación AC independientes a fin de garantizar la redundancia de la alimentación.</p></span> 
+</html>
+
+
+
+ 
+ 
+

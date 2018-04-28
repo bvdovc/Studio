@@ -1,0 +1,26 @@
+<html>
+	<title>VMAX 400K</title>
+	<span>
+		<h>Détails de la configuration :</h> 
+		<ul>
+			<li>Capacité utile de l’OS (To) : {0}</li>
+			<li>Capacité utile du MF (To) : {4}</li>
+			<li>Nombre de moteurs : {1}</li>
+			<li>Nombre de boîtiers DAE : {2}</li>
+			<li>Nombre maximal de disques dans le système de stockage {3}</li>
+			<li>Nombre réel de disques : {5}</li>
+			<li>Nombre de ports FE : {6}</li>
+		</ul>
+	</span>
+	<span><h>Description :</h></span>
+	<span>
+		<p>Le VMAX 400K inclut un à huit moteurs 2,7 GHz 48 cœurs Ivy Bridge (IVB) avec 512, 1 024 ou 2 048 Go de mémoire par moteur. Avec la configuration maximale à huit moteurs, le VMAX 400K prend en charge jusqu’à (5 760) disques de 2,5 pouces ou jusqu’à (2 880) disques de 3,5 pouces, pour une capacité utile de 4,27 Po lors de l’utilisation de disques de 4 To. Les moteurs résident dans des baies système prenant en charge des baies système à un ou à deux moteurs.
+		</p></span>
+	<span>
+		<p>
+ En configuration maximale, la baie 400K fournit jusqu’à 256 ports front-end pour la connectivité SRDF. L’interconnexion Fabric interne utilise deux switches 18 ports Infiniband qui garantissent redondance et disponibilité.
+		</p></span>
+	<span>
+		<p> La baie 400K prend en charge des disques Flash de différentes capacités pour optimiser les performances des baies sur tous les types de disque. Pour activer la technologie FAST (Fully Automated Storage Tiering) d’EMC afin d’optimiser les performances de la baie 400K tout en réduisant les coûts grâce à la vitesse des disques Flash et aux disques NL-SAS économiques, la baie doit contenir des disques dotés de différentes technologies pour répondre à vos exigences en matière de charge applicative.
+		</p></span>
+</html>

@@ -1,0 +1,14 @@
+﻿<html>
+	<title>GABINETE DO SISTEMA 1</title>
+	<span><p>Todos os gabinetes do sistema VMAX All Flash contém 1 ou 2 V-Bricks/zBricks, cada um consistindo em 1 mecanismo, 2 gavetas Disk Array Enclosure de alta densidade com 120 unidades, 2 SPSs (Standby Power Supply, fonte de alimentação em standby) Li-on para fornecer energia reserva para o mecanismo e 2 PDUs (Power Distribution Unit, unidade de distribuição de energia), que fornecem energia às zonas redundantes de alimentação (zona A e zona B).</p></span>
+	<span><p>Os seguintes componentes são exclusivos do gabinete do sistema 1: </p>
+		<ul>
+			<li>Duas unidades SPSs (Standby Power Supply, fonte de alimentação em standby) na parte inferior do gabinete, fornecendo alimentação reserva para a interconexão de matriz virtual IB (InfiniBand) caso o array esteja configurado com vários V-Bricks/zBricks. </li>
+			<li>Interconexão IB se o array estiver configurado com vários v-Bricks/z-Bricks </li>
+			<li>Switch Ethernet </li>
+			<li>KVM (Key, Video, Mouse,teclado, vídeo, mouse) </li>
+		</ul>
+	</span>
+</html>
+
+

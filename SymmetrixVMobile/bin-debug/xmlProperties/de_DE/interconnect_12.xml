@@ -1,0 +1,10 @@
+﻿<html>
+<title>12-Port-InfiniBand(IB)-Verbindung </title>
+	<span>
+		<p>Diese Komponente mit 1HE ist der Kern der EMC Dynamic Virtual Matrix(TM)-Architektur. Die IB-Verbindung wird nur in System-Bay&#160;1 in den 100K- und 200K-Arrays mit mehreren Engines verwendet. Sie ermöglicht die Skalierung von Ressourcen und Kommunikation zwischen mehreren VMAX-Engines. Jede VMAX-Engine verfügt über redundante Schnittstellen zur IB-Verbindung.</p>
+	</span>
+	<span>
+		<p>Die IB-Verbindung verfügt über 2&#160;Netzteile.</p>
+	</span>
+
+</html>

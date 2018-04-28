@@ -1,0 +1,26 @@
+<html> 
+	<title>
+		引擎 
+	</title> 
+	<span>
+	<p>VMAX 20K/VMAX 引擎是关键的系统机架组件，它提供物理内存、CPU 处理能力、前端主机连接、SRDF 连接、外部阵列连接、磁盘阵列存储模块 (DAE) 后端连接以及阵列中其他引擎的连接。 
+每个引擎包含：</p>
+		<ul> 
+			<li>两个支持前端、后端、外部阵列和 SRDF 连接的控制器</li> 
+			<li>32、64 或 128 GB 物理内存</li> 
+			<li>两个连接控制器和矩阵接口板存储模块 (MIBE) 的系统接口板 (SIB)（每个控制器一个）</li> 
+			<li>四个后端 I/O 模块（每个控制器两个） </li> 
+			<li>四个提供以下连接的前端 I/O 模块（每个控制器两个）：</li> 
+			<li indent="1">4 个光纤通道（2、4 或 8 Gb/s）端口</li> 
+			<li indent="1">2 个光纤通道 SRDF（2、4、8 Gb/s）</li> 
+			<li indent="1">2 个以太网光纤通道 (FCoE) 端口 (10 Gb/s)</li> 
+			<li indent="1">2 个 FICON 端口（2、4 或 8 Gb/s）</li> 
+			<li indent="1">2 个 iSCSI 端口 (1 Gb/s)</li> 
+			<li indent="1">2 个 iSCSI/FCoE 端口 (10 Gb/s)</li> 
+			<li indent="1">2 个 GbE SRDF 端口（1 Gb/s，10 Gb/s）。</li> 
+			<li>两个提供环境监控的管理模块</li> 
+			<li>两个引擎电源</li> 
+			<li>四个引擎冷却风扇</li> 
+		</ul>
+	</span> 
+</html>

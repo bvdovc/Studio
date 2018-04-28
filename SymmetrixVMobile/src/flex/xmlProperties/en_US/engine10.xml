@@ -1,0 +1,23 @@
+<html>
+	<title>
+		ENGINE
+	</title>
+	<span>
+	<p>The VMAX 10K Engine is the key system bay component that provides physical memory, CPUs , front-end host, SRDF and external array connectivity, back-end connectivity to Disk Array Enclosures (DAEs), and connectivity to other engines in the array.
+Each engine includes:</p>
+		<ul>
+			<li>Two directors that support front-end and back-end connections</li>
+			<li>96 and 128 GB of physical memory</li>
+			<li>Two System Interface Boards (SIBs) in mult- engine systems.Engine 1 in a single-engine array does not contain SIBs.</li>
+			<li>Four Back End I/O Modules (each containing 4 ports, 4 Gb/s)</li>
+			<li>Four Front End I/O Modules that provide the following connections:</li>
+			<li indent="1">Up to 16 (2, 4, 8 Gb/s) Fibre Channel Ports</li>
+			<li indent="1">Up to 4 Fibre Channel SRDF (2, 4, 8 Gb/s) ports</li>
+			<li indent="1">Up to 8  iSCSI/FCoE ( 10Gb/s) ports</li>
+			<li indent="1">Up to 8  iSCSI ( 1Gb/s) ports</li>
+			<li indent="1">Up to 4 GigE SRDF (1 Gb/s, 10 Gb/s) ports</li>
+			<li>Two Management Modules (one per director)</li>
+			<li>Four engine power supplies (two per director)</li>
+		</ul>
+	</span>
+</html>

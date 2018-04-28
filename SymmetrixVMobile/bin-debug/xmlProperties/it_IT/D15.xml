@@ -1,0 +1,12 @@
+<html>
+	<title> 		DAE STANDARD
+	</title> 	<span><p>I Disk Array Enclosure (DAE) sono alla base dell'elaborazione dello storage dei dati. Forniscono la connettività Fibre Channel a 4Gb/s ai moduli di I/O back-end nell'engine o ad altri DAE e loop di unità negli enclosure DAE. I DAE possono essere connessi direttamente all'engine o avere una connessione di tipo daisy-chain ad altri DAE.</p></span> 	<span><p>I DAE sono disponibili in configurazioni standard, a 15 unità, oppure a elevata densità, a 25 unità. I DAE a elevata densità possono ospitare solo unità da 2,5" mentre i DAE standard possono ospitare unità da 2,5" e da 3,5".</p></span> 	<span>
+	<p>I DAE comprendono i seguenti componenti principali:</p>
+		<ul>
+			<li>Un massimo di 15 o 25 unità per enclosure, a seconda del tipo di DAE</li>
+			<li>Due moduli DAE ridondanti di alimentazione/raffreddamento (accessibili dalla parte posteriore)</li>
+			<li>Due Link Control Card (LCC) (accessibili dalla parte posteriore) che forniscono il bypass all'unità e la funzionalità di failover del loop Fibre Channel.</li>
+			<li>I DAE possono essere connessi direttamente all'engine o avere una connessione di tipo daisy-chain ad altri DAE.</li>
+		</ul> 	
+	</span>
+</html>

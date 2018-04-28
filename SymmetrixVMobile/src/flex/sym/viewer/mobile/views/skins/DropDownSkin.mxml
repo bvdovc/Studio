@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SparkButtonSkin xmlns:fx="http://ns.adobe.com/mxml/2009"
+                   xmlns:s="library://ns.adobe.com/flex/spark">
+    <!-- host component -->
+    <fx:Metadata>
+		[HostComponent("spark.components.Button")]
+	</fx:Metadata>
+
+    <!-- states -->
+    <s:states>
+        <s:State name="disabled"/>
+        <s:State name="down"/>
+        <s:State name="over"/>
+        <s:State name="up"/>
+    </s:states>
+
+    <!-- SkinParts
+    name=iconDisplay, type=spark.primitives.BitmapImage, required=false
+    name=labelDisplay, type=spark.core.IDisplayText, required=false
+    -->
+
+    <s:BorderContainer borderWeight="1"
+                       cornerRadius="8"
+                       top="0"
+                       right="0"
+                       bottom="0"
+                       left="0"
+                       borderColor="#ffffff">
+        <s:Rect id="rect"
+                radiusX="8"
+                radiusY="8"
+                top="0"
+                right="0"
+                bottom="0"
+                left="0">
+            <s:fill>
+                <s:LinearGradient rotation="90">
+                    <s:GradientEntry color="#4682B4"
+                                     color.down="#6495ED"
+                                     color.over="#dae4eb"
+                                     color.disabled="#BABDBF"/>
+                    <s:GradientEntry color="#3E95CF"
+                                     color.down="#B0C4DE"
+                                     color.over="#dae3e9"
+                                     color.disabled="#C0C0C0"/>
+                </s:LinearGradient>
+            </s:fill>
+        </s:Rect>
+    </s:BorderContainer>
+
+    <!-- text -->
+    <s:HGroup verticalAlign="middle"
+              width="100%"
+              height="100%"
+              horizontalAlign="left"
+              paddingLeft="10"
+              paddingRight="5"
+              paddingBottom="2"
+              paddingTop="2">
+
+        <s:Label id="labelDisplay"
+                 textAlign="left"
+				 width="100%"
+                 verticalAlign="middle"
+                 horizontalCenter="0"
+                 verticalCenter="1"
+                 styleName="filterWizardButtonStyle"
+                 left="12"
+                 right="12"
+                 top="6"
+                 bottom="6"/>
+        <s:Image height="100%"
+                 scaleMode="letterbox"
+                 id="btnDown"
+                 source="@Embed('/images/arrow1.png')"
+                 smooth="true"
+                 buttonMode="true"
+                 useHandCursor="true"/>
+    </s:HGroup>
+</s:SparkButtonSkin>

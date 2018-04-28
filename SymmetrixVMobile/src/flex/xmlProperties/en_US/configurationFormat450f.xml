@@ -1,0 +1,34 @@
+<html>
+	<title>VMAX 450 All Flash</title>
+	<span>
+		<h>Current Configuration Details:</h>
+		<ul>
+		    <li>OS Usable Capacity (TB): {0}</li>
+		    <li>MF Usable Capacity (TB): {4}</li>
+			<li>Number of v-Bricks/z-Bricks: {1}</li>
+			<li>Number of DAEs: {2} </li>
+			<li>Maximum number of drives: {3}</li>
+			<li>Actual number of drives: {5}</li>
+			<li>Number of FE ports: {6}</li>
+		</ul>
+	</span>
+	<span><h>Description:</h></span>
+	<span><p> The VMAX 450F range in size from one up to four v-Brick/z-Brick systems. A v-Brick/z-Brick is the basic building block that includes:</p></span>
+	<span>
+		<ul>
+			<li>An engine (the redundant data storage processing unit) using 8-Core Intel Xeon E5-2650-v2, 2.6 GHz CPUs</li>
+			<li>A starter capacity of 53Tbu of flash drives distributed across two dense Disk Array Enclosures (DAEs), each supporting a maximum of 120 2.5" drives.</li>
+			<li>Software available in simple ordering options: F/FX for open systems, zF/zFX for mainframe </li>
+		</ul>
+	</span>
+		<span><p> An initial 53 TBu v-Brick/z-Brick configuration can be: </p>
+			<ul>
+			<li>Scaled up by adding 13TB flash capacity(open systems)/zCapacity(mainframe) packs that bundle all required storage capacity and software</li>
+				<li>Scaled out by adding v-Bricks/z-Bricks to increase performance, connectivity, and throughput.</li>
+			</ul>
+		</span>
+		<span><p>
+			Independent and linear scaling of both capacity and performance makes the VMAX 450F arrays extremely flexible at addressing varying workloads.
+		</p></span>
+</html>
+

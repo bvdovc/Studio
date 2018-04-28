@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx"
+					   creationComplete="windowedapplication1_creationCompleteHandler(event)">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.events.FlexEvent;
+			
+			import spark.events.IndexChangeEvent;
+			
+			import sym.configurationmodel.common.ConfigurationFactoryBase_VG3R;
+			import sym.configurationmodel.common.ConfigurationFilter;
+			import sym.configurationmodel.utils.AllFlashArrayUtility;
+			import sym.configurationmodel.utils.TieringUtility_VG3R;
+			import sym.configurationmodel.v100k.ConfigurationFactory;
+			import sym.configurationmodel.v200k.ConfigurationFactory;
+			import sym.configurationmodel.v250f.ConfigurationFactory;
+			import sym.configurationmodel.v400k.ConfigurationFactory;
+			import sym.configurationmodel.v450f.ConfigurationFactory;
+			import sym.configurationmodel.v850f.ConfigurationFactory;
+			import sym.objectmodel.common.Configuration_VG3R;
+			import sym.objectmodel.common.DriveGroup;
+			import sym.objectmodel.driveUtils.enum.DriveRaidLevel;
+			import sym.objectmodel.driveUtils.enum.HostType;
+			
+			private var factory:ConfigurationFactoryBase_VG3R;
+			
+			private var _driveGroups:Array;
+			
+			private static const maxPerSystemMfamily:Array = [sym.configurationmodel.v100k.ConfigurationFactory.TOTAL_USABLE_CAPACITY, 
+				sym.configurationmodel.v200k.ConfigurationFactory.TOTAL_USABLE_CAPACITY, 
+				sym.configurationmodel.v400k.ConfigurationFactory.TOTAL_USABLE_CAPACITY]; // 100/200/400K max capacities
+			
+			private static const NO_ENGINES_2:ArrayCollection = new ArrayCollection([1, 2]);
+			private static const NO_ENGINES_4:ArrayCollection = new ArrayCollection([1, 2, 3, 4]);
+			private static const NO_ENGINES_8:ArrayCollection = new ArrayCollection([1,2,3,4,5,6,7,8]);
+			
+			[Bindable]
+			private var _maxCapacity:Number;
+			
+			
+			protected function windowedapplication1_creationCompleteHandler(event:FlexEvent):void
+			{
+				seriesDrop.dataProvider = new ArrayCollection(["100K", "200K", "400K", "250F", "450F", "850F"]);
+			}
+			
+			private function getMaxSystemCapacity(series:Object, raid:DriveRaidLevel):int
+			{
+				if (series == "100K" || series == "200K" || series == "400K")
+					return maxPerSystemMfamily[seriesDrop.dataProvider.getItemIndex(series)];
+				
+				if (series == "450F")
+					return sym.configurationmodel.v450f.ConfigurationFactory.TOTAL_USABLE_CAPACITY;
+						
+				if (series == "850F")
+					return sym.configurationmodel.v850f.ConfigurationFactory.TOTAL_USABLE_CAPACITY;
+				
+				// 250f max capacity calculation
+				// TotCap = max_drives_system * RAID_group_size * RAID_factor
+				// RGS(R53) = 4, RGS(R66) = 8, RF = 0.75
+				var maxDrives:int = 48 * enginesDrop.selectedItem;
+				var cap:Number = maxDrives * (_driveGroups[0] as DriveGroup).driveDef.type.getFormattedCapacity(HostType.OPEN_SYSTEMS) * raid.factor
+				return cap/1000;
+			}
+			
+			private function getMinCap(tier:int):Number
+			{
+				if (tier == TieringUtility_VG3R.TIER_1_EFD && (seriesDrop.selectedItem == "450F" || 
+					seriesDrop.selectedItem == "850F" || seriesDrop.selectedItem == "250F"))
+				{
+					if (seriesDrop.selectedItem == "450F" || seriesDrop.selectedItem == "850F")
+						return AllFlashArrayUtility.BASE_CONFIG_V_BRICK_CAPACITY;
+					
+					return AllFlashArrayUtility.BASE_250F_CONFIG_MINIMUM_CAPACITY;
+				}
+				
+				return TieringUtility_VG3R.getMinCap(tier);
+			}
+			
+			protected function validate_clickHandler(event:MouseEvent):void
+			{
+//				var cap:Number = Number(capacityInput.text);
+				var tier:int = tierDrop.selectedItem;
+				factory = new ConfigurationFactoryBase_VG3R();
+				
+				if (seriesDrop.selectedItem == "100K" || seriesDrop.selectedItem == "200K" || seriesDrop.selectedItem == "400K")
+				{
+					_driveGroups = TieringUtility_VG3R.getDriveGroups(tier);
+				}
+				else
+				{
+					var selectedRaid:DriveRaidLevel = AllFlashArrayUtility.systemDriveRAID = raidDrop.selectedItem as DriveRaidLevel;
+					
+						_driveGroups = [AllFlashArrayUtility.BASE_DRIVE_GROUPS[selectedRaid.name][0]];
+				}
+				
+				var maxCap:Number = getMaxSystemCapacity(seriesDrop.selectedItem, selectedRaid);
+				
+				if (seriesDrop.selectedItem == "250F")
+				{
+					_maxCapacity = maxCap;
+					return;
+				}
+				
+				var minCap:Number = _maxCapacity = getMinCap(tier);
+
+				var noEngines:int = enginesDrop.selectedItem;
+				
+				for (var cap:int = minCap; cap <= maxCap; cap++)
+				{
+					for each (var driveGroup:DriveGroup in _driveGroups)
+					{
+						if (seriesDrop.selectedItem == "450F" || seriesDrop.selectedItem == "850F")
+						{
+							driveGroup.activeCount = TieringUtility_VG3R.calculateNoActives(-1, driveGroup, cap);
+						}
+						else if (seriesDrop.selectedItem != "250F")
+						{
+							driveGroup.activeCount = TieringUtility_VG3R.calculateNoActives(tier, driveGroup, cap);
+						}
+						
+						if (tier == TieringUtility_VG3R.TIER_2_PERF)
+						{
+							if (seriesDrop.selectedItem == "100K")
+							{
+								driveGroup.percent = TieringUtility_VG3R.PERFORMANCE_PERCENTS_100K[driveGroup.driveDef.type.capacity];
+							}
+							if (seriesDrop.selectedItem == "200K")
+							{
+								driveGroup.percent = TieringUtility_VG3R.PERFORMANCE_PERCENTS_200K[driveGroup.driveDef.type.capacity];
+							}
+							if (seriesDrop.selectedItem == "400K")
+							{
+								driveGroup.percent = TieringUtility_VG3R.PERFORMANCE_PERCENTS_400K[driveGroup.driveDef.type.capacity];
+							}
+						}
+					}
+						var sysBayType:int = seriesDrop.selectedItem == "450F" || seriesDrop.selectedItem == "850F" ? ConfigurationFilter.DUAL_ENGINE_BAY : ConfigurationFilter.SINGLE_ENGINE_BAY;
+						
+						var cfg:Configuration_VG3R = factory.createConfiguration(noEngines, sysBayType, [-1], _driveGroups, tier);
+						
+//						driveValidation.text = (cfg != null).toString();
+						if (cfg)
+							_maxCapacity = _maxCapacity < cap ? cap : _maxCapacity;
+						
+//						maxCapacity.visible = true;
+					
+				}
+				
+			}
+			
+			/*protected function tierDrop_changeHandler(event:IndexChangeEvent):void
+			{
+				min = TieringUtility_VG3R.getMinCap(int(tierDrop.selectedItem));
+				
+				if (seriesDrop.selectedItem == "100K")
+				{
+					max = 1103;
+				}
+				if(seriesDrop.selectedItem == "200K")
+				{
+					max = 2290;
+				}
+				if(seriesDrop.selectedItem == "400K")
+				{
+					max = 4275;
+				}
+				
+				capValues.text = min + " - " + max;
+				
+			}*/
+			
+			private function tierDropLabel(item:Object):String
+			{
+				var tier:int = int(item);
+				var label:String;
+				
+				if (tier == TieringUtility_VG3R.TIER_2_COST)
+				{
+					label = "cost optimized";
+				}
+				
+				if (tier == TieringUtility_VG3R.TIER_2_PERF)
+				{
+					label = "performance";
+				}
+				if (tier == TieringUtility_VG3R.TIER_1_EFD)
+				{
+					label = "EFD";
+				}
+				
+				return label;
+			}
+			private function raidDropLabel(item:Object):String
+			{
+				return item.name;
+			}
+			
+			protected function seriesDrop_changeHandler(event:IndexChangeEvent):void
+			{
+				enginesDrop.dataProvider = seriesDrop.selectedItem == "100K" || seriesDrop.selectedItem == "250F" ? NO_ENGINES_2 : 
+					seriesDrop.selectedItem == "200K" || seriesDrop.selectedItem == "450F" ? NO_ENGINES_4 : NO_ENGINES_8;
+				
+				raidDrop.dataProvider = seriesDrop.selectedItem == "250F" ? new ArrayCollection([DriveRaidLevel.R53, DriveRaidLevel.R66]) : 
+					new ArrayCollection([DriveRaidLevel.R57, DriveRaidLevel.R614]);
+				raidDrop.selectedIndex = 0;
+				
+				if (seriesDrop.selectedItem == "100K" || seriesDrop.selectedItem == "200K" || seriesDrop.selectedItem == "400K")
+				{
+					tierDrop.dataProvider = new ArrayCollection(TieringUtility_VG3R.getAllTiers());
+				}
+				else
+				{
+					tierDrop.dataProvider = new ArrayCollection([TieringUtility_VG3R.TIER_1_EFD]);
+					tierDrop.selectedItem = TieringUtility_VG3R.TIER_1_EFD;
+				}
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<s:VGroup verticalCenter="0"
+			  horizontalCenter="0"
+			  gap="15"
+			  width="420" >
+		<s:VGroup>
+			
+			<s:Label id="seriesLbl"
+					 text="VMAX" />
+			<s:DropDownList id="seriesDrop" 
+							change="seriesDrop_changeHandler(event)"/>
+		</s:VGroup>
+			
+		<s:HGroup gap="20"
+				  width="100%"
+				  height="100"
+				  verticalAlign="middle">
+			
+			<s:VGroup>
+				<s:Label id="driveMixLabel"
+						 text="Drive Mix"/>
+				<s:DropDownList id="tierDrop"
+								minWidth="{seriesDrop.width}"
+								labelFunction="tierDropLabel"/>
+			</s:VGroup>
+			<s:VGroup>
+				<s:Label id="raid"
+						 text="RAID"/>
+				<s:DropDownList id="raidDrop"
+								enabled="{seriesDrop.selectedItem == '250F' || seriesDrop.selectedItem == '450F' || seriesDrop.selectedItem == '850F'}"
+								minWidth="{seriesDrop.width}"
+								labelFunction="raidDropLabel"/>
+			</s:VGroup>
+			
+			<s:VGroup>
+				<s:Label id="enginesLbl"
+						 text="Engines"	/>	 
+				<s:DropDownList id="enginesDrop"
+								selectedItem="1"
+								width="100"/>
+			</s:VGroup>
+			
+		</s:HGroup>
+		
+		
+		<s:Button id="generate"
+				  label="Generate Max Capacity"
+				  enabled="{seriesDrop.selectedItem &amp;&amp; tierDrop.selectedItem &amp;&amp; enginesDrop.selectedItem}"
+				  click="validate_clickHandler(event)"/>
+		<s:Label id="maxCapacity" 
+				 fontWeight="bold"
+				 visible="{_maxCapacity > 0}"
+				 text="Max Capacity: {_maxCapacity}"/>
+		
+	</s:VGroup>
+	
+</s:WindowedApplication>

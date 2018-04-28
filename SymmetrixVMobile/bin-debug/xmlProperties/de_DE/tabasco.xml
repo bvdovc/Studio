@@ -1,0 +1,13 @@
+<html>
+	<title>DAE für 25 Laufwerke</title>
+	<span><p>Die 2-HE-DAEs (Laufwerks-Array-Gehäuse) für 25 2,5-Zoll-Laufwerke bieten 12-Gbit/s-SAS-Konnektivität zu den Back-end-I/O-Modulen in der VMAX-250F-Engine. Zwei DAEs in einem V-Brick sind direkt mit der Engine verbunden.</p></span>
+	
+	<span>
+	<p>Die DAEs umfassen die folgenden Hauptkomponenten:</p>
+		<ul>
+			<li>Bis zu 25 Laufwerke pro Gehäuse</li>
+			<li>Zwei redundante DAE-Stromversorgungskühlmodule (von der Rückseite aus zugänglich)</li>
+			<li>Zwei Link Control Cards (LCCs) (von der Rückseite aus zugänglich)</li>
+		</ul>
+	</span>
+</html> 

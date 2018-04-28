@@ -1,0 +1,12 @@
+<html>
+	<title>Interconnessione InfiniBand (IB) a 18 porte </title>
+	<span>
+		<p>Questo componente 1U è alla base dell'architettura di EMC Dynamic Virtual Matrix(TM). Utilizzato solo nel system bay 1, negli array 400K a più engine, l'interconnessione IB consente il dimensionamento delle risorse e la comunicazione tra più engine VMAX. Ogni engine VMAX ha interfacce ridondanti per l'interconnessione IB che includono:</p>
+		<ul>
+			<li> 18 porte InfiniBand </li>
+			<li> Alimentatori hot plug ridondanti</li>
+			<li> 2 porte di gestione RJ-45 Ethernet da 1 GB (connessioni ai switch Ethernet A e B) </li>
+			<li>Moduli delle ventole hot plug, ridondanti </li>
+		</ul>
+	</span>
+</html>

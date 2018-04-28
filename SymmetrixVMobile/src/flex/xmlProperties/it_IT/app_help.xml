@@ -1,0 +1,45 @@
+﻿<html>
+	<title>
+ Informazioni su VMAX Studio
+	</title>
+	<span>
+		<img src="buttons.png" alt="pulsante" heigth="50"/>
+	</span>
+	<span>
+		<p>
+ VMAX Studio è uno strumento di visualizzazione intuitivo che ti consente di:
+		</p>
+		<ul>
+			<li>Visualizzare le configurazioni degli array VMAX 250F e VMAX 950F seguendo una breve procedura guidata di configurazione: seleziona il modello dell'array, indica la capacità utilizzabile necessaria e seleziona alcune proprietà di sistema da visualizzare per il tuo sistema personalizzato nella finestra di VMAX Studio </li>
+            <li> Salvare le configurazioni degli array internamente nel formato VMAX Studio. Le configurazioni salvate vengono visualizzate come icone nella parte inferiore del riquadro di filtraggio. </li>
+			<li> Filtrare le configurazioni salvate utilizzando i pulsanti per filtrare e reimpostare il filtro.</li>
+			<li>Salvare object quali configurazioni o singoli componenti nel formato di file grafico PNG.</li>
+			<li>Esplorare le configurazioni degli array e i componenti hardware utilizzando la guida sensibile al contesto e le visualizzazioni dei componenti drill-down.</li>
+		</ul>
+	</span>
+		<span>
+			<p>Strumenti di VMAX Studio:</p>
+			<ul>
+				<li> Salva configurazione: fai clic per salvare una configurazione appena creata. Le configurazioni salvate vengono visualizzate nel riquadro di filtraggio come icone con ID di configurazione univoci.</li>
+				<li> Copia negli appunti: fai clic per copiare negli appunti il contenuto del riquadro di visualizzazione. </li>
+				<li> Esporta come immagine: fai clic per salvare il contenuto del riquadro di visualizzazione in un file *.PNG. </li>
+				<li> Evidenzia: fai clic per evidenziare i componenti di alimentazione principali nella vista della configurazione degli array.</li>
+				<li> Modifica vista: fai clic per visualizzare un'altra vista (ad esempio, anteriore e posteriore).</li>
+				<li> Attiva/disattiva pannelli di proprietà: mostra o nascondi le informazioni di proprietà dei contenuti del riquadro di visualizzazione. </li>
+			</ul>
+		</span>
+	<span><p></p></span>
+	<span>
+		<h>Procedura guidata di configurazione</h>
+	</span> 
+	<span>
+		<img src="wizard.png" alt="pulsante" heigth="50"/>
+	</span>
+	<span>
+	<p> La configurazione guidata ti consente di configurare e visualizzare gli array VMAX 250F e VMAX 950F scegliendo tra alcuni parametri di configurazione di base disponibili per il modello di array selezionato.</p>
+	</span>
+	<span><p></p></span>
+	<span>
+		<p>Per qualsiasi domanda o commento su VMAX STUDIO, invia un'email a SymmSystemViewers@emc.com</p>
+	</span>
+</html>

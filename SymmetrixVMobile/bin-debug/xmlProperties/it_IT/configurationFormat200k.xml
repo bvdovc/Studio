@@ -1,0 +1,26 @@
+<html>
+	<title>VMAX 200K</title>
+	<span>
+		<p>Dettagli di configurazione:</p>
+		<ul>
+			<li>Capacità utilizzabile (TB): {0}</li>
+			<li>Numero di engine: {1}</li>
+			<li>Numero di DAE: {2} </li>
+			<li>Numero massimo di unità per sistema: {3}</li>
+		</ul>
+	</span>
+	<span>
+		<p>VMAX 200K è configurato con da uno a quattro core engine Ivy Bridge (IVB) 32 da 2,6 GHz con 512, 1024 o 2048 GB di memoria per engine. Con la configurazione massima a quattro engine, VMAX 200K supporta fino a (2880) unità da 2,5" oppure fino a (1440) unità da 3,5", fornendo una capacità utilizzabile di 2,28 PB con le unità da 4 TB. Gli engine si trovano in system bay che supportano tipologie di system bay con un solo engine o con due engine.
+		</p>
+	</span>
+	<span>
+		<p>
+			Con la configurazione completa, la versione 200K fornisce fino a 128 porte front-end per la connettività host. La tecnologia Virtual Matrix Interconnect interna utilizza due switch InfiniBand a 12 porte per la ridondanza e l'availability.
+		</p>
+	</span>
+	<span>
+		<p>
+			200k supporta EFT, prestazioni e dischi di capacità per massimizzare le prestazioni dell'array con tutti i tipi di unità. Per abilitare la messa a punto della tecnologia Fully Automated Storage Tiering (FAST) per le prestazioni del 200K a costi ridotti, sfruttando l'altissima velocità delle flash drive insieme alle unità Near-Line SAS a costi contenuti, l'array necessita di essere popolato con unità di tecnologie differenti per rispettare i requisiti del carico di lavoro dell'applicazione.
+		</p>
+	</span>
+</html>

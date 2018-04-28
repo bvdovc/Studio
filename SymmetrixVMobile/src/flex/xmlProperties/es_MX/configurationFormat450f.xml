@@ -1,0 +1,34 @@
+<html>
+	<title>VMAX 450 All Flash</title>
+	<span>
+		<h>Detalles de la configuración actual:</h>
+		<ul>
+		    <li>Capacidad útil del SO (TB): {0}</li>
+		    <li>Capacidad útil de MF (TB): {4}</li>
+			<li>Cantidad de v-Bricks/z-Bricks: {1}</li>
+			<li>Cantidad de DAE: {2} </li>
+			<li>Cantidad máxima de unidades: {3}</li>
+			<li>Cantidad real de unidades: {5}</li>
+			<li>Cantidad de puertos FE: {6}</li>
+		</ul>
+	</span>
+	<span><h>Descripción:</h></span>
+	<span><p> El arreglo VMAX 450F varía en tamaño desde uno hasta cuatro sistemas de v-Bricks/z-Bricks. El componente básico es un v-Brick/z-Brick que incluye lo siguiente:</p></span>
+	<span>
+		<ul>
+			<li>Un motor (la unidad de procesamiento de almacenamiento de datos redundantes) con CPU de 8 cores Intel Xeon E5-2650-v2 y 2.6 GHz</li>
+			<li>Una capacidad de entrada de 53 TBu en discos flash que se distribuye entre dos gabinetes de arreglos de discos (DAE) cada uno compatible con un máximo de 120 unidades de 2.5 in.</li>
+			<li>Software disponible en opciones de pedido simples: F/FX para sistemas abiertos, zF/zFX para mainframe </li>
+		</ul>
+	</span>
+		<span><p> Una configuración inicial de 53 TBu y v-Bricks/z-Bricks puede: </p>
+			<ul>
+			<li>Escalarse verticalmente mediante el agregado de paquetes de capacidad flash de 13 TB (sistemas abiertos) o capacidad z (mainframe) que reúnen toda la capacidad de almacenamiento y el software requeridos</li>
+				<li>Escalarse horizontalmente mediante el agregado de v-Bricks/z-Bricks para aumentar el rendimiento y la conectividad</li>
+			</ul>
+		</span>
+		<span><p>
+ El escalamiento lineal e independiente de capacidad y rendimiento permite que los arreglos VMAX 450F sean extremadamente flexibles a la hora de ocuparse de diversas cargas de trabajo.
+		</p></span>
+</html>
+

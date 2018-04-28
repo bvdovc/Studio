@@ -1,0 +1,24 @@
+<html>
+	<title>VMAX 100K</title>
+	<span>
+		<h>Detalhes da configuração atual:</h>
+		<ul>
+		    <li>Capacidade utilizável (TB) do SO: {0}</li>
+		    <li>Capacidade utilizável (TB) de MF: "{4}"</li>
+			<li>Número de mecanismos: {1}</li>
+			<li>Número de DAEs: {2} </li>
+			<li>Número máximo de drives: {3}</li>
+			<li>Número real de unidades: {5}</li>
+			<li>Número de portas FE: {6}</li>
+		</ul>
+	</span>
+	<span><h>Descrição:</h></span>
+	<span><p>O VMAX 100K é configurado com um a dois mecanismos Ivy Bridge (IVB) 2,1 GHz de 24 núcleos, com 512 ou 1024 GB de memória por mecanismo distribuído em dois gabinetes do sistema. Com a configuração máxima de 2 mecanismos, o VMAX 100K comporta até (1.440) unidades de 2,5 pol. ou até (720) unidades de 3,5 pol., fornecendo até 1,1 PB de capacidade utilizável ao usar unidades de 4 TB. Os mecanismos residem em gabinetes do sistema que dão suporte ao tipo de gabinete do sistema com um ou dois mecanismos.</p></span>
+		<span>
+			<p> Quando totalmente configurado, o 100K fornece até 64 portas front-end para conectividade de host. A interconexão de fabrics interna usa switches Infiniband duais de 12 portas para fins de redundância e disponibilidade.</p>
+		</span>
+		<span><p>
+ O 100K suporta EFT, desempenho e discos de capacidade para maximizar o desempenho do array em todos os tipos de drive. Para permitir que a tecnologia EMC FAST (Fully Automated Storage Tiering, armazenamento com classificação totalmente automatizada por níveis) ajuste o desempenho do 100K enquanto reduz os custos aproveitando a velocidade incrível dos flash drives combinados com drives NL-SAS econômicos, o array deve ser preenchido com drives de diferentes tecnologias para atender aos requisitos de carga de trabalho de aplicativos.
+		</p></span>
+</html>
+

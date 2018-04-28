@@ -1,0 +1,30 @@
+<html>
+	<title>VMAX 200K</title>
+	<span>
+		<h>Detalles de configuración:</h>
+		<ul>
+			<li>Capacidad útil del SO (TB): {0}</li>
+			<li>Capacidad útil de MF (TB): {4}</li>
+			<li>Cantidad de motores: {1}</li>
+			<li>Cantidad de DAE: {2}</li>
+			<li>Cantidad máxima de unidades por sistema: {3}</li>
+			<li>Cantidad real de unidades: {5}</li>
+			<li>Cantidad de puertos FE: {6}</li>
+		</ul>
+	</span>
+	<span><h>Descripción:</h></span>
+	<span>
+		<p>VMAX 200K está configurado con uno a cuatro motores principales de 2.6 GHz Ivy Bridge (IVB) 32 con 512, 1,024 o 2,048 GB de memoria por motor. Con la configuración máxima de cuatro motores, el arreglo VMAX 200K admite hasta 2,880 unidades de 2.5 in o hasta 1,440 unidades de 3.5 in, y proporciona hasta 2.28 PB de capacidad útil si se usan unidades de 4 TB. Los motores residen en las bahías de sistema compatibles con el tipo de bahía de sistema de uno o dos motores.
+		</p>
+	</span>
+	<span>
+		<p>
+ Cuando está completamente configurado, el 200K proporciona hasta 128 puertos front-end para conectividad de host. La interconexión de matriz virtual interna usa switches dobles InfiniBand de 12 puertos para proporcionar redundancia y disponibilidad.
+		</p>
+	</span>
+	<span>
+		<p>
+ El 200K admite discos de capacidad, rendimiento y EFT para maximizar el rendimiento del arreglo en todos los tipos de unidades. Para permitir que la tecnología EMC Fully Automated Storage Tiering (FAST) ajuste el rendimiento del arreglo 200K mientras reduce los costos aprovechando la velocidad increíblemente rápida de los discos flash combinada con discos SAS NL rentables, el arreglo debe completarse con unidades de diferentes tecnologías para cumplir con los requisitos de cargas de trabajo de sus aplicaciones.
+		</p>
+	</span>
+</html>

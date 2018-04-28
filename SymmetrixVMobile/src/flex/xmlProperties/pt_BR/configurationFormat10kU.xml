@@ -1,0 +1,19 @@
+<html> 
+	<title>
+		CONFIGURAÇÃO 
+	</title> 
+	<span>
+		<p>Detalhes de configuração atual:</p>
+		<ul>
+			<li>Número de mecanismos: {0}</li> 
+			<li>Número de DAEs: {1}</li> 
+			<li>Número máximo de drives: {2}</li> 
+		</ul>
+	</span> 
+	<span><p>As configurações do array variam da seguinte forma: de um a seis gabinetes e sistemas com um a quatro mecanismos. Os mecanismos são as principais unidades de processamento de I/O, cada um residindo em seu próprio gabinete do sistema. Cada gabinete do sistema hospeda componentes de alimentação, no mínimo 4 DAEs (Disk Array Enclosures) e no máximo 8 DAEs padrão e um máximo de 12 DAEs em configurações de array de alta densidade.</p></span> 
+	<span><p>As configurações padrão aceitam DAEs padrão (com 15 drives) e DAEs de alta densidade (25 drives). As configurações de arrays de alta densidade aceitam apenas DAEs com 25 drives. A configuração máxima padrão consiste em 4 gabinetes do sistema e 2 gabinetes de armazenamento. Já a configuração máxima de alta densidade consiste em apenas 4 gabinetes do sistema. </p></span> 
+	<span><p>Um ou dois gabinetes de armazenamento (Gabinete de Armazenamento 1A e Gabinete de Armazenamento 1B) são aceitos na configuração padrão do array para maximizar a capacidade de armazenamento por trás de cada mecanismo. Os gabinetes de armazenamento contêm as DAEs e os componentes de alimentação.</p></span> 
+	<span><p>Cada mecanismo se conecta a todas as DAEs, além de as controlar, no gabinete do sistema. Se gabinetes de armazenamento forem usados, o Mecanismo 1 e o Mecanismo 2 se conectarão às DAEs dedicadas no Gabinete de Armazenamento 1A, e o Mecanismo 3 e o Mecanismo 4 se conectarão às DAEs dedicadas no Gabinete de Armazenamento 1B.</p></span> 
+	<span><p>Os componentes de gateway NAS que fornecem acesso em nível de arquivo aos dados no array sempre residem no Gabinete de Armazenamento 1 em configurações de array de alta densidade e no Gabinete de Armazenamento 1A em configurações de array padrão.</p></span> 
+	<span><p>A dispersão de gabinetes do sistema está disponível para configurações de 3 e 4 mecanismos. A dispersão dos gabinetes do sistema é uma opção de disposição de gabinetes que permite a separação física entre o Gabinete do Sistema 2 e o Gabinete do Sistema 3, podendo aceitar restrições de espaço físico. A distância máxima entre o Gabinete do Sistema 2 e o Gabinete do Sistema 4 é de 10 m/32,8 pés.</p></span> 
+</html>

@@ -1,0 +1,17 @@
+<html>
+	<title>
+		CONFIGURATION
+	</title>
+	<span>
+		<p>Current Configuration Details:</p>
+		<ul>
+			<li>Number of engines: {0}</li>
+			<li>Number of DAEs: {1}</li>
+			<li>Maximum number of drives: {2}</li>
+		</ul>
+	</span>
+	<span><p>The VMAX 10K array configurations range from single- to four-engine arrays. Engines are the key I/O processing units, each residing in own system bay. Besides the engine, each system bay houses the power components and a minimum of four Disk Array Enclosures (DAEs). One or two storage bays (Storage Bay 1A and Storage Bay 1B) can be included in the array configuration to maximize storage capacity behind each engine. Storage bays contain DAEs and the power components.</p></span>
+	<span><p>Every engine connects to and controls all Disk Array Enclosures in the system bay. If storage bays are used, Engine 1 and Engine 2 connect to the dedicated DAEs in Storage Bay 1A and Engine 3 and Engine 4 connect to the dedicated DAEs in Storage Bay 1B.</p></span>
+	<span><p>The standard configurations support standard (15-drive) DAEs and high density (25-drive) DAEs. High density array configurations support only 25-drive DAEs. The maximum standard configuration consists of four system and two storage bays while the maximum high density configuration consists of four system bays only. System bays contain a maximum of 10 DAEs in standard and a maximum of 12 DAEs in high density array configurations.</p></span>
+	<span><p>System bay dispersion is available for three- and four-engine configurations. System bay dispersion is a bay placement option that allows physical separation between System Bay 2 and System Bay 3 thereby accommodating potential floor space restrictions. The maximum distance between System Bay 2 and System Bay 4 is 10.0m /32.8 ft.</p></span>
+</html>

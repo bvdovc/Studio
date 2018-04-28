@@ -1,0 +1,30 @@
+<html>
+	<title> 		GABINETE DO SISTEMA TITAN
+	</title> 	<span>
+		<h>Gabinete do Sistema 1</h>
+ 		<ul>
+			<li>O Gabinete do Sistema 1 hospeda o Mecanismo 1 e no máximo 10 DAEs (Disk Array Enclosures).</li>
+			<li>Um par de módulos SPS (Standby Power Supply, fonte de alimentação em standby) na parte inferior do rack fornece energia reserva para as DAEs do compartimento.
+Um segundo par de módulos SPS fornece energia reserva para o mecanismo.</li> 
+			<li>O Gabinete do Sistema 1 também hospeda o processador Service Processor (Servidor, no-break, KVN) que fornece utilitários de software necessários para atender ao array.</li>
+			<li>As PDUs (Power Distribution Units, unidades de distribuição de energia ) e os PDPs (Power Distribution Panels, painéis de distribuição de energia) estão localizados em ambos os lados do rack e podem ser acessados pela parte traseira.</li>
+		</ul> 	
+	</span>	 	 	<span>
+		<h>Gabinete do Sistema 2</h>
+		<ul>	
+			<li>O Gabinete do Sistema 2 hospeda o Mecanismo 2 e no máximo 10 DAEs (Disk Array Enclosures).</li>
+			<li>Um par de módulos SPS (Standby Power Supply, fonte de alimentação em standby) na parte inferior do rack fornece energia reserva para as DAEs do compartimento.
+Um segundo par de módulos SPS fornece energia reserva para o mecanismo.</li>
+			<li>O Gabinete do Sistema 2 também inclui o MIBE (Matrix Interface Board Enclosure, compartimento para placa de interface matriz) que fornece conectividade entre mecanismos no array.</li>
+			<li>As PDUs (Power Distribution Units, unidades de distribuição de energia ) e os PDPs (Power Distribution Panels, painéis de distribuição de energia) estão localizados em ambos os lados do rack e podem ser acessados pela parte traseira.</li>
+		</ul> 	
+	</span>	 	<span>
+		<h>O Gabinete do Sistema 3 e o Gabinete do Sistema 4 (incluem componentes idênticos)</h>
+		<ul>
+			<li>O Gabinete do Sistema 3/4 hospeda o Mecanismo 3/4 e no máximo 10 DAEs (Disk Array Enclosures).</li>
+			<li>Um par de módulos SPS (Standby Power Supply, fonte de alimentação em standby) na parte inferior do rack fornece energia reserva para as DAEs do compartimento.
+Um segundo par de módulos SPS fornece energia reserva para o mecanismo.</li>
+			<li>As PDUs (Power Distribution Units, unidades de distribuição de energia ) e os PDPs (Power Distribution Panels, painéis de distribuição de energia) estão localizados em ambos os lados do rack e podem ser acessados pela parte traseira.</li>
+		</ul> 	
+	</span>
+</html>  

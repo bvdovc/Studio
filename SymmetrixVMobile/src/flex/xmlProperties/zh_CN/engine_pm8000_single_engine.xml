@@ -1,0 +1,20 @@
+<html>
+	<title>引擎</title>
+
+	<span>
+		<p>引擎是中央 I/O 处理单元，专门采用冗余设计来实现高可用性。每个冗余控制器（控制器 A 和控制器 B）包含缓存、两个 18 核 Broadwell 2.8 GHz CPU，并且将接口连接到 I/O 模块，例如通用前端、后端 NVMe、InfiniBand、压缩和重复数据消除以及闪存 NVMe I/O 模块。引擎提供 72 个 CPU 核心和高达 2TB 缓存。</p>
+	</span>	
+	<span>
+		<p>下图展示了在单引擎和多引擎配置的 PowerMax 8000 引擎后视图。图中显示了 I/O 模块类型、插槽名称和端口编号。在典型配置中，并非所有通用前端和闪存 NVMe 插槽均被占用。</p>
+	</span>
+	<span>
+		<p>单引擎配置：</p>
+	</span>
+		<span><img src="PowerMax8000_SingleEngine.jpg" ratio="0.57"/></span>
+	<span>
+		<p>对于大多数引擎组件，会从背面接触。仅引擎冷却风扇和电源应从正面接触。</p>
+	</span>
+		
+</html>
+
+

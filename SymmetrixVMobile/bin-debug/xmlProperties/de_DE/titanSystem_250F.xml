@@ -1,0 +1,9 @@
+﻿<html>
+	<title>SYSTEM-BAY </title>
+	<span><p>Das System-Bay des VMAX 250F bietet Platz für ein oder zwei V-Bricks. Jeder V-Brick besteht aus einer Engine, zwei Laufwerks-Array-Gehäusen (DAEs) mit hoher Dichte und 25 Laufwerken sowie zwei Lithium-Ionen-Stand-by-Netzteilen (SPS) für die Notstromversorgung der Engines. Auf jeder Seite des Racks sind eine Stromverteilereinheit (PDU) und eine Stromverteilertafel (PDP) installiert, die redundante Stromversorgungszonen (Zone A und Zone B) mit Strom versorgen. </p></span>
+	<span><p>Bei der Installation in einem standardmäßigen EMC Rack belegen die VMAX 250F-Komponenten nur die untere Hälfte des Racks (die unteren 2 HE im Rack), sodass der restliche Platz für andere Komponenten zur Verfügung steht. Bei der Installation in einem Mini-Rack belegen die VMAX 250F-Komponenten den gesamten Platz des Racks. </p>
+	
+	</span>
+</html>
+
+

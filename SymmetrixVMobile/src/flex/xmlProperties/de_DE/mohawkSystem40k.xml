@@ -1,0 +1,5 @@
+<html>
+	<title> 		SYSTEM-BAY
+	</title> 	
+	<span><p>Das System-Bay umfasst eine bis acht Engines, MIBE, Stromkomponenten, Komponenten des Serviceprozessors (Server, USV, KVM) sowie zwei Matrix Interface Boards (MIBE), die Verbindungen zwischen den Engines bieten.</p></span> 	<span><p>Die Engines sind auf der Grundlage ihrer Position im System-Bay nummeriert, von unten (Engine 1) nach oben (Engine 8). Die Engines werden zuerst in der Mitte des Bay hinzugefügt, beginnend mit Engine 4. Engine 5, Engine 3, Engine 6, Engine 2, Engine 7, Engine 1 und Engine 8 mit ihren zugehörigen Speicher-Bays können hinzugefügt werden, um wachsende Speicherkapazitätsanforderungen zu erfüllen.</p></span> 	<span><p>Wenn verteilte System-Bays implementiert werden, umfasst das Array zwei physisch separate System-Bays und die zugehörigen Speicher-Bays an jedem System-Bay-Standort.</p></span>
+</html>    

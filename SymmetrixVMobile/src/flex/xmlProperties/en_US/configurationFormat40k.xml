@@ -1,0 +1,17 @@
+<html>
+	<title>
+		CONFIGURATION
+	</title>
+	<span>
+		<p>Current Configuration Details:</p>
+		<ul>
+			<li>Number of engines: {0}</li>
+			<li>Number of DAEs: {1}</li>
+			<li>Maximum number of drives: {2}</li>
+		</ul>
+	</span>
+	<span><p>The VMAX 40K array configurations are designed for enterprise storage environments. The array configurations include at least one system bay that can house from one to eight engines and a number of half or fully populated storage bays, depending on the number of engines in the array.  Engines are the key I/O processing units that provide cache, CPU power, front-end (host) and back-end connectivity to drives in the array.</p></span>
+	<span><p>The maximum array configuration size depends on the type of Disk Array Enclosures (DAEs) in use.  If only 15-drive standard DAEs are used, the maximum array configuration includes an eight-engine system bay and 10 storage bays. If high-density 25-drive DAEs are configured, the maximum configurations consist of a system bay and eight storage bays. Both DAE types can be used within the array but not within the same storage bay.</p></span>
+	<span><p>DAEs from dedicated storage bays and dedicated DAE locations connect to a dedicated engine in the system bay. Depending on the way the DAEs connect to the engine, they are referred to direct-connect or daisy-chain DAEs.</p></span>
+	<span><p>System Bay dispersion is an array placement option available for arrays with three or more engines. The second, physically separated system bay is added when a third (Engine 3), fifth (Engine 2), or seventh (Engine 1) is added to the array. This engine and all subsequent engines are added to the second system bay. The dispersed system bay placement is suitable for data centers that cannot accommodate large, contiguous array placements. The maximum distance between both system bays is 20.0m /82.0 ft.</p></span>
+</html>

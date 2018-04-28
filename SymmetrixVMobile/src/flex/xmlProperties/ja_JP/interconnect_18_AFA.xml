@@ -1,0 +1,16 @@
+<html>
+<title>18ポートIB（InfiniBand）相互接続 </title>
+
+<span><p>この1Uコンポーネントはシステム ベイ1に存在し、EMC Dynamic Virtual Matrix（TM）アーキテクチャの中核となります。これにより、マルチ エンジン（V-Brick/zBrick）の450Fおよび850Fアレイで通信とリソース共有が可能になります。IB相互接続には、次のコンポーネントが含まれています。</p></span>
+<span>
+	<ul>
+		<li> InfiniBandポート×18 </li>
+		<li> 冗長型、ホットプラグ対応の電源</li>
+		<li> 冗長型、ホット プラグ対応のファン モジュール </li>
+		<li> 1 Gb Ethernet RJ-45管理ポート（EthernetスイッチAおよびBに接続）x2 </li>
+	</ul>
+</span>
+<span><p> 各エンジンはIB相互接続への冗長インターフェイスを提供します。</p></span>
+
+</html>
+

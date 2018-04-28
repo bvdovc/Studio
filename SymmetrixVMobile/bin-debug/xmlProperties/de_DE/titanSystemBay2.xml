@@ -1,0 +1,14 @@
+<html>
+    <title>         SYSTEM-BAY 2
+    </title>     <span>
+        <p>System-Bay 2 umfasst Engine 2, maximal 10 Disk Array Enclosures (DAEs) in einer Standard- oder maximal 12 DAEs in einer Array-Konfiguration mit hoher Dichte. Die Mindestanzahl DAEs in allen System-Bays beträgt vier, unabhängig vom Array-Konfigurationstyp. Diese vier DAEs sind DAE 1, DAE 2, DAE 5 und DAE 6, auch bekannt als die Vault-DAEs.</p>     
+    </span>      <span>
+        <p>Die wichtigsten Hardware-Komponenten, die sich nur in System-Bay 2 befinden, sind zwei redundante Matrix Interface Board Enclosures (MIBEs), die eine hohe Verfügbarkeit in Arrays mit mehreren Engines durch Verbindungen zwischen den Engines gewährleisten.</p>     
+    </span>      <span>
+        <p>Die Stromkomponenten des System-Bay umfassen Standby-Netzteil-Module, Power Distribution Units (PDUs) und Power Distribution Panels (PDPs). Stromkomponenten auf jeder Seite des Bay gehören zu unabhängigen Stromversorgungsbereichen, die mit unabhängigen Wechselstromleitungen verbunden werden müssen, um Stromredundanz zu ermöglichen.</p>     
+    </span>      <span>
+        <p>Zwei Standby-Netzteil-Module ganz unten im System-Bay liefern Reservestrom für die Vault-DAEs. Zwei Standby-Netzteil-Module in der Mitte des System-Bay liefern Reservestrom für die Engine.</p>     
+    </span>      <span>
+        <p>Der Zugriff auf die an jeder Seite des Bay montierte PDP und PDU erfolgt über die Rückseite. Sie bieten die zentralisierte Schnittstelle und Verteilungssteuerung für die Wechselstromversorgung. Die PDPs sind mit den Wechselstromversorgungsleitungen verbunden, bieten den Haupt-Ein/Aus-Schalter und sind zudem mit den PDPs in demselben Stromversorgungsbereich verbunden. Die PDPs verteilen den Strom an einzelne Komponenten weiter und umfassen auch die Ein/Aus-Schalter.</p>     
+    </span> 
+</html>

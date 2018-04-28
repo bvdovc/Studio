@@ -1,0 +1,314 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace breadcrumb "sym.viewer.mobile.views.components.breadcrumb.*";
+@namespace selectionList "sym.viewer.mobile.views.components.selectionList.*";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+@font-face {
+    src:url("/fonts/MtBdLFC.ttf");
+    fontFamily: MetaFont;
+	fontWeight:bold;
+    advancedAntiAliasing: true;
+}
+
+@font-face {
+ src:url("/fonts/MtNoLFC.ttf");
+ fontFamily: MetaFont;
+ fontWeight:normal;
+ advancedAntiAliasing: true;
+}
+
+@font-face {
+	src:url("/fonts/MtNoLFRo.ttf");
+	fontFamily: MetaFontRomanNormal;
+	fontWeight:normal;
+	advancedAntiAliasing: true;
+}
+
+@font-face {
+	src:url("/fonts/MtBdLFRo.ttf");
+	fontFamily: MetaFontRomanNormal;
+	fontWeight:bold;
+	advancedAntiAliasing: true;
+}
+
+@font-face {
+	src:url("/fonts/Roboto-Regular.otf");
+	fontFamily: RobotoFont;
+	fontWeight:normal;
+	advancedAntiAliasing: true;
+}
+
+@font-face {
+	src:url("/fonts/Roboto-Bold.otf");
+	fontFamily: RobotoFont;
+	fontWeight:bold;
+	advancedAntiAliasing: true;
+}
+
+@font-face {
+    src:url("/fonts/MtNoLFRo.ttf");
+    fontFamily: MetaFontMobile;
+	fontWeight:normal;
+    advancedAntiAliasing: true;
+	embed-as-cff: false;
+}
+
+@font-face {
+    src:url("/fonts/MtBdLFRo.ttf");
+    fontFamily: MetaFontMobile;
+	fontWeight:bold;
+    advancedAntiAliasing: true;
+	embed-as-cff: false;
+}
+
+@font-face {
+    src:url("/fonts/Roboto-Regular.otf");
+    fontFamily: RobotoMobileFont;
+	fontWeight:normal;
+    advancedAntiAliasing: true;
+	embed-as-cff: false;
+}
+
+@font-face {
+    src:url("/fonts/Roboto-Bold.otf");
+    fontFamily: RobotoMobileFont;
+	fontWeight:bold;
+    advancedAntiAliasing: true;
+	embed-as-cff: false;
+}
+
+
+s|Application{
+	fontFamily: RobotoFont;
+}
+
+s|ActionBar {
+    skinClass:ClassReference("sym.viewer.mobile.views.skins.ActionBarSkin");
+    defaultButtonAppearance: beveled;
+}
+
+s|ActionBar #titleDisplay {
+    fontWeight:normal;
+    color: #000000;
+}
+
+s|ActionBar #titleGroup {
+    fontWeight:normal;
+    color: #FFFFFF;
+}
+
+mx|ToolTip {
+	textAlign: center;
+	cornerRadius: 7;
+	fontWeight: bold;
+	backgroundColor: #FFFFFF;
+}
+
+.mainTitle{
+    color: #007DB8;
+    fontWeight: normal;
+    fontSize: 32;
+}
+
+.mainTitleSeria{
+    color: #007DB8;
+    fontWeight: normal;
+    fontSize: 25;
+}
+
+.seriesTitle{
+    color: #99E0F5;
+    fontWeight: bold;
+    fontSize: 30;
+}
+
+.toolBar{
+    backgroundColor: #007DB8;
+}
+
+.home{
+    backgroundColor: #EEEEEE;
+}
+
+.selectionComponent {
+    backgroundColor: #FFFFFF;
+}
+
+.homeSeriesTitle {
+    fontSize: large;
+    color: #000000;
+}
+
+.titleGroupStyle{
+    height: 115px;
+}
+
+.normalFont {
+	fontSize: normal;
+}
+.smallFont {
+	fontSize: small;
+}
+.mediumFont {
+	fontSize: medium;
+}
+.largeFont {
+	fontSize: large;
+}
+.titleFont {
+	fontSize: x-large;
+	fontWeight: bold;
+	color: "black";
+}
+
+.propertyTitle
+{
+	fontWeight: bold;
+	color: #ffffff;
+}
+
+.listStyle {
+	selectionColor: #CCCECF;
+}
+
+.breadcrumbItemStyle
+{
+	verticalAlign:justify;
+	horizontalAlign:center;
+    color:#FFFFFF;
+    fontWeight:bold;
+}
+
+.arrowBreadCrumbItem{
+   fontSize:x-large;
+   fontWeight:bold;
+   paddingLeft:20;
+}
+
+.breadcrumbFont
+{
+	fontSize: medium;
+}
+
+.labelStyle {
+	color: #ffffff;
+}
+
+.popUpStyle {
+	 backgroundColor: #007DB8; 
+}
+
+.borderStyle {
+	borderStyle: solid;
+	borderWeight: 2;
+	borderColor: #2483c2; 
+}
+
+.alertStyle {
+	backgroundColor: #cccccc;
+	borderColor: #000000;
+}
+
+.buttonStyle
+{
+	fontWeight:bold;
+	defaultButtonAppearance: beveled;
+}
+
+.itemStyle {
+	fontSize: x-small;
+    fontWeight:bold;
+}
+
+.titleArea{
+	backgroundColor: #2E94DC;
+}
+
+.title{
+	color: #000000;
+}
+
+.textInputBackground
+{
+	contentBackgroundColor: #ffffff;
+}
+
+.popupTitle
+{
+	color: #ffffff;
+	fontWeight: normal;
+}
+.popupTitleStep
+{
+	fontWeight: normal;
+}
+
+.filterBorderContainerStyle {
+	borderColor: #3a8dca;
+	borderWeight: 2;
+	cornerRadius: 8;
+}
+.filterNameLabelStyle{
+    color: #2483c2;
+}
+
+.filterValueLabelStyle{
+    color: #2483c2;
+	fontWeight: bold;
+}
+
+.filterWizardButtonStyle {
+	color: #ffffff;
+	fontWeight:bold;
+}
+
+.wizardTextInputStyle {
+	color: #ffffff;
+	fontWeight: bold;
+	fontFamily: RobotoMobileFont;
+	skinClass:ClassReference("sym.viewer.mobile.views.skins.TextInputMobileSkin")
+}
+
+.customTextInputPrompt{
+	fontStyle:italic;
+	fontWeight: normal;
+	color: #ffffff;
+}
+
+.propertyHeading{
+    fontWeight: bold;
+    fontSize: 14;
+	fontFamily: RobotoFont;
+}
+
+.propertyParagraph{
+    fontSize:12;
+	fontFamily: RobotoFont;
+}
+
+.propertyTableHeader
+{
+    fontSize:12;
+    fontFamily: RobotoFont;
+    fontWeight: bold;
+}
+
+.propStyleText{
+	fontFamily: RobotoFont;
+}
+
+.seriesProperty{
+    color:#000000;
+	borderVisible:false;
+    backgroundColor: #EEEEEE;
+    fontSize:13px;
+}
+
+.dropSlotStyle
+{
+    backgroundAlpha:0.2;
+    borderColor: #F0E68C;
+    borderWeight: 8;
+    borderVisible: true;
+}

@@ -1,0 +1,8 @@
+<html>
+	<title> 		BOÎTIER MIBE
+	</title> 	<span>
+	<p>Le boîtier Matrix Interface Board (MIBE) est le système nerveux central des baies à plusieurs moteurs. Les boîtiers MIBE offrent une faible latence et une interconnexion de moteurs haut débit et assurent une disponibilité générale du système. Deux boîtiers MIBE résident dans la baie système&nbsp;2, chacun étant connecté à tous les moteurs de la baie.</p> 	
+	</span> 	<span>
+	<p>Les boîtiers MIBE comprennent leurs propres modules d’alimentation/refroidissement et ports de fabric redondants aux cartes d’interface système (SIB) de chaque moteur de la baie.</p> 	
+	</span>
+</html> 

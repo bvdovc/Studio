@@ -1,0 +1,37 @@
+<html>
+	<title>
+		TITAN SYSTEM BAY
+	</title>
+	<span>
+		<h>System Bay 1</h>
+ 		<ul>
+			<li>System Bay 1 houses Engine 1 and a maximum of 10 Disk Array Enclosures (DAEs).</li>
+			<li>A pair of Standby Power Supply (SPS) modules at the bottom of the rack provides backup power to the vault DAEs.
+The second pair of SPS modules provides backup power to the engine.</li> 
+			<li>System Bay 1 also houses the Service Processor (Server, KVM, and UPS) Processor that provides software utilities required to service the array.</li>
+			<li>Power Distribution Units (PDUs) and Power Distribution Panels (PDPs) are located at both sides of the rack and can be accessed from the rear.</li>
+		</ul>
+	</span>	
+	
+	<span>
+		<h>System bay 2</h>
+		<ul>	
+			<li>System Bay 2 houses Engine 2 and a maximum of 10 Disk Array Enclosures (DAEs).</li>
+			<li>A pair of Standby Power Supply (SPS) modules at the bottom of the rack provides backup power to the vault DAEs.
+The second pair of SPS modules provides backup power to the engine.</li>
+			<li>System Bay 2 also includes the Matrix Interface Board Enclosure (MIBE) that provides inter-engine connectivity in the array.</li>
+			<li>Power Distribution Units (PDUs) and Power Distribution Panels (PDPs) are located at both sides of the rack and can be accessed from the rear.</li>
+		</ul>
+	</span>	
+	<span>
+		<h>System bay 3 and System Bay 4 (include identical components)</h>
+		<ul>
+			<li>System Bay 3/4 houses Engine 3/4 and a maximum of 10 Disk Array Enclosures (DAEs).</li>
+			<li>A pair of Standby Power Supply (SPS) modules at the bottom of the rack provides backup power to the vault DAEs.
+The second pair of SPS modules provides backup power to the engine.</li>
+			<li>Power Distribution Units (PDUs) and Power Distribution Panels (PDPs) are located at both sides of the rack and can be accessed from the rear.</li>
+		</ul>
+	</span>
+</html>
+
+

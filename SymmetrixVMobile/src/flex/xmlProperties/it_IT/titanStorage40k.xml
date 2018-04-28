@@ -1,0 +1,10 @@
+<html>
+	<title> 		STORAGE BAY A ELEVATA DENSITÀ
+	</title> 	<span>
+		<p>Gli storage bay a elevata densità possono accogliere da un minimo di otto a un massimo di 16 Disk Array Enclosure (DAE) da 25 unità e componenti di alimentazione. I DAE possono ospitare da un minimo di quattro a un massimo di 25 unità.</p> 	
+	</span> 	<span>
+		<p>I componenti di alimentazione degli storage bay comprendono moduli SPS (Standby Power Supply), PDU (Power Distribution Unit) e PDP (Power Distribution Panel). Otto moduli SPS garantiscono alimentazione di backup a 16 DAE, due moduli SPS per quattro DAE.</p> 	
+	</span> 	<span>
+		<p>È possibile accedere ai moduli PDP e alle PDU dalla parte posteriore. Entrambi i moduli forniscono l'interfaccia centralizzata e il controllo della distribuzione per l'alimentazione CA in ingresso. I moduli PDP eseguono il collegamento alle linee di alimentazione CA in ingresso, forniscono lo switch principale di accensione/spegnimento e collegano inoltre i PDP presenti all'interno della stessa power zone. I PDP distribuiscono l'alimentazione ai singoli componenti e includono inoltre gli switch di accensione e spegnimento. I componenti di alimentazione su ciascun lato del bay appartengono a power zone indipendenti che devono essere collegate a linee di alimentazione CA indipendenti per assicurare la ridondanza dell'alimentazione.</p> 	
+	</span>
+</html> 

@@ -1,0 +1,15 @@
+<html>
+	<title> 		CONFIGURATION
+	</title> 	
+	<span>
+		<p>Détails de la configuration actuelle:</p>
+		<ul>
+			<li>Nombre de moteurs: {0}</li>
+			<li>Nombre de boîtiers DAE: {1}</li>
+			<li>Nombre maximal de disques: {2}</li>
+		</ul> 	
+	</span>
+	<span><p>Les configurations de baies Symmetrix sont conçues pour des environnements de stockage d’entreprise. Les configurations de baies comprennent au moins une baie système pouvant héberger de un à huit moteurs et plusieurs baies de stockage complètes ou non, selon le nombre de moteurs de la baie. Les moteurs sont les unités de traitement d’E/S principales qui fournissent un cache et un CPU et qui assurent la connectivité front-end (hôte) et back-end des disques de la baie.</p></span> 	
+	<span><p>La taille de configuration maximale de la baie dépend du type de boîtier DAE utilisé. Si l’on n’utilise que des boîtiers DAE standard à 15 disques, la configuration de baies maximale comprend une baie système à huit moteurs et 10 baies de stockage. Si des boîtiers DAE haute densité à 25 disques sont configurés, les configurations maximales comprennent une baie système et huit baies de stockage. Vous pouvez utiliser les deux types de boîtier DAE au sein de la baie, mais pas au sein de la même baie de stockage.</p></span> 	
+	<span><p>Les boîtiers DAE des baies de stockage dédiées et des emplacements DAE dédiés sont reliés à un moteur dédié de la baie système. Selon leur mode de connexion au moteur, les boîtiers DAE sont appelés des boîtiers DAE à connexion directe ou en cascade.</p></span> 
+</html>

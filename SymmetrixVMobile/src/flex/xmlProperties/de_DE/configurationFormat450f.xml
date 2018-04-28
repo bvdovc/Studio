@@ -1,0 +1,34 @@
+<html>
+	<title>VMAX 450 All Flash</title>
+	<span>
+		<h>Details zur aktuellen Konfiguration:</h>
+		<ul>
+		    <li>Nutzbare Kapazität (TB) Betriebssystem: {0}</li>
+		    <li>Nutzbare Kapazität (TB) MF: {4}</li>
+			<li>Anzahl der V-Brick-/Z-Brick-Bausteine: {1}</li>
+			<li>Anzahl der DAEs: {2} </li>
+			<li>Maximale Anzahl der Laufwerke: {3}</li>
+			<li>Tatsächliche Anzahl von Laufwerken: {5}</li>
+			<li>Anzahl der FE-Ports: {6}</li>
+		</ul>
+	</span>
+	<span><h>Beschreibung:</h></span>
+	<span><p> Die VMAX 450F ist in Systemen mit bis zu vier V-Brick-/Z-Brick-Bausteinen verfügbar. Ein V-Brick/Z-Brick ist der grundlegende Baustein, der Folgendes enthält:</p></span>
+	<span>
+		<ul>
+			<li>Eine Engine (die redundante Datenspeicher-Verarbeitungseinheit), die auf Intel Xeon E5-2650-v2 Prozessoren mit 2,6 GHz und 8 Kernen zurückgreift</li>
+			<li>Eine Startkapazität von 53 Tbu auf Flash-Laufwerken, verteilt auf zwei Laufwerks-Array-Gehäuse (Disk Array Enclosures, DAEs) mit hoher Dichte, die jeweils bis zu 120 2,5-Zoll-Laufwerke unterstützen.</li>
+			<li>Die Software ist in einfachen Bestellungsoptionen verfügbar: F/FX für offene Systeme, zF/zFX für Mainframe </li>
+		</ul>
+	</span>
+		<span><p> Eine anfängliche V-Brick/Z-Brick-Konfiguration mit 53 Tbu kann: </p>
+			<ul>
+			<li>durch Hinzufügen von Flash Capacity Packs (offene Systeme) oder zCapacity Packs (Mainframe) aufgerüstet werden, die mit 13 TB über die erforderliche Flash-Kapazität verfügen und die nötige Software beinhalten.</li>
+				<li>durch das Hinzufügen von V-Brick-/Z-Brick-Bausteinen erweitert werden, um Performance, Konnektivität und Durchsatz zu steigern.</li>
+			</ul>
+		</span>
+		<span><p>
+ Dank unabhängiger und linearer Skalierung von Kapazität und Performance können VMAX-450F-Arrays äußerst flexibel für variierende Arbeitslasten angepasst werden.
+		</p></span>
+</html>
+

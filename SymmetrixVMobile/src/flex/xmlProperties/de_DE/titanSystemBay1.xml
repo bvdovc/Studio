@@ -1,0 +1,19 @@
+<html>
+    <title>         SYSTEM-BAY 1
+    </title>     <span>
+        <p>System-Bay 1 umfasst Engine 1, maximal 10 Disk Array Enclosures (DAEs) in einer Standard- oder maximal 12 DAEs in einer Array-Konfiguration mit hoher Dichte. Die Mindestanzahl DAEs in allen System-Bays beträgt vier, unabhängig vom Array-Konfigurationstyp. Diese vier DAEs sind DAE 1, DAE 2, DAE 5 und DAE 6, auch bekannt als die Vault-DAEs.</p>     
+    </span>      <span>
+        <p>Als Teil jeder Array-Konfiguration umfasst System-Bay 1 den Serviceprozessor, der zum Betreiben und Warten des gesamten Arrays vorgesehen ist. Der Serviceprozessor beinhaltet die folgenden Komponenten:</p>
+            <ul>
+                <li>Server, der Systemüberwachung, Remote-Unterstützung und Statusberichte bietet</li>
+                <li>KVM (Tastatur, Video, Maus)</li>
+                <li>Unterbrechungsfreie Stromversorgung (USV), die Reservestrom für Server und KVM bietet</li>
+            </ul>     
+    </span>      <span>
+    	<p>Die Stromkomponenten des System-Bay umfassen Standby-Netzteil-Module, Power Distribution Units (PDUs) und Power Distribution Panels (PDPs). Stromkomponenten auf jeder Seite des Bay gehören zu unabhängigen Stromversorgungsbereichen, die mit unabhängigen Wechselstromleitungen verbunden werden müssen, um Stromredundanz zu ermöglichen.</p>     
+    </span>     <span>
+        <p>Zwei Standby-Netzteil-Module ganz unten im System-Bay liefern Reservestrom für die Vault-DAEs. Zwei Standby-Netzteil-Module in der Mitte des System-Bay liefern Reservestrom für die Engine.</p>     
+    </span>      <span>
+        <p>Der Zugriff auf die an jeder Seite des Bay montierte PDP und PDU erfolgt über die Rückseite. Sie bieten die zentralisierte Schnittstelle und Verteilungssteuerung für die Wechselstromversorgung. Die PDPs sind mit den Wechselstromversorgungsleitungen verbunden, bieten den Haupt-Ein/Aus-Schalter und sind zudem mit den PDPs in demselben Stromversorgungsbereich verbunden. Die PDPs verteilen den Strom an einzelne Komponenten weiter und umfassen auch die Ein/Aus-Schalter.</p>     
+    </span> 
+</html>

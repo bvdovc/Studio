@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark"
+		  xmlns:dropdown="sym.viewer.mobile.views.components.dropdown.*"
+		  paddingLeft="10" 
+		  paddingRight="15"
+		  paddingTop="30"
+		  paddingBottom="20"
+		  gap="20"  
+		  width="100%"
+		  height="100%" 
+		  preinitialize="onPreinitialize(event)">
+	<fx:Script>
+		<![CDATA[
+			import mx.events.ToolTipEvent;
+			
+			import sym.objectmodel.common.Constants;
+			import sym.viewer.mobile.views.skins.WizardCheckBoxSkin;
+			import sym.viewer.mobile.views.skins.grid.WizardDataGridSkin;
+			
+			
+			protected function fileCapacity_toolTipHideHandler(event:ToolTipEvent):void
+			{
+				// TODO Auto-generated method stub
+				
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<fx:Script source="../../../script/components/wizard/wizardEnginePortComponent.as" />
+	
+	<s:Label id="stepDescription"
+			 text="{getResString('main', (SymmController.instance.isAFA() || SymmController.instance.isPM()) ? 'STATE_ENGINE_PORTS_AFA_TITLE' : 'STATE_ENGINE_PORTS_DESC')}"
+			 width="100%" />
+	
+	<s:HGroup id="selectionGroup"
+			  verticalAlign="baseline"
+			  horizontalAlign="left"
+			  gap="50"
+			  height="30"
+			  width="100%" >
+		
+		<s:HGroup id="hostProtocol"
+				  gap="20"
+				  horizontalAlign="left"
+				  verticalAlign="baseline"
+				  visible="{(SymmController.instance.isAFA() || SymmController.instance.isPM())}"
+				  includeInLayout="{(SymmController.instance.isAFA() || SymmController.instance.isPM())}" >
+			<s:Label id="protocolLabel" 
+					 textAlign="left"
+					 fontWeight="bold"
+					 text="{getResString('main', 'STATE_ENGINE_PORTS_HOST_PROTOCOL')}"/>
+			<dropdown:DropDown id="hostProtocolDrop"
+							   minWidth="120"
+							   dataProvider="{hostProtocolDP}"
+							   change="onHostProtocolChange(event)"/>
+		</s:HGroup>
+		
+		<s:CheckBox id="fileCapacity"
+					label="{getResString('main', 'STATE_ENGINE_PORTS_FILE_USE')}"
+					buttonMode="true"
+					useHandCursor="true"
+					change="fileCapacity_changeHandler(event)"
+					skinClass="sym.viewer.mobile.views.skins.WizardCheckBoxSkin" />
+		</s:HGroup>
+	
+	<s:DataGrid id="portGrid"
+				dataProvider="{_portGridDataProvider}"
+				width="100%"
+				height="100%"
+				editable="true"
+				itemEditor="sym.viewer.mobile.views.components.wizard.WizardPortItemEditor"
+				skinClass="sym.viewer.mobile.views.skins.grid.WizardDataGridSkin"
+				requestedColumnCount="{_columnCount}"
+				sortableColumns="false"
+				resizableColumns="true"
+				requestedMinRowCount="4"
+				chromeColor="0xffffff" >
+		<s:columns>
+			<s:ArrayList >
+				<s:GridColumn id="portType"
+							  dataField="{Constants.WIZARD_PORT_GRID_TYPE_COLUMN}"
+							  labelFunction="{portTypeLabelFunction}"
+							  editable="false"/>
+				<s:GridColumn id="portSpeed" 
+							  dataField="{Constants.WIZARD_PORT_GRID_SPEED}"
+							  labelFunction="{portSpeedLabelFunction}" />
+				<s:GridColumn id="engine1"
+							  dataField="{Constants.WIZARD_PORT_GRID_NO_ENGINE_COLUMN} 1"
+							  labelFunction="{engineLabelFunction}"/>
+				<s:GridColumn id="total"
+							  editable="false"
+							  dataField="{Constants.WIZARD_PORT_GRID_TOTAL_COLUMN}"
+							  labelFunction="{totalCountLabelFunction}" />
+			</s:ArrayList>
+		</s:columns>
+	</s:DataGrid>
+	
+	<s:HGroup id="gridView"
+			  gap="20"
+			  horizontalAlign="left"
+			  
+			  verticalAlign="baseline" >
+		<s:Label id="gridViewlLabel" 
+				 textAlign="left"
+				 fontWeight="bold"
+				 text="{getResString('main', 'STATE_ENGINE_PORTS_GRID_VIEW')}"/>
+		<dropdown:DropDown id="gridViewDrop"
+						   minWidth="120"
+						   change="gridViewDrop_changeHandler(event)"/>
+	</s:HGroup>
+	
+</s:VGroup>
+
+

@@ -1,0 +1,25 @@
+<html>
+	<title>
+		ENGINE
+	</title>
+	<span>
+	<p>The VMAX 40K Engine is the key system bay component that provides physical memory, CPU processing power , front-end host, SRDF and external array connectivity, back-end connectivity to Disk Array Enclosures (DAEs), and connectivity to other engines in the array.
+Each engine includes:</p>
+		<ul>
+			<li>Two directors that support front-end, back-end, external array and SRDF connections</li>
+			<li>48, 96, 192, or 256 GB of physical memory</li>
+			<li>Four System Interface boards (SIB) (two per director) that connect the director and the Matrix Interface  Board Enclosures (MIBEs)</li>
+			<li>Four Back End I/O Modules (two per director, available with or without encryption</li>
+			<li>Four Front End I/O Modules (two per director) that provide the following connections( per module)</li>
+			<li indent="1">4 Fibre Channel (2, 4, or 8 Gb/s ) ports</li>
+			<li indent="1">2 Fibre Channel SRDF ( 2, 4, 8 Gb/s)</li>
+			<li indent="1">2 Fibre Channel over Ethernet ( FCoE) ports (10 Gb/s)</li>
+			<li indent="1">2 FICON ports  (2, 4, or 8 Gb/s)</li>
+			<li indent="1">2 iSCSI  ports ( 1 Gb/s)</li>
+			<li indent="1">2 iSCSI/FCoE ports  (10 Gb/s)</li>
+			<li indent="1">2 GbE SRDF ports ( 1 Gb/s, 10 Gb/s).</li>
+			<li>2 Management Modules that provide environmental monitoring</li>
+			<li>Two engine power supplies</li>
+		</ul>
+	</span>
+</html>

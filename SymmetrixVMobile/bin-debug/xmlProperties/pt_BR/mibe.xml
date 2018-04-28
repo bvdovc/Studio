@@ -1,0 +1,8 @@
+<html>
+	<title> 		MIBE
+	</title> 	<span>
+	<p>A MIBE (Matrix Interface Board Enclosure, compartimento para placa de interface matriz) é o sistema nervoso central dos arrays com múltiplos mecanismos. As MIBEs fornecem interconexão de mecanismos de baixa latência e alta velocidade e garantem a disponibilidade geral do sistema. Duas MIBEs redundantes residem no Gabinete do Sistema 2, cada uma conectando-se a todos os mecanismos no array.</p> 	
+	</span> 	<span>
+	<p>As MIBEs contam com seus próprios módulos de fonte de alimentação/refrigeração e portas fabric redundantes aos SIBs (System Interface Boards, placas de interface do sistema) de cada mecanismo no array.</p> 	
+	</span>
+</html> 

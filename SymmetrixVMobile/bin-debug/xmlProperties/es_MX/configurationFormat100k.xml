@@ -1,0 +1,24 @@
+<html>
+	<title>VMAX 100K</title>
+	<span>
+		<h>Detalles de la configuración actual:</h>
+		<ul>
+		    <li>Capacidad útil del SO (TB): {0}</li>
+		    <li>Capacidad útil de MF (TB): {4}</li>
+			<li>Cantidad de motores: {1}</li>
+			<li>Cantidad de DAE: {2} </li>
+			<li>Cantidad máxima de unidades: {3}</li>
+			<li>Cantidad real de unidades: {5}</li>
+			<li>Cantidad de puertos FE: {6}</li>
+		</ul>
+	</span>
+	<span><h>Descripción:</h></span>
+	<span><p>VMAX 100K está configurado con uno o dos motores centrales de 2.1 GHz Ivy Bridge (IVB) 24 con 512 o 1,024 GB de memoria por motor distribuido en dos bahías de sistema. En configuraciones de dos motores, el arreglo VMAX 100K admite hasta 1,440 unidades de 2.5 in o hasta 720 unidades de 3.5 in, lo que proporciona hasta 1.1 PB de capacidad útil si se utilizan unidades de 4 TB. Los motores residen en las bahías de sistema compatibles con el tipo de bahía de sistema de uno o dos motores.</p></span>
+		<span>
+			<p> Cuando está completamente configurado, el 100K proporciona hasta 64 puertos front-end para la conectividad del host. La interconexión de fabric interna usa switches dobles InfiniBand de 12 puertos para redundancia y disponibilidad.</p>
+		</span>
+		<span><p>
+ El 100K admite discos de capacidad, rendimiento y EFT para maximizar el rendimiento del arreglo en todos los tipos de unidades. Para permitir que la tecnología EMC Fully Automated Storage Tiering (FAST) ajuste el rendimiento del arreglo 100K mientras reduce los costos aprovechando la velocidad increíblemente rápida de los discos flash combinada con discos SAS NL rentables, el arreglo debe completarse con unidades de diferentes tecnologías para cumplir con los requisitos de cargas de trabajo de sus aplicaciones.
+		</p></span>
+</html>
+

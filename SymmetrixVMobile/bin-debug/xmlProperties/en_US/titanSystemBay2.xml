@@ -1,0 +1,20 @@
+<html>
+    <title>
+        SYSTEM BAY 2
+    </title>
+    <span>
+        <p>System Bay 2 houses Engine 2, a maximum of 10 Disk Array Enclosures (DAEs) in standard or a maximum of 12 DAEs in high density array configurations. The minimum number of DAEs in any system bay is four, regardless of the array configuration type. These four DAEs are DAE 1, DAE 2, DAE 5, and DAE 6, also known as the vault DAEs.</p>
+    </span> 
+    <span>
+        <p>The key hardware components located only in System Bay 2 are two redundant Matrix Interface Board Enclosures (MIBEs) that ensure high availability in multi-engine arrays by providing inter-engine connectivity.</p>
+    </span> 
+    <span>
+        <p>The system bay power components include Standby Power Supply (SPS) modules, Power Distribution Units (PDUs), and Power Distribution Panels (PDPs). Power components on each side of the bay belong to independent power zones that must be connected to independent AC power lines to guarantee power redundancy.</p>
+    </span> 
+    <span>
+        <p>Two SPS modules at the bottom of the system bay provide backup power to the vault DAEs.Two SPS modules in the middle of the system bay provide backup power to the engine.</p>
+    </span> 
+    <span>
+        <p>The PDP and the PDU installed at each side of the bay can be accessed from the rear. They provide the centralized interface and distribution control for the input AC power. The PDPs connect to the input AC power lines, feature the main on/off power switch, and also connect to the PDPs within the same power zone. The PDPs further distribute power to individual components and also contain the on/off power switches.</p>
+    </span> 
+</html>

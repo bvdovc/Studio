@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:GridItemEditor xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				  xmlns:s="library://ns.adobe.com/flex/spark" 
+				  xmlns:dropdown="sym.viewer.mobile.views.components.dropdown.*">
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.utils.StringUtil;
+			
+			import spark.events.IndexChangeEvent;
+			import spark.events.PopUpEvent;
+			
+			import sym.controller.SymmController;
+			import sym.controller.events.DropDownEvent;
+			import sym.controller.model.FilterWizardPortsStateModel;
+			import sym.objectmodel.common.Constants;
+			import sym.objectmodel.common.Engine;
+			import sym.objectmodel.common.EnginePort;
+			import sym.objectmodel.common.EnginePortGroup;
+			import sym.objectmodel.driveUtils.enum.HostType;
+			import sym.viewer.mobile.views.components.popups.MessagePopup;
+			
+			
+			private var _selectedPortGroup:EnginePortGroup;
+			private var _selectedSpeed:int;
+			private var _selectedPortCount:Object;
+				
+			private var _fileEnginePorts:Array = [];
+			
+			override public function prepare():void
+			{
+				super.prepare();
+				
+				dropDown.bindingList.addEventListener(MouseEvent.CLICK, drop_clickHandler);
+				dropDown.addEventListener(DropDownEvent.HIDE, popUpHideHandler);
+				
+			}
+			
+			private function popUpHideHandler(e:DropDownEvent):void
+			{
+				dropDown.dropListAnchor.displayPopUp = false;
+			}
+			
+			// Checks if this cell belongs to Engine column
+			private function get isEngineColumn():Boolean
+			{
+				return this.column.columnIndex > 1 && this.column.columnIndex < this.dataGrid.columnsLength - 1;
+			}
+			
+			// gets engine index for current Engine column
+			private function get engineInd():int
+			{
+				return this.column.columnIndex - 2;
+			}
+
+			// gets dataGrid dataProvider
+			private function get dataGridDP():Array
+			{
+				return this.dataGrid.dataProvider.toArray();
+			}
+			
+			// Gets dataGrid's parent as WizardEnginePortComponent
+			private function get wizardEnginePortCmp():WizardEnginePortComponent
+			{
+				return this.dataGrid.parent as WizardEnginePortComponent;
+			}
+			
+			override public function set data(val:Object):void
+			{
+				_selectedPortGroup = val as EnginePortGroup;
+				
+				if (val && this.column.dataField)
+				{
+					if (this.column.dataField == Constants.WIZARD_PORT_GRID_SPEED)
+					{
+						this.value = _selectedPortGroup.speed;
+					}		
+						
+					// Engine columns values
+					if (this.isEngineColumn)
+					{
+						this.value = _selectedPortGroup.engineCountMap[this.engineInd];
+					}
+				}
+			}
+			
+			override public function get data():Object
+			{
+				return _selectedPortGroup;
+			}
+			
+			// Initialize the DropDown control with the cell data.
+			override public function set value(newValue:Object):void 
+			{
+				if (this.column.dataField == Constants.WIZARD_PORT_GRID_SPEED)
+				{	
+					dropDown.labelFunction = portSpeedDropLabelFunction;
+					
+					_selectedSpeed = int(newValue);
+					_selectedPortCount = _selectedPortGroup.engineCountMap[this.engineInd];
+					
+					dropDown.dataProvider = new ArrayCollection(EnginePort.getSupportedSpeed(_selectedPortGroup.port, is250F()));		
+				}
+				
+				if (this.isEngineColumn)
+				{
+					// set drop down label function
+					dropDown.labelFunction = enginePortCountDropLabelFunction;
+					
+					_selectedSpeed = _selectedPortGroup.speed;
+					_selectedPortCount = newValue;
+					
+					dropDown.dataProvider = new ArrayCollection(EnginePortGroup.getSupportedPortCount(this.dataGridDP, _selectedPortGroup, this.engineInd, this.rowIndex));
+				}
+				
+				// sets drop item with current cell value
+				dropDown.selectedItem = newValue;
+			}
+			
+			// Returns the current value of the DropDown control.
+			override public function get value():Object 
+			{
+				return dropDown.selectedItem;
+			}
+			
+			override public function save():Boolean
+			{
+				if (!validate())
+					return false;
+				
+				var oldData:Object;
+				var newData:Object = this.value;
+				
+				if (this.column.dataField == Constants.WIZARD_PORT_GRID_SPEED)
+				{
+					oldData = _selectedSpeed;
+					_selectedSpeed = int(newData);
+				}
+				
+				if (this.isEngineColumn)
+				{
+					oldData = _selectedPortCount;
+					_selectedPortCount = newData;
+				}
+				
+				if (oldData != newData && dropDown.selectedIndex > -1)
+				{
+					// updates provider
+					if (this.column.dataField == Constants.WIZARD_PORT_GRID_SPEED)
+					{
+						// update Speed column
+						
+						var oldPort:EnginePort = _selectedPortGroup.port;
+						
+						// set new port if speed is changed for FC, SRDF, and File
+						this.data.port = EnginePortGroup.checkAppropriatePort(_selectedPortGroup.port, _selectedSpeed);
+						this.data.speed = _selectedSpeed;
+						
+						var fileEngineNewPorts:Array = EnginePortGroup.validateFilePortCount(_selectedPortGroup, dataGridDP);
+						if (fileEngineNewPorts.length > 0)
+						{
+							// display popUp
+							var popup:MessagePopup = MessagePopup.open(getResString("main", "STATE_ENGINE_PORTS_COUNT_CHANGE_QUESTION"), 
+								WizardEnginePortComponent.FILE_TYPE,
+								this, 
+								MessagePopup.WARNING_MESSAGE, 
+								MessagePopup.BUTTON_OK | MessagePopup.BUTTON_CANCEL);
+							popup.addEventListener(PopUpEvent.CLOSE, function (event:PopUpEvent):void
+							{
+								if (event.target.result == MessagePopup.RESULT_CANCEL)
+								{
+									data.port = oldPort;
+									data.speed = oldPort.speed;
+								}
+								else if (event.target.result == MessagePopup.RESULT_OK)
+								{
+									for each (var engineIndex:int in fileEngineNewPorts)
+									{
+										data.engineCountMap[engineIndex] = EnginePortGroup.getSupportedPortCount(dataGridDP, _selectedPortGroup, engineIndex, rowIndex)[0];
+									}
+								}
+								
+								(dataGrid.dataProvider as ArrayCollection).refresh();
+							});
+						}
+					}
+					
+					if (this.isEngineColumn)
+					{
+						// update Engine column
+						this.data.engineCountMap[this.engineInd] = _selectedPortCount;
+
+						wizardEnginePortCmp.checkFileVisibility(this.engineInd);
+						
+						// check and filter host protocol data provider 
+						wizardEnginePortCmp.filterHostProtocolDP(this.engineInd);
+					}
+				}
+				
+				return true;
+			}
+			
+			// Shift focus to the DropDown. Opens DropDown
+			override public function setFocus():void 
+			{
+				dropDown.setFocus();
+				dropDown.btnDrop.dispatchEvent(new MouseEvent(MouseEvent.CLICK));
+			}
+			
+			override public function discard():void
+			{
+				super.discard();
+				dropDown.bindingList.removeEventListener(MouseEvent.CLICK, drop_clickHandler);
+			}
+			
+			protected function drop_changeHandler(event:IndexChangeEvent):void
+			{
+				// programmatically calls method to end editing session
+				this.dataGrid.endItemEditorSession();
+			}
+			
+			protected function drop_clickHandler(event:Event):void
+			{
+				// if same selection, close the editor and save data
+				if (dropDown.bindingList.selectedItem == dropDown.selectedItem)
+				{
+					// programmatically calls method to end editing session
+					this.dataGrid.endItemEditorSession();
+				}
+			}
+			
+			/**
+			 * Port Speed DropDown Label function 
+			 */
+			private function portSpeedDropLabelFunction(item:Object):String
+			{
+				var speed:int = int(item);
+				if (item == EnginePort.PORT_SPEED_16GB || item == EnginePort.PORT_SPEED_8GB)
+					return StringUtil.substitute(WizardEnginePortComponent.WIZARD_PORT_SPEED_8_16GB, speed, speed/2, speed/4);
+				
+				return StringUtil.substitute(WizardEnginePortComponent.WIZARD_PORT_SPEED, speed);
+			}
+
+			/**
+			 * Engine Port/Module count DropDown label function 
+			 */
+			private function enginePortCountDropLabelFunction(item:Object):String
+			{
+				// display port count values if port grid view is selected
+				if (wizardEnginePortCmp.model.portViewModel)
+					return item.toString();
+				
+				// display module count values if module view is selected
+				return EnginePortGroup.convertPortsToModules(this.data as EnginePortGroup, int(item)).toString();
+			}
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	
+	<s:layout >
+		<s:HorizontalLayout paddingLeft="5"
+							paddingRight="5"
+							paddingBottom="5"
+							paddingTop="5"
+							horizontalAlign="center"
+							verticalAlign="middle" />
+	</s:layout>
+	
+	<dropdown:DropDown id="dropDown"
+					   width="100%"
+					   maxRowCount="{Constants.WIZARD_DROP_DOWN_MAX_ROWS}"
+					   prompt="{getResString('main', 'WIZARD_DROPDOWN_DEFAULT_SELECTION')}"
+					   verticalAlign="middle"
+					   change="drop_changeHandler(event)"/>
+	
+</s:GridItemEditor>

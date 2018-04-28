@@ -1,0 +1,12 @@
+<html> 
+    <title>
+		BAIE DE STOCKAGE 
+	</title> 
+	<span><p>Les baies de stockage sont prises en charge dans des configurations standard. Elles hébergent 2 à 8 boîtiers DAE (Disk Array Enclosure), ainsi que des composants NAS (stockage rattaché au réseau) offrant un accès en mode fichier aux données stockées sur la baie. Les composants NAS ont recours à des composants d’alimentation dédiés, connectés à des sources d’alimentation redondantes. </p></span> <span><p>Les composants d’alimentation de la baie de stockage comprennent des unités d’alimentation et des tableaux électriques. Contrairement aux baies système, les baies de stockage ne comportent pas de modules d’alimentation de secours pour assurer une alimentation auxiliaire aux boîtiers DAE qu’elles hébergent.</p></span> <span><p>Les tableaux électriques et les unités d’alimentation sont accessibles par l’arrière et offrent une interface centralisée et le contrôle de la distribution pour l’alimentation CA d’entrée. Les tableaux électriques sont raccordés aux lignes électriques CA d’entrée, disposent de l’interrupteur d’alimentation marche/arrêt principal et permettent d’établir des connexions avec les tableaux électriques situés dans la même zone d’alimentation. Les tableaux électriques distribuent ensuite l’alimentation aux différents composants ; ils sont également équipés d’interrupteurs marche/arrêt. Les composants d’alimentation situés des deux côtés de la baie font partie de zones d’alimentation autonomes, devant être raccordées à des lignes électriques CA indépendantes afin d’assurer la redondance de l’alimentation.</p></span> 
+</html>
+
+
+
+ 
+ 
+

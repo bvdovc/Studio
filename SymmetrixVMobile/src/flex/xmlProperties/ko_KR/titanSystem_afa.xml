@@ -1,0 +1,14 @@
+﻿<html>
+	<title>시스템 베이 1</title>
+	<span><p>모든 VMAX All Flash 시스템 베이에는 각각 1개의 엔진, 2개의 고집적 120 드라이브 DAE(Disk Array Enclosure), 엔진에 백업 전원을 제공하는 2개의 리튬 이온 SPS(Standby Power Supply), 그리고 이중화된 파워존(존 A 및 존 B)에 전원을 공급하는 2개의 PDU(Power Distribution Unit)로 구성된 V-Brick/zBrick이 장착됩니다.</p></span>
+	<span><p>다음 구성 요소는 시스템 베이 1에만 장착됩니다.</p>
+		<ul>
+			<li>여러 V-Brick/zBrick으로 스토리지를 구성한 경우 Virtual Matrix IB(InfiniBand) 상호 연결에 백업 전원을 제공하며 베이의 하단에 장착되는 2개의 리튬 이온 SPS(Standby Power Supply) 유닛 </li>
+			<li>여러 V-Brick/zBrick으로 스토리지를 구성한 경우 IB 상호 연결 </li>
+			<li>이더넷 스위치 </li>
+			<li>KVM(키보드, 비디오, 마우스) </li>
+		</ul>
+	</span>
+</html>
+
+

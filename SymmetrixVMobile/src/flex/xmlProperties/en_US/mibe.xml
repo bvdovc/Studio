@@ -1,0 +1,12 @@
+<html>
+	<title>
+		MIBE
+	</title>
+	<span>
+	<p>Matrix Interface Board Enclosure is the central nerve system of the multi-engine arrays. MIBEs provide low latency, high-speed engine interconnect and ensure overall system availability. Two redundant MIBEs reside in System Bay 2, each connecting to every engine in the array.</p>
+	</span>
+	<span>
+	<p>MIBEs feature their own power supply/cooling modules and redundant fabric ports to the System Interface Boards (SIBs) of each engine in the array.</p>
+	</span>
+</html>
+

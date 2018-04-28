@@ -1,0 +1,9 @@
+<html>
+	<title>12포트 IB(InfiniBand) 상호 연결 </title>
+	<span>
+		<p>이 1U 구성 요소는 EMC Dynamic Virtual Matrix(TM) 아키텍처의 핵심 요소입니다. 멀티 엔진 100K 및 200K 스토리지의 시스템 베이 1에서만 사용되는 IB 상호 연결을 통해 리소스를 확장할 수 있고 여러 VMAX 엔진 간에 통신할 수 있습니다. 각 VMAX 엔진에는 IB 상호 연결을 위한 이중 인터페이스가 있습니다.</p>
+	</span>
+	<span>
+		<p>IB 상호 연결에는 2개의 전원 공급 장치가 있습니다.</p>
+	</span>
+</html>

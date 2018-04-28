@@ -1,0 +1,31 @@
+<html>
+	<title>Baie système 1</title>
+	
+	<span>
+		<p>La baie système 1 héberge un à quatre modules Brick/zBrick dans les baies PowerMax 8000. Un module Brick/zBrick se compose d’un moteur, de deux boîtiers DAE et de deux SPS.</p>
+	</span>
+	<span>
+		<p>Les modules Brick et zBrick présentent les différences suivantes :</p>
+	</span>
+	<span>
+		<ul>
+			<li>La capacité de stockage de base est de 53 To utiles pour les modules Brick et de 13 To utiles pour les modules zBrick.</li>
+			<li>Les modules d’E/S qui fournissent la connectivité hôte sont Fibre Channel, iSCSI et/ou FICON (uniquement pour les systèmes mixtes) pour les modules Brick et FICON uniquement pour les modules zBrick.</li>
+	   </ul>
+	</span>
+	 <span>
+		<p>Outre les composants des modules Brick/zBrick, la baie système 1 héberge l’interconnexion InfiniBand et les commutateurs Ethernet. Il s’agit de composants spécifiques à la baie système 1.</p>
+	 </span>
+	 <span>
+		<p>De chaque côté du rack, vous trouverez une unité de distribution d’alimentation verticale pleine hauteur accessible par l’arrière.</p>
+	</span>
+	<span>
+		<p>Le remplissage de la baie système 1 commence en bas, avec des SPS pour le moteur 1, puis les boîtiers DAE, le moteur 1, les SPS pour le moteur 2, et enfin le moteur 2. Le remplissage de la moitié supérieure reflète celui de la moitié inférieure, en commençant par le moteur 3, des SPS pour le moteur 3, le moteur 4, les boîtiers DAE et des SPS pour le moteur 4 en haut du rack.</p>
+	</span>
+	<span>
+		<p>Chaque module Brick/zBrick possède un boîtier DAE et en partage un. Par conséquent, une fois remplis, les trois boîtiers DAE fournissent la capacité de stockage pour deux modules Brick/zBrick. Les boîtiers DAE partagés contiennent des disques de secours universels qui se trouvent dans des emplacements de disque dédiés.</p>	
+	</span>	
+
+</html>
+
+

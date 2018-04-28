@@ -1,0 +1,49 @@
+﻿<html>
+	<title>
+ Haupthilfe 
+	</title>
+	<span><h>Informationen zu VMAX STUDIO</h></span>
+		<span>
+			<p>VMAX STUDIO ist ein intuitives Visualisierungstool. Es ermöglicht Folgendes:</p>
+			<ul>
+				<li> Visualisieren der VMAX 250F- und VMAX 950F-Arraykonfigurationen durch Befolgen eines Konfigurationsassistenten mit wenigen Schritten.</li>
+				<li> Internes Speichern der Arraykonfigurationen im VMAX Studio-Format – Gespeicherte Konfigurationen werden unten im Filterbereich als Symbole angezeigt. </li>
+				<li> Speichern von Objekten wie z. B. Konfigurationen oder Einzelkomponenten im PNG-Grafikdateiformat.</li>
+				<li> Anzeigen von Arraykonfigurationen und Hardwarekomponenten durch die Verwendung der kontextsensitiven Hilfe und der Drill-down-Komponentenansichten.</li>
+			</ul>
+		</span>
+		<span>
+			<p> Tools</p>
+		</span>
+		<span>
+			<img src="Save.png" alt="Schaltfläche" heigth="50"/>
+			<p> Konfiguration speichern – auswählen, um eine neu erstellte Konfiguration zu speichern Gespeicherte Konfigurationen werden im Filterbereich als Symbole mit eindeutigen Konfigurations-IDs angezeigt.</p>
+		</span>
+		<span>
+			<img src="Copy.png" alt="Schaltfläche" heigth="50"/>
+			<p>In die Zwischenablage kopieren – Anklicken, um den Inhalt des Anzeigefensters in die Zwischenablage zu kopieren.</p>
+		</span>
+		<span>
+			<img src="Export.png" alt="Schaltfläche" heigth="50"/>
+			<p>Als Bild exportieren – Anklicken, um den Inhalt des Anzeigefensters als *.PNG-Datei zu speichern.</p>
+		</span>
+		<span>
+			<img src="Show.png" alt="Schaltfläche" heigth="50"/>
+			<p>Hervorheben – Anklicken, um die Hauptstromversorgungskomponenten in der Arraykonfigurationsansicht hervorzuheben.</p>
+		</span>
+		<span>
+			<img src="Toggle.png" alt="Schaltfläche" heigth="50"/>
+			<p>Ansicht ändern – Anklicken, um die Ansicht (vorne, hinten, oben) zu wechseln.</p>
+		</span>
+		<span>
+			<img src="Property.png" alt="Schaltfläche" heigth="50"/>
+			<p>Eigenschaftsfenster ein-/ausschalten – Eigenschaftsinformationen im Anzeigefenster anzeigen/verbergen.</p>
+		</span>
+		<span>
+			<img src="ConfW.png" alt="Schaltfläche" heigth="50"/>
+			<p>Konfigurationsassistent – Anklicken, um ein neues VMAX All-Flash-Array zu konfigurieren.</p>
+		</span>
+    <span>
+		<p>Fragen/Anmerkungen zu VMAX STUDIO? Senden Sie eine E-Mail an SymmSystemViewers@emc.com.</p>
+	</span>
+</html>

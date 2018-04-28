@@ -1,0 +1,24 @@
+<html>
+	<title>VMAX	 100K</title>
+	<span>
+		<h>Current Configuration Details:</h>
+		<ul>
+		    <li>OS Usable Capacity (TB): {0}</li>
+		    <li>MF Usable Capacity (TB): {4}</li>
+			<li>Number of engines: {1}</li>
+			<li>Number of DAEs: {2} </li>
+			<li>Maximum number of drives: {3}</li>
+			<li>Actual number of drives: {5}</li>
+			<li>Number of FE ports: {6}</li>
+		</ul>
+	</span>
+	<span><h>Description:</h></span>
+	<span><p>The VMAX 100K is configured with one to two 2.1 GHz, 24 Ivy Bridge(IVB)core engines with either 512 or 1024 GB of memory per engine distributed in two system bays. In two-engine configurations, the VMAX 100K supports up to (1440) 2.5" drives, or up to (720) 3.5" drives, providing up to 1.1 PB usable capacity when using 4 TB drives. Engines reside in system bays that support single- or dual-engine system bay type.</p></span>
+		<span>
+			<p> When fully configured, the 100K provides up to 64 front-end ports for host connectivity. The internal fabric interconnect uses dual Infiniband 12-port switches for redundancy and availability.</p>
+		</span>
+		<span><p>
+			The 100k supports EFT, performance, and capacity disks to maximize array performance across all drive types. To enable the EMC Fully Automated Storage Tiering (FAST) technology fine tune your 100K performance while reducing cost by leveraging lightning fast speed of Flash drives combined with cost effective NL-SAS drives, the array needs to be populated with the drives of different technologies to meet your application workload requirements.
+		</p></span>
+</html>
+

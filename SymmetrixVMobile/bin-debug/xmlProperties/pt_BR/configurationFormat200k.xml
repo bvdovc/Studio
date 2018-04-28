@@ -1,0 +1,30 @@
+<html>
+	<title>VMAX 200K</title>
+	<span>
+		<h>Detalhes de configuração:</h>
+		<ul>
+			<li>Capacidade utilizável (TB) do SO: {0}</li>
+			<li>Capacidade utilizável (TB) de MF: "{4}"</li>
+			<li>Número de mecanismos: {1}</li>
+			<li>Número de DAEs: {2}</li>
+			<li>Número máximo de drives por sistema: {3}</li>
+			<li>Número real de unidades: {5}</li>
+			<li>Número de portas FE: {6}</li>
+		</ul>
+	</span>
+	<span><h>Descrição:</h></span>
+	<span>
+		<p>O VMAX 200K é configurado com um a quatro mecanismos Ivy Bridge (IVB) 2,6 GHz de 32 núcleos, com 512, 1024 ou 2048 GB de memória por mecanismo. Com a configuração máxima de 4 mecanismos, o VMAX 200K comporta até (2.880) unidades de 2,5 pol., ou até (1.440) unidades de 3,5 pol., fornecendo até 2,28 PB de capacidade utilizável ao usar unidades de 4 TB. Os mecanismos residem em gabinetes do sistema que dão suporte ao tipo de gabinete do sistema com um ou dois mecanismos.
+		</p>
+	</span>
+	<span>
+		<p>
+ Quando totalmente configurado, o 200K fornece até 128 portas front-end para conectividade de host. A interconexão de matriz virtual interna usa dois switches Infiniband de 12 portas para fins de redundância e disponibilidade.
+		</p>
+	</span>
+	<span>
+		<p>
+ O 200K suporta EFT, desempenho e discos de capacidade para maximizar o desempenho do array em todos os tipos de drive. Para permitir que a tecnologia EMC FAST (Fully Automated Storage Tiering, armazenamento com classificação totalmente automatizada por níveis) ajuste o desempenho do 200K enquanto reduz os custos aproveitando a velocidade incrível dos flash drives combinados com drives NL-SAS econômicos, o array deve ser preenchido com drives de diferentes tecnologias para atender aos requisitos de carga de trabalho de aplicativos.
+		</p>
+	</span>
+</html>

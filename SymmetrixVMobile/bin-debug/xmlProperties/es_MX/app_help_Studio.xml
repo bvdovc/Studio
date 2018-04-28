@@ -1,0 +1,49 @@
+﻿<html>
+	<title>
+ Ayuda principal 
+	</title>
+	<span><h>Acerca de VMAX STUDIO</h></span>
+		<span>
+			<p>VMAX STUDIO es una herramienta de visualización intuitiva que le permite hacer lo siguiente:</p>
+			<ul>
+				<li> Visualizar la configuración de los arreglos VMAX 250F y VMAX 950F siguiendo un asistente de configuración de algunos pasos.</li>
+				<li> Guardar las configuraciones del arreglo de manera interna en el formato de VMAX Studio: las configuraciones guardadas aparecen como íconos en la parte inferior en el panel de filtrado. </li>
+				<li> Guardar diversos objetos, como configuraciones o componentes individuales en el formato de archivo de gráficos PNG.</li>
+				<li> Explorar las configuraciones de arreglos y los componentes de hardware mediante el uso de la ayuda contextual y las vistas de componentes de desglose.</li>
+			</ul>
+		</span>
+		<span>
+			<p> Herramientas</p>
+		</span>
+		<span>
+			<img src="Save.png" alt="botón" heigth="50"/>
+			<p> Guardar configuración: haga clic para guardar una configuración recién creada. Las configuraciones guardadas aparecen en el panel de filtrado como íconos con ID de configuración únicos.</p>
+		</span>
+		<span>
+			<img src="Copy.png" alt="botón" heigth="50"/>
+			<p>Copiar al portapapeles: haga clic para copiar el contenido del panel de visualización en el portapapeles.</p>
+		</span>
+		<span>
+			<img src="Export.png" alt="botón" heigth="50"/>
+			<p>Exportar como imagen: haga clic para guardar el contenido del panel de visualización en un archivo *.PNG.</p>
+		</span>
+		<span>
+			<img src="Show.png" alt="botón" heigth="50"/>
+			<p>Resaltar: haga clic para destacar los componentes de alimentación principales en la vista de configuración de arreglos.</p>
+		</span>
+		<span>
+			<img src="Toggle.png" alt="botón" heigth="50"/>
+			<p>Cambiar vista: haga clic para cambiar la vista (parte superior, parte posterior, parte delantera).</p>
+		</span>
+		<span>
+			<img src="Property.png" alt="botón" heigth="50"/>
+			<p>Alternar entre los paneles de propiedades: mostrar u ocultar información de propiedades en/desde el panel de visualización.</p>
+		</span>
+		<span>
+			<img src="ConfW.png" alt="botón" heigth="50"/>
+			<p>Asistente de configuración: haga clic para configurar un arreglo VMAX All Flash nuevo.</p>
+		</span>
+    <span>
+		<p>¿Tiene alguna pregunta o comentario acerca de VMAX STUDIO? Envíe un correo electrónico a SymmSystemViewers@emc.com</p>
+	</span>
+</html>

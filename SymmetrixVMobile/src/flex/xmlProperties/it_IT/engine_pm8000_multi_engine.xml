@@ -1,0 +1,18 @@
+<html>
+	<title>Engine</title>
+
+	<span>
+		<p>L'engine è l'unità di elaborazione I/O centrale e viene costruito in modo ridondante per garantire high availability. I director ridondanti (director A e director B) contengono ciascuno la cache, due CPU a 18 core Broadwell da 2,8 GHz e interfacce di collegamento ai moduli I/O, ad esempio front-end, back-end NVMe, InfiniBand, compressione e deduplica e moduli I/O flash NVMe universali. L'engine offre 72 core CPU e una cache massima da 2 TB.</p>
+	</span>	
+	<span>
+		<p>Il diagramma seguente mostra la vista posteriore di un engine PowerMax 8000 in una configurazione con uno o più engine. I diagrammi mostrano i tipi di moduli I/O, le designazioni degli slot e la numerazione delle porte. Non tutti gli slot universali front-end e flash NVMe sono occupati in una configurazione tipica.</p>
+	</span>
+	<span>
+		<p>Configurazione con più engine:</p>
+	</span>
+		<span><img src="PowerMax8000_MEngine.jpg" ratio="0.57"/></span>
+	<span>
+		<p>La maggior parte dei componenti dell'engine è accessibile dalla parte posteriore. Solo gli alimentatori e le ventole di raffreddamento dell'engine sono accessibili dalla parte anteriore.</p>
+	</span>
+		
+</html>

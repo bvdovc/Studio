@@ -1,0 +1,17 @@
+<html>
+	<title>锂电备用电源 (SPS)</title>
+	<span>
+		<p>锂电 SPS 为引擎和 InfiniBand (IB) 互连提供冗余 DC 电源，并且只位于系统机架中。 SPS 包括以下组件： </p>
+		<ul>
+			<li>AC 引线 </li>
+			<li>电池 </li>
+			<li>电池充电器</li>
+			<li>DC-DC 转换器</li>
+			<li>RS232 端口</li>
+			<li>4 个 AC 插座 </li>
+		</ul>
+	</span>
+	<span>
+		<p> 在联机操作期间，SPS 直接从 AC 输入电流提供 DC 输出负荷。 充电器对电池进行浮动充电并在必要时再充电。 如果 AC 输入电流发生故障，将断开输出电流与 AC 输入电流之间的连接，改为通过内部电池和 DC-DC 转换器（电池供电）供电。 </p>
+	</span>
+</html>

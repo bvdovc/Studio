@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+		<languages>
+		<language enabled="true" code="en_US" isDefault="true">English</language>
+		<language enabled="true" code="fr_FR">Français</language>
+		<language enabled="true" code="de_DE">Deutsch</language>
+		<language enabled="true" code="it_IT">Italiano</language>
+		<language enabled="true" code="es_MX">Español - México</language>
+		<language enabled="true" code="pt_BR">Português - Brasil</language>
+		<language enabled="false" code="ru_RU">Русский</language>
+		<language enabled="true" code="zh_CN">中文</language>
+		<language enabled="true" code="ja_JP">日本語</language>
+		<language enabled="true" code="ko_KR">한국의</language>
+	</languages>
+</settings>

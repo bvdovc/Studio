@@ -1,0 +1,15 @@
+<html>
+	<title>Engine</title>
+
+	<span>
+		<p>L'engine è l'unità di elaborazione I/O centrale e viene costruito in modo ridondante per garantire high availability. I director ridondanti (director A e director B) contengono ciascuno la cache, due CPU a 12 core Broadwell da 2,5 GHz e interfacce di collegamento ai moduli I/O, ad esempio front-end, back-end NVMe, InfiniBand, compressione e deduplica e moduli I/O flash NVMe universali. L'engine offre 48 core CPU e una cache massima da 2 TB.</p>
+	</span>
+	<span>
+		<p> Il diagramma seguente mostra la vista posteriore di un engine PowerMax 2000 completamente popolato in cui è possibile visualizzare i tipi di moduli I/O, le designazioni degli slot e la numerazione delle porte. Non tutti gli slot universali front-end e flash NVMe sono popolati in una configurazione tipica di engine.</p>
+	</span>
+	<span><img src="PowerMax2000_Engine.jpg" ratio="0.57"/></span>
+	<span>
+		<p> La maggior parte dei componenti dell'engine è accessibile dalla parte posteriore. Solo gli alimentatori e le ventole di raffreddamento dell'engine sono accessibili dalla parte anteriore.</p>
+	</span>
+	
+</html>

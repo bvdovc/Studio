@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:List xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        width="100%"
+        height="100%"
+        itemRenderer="sym.viewer.mobile.views.components.selectionList.SelectionComponentItemRenderer"
+        horizontalScrollPolicy="auto"
+        verticalScrollPolicy="off"
+		contentBackgroundAlpha="0"
+		updateComplete="updateCompleteHandler(event)"
+        changing="selectionChangingHandler(event)">	
+	
+    <fx:Declarations>
+        <!-- Place non-visual elements (e.g., services, value objects) here -->
+    </fx:Declarations>
+
+    <fx:Script source="../../../script/components/selectionList/selectionComponent.as"/>
+
+    <s:layout>
+        <s:HorizontalLayout variableColumnWidth="false"
+                            columnWidth="{width/6}" 
+							gap="0"/>
+    </s:layout>
+</s:List>

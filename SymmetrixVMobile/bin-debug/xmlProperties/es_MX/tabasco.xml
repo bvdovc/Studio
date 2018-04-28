@@ -1,0 +1,13 @@
+<html>
+	<title>DAE de 25 unidades</title>
+	<span><p>Los gabinetes de arreglos de discos (DAE) de 2U y 25 unidades de 2.5 in (DAE) proporcionan conectividad SAS de 12 Gb/s a módulos de I/O de back-end en el motor VMAX 250F. Dos DAE en un v-Brick están conectados directamente al motor.</p></span>
+	
+	<span>
+	<p>Los DAE incluyen los siguientes componentes principales:</p>
+		<ul>
+			<li>Un máximo de 25 unidades por gabinete</li>
+			<li>Dos módulos de enfriamiento de la fuente de alimentación DAE redundantes (se pueden acceder desde la parte posterior)</li>
+			<li>Dos Link Control Card (LCC) (se pueden acceder desde la parte posterior)</li>
+		</ul>
+	</span>
+</html> 

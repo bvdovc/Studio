@@ -1,0 +1,34 @@
+<html>
+	<title>VMAX 850F </title>
+	<span>
+		<h>当前配置详细信息：</h>
+		<ul>
+		    <li>操作系统可用容量 (TB)：{0}</li>
+		    <li>大型机可用容量 (TB)：{4}</li>
+			<li>v-Brick/z-Brick 数量：{1}</li>
+			<li>DAE 数量：{2} </li>
+			<li>最大驱动器数量：{3}</li>
+			<li>驱动器实际数量：{5}</li>
+			<li>FE 端口数：{6}</li>
+		</ul>
+	</span>
+	<span><h>描述：</h></span>
+	<span><p>VMAX 850F 的大小范围在一个至多达八个v-Brick/z-Brick 系统之间。基本构造块为一个适用于开放式系统的 v-Brick 和适用于大型机的 z-Brick，包含：</p></span>
+		<span>
+			<ul>
+				<li>一个使用 12 核 Intel Xeon E5-2650-v2，2.7 GHz 中央处理单元 (CPU) 的引擎（冗余数据存储处理单元）</li>
+				<li>入门级容量为 53Tbu 的闪存驱动器，分布于两个高密度磁盘阵列存储模块 (DAE)，每个支持多达 120 个 2.5 英寸驱动器。</li>
+				<li>提供两种简单的软件订购选择：适用于开放式系统的 F/FX，和适用于大型机的 zF/zFX</li>
+			</ul>
+		</span>
+		<span><p> 初始的 53 TBu v-Brick/z-Brick 配置可：</p>
+			<ul>
+				<li>通过添加捆绑全部所需存储容量和软件的 13TB 闪存容量包（开放式系统）/zCapacity（大型机），进行纵向扩展</li>
+				<li>通过添加 v-Brick/z-Brick 提高性能、连接性和吞吐量，进行横向扩展。</li>
+			</ul>
+		</span>
+		<span><p>
+ 容量和性能的独立和线性扩展能力使 VMAX 850F 阵列在处理不同工作负载方面极其灵活。
+		</p></span>
+</html>
+

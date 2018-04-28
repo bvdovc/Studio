@@ -1,0 +1,9 @@
+﻿<html>
+	<title>BAHÍA DE SISTEMA </title>
+	<span><p>La bahía de sistema VMAX 250F aloja uno o dos V-Bricks. Cada V-Brick consta de un motor, dos gabinetes de arreglos de discos (DAE) de 25 unidades y dos fuentes de alimentación en espera (SPS) de iones de litio que proporcionan alimentación de respaldo para los motores En cada lado del rack se instalan una unidad de distribución de alimentación (PDU) y un panel de distribución de alimentación (PDP) que proporcionan alimentación a las zonas de alimentación redundante (zona A y zona B). </p></span>
+	<span><p>Si se instala en un rack estándar de EMC, los componentes del arreglo VMAX 250F ocupan solamente la mitad inferior del rack (las 2U inferiores del rack) y el resto del rack queda disponible para otros componentes. Si se instala en un minirack, los componentes del arreglo VMAX 250F ocupan todo el espacio de rack. </p>
+	
+	</span>
+</html>
+
+

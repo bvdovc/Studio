@@ -1,0 +1,16 @@
+<html>
+	<title>
+ CONFIGURAZIONE
+	</title>
+	<span>
+		<p>Dettagli configurazione corrente:</p>
+		<ul>
+			<li>Numero di engine: {0}</li>
+			<li>Numero di DAE: {1}</li>
+			<li>Numero massimo di unità: {2}</li>
+		</ul>
+	</span>
+	<span><p>Le configurazioni degli array VMAX comprendono almeno un system bay che può ospitare da uno a otto engine e un numero di storage bay parzialmente o completamente popolati, a seconda del numero di engine nell'array. Gli engine sono le unità di elaborazione I/O chiave che forniscono cache, alimentazione della CPU, connettività front-end (host) e back-end alle unità nell'array.</p></span>
+	<span><p>La dimensione massima dell’array include sempre il system bay e 10 storage bay, cinque su ogni lato del system bay. I Disk Array Enclosure (DAE) di storage bay dedicati e percorsi di DAE dedicati si connettono a un engine dedicato nel system bay. A seconda della modalità di connessione dei DAE all’engine, vengono definiti come DAE con connessione diretta o con collegamento a margherita. Gli storage bay includono sia i DAE con connessione diretta che i DAE con collegamento a margherita.</p></span>
+	<span><p>Le configurazioni di loop di unità estese supportano un massimo di quattro engine e un massimo di quattro livelli di DAE con collegamento a margherita per mettere a disposizione una quantità elevata di capacità di storage configurata per un singolo engine. La serie VMAX supporta array VMAX SE a engine singolo che non possono essere aggiornati agli array VMAX di classe enterprise. I sistemi VMAX SE possono includere al massimo due bay: un system bay che ospita l'engine e i Disk Array Enclosure (DAE) e uno storage bay completamente popolato.</p></span>
+</html>

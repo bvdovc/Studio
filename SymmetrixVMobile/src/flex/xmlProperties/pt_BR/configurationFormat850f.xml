@@ -1,0 +1,34 @@
+<html>
+	<title>VMAX 850F </title>
+	<span>
+		<h>Detalhes da configuração atual:</h>
+		<ul>
+		    <li>Capacidade utilizável (TB) do SO: {0}</li>
+		    <li>Capacidade utilizável (TB) de MF: "{4}"</li>
+			<li>Número de v-Bricks/z-Bricks: {1}</li>
+			<li>Número de DAEs: {2} </li>
+			<li>Número máximo de drives: {3}</li>
+			<li>Número real de unidades: {5}</li>
+			<li>Número de portas FE: {6}</li>
+		</ul>
+	</span>
+	<span><h>Descrição:</h></span>
+	<span><p>O VMAX 850F tem dimensões que variam de 1 até 8 sistemas v-Brick/z-Brick. Um v-Brick para sistemas abertos e um z-Brick para mainframe são os componentes modulares básicos que incluem: </p></span>
+		<span>
+			<ul>
+				<li>Um mecanismo (a unidade de processamento de armazenamento de dados redundantes) usando CPUs Intel Xeon E5-2650-v2 de 12 núcleos e 2,7 GHz</li>
+				<li>Uma capacidade inicial de 53 Tbu em unidades flash distribuídas em 2 gavetas Disk Array Enclosure densas que comportam até 120 unidades de 2,5 pol. cada.</li>
+				<li>Software disponível em opções simples de pedido: F/FX para sistemas abertos, zF/zFx para mainframe</li>
+			</ul>
+		</span>
+		<span><p> Uma configuração inicial do v-Brick/z-Brick de 53 TBu pode ser: </p>
+			<ul>
+				<li>Dimensionada verticalmente com a adição de pacotes de capacidade de flash de 13 TB (sistemas abertos)/zCapacity que incluem toda a capacidade de armazenamento e itens de software necessários</li>
+				<li>Dimensionada horizontalmente com a adição de v-Bricks/z-Bricks para aumentar o desempenho, a conectividade e o throughput.</li>
+			</ul>
+		</span>
+		<span><p>
+ O dimensionamento independente e linear tanto da capacidade quanto do desempenho torna os arrays VMAX 850F extremamente flexíveis para lidar com várias cargas de trabalho.
+		</p></span>
+</html>
+

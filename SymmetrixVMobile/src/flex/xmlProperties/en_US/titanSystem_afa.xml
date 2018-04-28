@@ -1,0 +1,14 @@
+<html>
+	<title>SYSTEM BAY 1</title>
+	<span><p>All VMAX All Flash system bays house one or two V-Bricks/zBricks, each consisting of an engine, two high-density, 120-drive Disk Array Enclosures ( DAEs), two Li-on standby power supplies (SPS-es) to provide backup power for the engine, and two power distribution units (PDUs) that supply power to redundant power zones (zone A and zone B).</p></span>
+	<span><p>The following components are unique to system bay 1: </p>
+		<ul>
+			<li>Two Li-On standby power supply (SPS) units at the bottom of the bay that provide backup power for  the virtual matrix InfiniBand (IB) interconnect if the array is configured with multiple V-Bricks/zBricks </li>
+			<li>InfiniBand (IB) Interconnect if the array is configured with multiple V-Bricks/zBricks </li>
+			<li>Ethernet switch </li>
+			<li>KVM  ( key, video, mouse) </li>
+		</ul>
+	</span>
+</html>
+
+

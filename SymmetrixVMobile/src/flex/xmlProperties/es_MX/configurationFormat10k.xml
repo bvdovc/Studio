@@ -1,0 +1,16 @@
+<html>
+	<title> 		CONFIGURACIÓN
+	</title> 	
+	<span>
+		<p>Detalles de la configuración actual:</p>
+		<ul>
+			<li>Cantidad de motores: {0}</li>
+			<li>Cantidad de DAE: {1}</li>
+			<li>Cantidad máxima de unidades: {2}</li>
+		</ul> 	
+	</span>
+	<span><p>Las configuraciones de arreglos VMAX 10K varían de arreglos con uno a cuatro motores. Los motores son las unidades de procesamiento de I/O clave y cada uno de ellos reside en su propia bahía de sistema. Además del motor, cada bahía de sistema aloja los componentes de alimentación y un mínimo de cuatro gabinetes de arreglos de discos (DAE). Se pueden incluir una o dos bahías de almacenamiento (bahía de almacenamiento 1A y bahía de almacenamiento 1B) en la configuración del arreglo a fin de maximizar la capacidad de almacenamiento que ofrece cada motor. Las bahías de almacenamiento contienen los DAE y los componentes de alimentación.</p></span> 	
+	<span><p>Cada motor se conecta con todos los gabinetes de arreglos de discos de la bahía de sistema y los controla. Si se utilizan bahías de almacenamiento, los motores 1 y 2 se conectan con los DAE dedicados de la bahía de almacenamiento 1A, y los motores 3 y 4 se conectan con los DAE dedicados de la bahía de almacenamiento 1B.</p></span> 	
+	<span><p>Las configuraciones estándar son compatibles con DAE estándar (de 15 unidades) y DAE de alta densidad (de 25 unidades). Las configuraciones de arreglos de alta densidad solo son compatibles con DAE de 25 unidades. La configuración estándar máxima consta de cuatro bahías de sistema y dos bahías de almacenamiento, mientras que la configuración de alta densidad máxima consta de cuatro bahías de sistema solamente. Las bahías de sistema contienen un máximo de 10 DAE en configuraciones de arreglos estándar y un máximo de 12 DAE en configuraciones de arreglos de alta densidad.</p></span> 	
+	<span><p>La dispersión de bahías de sistema está disponible para las configuraciones con tres y cuatro motores. La dispersión de bahías de sistema es una opción de ubicación de bahías que permite la separación física entre la bahía de sistema 2 y la bahía de sistema 3, por lo que se adapta a posibles restricciones de espacio físico. La distancia máxima entre la bahía de sistema 2 y la bahía de sistema 4 es de 10.0 m/32.8 ft.</p></span>
+</html>

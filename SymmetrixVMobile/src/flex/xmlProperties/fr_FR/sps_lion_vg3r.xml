@@ -1,0 +1,17 @@
+<html>
+	<title>Alimentation de secours Li-Ion</title>
+	<span>
+		<p>L'alimentation de secours Li-Ion fournit une alimentation redondante aux moteurs et aux switches InfiniBand. Elle est logée uniquement dans les baies système. Les alimentations de secours incluent les composants suivants: </p>
+		<ul>
+			<li>Entrée de ligne CA </li>
+			<li>Batteries </li>
+			<li>Chargeur de batterie</li>
+			<li>Convertisseur DC-DC</li>
+			<li>Port RS232</li>
+			<li>4 prises de courant CA </li>
+		</ul>
+	</span>
+	<span>
+		<p> Pendant les opérations en ligne, l'alimentation de secours fournit une charge de sortie CC à partir de l'entrée de ligne CA. Le chargeur assure une charge d'entretien dans les batteries et les recharge, si nécessaire. En cas de défaillance de l'entrée de ligne CA, la sortie est déconnectée de l'entrée de ligne CA et est alimentée par les batteries internes et le convertisseur DC-DC (opération d'alimentation par batterie). </p>
+	</span>
+</html>

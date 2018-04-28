@@ -1,0 +1,10 @@
+<html>
+	<title> 		GABINETE DE ARMAZENAMENTO PADRÃO
+	</title> 	<span>
+		<p>Os gabinetes de armazenamento padrão hospedam no mínimo 8 e no máximo 16 DAEs (Disk Array Enclosures) de 15 drives e componentes de alimentação. As DAEs podem hospedar no mínimo 4 e no máximo 15 drives.</p> 	
+	</span> 	<span>
+		<p>Os componentes de alimentação do gabinete de armazenamento incluem módulos SPS (Standby Power Supply, fonte de alimentação em standby), PDUs (Power Distribution Units, unidades de distribuição de energia ) e PDPs (Power Distribution Panels, painéis de distribuição de energia). Oito módulos SPS no meio do gabinete fornecem energia reserva para 16 DAEs e 2 módulos SPS por cada 4 DAEs.</p> 	
+	</span> 	<span>
+		<p>Os PDPs e as PDUs podem ser acessados a partir da parte traseira e fornecem a interface centralizada e o controle de distribuição para a fonte de alimentação CA de entrada. Os PDPs se conectam às linhas da fonte de alimentação CA de entrada, fornecem o principal interruptor de alimentação liga/desliga e também se conectam aos PDPs que estão dentro da mesma zona de alimentação. Os PDPs distribuem ainda mais energia para os componentes individuais e também contêm os interruptores de alimentação liga/desliga. Componentes de alimentação em cada lado do gabinete pertencem a zonas de alimentação independentes que devem ser conectadas a linhas independentes de fonte de alimentação CA para assegurar a redundância de alimentação.</p> 	
+	</span>
+</html>

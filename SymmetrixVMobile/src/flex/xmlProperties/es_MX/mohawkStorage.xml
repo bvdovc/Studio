@@ -1,0 +1,10 @@
+<html>
+	<title> 		BAHÍA DE ALMACENAMIENTO ESTÁNDAR
+	</title> 	<span>
+		<p>Las bahías de almacenamiento estándar alojan un mínimo de 8 y un máximo de 16 gabinetes de arreglos de discos (DAE) de 15 unidades y componentes de alimentación. Los DAE pueden alojar un mínimo de 4 y un máximo de 15 unidades.</p> 	
+	</span> 	<span>
+		<p>Los componentes de alimentación de las bahías de almacenamiento incluyen módulos de fuente de alimentación en standby (SPS), unidades de distribución de alimentación (PDU) y paneles de distribución de alimentación (PDP). Ocho módulos de fuente de alimentación en standby (SPS) en el medio de la bahía proporcionan alimentación de respaldo a 16 DAE, con dos módulos SPS cada cuatro DAE.</p> 	
+	</span> 	<span>
+		<p>Desde la parte posterior, se puede acceder a los PDP y las PDU, que proporcionan el control centralizado de la interfaz y la distribución para la alimentación de CA de entrada. Los PDP se conectan con las líneas de alimentación de CA de entrada, proporcionan el switch de encendido/apagado principal y también se conectan con los PDP dentro de la misma zona de alimentación. Los PDP, además, distribuyen la alimentación a componentes individuales y también contienen los switches de alimentación de encendido/apagado. Los componentes de alimentación ubicados en cada lado de la bahía pertenecen a zonas de alimentación independientes que se deben conectar a líneas de alimentación de CA independientes, a fin de garantizar redundancia de alimentación.</p> 	
+	</span>
+</html>

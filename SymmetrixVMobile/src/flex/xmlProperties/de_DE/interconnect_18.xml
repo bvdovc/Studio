@@ -1,0 +1,16 @@
+<html>
+<title>18-Port-InfiniBand(IB)-Verbindung </title>
+
+<span><p>Diese Komponente mit 1 HE befindet sich in System-Bay 1 und stellt den Kern der EMC Dynamic Virtual Matrix(TM)-Architektur dar. Sie ermöglicht die Kommunikation und Ressourcenfreigabe in 400K-Arrays mit mehreren Engines. Die IB-Verbindung umfasst die folgenden Komponenten</p></span>
+<span>
+	<ul>
+		<li> 18 InfiniBand-Ports </li>
+		<li> Redundante, Hot-Plug-fähige Netzteile</li>
+		<li> Redundante, Hot-Plug-fähige Lüftermodule </li>
+		<li> 2,1-Gbit-Ethernet-Management-Ports (RJ-45; Verbindungen zu Ethernet-Switches A und B) </li>
+	</ul>
+</span>
+<span><p> Jede Engine bietet redundante Schnittstellen zur IB-Verbindung. </p></span>
+</html>
+
+

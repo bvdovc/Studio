@@ -1,0 +1,49 @@
+﻿<html>
+	<title>
+ Aide principale 
+	</title>
+	<span><h>À propos de VMAX STUDIO</h></span>
+		<span>
+			<p>VMAX STUDIO est un outil de visualisation intuitif qui vous permet de :</p>
+			<ul>
+				<li> Visualiser les configurations des baies VMAX 250F et VMAX 950F en suivant un assistant de configuration en quelques étapes.</li>
+				<li> Enregistrer les configurations de la baie en interne au format VMAX Studio : les configurations enregistrées sont affichées sous forme d’icônes en bas, dans le volet de filtrage. </li>
+				<li> Enregistrer des objets tels que des configurations ou des composants individuels au format PNG.</li>
+				<li> Découvrir les configurations de baie et les composants matériels grâce à l’aide contextuelle et aux vues de composant de recherche verticale.</li>
+			</ul>
+		</span>
+		<span>
+			<p> Outils</p>
+		</span>
+		<span>
+			<img src="Save.png" alt="bouton" heigth="50"/>
+			<p> Enregistrer la configuration : cliquez ici pour enregistrer une configuration nouvellement créée. Les configurations enregistrées sont affichées sous la forme d’icônes avec ID de configuration unique dans le volet de filtrage.</p>
+		</span>
+		<span>
+			<img src="Copy.png" alt="bouton" heigth="50"/>
+			<p>Copier dans le Presse-papiers : cliquez ici pour copier le contenu du volet d’affichage dans le Presse-papiers.</p>
+		</span>
+		<span>
+			<img src="Export.png" alt="bouton" heigth="50"/>
+			<p>Exporter en tant qu’image : cliquez ici pour enregistrer le contenu du volet d’affichage d’un fichier *.PNG.</p>
+		</span>
+		<span>
+			<img src="Show.png" alt="bouton" heigth="50"/>
+			<p>Mettre en surbrillance : cliquez ici pour mettre en évidence les composants de l’alimentation principale dans la vue de configuration de baie.</p>
+		</span>
+		<span>
+			<img src="Toggle.png" alt="bouton" heigth="50"/>
+			<p>Changer de vue : cliquez ici pour changer l’affichage (arrière, avant, dessus).</p>
+		</span>
+		<span>
+			<img src="Property.png" alt="bouton" heigth="50"/>
+			<p>Activer ou désactiver des panneaux de propriétés : afficher ou masquer les informations de propriété du volet d’affichage.</p>
+		</span>
+		<span>
+			<img src="ConfW.png" alt="bouton" heigth="50"/>
+			<p>Assistant de configuration : cliquez ici pour configurer une nouvelle baie VMAX All Flash.</p>
+		</span>
+    <span>
+		<p>Vous avez des questions/commentaires concernant le VMAX STUDIO ? Envoyez un e-mail à SymmSystemViewers@emc.com</p>
+	</span>
+</html>

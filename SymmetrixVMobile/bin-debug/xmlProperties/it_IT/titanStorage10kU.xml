@@ -1,0 +1,11 @@
+<html> 
+    <title>
+		STORAGE BAY 
+	</title> 
+		<span><p>Gli storage bay sono supportati nelle configurazioni degli array standard. Sono in grado di ospitare da due a otto Disk Array Enclosure (DAE), oltre ai componenti NAS che forniscono accesso a livello di file ai dati nell'array. I componenti NAS utilizzano componenti dell'alimentazione dedicati collegati ad alimentatori ridondanti. </p></span> <span><p>I componenti per l'alimentazione degli storage bay comprendono PDU (Power Distribution Unit) e PDP (Power Distribution Panel). A differenza dei system bay, gli storage bay non utilizzano moduli SPS (alimentatori di standby) per garantire l'alimentazione di backup per i DAE dello storage bay.</p></span> <span><p>È possibile accedere a PDP e PDU dalla parte posteriore. Entrambi i componenti forniscono l'interfaccia centralizzata e il controllo della distribuzione per l'alimentazione CA in ingresso. I PDP sono collegati alle linee di alimentazione CA in ingresso e ai PDP presenti all'interno della stessa power zone e dispongono dello switch di alimentazione principale per l'accensione e lo spegnimento. I PDP distribuiscono l'alimentazione ai singoli componenti e includono inoltre gli switch di alimentazione per l'accensione e lo spegnimento. I componenti di alimentazione su ciascun lato del bay appartengono a power zone indipendenti che devono essere collegate a linee di alimentazione CA indipendenti per assicurare la ridondanza dell'alimentazione.</p></span> </html>
+
+
+
+ 
+ 
+

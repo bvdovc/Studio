@@ -1,0 +1,13 @@
+<html>
+	<title>25 驱动器 DAE</title>
+	<span><p>2U 规格 25 驱动器 2.5 英寸驱动器磁盘阵列存储模块 (DAE) 在 VMAX 250F 引擎中提供到后端 I/O 模块的 12Gbs SAS 连接。v-Brick 中的两个 DAE 直接与引擎相连。</p></span>
+	
+	<span>
+	<p>DAE 包括以下主要组件：</p>
+		<ul>
+			<li>多达 25 个驱动器（每个存储模块）</li>
+			<li>两个冗余 DAE 电源冷却模块（可从后部进行维护）</li>
+			<li>两个链路控制卡 (LCC)（可从后部进行维护）</li>
+		</ul>
+	</span>
+</html> 

@@ -1,0 +1,19 @@
+<html> 
+	<title>
+		KONFIGURATION 
+	</title> 
+	<span>
+		<p>Details zur aktuellen Konfiguration:</p>
+		<ul> 
+			<li>Anzahl der Engines: {0}</li> 
+			<li>Anzahl der DAEs: {1}</li> 
+			<li>Maximale Anzahl der Laufwerke: {2}</li> 
+		</ul>
+	</span> 
+	<span><p>Die Arraykonfigurationen umfassen Systeme mit 1-6 Bays und 1-4 Engines. Engines sind die zentralen I/O-Verarbeitungseinheiten und befinden sich jeweils in einem eigenen System-Bay. Jedes System-Bay verfügt über Stromkomponenten und mindestens vier Disk Array Enclosures (DAEs). In standardmäßigen Arraykonfigurationen liegt das Maximum bei 8 DAEs, in Arraykonfigurationen mit hoher Dichte bei 12 DAEs.</p></span> 
+	<span><p>Die Standardkonfigurationen unterstützen sowohl Standard-DAEs (15 Laufwerke) als auch DAEs mit hoher Dichte (25 Laufwerke). Arraykonfigurationen mit hoher Dichte unterstützen nur DAEs mit 25 Laufwerken. Die maximale Standardkonfiguration besteht aus vier System- und zwei Speicher-Bays. Die maximale Konfiguration mit hoher Dichte umfasst lediglich vier System-Bays. </p></span> 
+	<span><p>Zur Maximierung der Speicherkapazität jeder Engine werden in standardmäßigen Arraykonfigurationen ein oder zwei Speicher-Bays (Speicher-Bay 1A und Speicher-Bay 1B) unterstützt. Speicher-Bays enthalten DAEs und Stromkomponenten.</p></span> 
+	<span><p>Jede Engine ist mit allen Disk Array Enclosures im System-Bay verbunden und steuert diese. Bei der Verwendung von Speicher-Bays sind Engine 1 und Engine 2 mit den dedizierten DAEs in Speicher-Bay 1A und Engine 3 und Engine 4 mit den dedizierten DAEs in Speicher-Bay 1B verbunden.</p></span> 
+	<span><p>Komponenten von NAS-Gateways, die Zugriff auf Dateiebene auf Daten im Array bereitstellen, befinden sich in Arraykonfigurationen mit hoher Dichte immer in System-Bay 1, in standardmäßigen Arraykonfigurationen immer in Speicher-Bay 1A.</p></span> 
+	<span><p>Verteilte System-Bays sind für Konfigurationen mit drei und vier Engines verfügbar. Bei verteilten System-Bays handelt es sich um eine Option zur Bay-Platzierung, die eine physische Trennung zwischen System-Bay 2 und System-Bay 3 ermöglicht und im Fall von Stellflächeneinschränkungen von Vorteil ist. Der maximale Abstand zwischen System-Bay 2 und System-Bay 4 beträgt 10 m.</p></span> 
+</html>

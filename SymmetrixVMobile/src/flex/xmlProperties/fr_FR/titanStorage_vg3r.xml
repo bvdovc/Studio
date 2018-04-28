@@ -1,0 +1,10 @@
+<html>
+	<title>
+		BAIE DE STOCKAGE </title>
+	<span>
+		<p>Les baies de stockage sont facultatives et ne sont prises en charge qu'avec les baies système à deux moteurs. La baie de stockage doit être boulonnée dans sa baie système et ne peut pas être distribuée. Les baies de stockage prennent en charge les mêmes types de boîtier DAE que la baie système et peuvent héberger entre un (1) et huit (8) boîtiers DAE avec n'importe quelle combinaison de types. Les baies de stockage hébergent jusqu'à 8 boîtiers DAE, 4 par moteur dans la baie système associée.</p>
+	</span>
+	<span>
+		<p>Les baies de stockage nécessitent une alimentation triphasée ou monophasée et sont disponibles en configuration Delta (4 fils pour les installations nationales) et WYE (5 fils pour les installations internationales). Chaque baie avec alimentation triphasée prend en charge deux connexions d'alimentation. Chaque baie avec alimentation monophasée nécessite quatre connexions d'alimentation minimum.</p>
+	</span>
+</html>

@@ -1,0 +1,86 @@
+<html>
+	<title>MOTEUR</title>
+
+	<span>
+		<p> Le moteur est l’unité de traitement d’E/S centrale conçue de manière redondante pour assurer une haute disponibilité. Il comprend des directeurs redondants (directeur A et directeur B) dotés chacun de processeurs multicœurs, des modules mémoire, ainsi que des interfaces de connexion à des modules d’E/S universels, tels que les modules front-end et back-end, InfiniBand, de compression et d’E/S Flash.</p>
+	</span>
+	<span>
+		<p> Les ventilateurs et les alimentations du moteur sont accessibles depuis l’avant ; les modules d’E/S, le module de gestion et la station pilote sont accessibles depuis l’arrière. Étant donné que le nombre de modules d’E/S universels utilisés dans le moteur dépend des fonctionnalités requises et de la capacité de stockage du système, certains slots peuvent être inutilisés.</p>
+	</span>
+	<span>
+		<p> La vue arrière du moteur, les slots des modules d’E/S et la numérotation des ports physiques et logiques sont illustrés ci-dessous.</p>
+	</span>
+	<span>
+		<p>Numéros de port physique</p>
+	</span>
+	<span><img src="phy_eng_ports.gif" ratio="0.41"/></span>
+	<span>
+		<p>Numéros de port logique</p>
+	</span>
+	<span><img src="logical_eng_phy_ports.gif" ratio="0.398"/></span>
+	<span>
+		<p> Le tableau suivant illustre les règles d’utilisation des slots du moteur :</p>
+		<table>
+			<tr>
+				<td>Numéro de slot</td>
+				<td>Composant</td>
+				<td>Description</td>
+			</tr>
+			<tr>
+				<td>0</td>
+				<td>Module Flash</td>
+				<td>Toujours utilisé, réservé à la technologie Flash.</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Module Flash</td>
+				<td>Facultatif, selon la capacité de stockage de la baie. Réservé à la technologie Flash. S’il est utilisé, le slot 7 est également utilisé.</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Module front-end universel</td>
+				<td>Un module FC, FICON, Ethernet ou d’E/S de compression peut occuper ce slot.</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Module front-end universel</td>
+				<td>Facultatif. Un module FC, FICON, Ethernet ou d’E/S de compression peut occuper ce slot.</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Module d’E/S back-end</td>
+				<td>Toujours utilisé, réservé aux modules back-end.</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Module d’E/S back-end</td>
+				<td>Toujours utilisé, réservé aux modules back-end.</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Module Flash</td>
+				<td>Toujours utilisé, réservé à la technologie Flash.</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>Module Flash</td>
+				<td>Facultatif, dépend de la capacité de stockage de la baie - réservé à la technologie Flash. Utilisé si le slot 1 est utilisé.</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>Module front-end universel</td>
+				<td>Facultatif. Un module FC, FICON, Ethernet ou d’E/S de compression peut occuper ce slot.</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>Module front-end universel</td>
+				<td>Un module FC, FICON, Ethernet ou d’E/S de compression peut occuper ce slot.</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>Module d’E/S InfiniBand</td>
+				<td>Toujours utilisé avec un système avec plusieurs moteurs - Non utilisé avec les autres systèmes. Réservé au module InfiniBand.</td>
+			</tr>
+		</table>
+	</span>
+</html>

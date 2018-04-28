@@ -1,0 +1,8 @@
+<html>
+	<title> 		MIBE
+	</title> 	<span>
+	<p>Il MIBE (Matrix Interface Board Enclosure) è il sistema nervoso centrale degli array a più engine. I MIBE forniscono interconnessioni a elevata velocità e bassa latenza e assicurano la generale availability del sistema. Due MIBE ridondanti risiedono nel System Bay 2, ciascuno con connessione a tutti gli engine nell'array.</p> 	
+	</span> 	<span>
+	<p>I MIBE sono dotati dei propri moduli di alimentazione/raffreddamento e di porte fabric ridondanti alle schede SIB (System Interface Boards) di ciascun engine nell'array.</p> 	
+	</span>
+</html> 

@@ -1,0 +1,19 @@
+<html> 
+	<title>
+		CONFIGURATION 
+	</title> 
+	<span>
+		<p>Détails de la configuration actuelle :</p>
+		<ul> 
+			<li>Nombre de moteurs : {0}</li> 
+			<li>Nombre de boîtiers DAE : {1}</li> 
+			<li>Nombre maximal de disques : {2}</li> 
+			</ul>
+	</span> 
+	<span><p>Les configurations de baies comprennent des systèmes d’une à six baies et d’un à quatre moteurs. Les moteurs sont les principales unités de traitement des E/S et résident chacun dans sa propre baie système. Chaque baie système contient les composants d’alimentation, quatre boîtiers DAE (Disk Array Enclosure) au minimum et 8 au maximum en standard ou 12 au maximum dans les configurations de baies haute densité.</p></span> 
+	<span><p>Les configurations standard prennent en charge les boîtiers DAE standard (15 disques) et haute densité (25 disques). Les configurations de baies haute densité prennent uniquement en charge les boîtiers DAE de 25 disques. La configuration standard maximale comprend quatre baies système et deux baies de stockage, tandis que la configuration haute densité maximale se compose uniquement de quatre baies système. </p></span> 
+	<span><p>Dans une configuration standard, vous pouvez installer une ou deux baies de stockage (intitulées 1A et 1B) afin d’optimiser la capacité de stockage sous-jacente à chaque moteur. Les baies de stockage hébergent les boîtiers DAE et les composants d’alimentation.</p></span> 
+	<span><p>Chaque moteur est connecté à tous les boîtiers DAE de la baie système en vue de les contrôler. En cas d’utilisation de baies de stockage, les moteurs 1 et 2 se connectent aux boîtiers DAE dédiés de la baie de stockage 1A, tandis que les moteurs 3 et 4 se connectent aux boîtiers DAE dédiés de la baie de stockage 1B.</p></span> 
+	<span><p>Les composants de la passerelle NAS qui offrent un accès en mode fichier aux données de la baie résident toujours dans la baie système 1 dans les configurations haute densité, et dans la baie de stockage 1A dans les configurations de baie standard.</p></span> 
+	<span><p>L’option d’éloignement des baies système est disponible dans les configurations à trois ou quatre moteurs. Il s’agit d’une option d'installation permettant de séparer physiquement les baies système 2 et 3 afin de faire face à d’éventuelles restrictions de l’espace au sol. La distance maximale admise entre les baies système 2 et 4 est de 10 m.</p></span> 
+</html>

@@ -1,0 +1,14 @@
+<html>
+	<title>
+		CONFIGURATION
+	</title>
+	<span>
+		<p>Current Configuration Details:</p>
+		<ul>
+			<li>Number of engines: {0}</li>
+			<li>Number of DAEs: {1}</li>
+			<li>Maximum number of drives: {2}</li>
+		</ul>
+	</span>
+	<span><p>This configuration is intended for customers who want to build a standard, 6-bay array configuration sometime in the future but are currently using only high-density DAEs.</p> </span>
+</html>

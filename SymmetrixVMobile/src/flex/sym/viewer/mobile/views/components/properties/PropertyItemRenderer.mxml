@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                xmlns:s="library://ns.adobe.com/flex/spark"
+                autoDrawBackground="false"
+                width="100%"
+                xmlns:properties="sym.viewer.mobile.views.components.properties.*">
+    
+    <fx:Script source="../../../script/components/properties/propertyItemRenderer.as"/>
+
+    <s:layout>
+        <s:VerticalLayout gap="8"/>
+    </s:layout>
+    <!--height="50"-->
+    <s:BorderContainer 
+        visible="{property.hasImage}"
+        includeInLayout="{property.hasImage}"  
+        borderVisible="false"
+        width="100%">
+    <s:Image id="image" 
+             visible="{property.hasImage}"
+             includeInLayout="{property.hasImage}"
+             width="100%" 
+             height="{property.imageHeight == 0 ? image.width * property.imageRatio : property.imageHeight}"
+             horizontalAlign="left"
+             smooth="true"
+             scaleMode="letterbox"
+             source="images/properties/{property.image}"/>
+    </s:BorderContainer> 
+             
+    <s:Label id="heading"
+			 paddingTop="1"
+             visible="{property.hasHeading}"
+             includeInLayout="{property.hasHeading}"
+             text="{property.heading}"
+             styleName="propertyHeading" 
+             width="100%"/>
+    <s:Label id="paragraph"
+			 paddingTop="1"
+             visible="{property.hasParagraph}"
+             includeInLayout="{property.hasParagraph}"
+             text="{property.paragraph}"
+             styleName="propertyParagraph"
+             width="100%"/>
+    <s:List id="bullets"
+            itemRenderer="sym.viewer.mobile.views.components.properties.BulletItemRenderer"
+            width="100%"
+            visible="{property.hasBullets}"
+            includeInLayout="{property.hasBullets}"
+            dataProvider="{property.bullets}"
+            creationComplete="{bullets_creationCompleteHandler(event)}">
+        <s:layout>
+            <s:VerticalLayout gap="5"/>
+        </s:layout>
+    </s:List>
+    <properties:DataTableComponent id="table" 
+                                   maxColumnIndexAutoWidth="0"
+                                   autoSizeColumnPercentWidth="20"
+                                   visible="{property.hasTable}"
+                                   includeInLayout="{property.hasTable}"
+                                   width="100%"
+                                   initialize="{table_creationCompleteHandler(event)}"/>
+</s:ItemRenderer>

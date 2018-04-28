@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:HGroup xmlns:fx="http://ns.adobe.com/mxml/2009"
+                   xmlns:s="library://ns.adobe.com/flex/spark"
+                   width="100%"
+                   preinitialize="breadcrumbComponentPreinitializeHandler(event)">
+
+    <fx:Declarations>
+        <!-- Place non-visual elements (e.g., services, value objects) here -->
+    </fx:Declarations>
+
+    <fx:Script source="../../../script/components/breadcrumb/arrowBreadcrumb.as"/>
+	
+	<fx:Script>
+		<![CDATA[
+			
+			public function set configView(configV:ConfigurationView):void{
+				this._configView = configV;
+			}
+            
+            public function addEventListeners():void
+            {
+                NavigationContoller.instance.addEventListener(RefreshNavigationEvent.REFRESH_NAVIGATION, onRefresh, false, 0, true);
+                NavigationContoller.instance.addEventListener(NavigationRequestEvent._NAVIGATION_REQUEST, navigateHandler, false, 0, true);
+            }
+		]]>
+	</fx:Script>
+
+</s:HGroup>

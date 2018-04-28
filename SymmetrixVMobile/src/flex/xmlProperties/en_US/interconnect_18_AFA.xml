@@ -1,0 +1,16 @@
+﻿<html>
+<title>18-Port InfiniBand(IB) Interconnect </title>
+
+<span><p>This 1U component resides in systrem bay 1 and is at the heart of the EMC Dynamic Virtual Matrix(TM) architecture. It enables communication and resource sharing in multi-engine (V-Brick/zBrick) 950F arrays. The IB interconnect includes the following components</p></span>
+<span>
+	<ul>
+		<li> 18 InfiniBand ports </li>
+		<li> Redundant, hot-pluggable power supplies</li>
+		<li> Redundant, hot pluggable fan modules </li>
+		<li> 2 1Gb Ethernet RJ-45 management ports (connections to Ethernet switches A and B) </li>
+	</ul>
+</span>
+<span><p> Each engine provides redundant interfaces to the IB interconnect. </p></span>
+
+</html>
+

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:GridItemEditor xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				  xmlns:s="library://ns.adobe.com/flex/spark" 
+				  xmlns:dropdown="sym.viewer.mobile.views.components.dropdown.*"
+				   >
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			
+			import spark.events.IndexChangeEvent;
+			
+			import sym.controller.FilterController;
+			import sym.controller.events.DropDownEvent;
+			import sym.controller.events.WizardDataGridEvent;
+			import sym.objectmodel.common.Constants;
+			import sym.objectmodel.common.DriveGroup;
+			import sym.objectmodel.driveUtils.DriveDef;
+			import sym.objectmodel.driveUtils.DriveRegister;
+			import sym.objectmodel.driveUtils.enum.DriveRaidLevel;
+			import sym.objectmodel.driveUtils.enum.DriveType;
+			
+			private var _selectedDriveGroup:DriveGroup;
+			private var _selectedDrive:DriveType;
+			private var _selectedRaid:DriveRaidLevel;
+			private var _selectedSize:int;
+			
+			override public function prepare():void
+			{
+				super.prepare();
+				
+				drop.bindingList.addEventListener(MouseEvent.CLICK, drop_clickHandler);
+				drop.addEventListener(DropDownEvent.HIDE, popUpHideHandler);
+			}
+				
+			private function popUpHideHandler(e:DropDownEvent):void
+			{
+				drop.dropListAnchor.displayPopUp = false;
+			}
+			
+			override public function set data(val:Object):void
+			{
+				_selectedDriveGroup = val as DriveGroup;
+				
+				if (val && this.column.dataField)
+				{
+					switch(this.column.dataField)
+					{
+						case Constants.WIZARD_DATA_GRID_DRIVE_TYPE_COLUMN:
+						{
+							this.value = _selectedDriveGroup.driveDef.type;
+							break;
+						}
+						case Constants.WIZARD_DATA_GRID_SIZE_COLUMN:
+						{
+							this.value = _selectedDriveGroup.driveDef.size;
+							break;
+						}
+						case Constants.WIZARD_DATA_GRID_RAID_COLUMN:
+						{
+							this.value = _selectedDriveGroup.driveDef.raid;
+							break;
+						}
+					}
+				}
+			}
+			
+			override public function get data():Object
+			{
+				return _selectedDriveGroup;
+			}
+			
+			// Initialize the DropDown control with the cell data.
+			override public function set value(newValue:Object):void 
+			{
+				if (this.column.dataField == Constants.WIZARD_DATA_GRID_DRIVE_TYPE_COLUMN)
+				{
+					drop.labelFunction = FilterController.instance.driveTypeDropLabelFunction;
+						
+					_selectedDrive = newValue as DriveType;
+					_selectedRaid = _selectedDriveGroup.driveDef.raid;
+					_selectedSize = _selectedDriveGroup.driveDef.size;
+					
+					drop.dataProvider = new ArrayCollection(DriveDef.getSupportedDrives(_selectedSize));
+				}
+				
+				if (this.column.dataField == Constants.WIZARD_DATA_GRID_RAID_COLUMN)
+				{
+					drop.labelFunction = FilterController.instance.raidDropLabelFunction;
+					
+					_selectedDrive = _selectedDriveGroup.driveDef.type;
+					_selectedRaid = newValue as DriveRaidLevel;
+					_selectedSize = _selectedDriveGroup.driveDef.size;
+					
+					drop.dataProvider = new ArrayCollection(DriveRaidLevel.values);
+				}
+				
+				if (this.column.dataField == Constants.WIZARD_DATA_GRID_SIZE_COLUMN)
+				{
+					drop.labelFunction = FilterController.instance.sizeDropLabelFunction;
+					
+					_selectedDrive = _selectedDriveGroup.driveDef.type;
+					_selectedRaid = _selectedDriveGroup.driveDef.raid;
+					_selectedSize = int(newValue);
+					
+					drop.dataProvider = new ArrayCollection(DriveDef.getSupportedSize(_selectedDrive, true) as Array);	
+				}
+				
+				// sets drop item with current value
+				drop.selectedItem = newValue;
+			}
+			
+			// Returns the current value of the DropDown control.
+			override public function get value():Object 
+			{
+				return drop.selectedItem;
+			}
+			
+			private function get allFlashArraysSelected():Boolean
+			{
+				return (this.dataGrid.parent as WizardTierComponent).allFlashArraysSelected;
+			}
+			
+			override public function save():Boolean
+			{
+				if (!validate())
+					return false;
+				
+				var oldData:Object;
+				var newData:Object = value;
+				var property:String = column.dataField;
+				var driveTypeDP:ArrayCollection;
+				var sizeDP:ArrayCollection;	
+				var raidDP:ArrayCollection; 
+				
+				if (property == Constants.WIZARD_DATA_GRID_DRIVE_TYPE_COLUMN)
+				{
+					oldData = _selectedDrive;
+					_selectedDrive = newData as DriveType;
+					
+					sizeDP = new ArrayCollection(DriveDef.getSupportedSize(_selectedDrive, true) as Array);
+					if (!sizeDP.contains(_selectedSize))
+					{
+						_selectedSize = sizeDP[0];
+					}
+				}
+				if (property == Constants.WIZARD_DATA_GRID_RAID_COLUMN)
+				{
+					oldData = _selectedRaid;
+					_selectedRaid = newData as DriveRaidLevel;
+				}
+				if (property == Constants.WIZARD_DATA_GRID_SIZE_COLUMN)
+				{
+					oldData = _selectedSize;
+					_selectedSize = int(newData);
+					
+					driveTypeDP = new ArrayCollection(DriveDef.getSupportedDrives(_selectedSize));
+					if (!driveTypeDP.contains(_selectedDrive))
+					{
+						_selectedDrive = driveTypeDP[0];
+					}
+				}
+				
+				if (oldData != newData)
+				{
+					data.driveDef = DriveRegister.register(_selectedDrive, _selectedRaid, _selectedSize); 
+				}
+                
+                if((data as DriveGroup).activeCount % _selectedRaid.raidGroupSize != 0)
+                {
+                    var evt:WizardDataGridEvent = new WizardDataGridEvent(WizardDataGridEvent.DRIVE_COUNT_EDIT_SESSION_REQUEST);
+                    evt.rowIndex = this.rowIndex;
+                    dataGrid.dispatchEvent(evt);
+                }
+                
+				return true;
+			}
+			
+			// Shift focus to the DropDown. Opens DropDown
+			override public function setFocus():void 
+			{
+				drop.setFocus();
+				drop.btnDrop.dispatchEvent(new MouseEvent(MouseEvent.CLICK));
+			}
+			
+			protected function drop_clickHandler(event:Event):void
+			{
+				// if same selection, close the editor and save data
+				if (drop.bindingList.selectedItem == drop.selectedItem)
+				{
+					// programmatically calls method to end editing session
+					this.dataGrid.endItemEditorSession();
+				}
+			}
+			
+			protected function drop_changeHandler(event:IndexChangeEvent):void
+			{
+				// programmatically calls method to end editing session
+				this.dataGrid.endItemEditorSession();
+			}
+			
+			override public function discard():void
+			{
+				super.discard();
+				drop.bindingList.removeEventListener(MouseEvent.CLICK, drop_clickHandler);
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<s:layout >
+		<s:HorizontalLayout paddingLeft="5"
+							paddingRight="5"
+							paddingBottom="5"
+							paddingTop="5"
+							horizontalAlign="center"
+							verticalAlign="middle" />
+	</s:layout>
+	
+	<dropdown:DropDown id="drop"
+					   width="100%"
+					   maxRowCount="{Constants.WIZARD_DROP_DOWN_MAX_ROWS}"
+					   verticalAlign="middle"
+					   change="drop_changeHandler(event)"/>
+	
+</s:GridItemEditor>

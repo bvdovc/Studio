@@ -1,0 +1,20 @@
+<html>
+	<title>Motor</title>
+
+	<span>
+		<p>El motor es la unidad central de procesamiento de I/O, diseñada de manera redundante para garantizar alta disponibilidad. Cada director redundante (el director A y el director B) contiene caché, dos CPU Broadwell de 18 núcleos de 2.8 GHz e interfaces de conexión a módulos de I/O, como módulos de I/O universales de front-end, de back-end NVMe, InfiniBand, de compresión, deduplicación y flash NVMe. El motor proporciona 72 núcleos de CPU y un máximo de 2 TB de caché.</p>
+	</span>	
+	<span>
+		<p>Los siguientes diagramas muestran la vista posterior de un motor PowerMax 8000 en una configuración de múltiples motores o de un solo motor. Los diagramas muestran los tipos de módulos de I/O, las designaciones de slot y la numeración de los puertos. No todos los slots flash NVMe y de front-end universales están ocupados en una configuración típica.</p>
+	</span>
+	<span>
+		<p>Configuración de un solo motor:</p>
+	</span>
+		<span><img src="PowerMax8000_SingleEngine.jpg" ratio="0.57"/></span>
+	<span>
+		<p>Se accede a la mayoría de los componentes del motor desde la parte posterior. Solo se puede acceder a los ventiladores de enfriamiento del motor y a las fuentes de alimentación desde la parte frontal.</p>
+	</span>
+		
+</html>
+
+

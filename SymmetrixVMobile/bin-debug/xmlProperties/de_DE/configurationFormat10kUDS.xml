@@ -1,0 +1,11 @@
+<html> 
+	<title>
+		KONFIGURATION 
+	</title> 
+	<span>
+		<p>Details zur aktuellen Konfiguration:</p>
+		<ul> 
+			<li>Anzahl der Engines: {0}</li> 
+			<li>Anzahl der DAEs: {1}</li> 
+			<li>Maximale Anzahl der Laufwerke: {2}</li> </ul>
+	</span> <span><p>Diese Konfiguration ist auf Kunden ausgerichtet, die in der Zukunft eine standardmäßige Arraykonfiguration mit 6 Bays einrichten möchten, momentan jedoch nur DAEs mit hoher Dichte verwenden.</p> </span> </html>

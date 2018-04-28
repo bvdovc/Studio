@@ -1,0 +1,8 @@
+<html>
+	<title> 		MIBE
+	</title> 	<span>
+	<p>El gabinete de placa de interfaz matriz es el sistema central de los arreglos con múltiples motores. Los MIBE proporcionan interconexión de motores de alta velocidad y baja latencia, y garantizan la disponibilidad general del sistema. Dos MIBE redundantes residen en la bahía de sistema 2 y cada uno de ellos se conecta con cada motor del arreglo.</p> 	
+	</span> 	<span>
+	<p>Los MIBE incluyen sus propios módulos de fuente de alimentación/enfriamiento y puertos fabric redundantes a las placas de interfaz de sistema (SIB) de cada motor del arreglo.</p> 	
+	</span>
+</html> 

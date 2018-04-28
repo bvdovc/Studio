@@ -1,0 +1,1283 @@
+<project name="Symmetrix System Viewer Build"  xmlns:ant="antlib:net.sf.antcontrib">
+	
+	<taskdef resource="net/sf/antcontrib/antlib.xml" uri="http://ant-contrib.sourceforge.net">
+        <classpath>
+                <pathelement location="${ANT_CONTRIB}"/>
+        </classpath>
+    </taskdef>   
+	
+	<tstamp>
+        <format property="current.time" pattern="MM-dd-yyyy_hh-mm-ss"/>
+    </tstamp>
+
+	<tstamp>
+      <format property="touch.time" pattern="MM/dd/yyyy hh:mm aa"
+              offset="-3" unit="day"/>
+	</tstamp>
+	
+	<target name="deleteBIN">
+		<delete includeemptydirs="true">
+			<fileset dir="SymmetrixVMobile/bin" >
+				<date datetime="${touch.time}" when="before"/>
+			</fileset>
+		</delete>	
+	</target>	
+		
+	<property file="build.properties"/>
+	
+	<import file="${CTRL_NAME}/build.xml" as="ctrlbuild"/>
+	<import file="${HELPER_NAME}/build.xml" as="iconbuild"/>
+	
+    <target name="createBin">
+		<echo>----------------------------------------------</echo>
+		<ant:if>
+			<not>
+				<available file="${APP_BIN}" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application bin..." />
+				<mkdir dir="${APP_BIN}" /> 
+			</then>
+		</ant:if>
+		<mkdir dir="${APP_BIN}/${current.time}" /> 	
+		<antcall target="deleteBIN"/>
+	</target>
+	
+    <target name="createReleaseAir">
+		<echo>----------------------------------------------</echo>
+		<ant:if>
+			<not>
+				<available file="${APP_RELEASE_AIR}" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application release air..." />
+				<mkdir dir="${APP_RELEASE_AIR}" /> 
+			</then>
+		</ant:if>
+		<mkdir dir="${APP_RELEASE_AIR}/${current.time}" /> 
+	</target>
+	
+    <target name="createReleaseAiri">
+		<echo>----------------------------------------------</echo>
+		<ant:if>
+			<not>
+				<available file="${APP_RELEASE_AIRI}" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application release airi..." />
+				<mkdir dir="${APP_RELEASE_AIRI}" /> 
+			</then>
+		</ant:if>
+		<mkdir dir="${APP_RELEASE_AIRI}/${current.time}" /> 
+	</target>
+	
+	<target name="createReleaseIpa">
+		<ant:if>
+			<not>
+				<available file="${APP_RELEASE_IPA}" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application release ipa..." />
+				<mkdir dir="${APP_RELEASE_IPA}" /> 
+			</then>
+		</ant:if>
+		<mkdir dir="${APP_RELEASE_IPA}/${current.time}" /> 
+	</target>
+	
+	<target name="createReleaseIpaTest">
+		<ant:if>
+			<not>
+				<available file="${APP_RELEASE_IPA_TEST}" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application test (comtrade cert) release ipa..." />
+				<mkdir dir="${APP_RELEASE_IPA_TEST}" /> 
+			</then>
+		</ant:if>
+		<mkdir dir="${APP_RELEASE_IPA_TEST}/${current.time}" /> 
+	</target>
+	
+	<target name="createReleaseIpaAiri">
+		<ant:if>
+			<not>
+				<available file="${APP_RELEASE_IPA_AIRI}" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application release ipa airi..." />
+				<mkdir dir="${APP_RELEASE_IPA_AIRI}" /> 
+			</then>
+		</ant:if>
+		<mkdir dir="${APP_RELEASE_IPA_AIRI}/${current.time}" /> 
+	</target>
+	
+	<target name="copyAssets">
+		<echo>----------------------------------------------</echo>
+		<echo message="Copying application assets..." />
+		<mkdir dir="${APP_BIN}/${current.time}/images" />
+		<mkdir dir="${APP_BIN}/${current.time}/xmlProperties"/>
+
+		<copy todir="${APP_BIN}/${current.time}/images/properties">
+			<fileset dir="${APP_ASSETS}/images/properties" />
+		</copy>
+		<copy todir="${APP_BIN}/${current.time}/images" file="${APP_ASSETS}/images/symIntro.jpg"/>
+		<copy todir="${APP_BIN}/${current.time}/xmlProperties">
+			<fileset dir="${APP_SRC}/xmlProperties" />
+		</copy>
+		<copy todir="${APP_BIN}/${current.time}" file="${APP_SRC}/appIcon72.png"/>
+		<copy todir="${APP_BIN}/${current.time}" file="${APP_SRC}/appIcon114.png"/>
+		<copy todir="${APP_BIN}/${current.time}" file="${APP_SRC}/appIcon128.png"/>
+		<copy todir="${APP_BIN}/${current.time}" file="${APP_SRC}/appIcon76.png"/>
+		<copy todir="${APP_BIN}/${current.time}" file="${APP_SRC}/appIcon152.png"/>
+		<copy todir="${APP_BIN}/${current.time}" file="${APP_SRC}/Default-Landscape@2x.png"/>
+		<copy todir="${APP_BIN}/${current.time}" file="${APP_SRC}/SymmetrixVMobile-app.xml"/>
+		<copy todir="${APP_BIN}/${current.time}" file="${APP_SRC}/settings.xml"/>
+					
+		<echo message="Application assets copied..."/>
+	</target>
+	
+	<target name="swfMobile">
+		<echo>----------------------------------------------</echo>
+		<echo message="Starting compilation SymmetrixVMobile..." />
+		<mxmlc file="${APP_SRC}/${APP_NAME}.${APP_EXTENSION}"
+			output="${APP_BIN}/${current.time}/${APP_NAME}.swf" 
+			static-rsls="true"
+			accessible="true"
+			configname="airmobile" 
+			debug="${DEBUG_FLAG}" 
+			failonerror="true" 
+			fork="true" 
+			maxmemory="1024m">
+			<arg line="-locale=en_US,de_DE,it_IT,ja_JP,es_MX,pt_BR,ko_KR,ru_RU,zh_CN,fr_FR"/>	
+			<arg line="-source-path+='${APP_LOCALES}/{locale}'"/>
+			<arg line="-source-path+='${APP_ASSETS}'"/>
+			<arg line="-define+=OS::desktop,false"/>
+			<arg line="-define+=INCLUDE::unified,true"/>
+			<arg line="-define+=SERIES::m_series,false"/>
+			<arg line="-define+=SERIES::k_series,true"/>
+			<source-path path-element="${APP_SRC}" />
+			<external-library-path file="${FLEX_HOME}/frameworks/libs/air/airglobal.swc" append="true" />
+			<library-path dir="${MODEL_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${CONFIG_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${CTRL_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${HELPER_BIN}" includes="*.swc" append="true" />
+		</mxmlc>
+		<echo message="Compilation SymmetrixVMobile (mobile version) finished successfully." />
+		<echo>----------------------------------------------</echo>
+	</target>
+
+	<target name="swfMobile_M">
+		<echo>----------------------------------------------</echo>
+		<echo message="Starting compilation SymmetrixVMobile..." />
+		<mxmlc file="${APP_SRC}/${APP_NAME}.${APP_EXTENSION}"
+			output="${APP_BIN}/${current.time}/${APP_NAME}.swf" 
+			static-rsls="true"
+			accessible="true"
+			configname="airmobile" 
+			debug="${DEBUG_FLAG}" 
+			failonerror="true" 
+			fork="true" 
+			maxmemory="1024m">
+			<arg line="-locale=en_US,de_DE,it_IT,ja_JP,es_MX,pt_BR,ko_KR,ru_RU,zh_CN,fr_FR"/>	
+			<arg line="-source-path+='${APP_LOCALES}/{locale}'"/>
+			<arg line="-source-path+='${APP_ASSETS}'"/>
+			<arg line="-define+=OS::desktop,false"/>
+			<arg line="-define+=INCLUDE::unified,true"/>
+			<arg line="-define+=SERIES::m_series,true"/>
+			<arg line="-define+=SERIES::k_series,true"/>
+			<source-path path-element="${APP_SRC}" />
+			<external-library-path file="${FLEX_HOME}/frameworks/libs/air/airglobal.swc" append="true" />
+			<library-path dir="${MODEL_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${CONFIG_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${CTRL_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${HELPER_BIN}" includes="*.swc" append="true" />
+		</mxmlc>
+		<echo message="Compilation SymmetrixVMobile (mobile version) finished successfully." />
+		<echo>----------------------------------------------</echo>
+	</target>	
+	
+	<target name="swfMobile_AFA">
+		<echo>----------------------------------------------</echo>
+		<echo message="Starting compilation SymmetrixVMobile..." />
+		<mxmlc file="${APP_SRC}/${APP_NAME}.${APP_EXTENSION}"
+			output="${APP_BIN}/${current.time}/${APP_NAME}.swf" 
+			static-rsls="true"
+			accessible="true"
+			configname="airmobile" 
+			debug="${DEBUG_FLAG}" 
+			failonerror="true" 
+			fork="true" 
+			maxmemory="1024m">
+			<arg line="-locale=en_US,de_DE,it_IT,ja_JP,es_MX,pt_BR,ko_KR,ru_RU,zh_CN,fr_FR"/>	
+			<arg line="-source-path+='${APP_LOCALES}/{locale}'"/>
+			<arg line="-source-path+='${APP_ASSETS}'"/>
+			<arg line="-define+=OS::desktop,false"/>
+			<arg line="-define+=INCLUDE::unified,true"/>
+			<arg line="-define+=SERIES::m_series,true"/>
+			<arg line="-define+=SERIES::k_series,true"/>
+			<arg line="-define+=SERIES::afa_series,true"/>
+			<source-path path-element="${APP_SRC}" />
+			<external-library-path file="${FLEX_HOME}/frameworks/libs/air/airglobal.swc" append="true" />
+			<library-path dir="${MODEL_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${CONFIG_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${CTRL_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${HELPER_BIN}" includes="*.swc" append="true" />
+		</mxmlc>
+		<echo message="Compilation SymmetrixVMobile (mobile version) finished successfully." />
+		<echo>----------------------------------------------</echo>
+	</target>	
+	
+	<target name="swfDesktop">
+		<echo>----------------------------------------------</echo>
+		<echo message="Starting compilation SymmetrixVMobile..." />
+		<mxmlc file="${APP_SRC}/${APP_NAME}.${APP_EXTENSION}"
+			output="${APP_BIN}/${current.time}/${APP_NAME}.swf" 	
+			static-rsls="true"
+			accessible="true"
+			configname="airmobile" 
+			debug="${DEBUG_FLAG}" 
+			failonerror="true" 
+			fork="true" 
+			maxmemory="1024m">
+			<arg line="-locale=en_US,de_DE,it_IT,ja_JP,es_MX,pt_BR,ko_KR,ru_RU,zh_CN,fr_FR"/>
+			<arg line="-source-path+='${APP_LOCALES}/{locale}'"/>
+			<arg line="-source-path+='${APP_ASSETS}'"/>
+			<arg line="-define+=OS::desktop,true"/>
+			<arg line="-define+=INCLUDE::unified,true"/>
+			<arg line="-define+=SERIES::m_series,false"/>
+			<arg line="-define+=SERIES::k_series,true"/>
+			<source-path path-element="${APP_SRC}" />
+			<external-library-path file="${FLEX_HOME}/frameworks/libs/air/airglobal.swc" append="true" />
+			<library-path dir="${MODEL_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${CONFIG_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${CTRL_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${HELPER_BIN}" includes="*.swc" append="true" />
+		</mxmlc>
+		<echo message="Compilation SymmetrixVMobile (desktop version) finished successfully." />
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="swfDesktop_M">
+		<echo>----------------------------------------------</echo>
+		<echo message="Starting compilation SymmetrixVMobile..." />
+		<mxmlc file="${APP_SRC}/${APP_NAME}.${APP_EXTENSION}"
+			output="${APP_BIN}/${current.time}/${APP_NAME}.swf"		
+			static-rsls="true"
+			accessible="true"
+			configname="airmobile" 
+			debug="${DEBUG_FLAG}"
+			failonerror="true" 
+			fork="true" 
+			maxmemory="1024m">
+			<arg line="-locale=en_US,de_DE,it_IT,ja_JP,es_MX,pt_BR,ko_KR,ru_RU,zh_CN,fr_FR"/>
+			<arg line="-source-path+='${APP_LOCALES}/{locale}'"/>
+			<arg line="-source-path+='${APP_ASSETS}'"/>
+			<arg line="-define+=OS::desktop,true"/>
+			<arg line="-define+=INCLUDE::unified,true"/>
+			<arg line="-define+=SERIES::m_series,true"/>
+			<arg line="-define+=SERIES::k_series,true"/>
+			<source-path path-element="${APP_SRC}" />
+			<external-library-path file="${FLEX_HOME}/frameworks/libs/air/airglobal.swc" append="true" />
+			<library-path dir="${MODEL_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${CONFIG_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${CTRL_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${HELPER_BIN}" includes="*.swc" append="true" />
+		</mxmlc>
+		<echo message="Compilation SymmetrixVMobile (desktop version) finished successfully." />
+		<echo>----------------------------------------------</echo>
+	</target>	
+	
+	<target name="swfDesktop_AFA">
+		<echo>----------------------------------------------</echo>
+		<echo message="Starting compilation SymmetrixVMobile..." />
+		<mxmlc file="${APP_SRC}/${APP_NAME}.${APP_EXTENSION}"
+			output="${APP_BIN}/${current.time}/${APP_NAME}.swf"		
+			static-rsls="true"
+			accessible="true"
+			configname="airmobile" 
+			debug="${DEBUG_FLAG}"
+			failonerror="true" 
+			fork="true" 
+			maxmemory="1024m">
+			<arg line="-locale=en_US,de_DE,it_IT,ja_JP,es_MX,pt_BR,ko_KR,ru_RU,zh_CN,fr_FR"/>
+			<arg line="-source-path+='${APP_LOCALES}/{locale}'"/>
+			<arg line="-source-path+='${APP_ASSETS}'"/>
+			<arg line="-define+=OS::desktop,true"/>
+			<arg line="-define+=INCLUDE::unified,true"/>
+			<arg line="-define+=SERIES::m_series,true"/>
+			<arg line="-define+=SERIES::k_series,true"/>
+			<arg line="-define+=SERIES::afa_series,true"/>
+			<source-path path-element="${APP_SRC}" />
+			<external-library-path file="${FLEX_HOME}/frameworks/libs/air/airglobal.swc" append="true" />
+			<library-path dir="${MODEL_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${CONFIG_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${CTRL_BIN}" includes="*.swc" append="true" />
+			<library-path dir="${HELPER_BIN}" includes="*.swc" append="true" />
+		</mxmlc>
+		<echo message="Compilation SymmetrixVMobile (desktop version) finished successfully." />
+		<echo>----------------------------------------------</echo>
+	</target>	
+	
+	<target name="air" depends="compileDesktop, createReleaseAir">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING .AIR FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-package"/>
+			<arg value="-storetype"/>
+			<arg value="${DESC_STORETYPE}"/>
+			<arg value="-keystore"/> 
+			<arg value="${DESC_KEYSTORE}"/>  
+			<arg value="-storepass"/> 
+			<arg value="${DESC_CERT_PASSWORD}"/>
+			<arg value="${APP_RELEASE_AIR}/${current.time}/SymmViewer.air"/>			
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile-app.xml" /> 
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile.swf" /> 
+			<arg value="${APP_BIN}/${current.time}/appIcon72.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon114.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon128.png"/>
+			<arg value="${APP_BIN}/${current.time}/Default-Landscape@2x.png"/>
+			<arg value="${APP_BIN}/${current.time}/images"/>
+			<arg value="${APP_BIN}/${current.time}/xmlProperties"/>
+			<arg value="${APP_BIN}/${current.time}/settings.xml"/>
+		</java> 
+		<echo message="Finished packaging air..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="air_M" depends="compileDesktop_M, createReleaseAir">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING .AIR FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-package"/>
+			<arg value="-storetype"/>
+			<arg value="${DESC_STORETYPE}"/>
+			<arg value="-keystore"/> 
+			<arg value="${DESC_KEYSTORE}"/>  
+			<arg value="-storepass"/> 
+			<arg value="${DESC_CERT_PASSWORD}"/>
+			<arg value="${APP_RELEASE_AIR}/${current.time}/SymmViewer.air"/>			
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile-app.xml" /> 
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile.swf" /> 
+			<arg value="${APP_BIN}/${current.time}/appIcon72.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon114.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon128.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon76.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon152.png"/>
+			<arg value="${APP_BIN}/${current.time}/images"/> 
+			<arg value="${APP_BIN}/${current.time}/xmlProperties"/>
+			<arg value="${APP_BIN}/${current.time}/settings.xml"/> 
+		</java> 
+		<echo message="Finished packaging air..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+		
+	<target name="air_AFA" depends="compileDesktop_AFA, createReleaseAir">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING .AIR FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-package"/>
+			<arg value="-storetype"/>
+			<arg value="${DESC_STORETYPE}"/>
+			<arg value="-keystore"/> 
+			<arg value="${DESC_KEYSTORE}"/>  
+			<arg value="-storepass"/> 
+			<arg value="${DESC_CERT_PASSWORD}"/>
+			<arg value="${APP_RELEASE_AIR}/${current.time}/SymmViewer.air"/>			
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile-app.xml" /> 
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile.swf" /> 
+			<arg value="${APP_BIN}/${current.time}/appIcon72.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon114.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon128.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon76.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon152.png"/>
+			<arg value="${APP_BIN}/${current.time}/images"/> 
+			<arg value="${APP_BIN}/${current.time}/xmlProperties"/>
+			<arg value="${APP_BIN}/${current.time}/settings.xml"/> 
+		</java> 
+		<echo message="Finished packaging air..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="airi" depends="compileDesktop, createReleaseAiri">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING .AIRI FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-prepare"/>
+			<arg value="${APP_RELEASE_AIRI}/${current.time}/SymmViewer.airi"/>			
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile-app.xml" /> 
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile.swf" /> 
+			<arg value="${APP_BIN}/${current.time}/appIcon72.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon114.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon128.png"/>
+			<arg value="${APP_BIN}/${current.time}/images"/> 
+			<arg value="${APP_BIN}/${current.time}/xmlProperties"/>
+			<arg value="${APP_BIN}/${current.time}/settings.xml"/> 				
+		</java> 
+		<echo message="Finished packaging airi ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="airi_M" depends="compileDesktop_M, createReleaseAiri">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING .AIRI FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-prepare"/>
+			<arg value="${APP_RELEASE_AIRI}/${current.time}/SymmViewer.airi"/>			
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile-app.xml" /> 
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile.swf" /> 
+			<arg value="${APP_BIN}/${current.time}/appIcon72.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon114.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon128.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon76.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon152.png"/>
+			<arg value="${APP_BIN}/${current.time}/images"/> 
+			<arg value="${APP_BIN}/${current.time}/xmlProperties"/>
+			<arg value="${APP_BIN}/${current.time}/settings.xml"/> 				
+		</java> 
+		<echo message="Finished packaging airi ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="airi_AFA" depends="compileDesktop_AFA, createReleaseAiri">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING .AIRI FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-prepare"/>
+			<arg value="${APP_RELEASE_AIRI}/${current.time}/SymmViewer.airi"/>			
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile-app.xml" /> 
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile.swf" /> 
+			<arg value="${APP_BIN}/${current.time}/appIcon72.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon114.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon128.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon76.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon152.png"/>
+			<arg value="${APP_BIN}/${current.time}/images"/> 
+			<arg value="${APP_BIN}/${current.time}/xmlProperties"/>
+			<arg value="${APP_BIN}/${current.time}/settings.xml"/> 				
+		</java> 
+		<echo message="Finished packaging airi ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="airiSigned" depends="airi">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING SIGNED .AIRI FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-sign"/>
+			<arg value="-storetype"/>
+			<arg value="${DESC_STORETYPE}"/>
+			<arg value="-keystore"/> 
+			<arg value="${DESC_KEYSTORE}"/>
+			<arg value="-storepass"/> 
+			<arg value="${DESC_CERT_PASSWORD}"/>	
+			<arg value="${APP_RELEASE_AIRI}/${current.time}/SymmViewer.airi"/>		
+			<arg value="${APP_RELEASE_AIRI}/${current.time}/SymmViewer.air"/>					
+		</java> 
+		<echo message="Finished packaging signed airi ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="airiSigned_M" depends="airi_M">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING SIGNED .AIRI FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-sign"/>
+			<arg value="-storetype"/>
+			<arg value="${DESC_STORETYPE}"/>
+			<arg value="-keystore"/> 
+			<arg value="${DESC_KEYSTORE}"/>
+			<arg value="-storepass"/> 
+			<arg value="${DESC_CERT_PASSWORD}"/>	
+			<arg value="${APP_RELEASE_AIRI}/${current.time}/SymmViewer.airi"/>		
+			<arg value="${APP_RELEASE_AIRI}/${current.time}/SymmViewer.air"/>					
+		</java> 
+		<echo message="Finished packaging signed airi ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="airiSigned_AFA" depends="airi_AFA">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING SIGNED .AIRI FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-sign"/>
+			<arg value="-storetype"/>
+			<arg value="${DESC_STORETYPE}"/>
+			<arg value="-keystore"/> 
+			<arg value="${DESC_KEYSTORE}"/>
+			<arg value="-storepass"/> 
+			<arg value="${DESC_CERT_PASSWORD}"/>	
+			<arg value="${APP_RELEASE_AIRI}/${current.time}/SymmViewer.airi"/>		
+			<arg value="${APP_RELEASE_AIRI}/${current.time}/SymmViewer.air"/>					
+		</java> 
+		<echo message="Finished packaging signed airi ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="compileMobile">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING BUILDING SYMMETRIX SYSTEM VIEWER - (MOBILE)...</echo>
+		<antcall target="ctrlbuild.compile" />
+		<antcall target="iconbuild.compile" />
+		<antcall target="createBin"/>
+		<antcall target="copyAssets"/>
+		<antcall target="swfMobile"/>
+	</target>
+	
+	<target name="compileMobile_M">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING BUILDING SYMMETRIX SYSTEM VIEWER - (MOBILE)...</echo>
+		<antcall target="ctrlbuild.compile_M" />
+		<antcall target="iconbuild.compile" />
+		<antcall target="createBin"/>
+		<antcall target="copyAssets"/>
+		<antcall target="swfMobile_M"/>
+	</target>
+	
+	<target name="compileMobile_AFA">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING BUILDING SYMMETRIX SYSTEM VIEWER - (MOBILE)...</echo>
+		<antcall target="ctrlbuild.compile_M" />
+		<antcall target="iconbuild.compile" />
+		<antcall target="createBin"/>
+		<antcall target="copyAssets"/>
+		<antcall target="swfMobile_AFA"/>
+	</target>
+	
+	<target name="compileDesktop">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING BUILDING SYMMETRIX SYSTEM VIEWER - (DESKTOP)...</echo>
+		<antcall target="ctrlbuild.compile" />
+		<antcall target="iconbuild.compile" />
+		<antcall target="createBin"/>
+		<antcall target="copyAssets"/>
+		<antcall target="swfDesktop"/>
+	</target>
+	
+	<target name="compileDesktop_M">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING BUILDING SYMMETRIX SYSTEM VIEWER - (DESKTOP)...</echo>
+		<antcall target="ctrlbuild.compile_M" />
+		<antcall target="iconbuild.compile" />
+		<antcall target="createBin"/>
+		<antcall target="copyAssets"/>
+		<antcall target="swfDesktop_M"/>
+	</target>
+
+	<target name="compileDesktop_AFA">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING BUILDING SYMMETRIX SYSTEM VIEWER - (DESKTOP)...</echo>
+		<antcall target="ctrlbuild.compile_M" />
+		<antcall target="iconbuild.compile" />
+		<antcall target="createBin"/>
+		<antcall target="copyAssets"/>
+		<antcall target="swfDesktop_AFA"/>
+	</target>	
+	
+    <target name="ipa" depends="compileMobile, createReleaseIpa">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING .IPA FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true">
+			<arg value="-package"/>
+			<arg value="-target"/>
+			<arg value="ipa-test"/>
+			<arg value="-provisioning-profile"/>
+			<arg value="${MOB_PROVISIONING_FILE}"/>
+			<arg value="-storetype"/>
+			<arg value="${MOB_STORETYPE}"/>
+			<arg value="-keystore"/>
+			<arg value="${MOB_KEYSTORE}"/>
+			<arg value="-storepass"/>
+			<arg value="${MOB_CERT_PASS}"/>
+			<arg value="${APP_RELEASE_IPA}/${current.time}/${IPA_NAME}"/>
+			<arg value="${APP_BIN}/${current.time}/${APP_NAME}-app.xml"/>
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile.swf"/> 
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	    
+			<arg value="${APP_BIN}/${current.time}/appIcon72.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon114.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon128.png"/>
+			<arg value="${APP_BIN}/${current.time}/Default-Landscape@2x.png"/>			
+			<arg value="${APP_BIN}/${current.time}/images"/> 
+			<arg value="${APP_BIN}/${current.time}/xmlProperties"/>
+			<arg value="${APP_BIN}/${current.time}/settings.xml"/> 
+		</java>
+		<echo message="Finished packaging .ipa ..."/>
+		<echo>----------------------------------------------</echo>
+    </target>
+	
+    <target name="ipa_M" depends="compileMobile_M, createReleaseIpa">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING .IPA FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true">
+			<arg value="-package"/>
+			<arg value="-target"/>
+			<arg value="ipa-test"/>
+			<arg value="-provisioning-profile"/>
+			<arg value="${MOB_PROVISIONING_FILE}"/>
+			<arg value="-storetype"/>
+			<arg value="${MOB_STORETYPE}"/>
+			<arg value="-keystore"/>
+			<arg value="${MOB_KEYSTORE}"/>
+			<arg value="-storepass"/>
+			<arg value="${MOB_CERT_PASS}"/>
+			<arg value="${APP_RELEASE_IPA}/${current.time}/${IPA_NAME}"/>
+			<arg value="${APP_BIN}/${current.time}/${APP_NAME}-app.xml"/>
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile.swf"/> 
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	    
+			<arg value="${APP_BIN}/${current.time}/appIcon72.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon114.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon128.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon76.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon152.png"/>
+			<arg value="${APP_BIN}/${current.time}/Default-Landscape@2x.png"/>			
+			<arg value="${APP_BIN}/${current.time}/images"/> 
+			<arg value="${APP_BIN}/${current.time}/xmlProperties"/>
+			<arg value="${APP_BIN}/${current.time}/settings.xml"/> 
+		</java>
+		<echo message="Finished packaging .ipa ..."/>
+		<echo>----------------------------------------------</echo>
+    </target>	
+	
+	 <target name="ipa_AFA" depends="compileMobile_AFA, createReleaseIpa">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING .IPA FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true">
+			<arg value="-package"/>
+			<arg value="-target"/>
+			<arg value="ipa-test"/>
+			<arg value="-provisioning-profile"/>
+			<arg value="${MOB_PROVISIONING_FILE}"/>
+			<arg value="-storetype"/>
+			<arg value="${MOB_STORETYPE}"/>
+			<arg value="-keystore"/>
+			<arg value="${MOB_KEYSTORE}"/>
+			<arg value="-storepass"/>
+			<arg value="${MOB_CERT_PASS}"/>
+			<arg value="${APP_RELEASE_IPA}/${current.time}/${IPA_NAME}"/>
+			<arg value="${APP_BIN}/${current.time}/${APP_NAME}-app.xml"/>
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile.swf"/> 
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	    
+			<arg value="${APP_BIN}/${current.time}/appIcon72.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon114.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon128.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon76.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon152.png"/>
+			<arg value="${APP_BIN}/${current.time}/Default-Landscape@2x.png"/>			
+			<arg value="${APP_BIN}/${current.time}/images"/> 
+			<arg value="${APP_BIN}/${current.time}/xmlProperties"/>
+			<arg value="${APP_BIN}/${current.time}/settings.xml"/> 
+		</java>
+		<echo message="Finished packaging .ipa ..."/>
+		<echo>----------------------------------------------</echo>
+    </target>	
+	
+	<target name="ipa_M_Test" depends="compileMobile_M, createReleaseIpaTest">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING .IPA FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true">
+			<arg value="-package"/>
+			<arg value="-target"/>
+			<arg value="ipa-test"/>
+			<arg value="-provisioning-profile"/>
+			<arg value="${MOB_PROVISIONING_FILE_TEST}"/>
+			<arg value="-storetype"/>
+			<arg value="${MOB_STORETYPE}"/>
+			<arg value="-keystore"/>
+			<arg value="${MOB_KEYSTORE_TEST}"/>
+			<arg value="-storepass"/>
+			<arg value="${MOB_CERT_PASS_TEST}"/>
+			<arg value="${APP_RELEASE_IPA_TEST}/${current.time}/${IPA_NAME}"/>
+			<arg value="${APP_BIN}/${current.time}/${APP_NAME}-app.xml"/>
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile.swf"/> 
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	    
+			<arg value="${APP_BIN}/${current.time}/appIcon72.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon114.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon128.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon76.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon152.png"/>
+			<arg value="${APP_BIN}/${current.time}/Default-Landscape@2x.png"/>
+			<arg value="${APP_BIN}/${current.time}/images"/> 
+			<arg value="${APP_BIN}/${current.time}/xmlProperties"/>
+			<arg value="${APP_BIN}/${current.time}/settings.xml"/> 
+		</java>
+		<echo message="Finished packaging .ipa ..."/>
+		<echo>----------------------------------------------</echo>
+    </target>	
+	
+	<target name="ipa_AFA_Test" depends="compileMobile_AFA, createReleaseIpaTest">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING .IPA FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true">
+			<arg value="-package"/>
+			<arg value="-target"/>
+			<arg value="ipa-test"/>
+			<arg value="-provisioning-profile"/>
+			<arg value="${MOB_PROVISIONING_FILE_TEST}"/>
+			<arg value="-storetype"/>
+			<arg value="${MOB_STORETYPE}"/>
+			<arg value="-keystore"/>
+			<arg value="${MOB_KEYSTORE_TEST}"/>
+			<arg value="-storepass"/>
+			<arg value="${MOB_CERT_PASS_TEST}"/>
+			<arg value="${APP_RELEASE_IPA_TEST}/${current.time}/${IPA_NAME}"/>
+			<arg value="${APP_BIN}/${current.time}/${APP_NAME}-app.xml"/>
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile.swf"/> 
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	    
+			<arg value="${APP_BIN}/${current.time}/appIcon72.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon114.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon128.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon76.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon152.png"/>
+			<arg value="${APP_BIN}/${current.time}/Default-Landscape@2x.png"/>
+			<arg value="${APP_BIN}/${current.time}/images"/> 
+			<arg value="${APP_BIN}/${current.time}/xmlProperties"/>
+			<arg value="${APP_BIN}/${current.time}/settings.xml"/> 
+		</java>
+		<echo message="Finished packaging .ipa ..."/>
+		<echo>----------------------------------------------</echo>
+    </target>	
+		
+	<target name="ipaAiri" depends="compileMobile, createReleaseIpaAiri">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING .IPA AIRI FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-prepare"/>
+			<arg value="${APP_RELEASE_IPA_AIRI}/${current.time}/SymmetrixVMobile.airi"/>			
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile-app.xml" /> 
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile.swf" /> 
+			<arg value="${APP_BIN}/${current.time}/appIcon72.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon114.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon128.png"/>
+			<arg value="${APP_BIN}/${current.time}/Default-Landscape@2x.png"/>
+			<arg value="${APP_BIN}/${current.time}/images"/> 
+			<arg value="${APP_BIN}/${current.time}/xmlProperties"/>
+			<arg value="${APP_BIN}/${current.time}/settings.xml"/> 				
+		</java> 
+		<echo message="Finished packaging IPA airi ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="ipaAiri_M" depends="compileMobile_M, createReleaseIpaAiri">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING .IPA AIRI FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-prepare"/>
+			<arg value="${APP_RELEASE_IPA_AIRI}/${current.time}/SymmetrixVMobile.airi"/>			
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile-app.xml" /> 
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile.swf" /> 
+			<arg value="${APP_BIN}/${current.time}/appIcon72.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon114.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon128.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon76.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon152.png"/>
+			<arg value="${APP_BIN}/${current.time}/Default-Landscape@2x.png"/>
+			<arg value="${APP_BIN}/${current.time}/images"/> 
+			<arg value="${APP_BIN}/${current.time}/xmlProperties"/>
+			<arg value="${APP_BIN}/${current.time}/settings.xml"/> 				
+		</java> 
+		<echo message="Finished packaging IPA airi ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="ipaAiri_AFA" depends="compileMobile_AFA, createReleaseIpaAiri">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING .IPA AIRI FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-prepare"/>
+			<arg value="${APP_RELEASE_IPA_AIRI}/${current.time}/SymmetrixVMobile.airi"/>			
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile-app.xml" /> 
+			<arg value="-C" /> 
+			<arg value="${APP_BIN}/${current.time}"/> 	
+			<arg value="${APP_BIN}/${current.time}/SymmetrixVMobile.swf" /> 
+			<arg value="${APP_BIN}/${current.time}/appIcon72.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon114.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon128.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon76.png"/>
+			<arg value="${APP_BIN}/${current.time}/appIcon152.png"/>
+			<arg value="${APP_BIN}/${current.time}/Default-Landscape@2x.png"/>
+			<arg value="${APP_BIN}/${current.time}/images"/> 
+			<arg value="${APP_BIN}/${current.time}/xmlProperties"/>
+			<arg value="${APP_BIN}/${current.time}/settings.xml"/> 				
+		</java> 
+		<echo message="Finished packaging IPA airi ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="ipaAiriSigned" depends="ipaAiri">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING SIGNED IPA AIRI FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-package"/>
+			<arg value="-target"/>
+			<arg value="ipa-app-store"/>
+			<arg value="-provisioning-profile"/>
+			<arg value="${MOB_PROVISIONING_FILE}"/>
+			<arg value="-storetype"/>
+			<arg value="${MOB_STORETYPE}"/>
+			<arg value="-keystore"/> 
+			<arg value="${MOB_KEYSTORE}"/>
+			<arg value="-storepass"/> 
+			<arg value="${MOB_CERT_PASS}"/>
+			<arg value="${APP_RELEASE_IPA_AIRI}/${current.time}/SymmViewer.ipa"/>		
+			<arg value="${APP_RELEASE_IPA_AIRI}/${current.time}/SymmetrixVMobile.airi"/>					
+		</java> 
+		<echo message="Finished packaging signed ipa airi ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="ipaAiriSigned_M" depends="ipaAiri_M">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING SIGNED IPA AIRI FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-package"/>
+			<arg value="-target"/>
+			<arg value="ipa-app-store"/>
+			<arg value="-provisioning-profile"/>
+			<arg value="${MOB_PROVISIONING_FILE}"/>
+			<arg value="-storetype"/>
+			<arg value="${MOB_STORETYPE}"/>
+			<arg value="-keystore"/> 
+			<arg value="${MOB_KEYSTORE}"/>
+			<arg value="-storepass"/> 
+			<arg value="${MOB_CERT_PASS}"/>
+			<arg value="${APP_RELEASE_IPA_AIRI}/${current.time}/SymmViewer.ipa"/>		
+			<arg value="${APP_RELEASE_IPA_AIRI}/${current.time}/SymmetrixVMobile.airi"/>					
+		</java> 
+		<echo message="Finished packaging signed ipa airi ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="ipaAiriSigned_AFA" depends="ipaAiri_AFA">
+		<echo>----------------------------------------------</echo>
+		<echo>STARTING DEPLOYING SIGNED IPA AIRI FILE...</echo>
+		<java jar="${ADT}" fork="true" failonerror="true"> 
+			<arg value="-package"/>
+			<arg value="-target"/>
+			<arg value="ipa-app-store"/>
+			<arg value="-provisioning-profile"/>
+			<arg value="${MOB_PROVISIONING_FILE}"/>
+			<arg value="-storetype"/>
+			<arg value="${MOB_STORETYPE}"/>
+			<arg value="-keystore"/> 
+			<arg value="${MOB_KEYSTORE}"/>
+			<arg value="-storepass"/> 
+			<arg value="${MOB_CERT_PASS}"/>
+			<arg value="${APP_RELEASE_IPA_AIRI}/${current.time}/SymmViewer.ipa"/>		
+			<arg value="${APP_RELEASE_IPA_AIRI}/${current.time}/SymmetrixVMobile.airi"/>					
+		</java> 
+		<echo message="Finished packaging signed ipa airi ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+		
+	<target name="createTRUNKfolder">	
+		<echo>----------------------------------------------</echo>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/TRUNK" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application BUILDS/TRUNK..." />
+				<mkdir dir="${APP_BUILDS}/TRUNK" /> 
+			</then>
+		</ant:if>
+	</target>
+	
+	<target name="createAIRfolder">	
+		<echo>----------------------------------------------</echo>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/AIR" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application BUILDS/AIR..." />
+				<mkdir dir="${APP_BUILDS}/AIR" /> 
+			</then>
+		</ant:if>
+	</target>
+	
+	<target name="createAIRIfolder">	
+	    <echo>----------------------------------------------</echo>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/AIRI" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application BUILDS/AIRI..." />
+				<mkdir dir="${APP_BUILDS}/AIRI" /> 
+			</then>
+		</ant:if>
+	</target>
+	
+	<target name="createIPAfolder">	
+	    <echo>----------------------------------------------</echo>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/IPA" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application BUILDS/IPA..." />
+				<mkdir dir="${APP_BUILDS}/IPA" /> 
+			</then>
+		</ant:if>
+	</target>
+	
+	<target name="createIPAAIRIfolder">	
+	    <echo>----------------------------------------------</echo>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/IPA_AIRI" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application BUILDS/IPA_AIRI..." />
+				<mkdir dir="${APP_BUILDS}/IPA_AIRI" /> 
+			</then>
+		</ant:if>
+	</target>
+	
+	<target name="createIPATESTfolder">	
+	    <echo>----------------------------------------------</echo>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/IPA_TEST" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application BUILDS/IPA_TEST..." />
+				<mkdir dir="${APP_BUILDS}/IPA_TEST" /> 
+			</then>
+		</ant:if>
+	</target>
+	
+	<target name="copyLAST_BUILD_TRUNK_M">	
+		<antcall target="createTRUNKfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/TRUNK/RECENT_BUILDS/MOBILE" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application TRUNK/RECENT_BUILDS/MOBILE..." />
+				<mkdir dir="${APP_BUILDS}/TRUNK/RECENT_BUILDS/MOBILE" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/TRUNK/RECENT_BUILDS/MOBILE/${current.time}">
+			<fileset dir="${APP_BIN}/${current.time}" />
+		</copy>
+	</target>	
+	
+	<target name="copyLAST_BUILD_TRUNK_D">	
+		<antcall target="createTRUNKfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/TRUNK/RECENT_BUILDS/DESKTOP" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application TRUNK/RECENT_BUILDS/DESKTOP..." />
+				<mkdir dir="${APP_BUILDS}/TRUNK/RECENT_BUILDS/DESKTOP" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/TRUNK/RECENT_BUILDS/DESKTOP/${current.time}">
+			<fileset dir="${APP_BIN}/${current.time}" />
+		</copy>
+	</target>	
+	
+	<target name="copyAIR_TRUNK">	
+		<antcall target="createAIRfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/AIR/TRUNK" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application AIR/TRUNK..." />
+				<mkdir dir="${APP_BUILDS}/AIR/TRUNK" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/AIR/TRUNK/${current.time}">
+			<fileset dir="${APP_RELEASE_AIR}/${current.time}" />
+		</copy>
+	</target>	
+	
+	<target name="copyAIR_1.0">
+		<antcall target="createAIRfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/AIR/1.0" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application AIR/1.0..." />
+				<mkdir dir="${APP_BUILDS}/AIR/1.0" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/AIR/1.0/${current.time}">
+			<fileset dir="${APP_RELEASE_AIR}/${current.time}" />
+		</copy>
+	</target>	
+	
+	<target name="copyAIR_2.0-Arno">
+		<antcall target="createAIRfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/AIR/2.0-Arno" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application AIR/2.0-Arno..." />
+				<mkdir dir="${APP_BUILDS}/AIR/2.0-Arno" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/AIR/2.0-Arno/${current.time}">
+			<fileset dir="${APP_RELEASE_AIR}/${current.time}" />
+		</copy>
+	</target>	
+	
+	<target name="copyAIR_2.1">
+		<antcall target="createAIRfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/AIR/2.1" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application AIR/2.1..." />
+				<mkdir dir="${APP_BUILDS}/AIR/2.1" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/AIR/2.1/${current.time}">
+			<fileset dir="${APP_RELEASE_AIR}/${current.time}" />
+		</copy>
+	</target>	
+		
+	<target name="copyAIRI_TRUNK">
+		<antcall target="createAIRIfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/AIRI/TRUNK" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application AIRI/TRUNK..." />
+				<mkdir dir="${APP_BUILDS}/AIRI/TRUNK" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/AIRI/TRUNK/${current.time}">
+			<fileset dir="${APP_RELEASE_AIRI}/${current.time}" />
+		</copy>
+	</target>	
+		
+	<target name="copyAIRI_1.0">
+		<antcall target="createAIRIfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/AIRI/1.0" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application AIRI/1.0..." />
+				<mkdir dir="${APP_BUILDS}/AIRI/1.0" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/AIRI/1.0/${current.time}">
+			<fileset dir="${APP_RELEASE_AIRI}/${current.time}" />
+		</copy>
+	</target>	
+		
+	<target name="copyAIRI_2.0-Arno">
+		<antcall target="createAIRIfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/AIRI/2.0-Arno" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application AIRI/2.0-Arno..." />
+				<mkdir dir="${APP_BUILDS}/AIRI/2.0-Arno" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/AIRI/2.0-Arno/${current.time}">
+			<fileset dir="${APP_RELEASE_AIRI}/${current.time}" />
+		</copy>
+	</target>	
+	
+	<target name="copyAIRI_2.1">
+		<antcall target="createAIRIfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/AIRI/2.1" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application AIRI/2.1..." />
+				<mkdir dir="${APP_BUILDS}/AIRI/2.1" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/AIRI/2.1/${current.time}">
+			<fileset dir="${APP_RELEASE_AIRI}/${current.time}" />
+		</copy>
+	</target>	
+	
+	<target name="copyIPA_TRUNK">
+		<antcall target="createIPAfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/IPA/TRUNK" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application IPA/TRUNK..." />
+				<mkdir dir="${APP_BUILDS}/IPA/TRUNK" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/IPA/TRUNK/${current.time}">
+			<fileset dir="${APP_RELEASE_IPA}/${current.time}" />
+		</copy>
+	</target>	
+	
+	<target name="copyIPA_1.0">
+		<antcall target="createIPAfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/IPA/1.0" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application IPA/1.0..." />
+				<mkdir dir="${APP_BUILDS}/IPA/1.0" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/IPA/1.0/${current.time}">
+			<fileset dir="${APP_RELEASE_IPA}/${current.time}" />
+		</copy>
+	</target>	
+	
+	<target name="copyIPA_2.0-Arno">
+		<antcall target="createIPAfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/IPA/2.0-Arno" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application IPA/2.0-Arno..." />
+				<mkdir dir="${APP_BUILDS}/IPA/2.0-Arno" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/IPA/2.0-Arno/${current.time}">
+			<fileset dir="${APP_RELEASE_IPA}/${current.time}" />
+		</copy>
+	</target>	
+	
+	<target name="copyIPA_2.1">
+		<antcall target="createIPAfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/IPA/2.1" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application IPA/2.1..." />
+				<mkdir dir="${APP_BUILDS}/IPA/2.1" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/IPA/2.1/${current.time}">
+			<fileset dir="${APP_RELEASE_IPA}/${current.time}" />
+		</copy>
+	</target>	
+	
+	<target name="copyIPA_AIRI_TRUNK">
+		<antcall target="createIPAAIRIfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/IPA_AIRI/TRUNK" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application IPA_AIRI/TRUNK..." />
+				<mkdir dir="${APP_BUILDS}/IPA_AIRI/TRUNK" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/IPA_AIRI/TRUNK/${current.time}">
+			<fileset dir="${APP_RELEASE_IPA_AIRI}/${current.time}" />
+		</copy>
+	</target>	
+	
+	<target name="copyIPA_AIRI_1.0">
+		<antcall target="createIPAAIRIfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/IPA_AIRI/1.0" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application IPA_AIRI/1.0..." />
+				<mkdir dir="${APP_BUILDS}/IPA_AIRI/1.0" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/IPA_AIRI/1.0/${current.time}">
+			<fileset dir="${APP_RELEASE_IPA_AIRI}/${current.time}" />
+		</copy>
+	</target>	
+	
+	<target name="copyIPA_AIRI_2.0-Arno">
+		<antcall target="createIPAAIRIfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/IPA_AIRI/2.0-Arno" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application IPA_AIRI/2.0-Arno..." />
+				<mkdir dir="${APP_BUILDS}/IPA_AIRI/2.0-Arno" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/IPA_AIRI/2.0-Arno/${current.time}">
+			<fileset dir="${APP_RELEASE_IPA_AIRI}/${current.time}" />
+		</copy>
+	</target>	
+		
+	<target name="copyIPA_AIRI_2.1">
+		<antcall target="createIPAAIRIfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/IPA_AIRI/2.1" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application IPA_AIRI/2.1..." />
+				<mkdir dir="${APP_BUILDS}/IPA_AIRI/2.1" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/IPA_AIRI/2.1/${current.time}">
+			<fileset dir="${APP_RELEASE_IPA_AIRI}/${current.time}" />
+		</copy>
+	</target>	
+	
+	<target name="copyIPA_TEST_TRUNK">
+		<antcall target="createIPATESTfolder"/>
+		<ant:if>
+			<not>
+				<available file="${APP_BUILDS}/IPA_TEST/TRUNK" type="dir" />
+			</not>	
+			<then>
+			    <echo message="Creating application IPA_TEST/TRUNK..." />
+				<mkdir dir="${APP_BUILDS}/IPA_TEST/TRUNK" /> 
+			</then>
+		</ant:if>
+		<copy todir="${APP_BUILDS}/IPA_TEST/TRUNK/${current.time}">
+			<fileset dir="${APP_RELEASE_IPA_TEST}/${current.time}" />
+		</copy>
+	</target>	
+	
+</project>

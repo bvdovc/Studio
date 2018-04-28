@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                           xmlns:s="library://ns.adobe.com/flex/spark"
+						   width="{FlexGlobals.topLevelApplication.width * 0.4}"
+						   height="{FlexGlobals.topLevelApplication.height * 0.3}"
+						   minWidth="400"
+						   minHeight="230"
+                           skinClass="sym.viewer.mobile.views.skins.FileSaveLoadPopupSkin"
+                           creationComplete="skinnablepopupcontainer1_creationCompleteHandler(event)"
+						   updateComplete="messagePopUpUpdateCompleteHandler(event)">
+    <fx:Metadata>
+        [ResourceBundle("main")]
+    </fx:Metadata>
+	<fx:Script>
+		<![CDATA[
+			import sym.viewer.mobile.script.ViewConstants;
+		]]>
+	</fx:Script>
+
+    <fx:Declarations>
+        <!-- Place non-visual elements (e.g., services, value objects) here -->
+    </fx:Declarations>
+    
+    <fx:Script source="../../../script/components/popups/messagePopup.as"/>
+
+    <s:HGroup id="titleArea"
+			  verticalAlign="middle"
+			  horizontalAlign="center"
+              height="15%"                   
+			  width="100%">
+        <s:Label text="{_title}"
+                 styleName="popupTitle" 
+				 fontSize="{17 * FlexGlobals.topLevelApplication.height/ViewConstants.DEFAULT_APP_HEIGHT}"/>
+    </s:HGroup>
+
+    <s:HGroup width="90%"
+              height="100%"
+			  verticalAlign="middle"
+			  horizontalAlign="center"
+              gap="10">
+        <s:Image id="imgIcon"
+                 width="35%"
+                 height="35%"
+				 smooth="true"
+                 visible="{_type != NORMAL_MESSAGE}"
+                 includeInLayout="{visible}"/>
+        <s:Label text="{_message}"
+				 fontSize="{16 * FlexGlobals.topLevelApplication.height/ViewConstants.DEFAULT_APP_HEIGHT}"
+                 width="100%"/>
+    </s:HGroup>
+	<s:HGroup id="btnGroup"
+			  width="90%"
+			  height="10%"
+			  horizontalAlign="center"
+			  variableColumnWidth="false"
+			  buttonMode="true"
+			  gap="10"
+			  useHandCursor="true"
+			  columnWidth="{(btnGroup.width/2 - btnGroup.gap)/2}"
+			  fontSize="15">
+		<s:Button id="btnOK"
+				  label="{getResString('main', 'BUTTON_OK')}"
+				  width="100%"
+				  height="100%"
+				  click="{buttonClickHandler(event)}"
+				  skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"/>
+		<s:Button id="btnYES"
+				  label="{getResString('main', 'BUTTON_YES')}"
+				  width="100%"
+				  height="100%"
+				  click="{buttonClickHandler(event)}"
+				  skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"/>
+		<s:Button id="btnNO"
+				  label="{getResString('main', 'BUTTON_NO')}"
+				  width="100%"
+				  height="100%"
+				  click="buttonClickHandler(event)"
+				  skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"/>
+		<s:Button id="btnCancel"
+				  label="{getResString('main', 'BUTTON_CANCEL')}"
+				  width="100%"
+				  height="100%"
+				  click="buttonClickHandler(event)"
+				  skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"/>
+    </s:HGroup>
+
+
+</s:SkinnablePopUpContainer>

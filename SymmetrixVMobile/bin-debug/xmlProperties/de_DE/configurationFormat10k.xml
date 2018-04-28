@@ -1,0 +1,16 @@
+<html>
+	<title> 		KONFIGURATION
+	</title> 	
+	<span>
+		<p>Details zur aktuellen Konfiguration:</p>
+		<ul>
+			<li>Anzahl der Engines: {0}</li>
+			<li>Anzahl der DAEs: {1}</li>
+			<li>Maximale Anzahl Laufwerke: {2}</li>
+		</ul> 	
+	</span>
+	<span><p>Die VMAX-10K-Array-Konfigurationen sind als Arrays mit einer bis vier Engines verfügbar. Engines sind die wichtigsten I/O-Verarbeitungseinheiten, und jede hat ein eigenes System-Bay. Neben der Engine sind in jedem System-Bay die Stromkomponenten und mindestens vier Disk Array Enclosures (DAEs) untergebracht. Ein oder zwei Speicher-Bays (Speicher-Bay 1A und Speicher-Bay 1B) können in die Array-Konfiguration aufgenommen werden, um die Speicherkapazität für jede Engine zu maximieren. Speicher-Bays enthalten DAEs und die Stromkomponenten.</p></span> 	
+	<span><p>Jede Engine ist mit allen Disk Array Enclosures im System-Bay verbunden und steuert sie. Wenn Speicher-Bays verwendet werden, sind Engine 1 und Engine 2 mit den dedizierten DAEs in Speicher-Bay 1A und Engine 3 und Engine 4 mit den dedizierten DAEs in Speicher-Bay 1B verbunden.</p></span> 
+	<span><p>Die Standardkonfigurationen unterstützen Standard-DAEs mit 15 Laufwerken sowie DAEs mit hoher Dichte und 25 Laufwerken. Array-Konfigurationen mit hoher Dichte unterstützen nur DAEs mit 25 Laufwerken. Die maximale Standardkonfiguration besteht aus vier System- und zwei Speicher-Bays, während die maximale Konfiguration mit hoher Dichte nur aus vier System-Bays besteht. System-Bays enthalten maximal 10 DAEs in Standard-Array-Konfigurationen und maximal 12 DAEs in Array-Konfigurationen mit hoher Dichte.</p></span> 	
+	<span><p>Verteilte System-Bays sind für Konfigurationen mit drei und vier Engines verfügbar. Verteilte System-Bays sind eine Option der Bay-Platzierung, mit der System-Ba 2 und System-Bay 3 physisch voneinander getrennt werden können, wodurch Einschränkungen hinsichtlich der Stellfläche Rechnung getragen werden kann. Der maximale Abstand zwischen System-Bay 2 und System-Bay 4 darf 10,0 m betragen.</p></span> 	
+</html>

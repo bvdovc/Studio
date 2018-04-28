@@ -1,0 +1,23 @@
+<html> 
+    <title>
+		ENGINE 
+	</title> 
+	<span>
+	<p>Die VMAX 40K-Engine ist die zentrale System-Bay-Komponente, die physischen Speicher, CPU-Verarbeitungsleistung, Front-End-Hosts, SRDF- und externe Arraykonnektivität, Back-End-Verbindungen zu Disk Array Enclosures (DAEs) und Verbindungen zu anderen Engines im Array bereitstellt. Jede Engine enthält:</p>
+	   <ul> 
+	       <li>zwei Directors, die Front-End- und Back-End-Verbindungen sowie externe Array- und SRDF-Konnektivität unterstützen</li> 
+	       <li>48, 96, 192 oder 256 GB physischen Speicher</li> 
+	       <li>vier System Interface Boards (SIB) (zwei pro Director), die Director und Matrix Interface Board Enclosures (MIBEs) miteinander verbinden</li> 
+	       <li>vier Back-End-I/O-Module (zwei pro Director), mit oder ohne Verschlüsselung verfügbar</li> 
+	       <li>vier Front-End-I/O-Module (zwei pro Director), die die folgenden Verbindungen (pro Modul) bereitstellen:</li> 
+	       <li indent="1">4 Fibre-Channel-Ports mit 2, 4 oder 8 Gbit/s</li> 
+	       <li indent="1">2 Fibre-Channel-SRDF-Ports mit 2, 4 oder 8 Gbit/s</li> 
+	       <li indent="1">2 Fibre-Channel-over-Ethernet-Ports (FCoE) mit 10 Gbit/s</li> 
+	       <li indent="1">2 FICON-Ports mit 2, 4 oder 8 Gbit/s</li> <li indent="1">2 iSCSI-Ports mit 1 Gbit/s</li> .
+	       <li indent="1">2 iSCSI/FCoE-Ports mit 10 Gbit/s</li> 
+	       <li indent="1">2 GbE-SRDF-Ports mit 1 Gbit/s oder 10 Gbit/s</li> 
+	       <li>2 Managementmodule zur Umgebungsüberwachung</li> 
+	       <li>2 Netzteile für die Engine</li> 
+        </ul>
+	</span> 
+</html>

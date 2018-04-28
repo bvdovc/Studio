@@ -1,0 +1,16 @@
+<html>
+    <title>         SYSTEM BAY 4
+    </title>     <span>
+        <p>Il System bay 3 e il System bay 4 contengono solo i componenti di base del system bay che sono presenti in tutti i system bay.</p>     
+    </span>      <span>
+        <p>Il System bay 3 ospita l'Engine 3, mentre il System bay 4 ospita l'Engine 4. Ogni system bay può contenere un massimo di 10 DAE nella configurazione standard e un massimo di 12 DAE nella configurazione a elevata densità. Il numero minimo di DAE in ogni system bay è di quattro, indipendentemente dal tipo di configurazione dell'array. Questi quattro DAE sono DAE 1, DAE 2, DAE 5 e DAE 6, anche definiti DAE del vault.</p>     
+    </span>      <span>
+        <p>I componenti di alimentazione dei system bay comprendono moduli SPS (Standby Power Supply), PDU (Power Distribution Unit) e PDP (Power Distribution Panel).</p>     
+    </span>      <span>
+        <p>I componenti di alimentazione su ciascun lato del bay appartengono a power zone indipendenti che devono essere collegate a linee di alimentazione CA indipendenti per assicurare la ridondanza dell'alimentazione.</p>     
+    </span>      <span>
+        <p>Una coppia di moduli SPS nella parte inferiore del system bay garantisce l'alimentazione di backup ai DAE del vault. Una coppia di moduli SPS al centro del system bay garantisce l'alimentazione di backup agli engine.</p>     
+    </span>      <span>
+        <p>I moduli PDP e PDU installati su entrambi i lati del bay sono accessibili dal pannello posteriore. Entrambi i moduli forniscono l'interfaccia centralizzata e il controllo della distribuzione per l'alimentazione CA in ingresso. I moduli PDP eseguono il collegamento alle linee di alimentazione CA in ingresso, forniscono lo switch principale di accensione/spegnimento e collegano inoltre i PDP presenti all'interno della stessa power zone. I PDP distribuiscono l'alimentazione ai singoli componenti e includono inoltre gli switch di accensione e spegnimento.</p>     
+    </span> 
+</html>

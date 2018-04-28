@@ -1,0 +1,15 @@
+<html>
+	<title>NETZVERTEILER (PDU)</title>
+	<span>
+		<p>
+			System-Bays verfügen über zwei Netzverteiler (Power Distribution Units, PDUs), dh. einen Netzverteiler pro Stromversorgungszone. PDU A ist der primäre, PDU B der redundante Netzverteiler. Beide PDUs sind mechanisch angeschlossen (mit Montagehalterungen) und zusammen 2 HE hoch. Die integrierten PDUs unterstützen Wechselstrom an Eingang und stellen die Stromversorgung für sämtliche Komponenten im Bay bereit. </p>
+	</span>
+	<span>
+		<p>Jeder Netzverteiler stellt die folgenden Komponenten bereit:</p>
+		<ul>
+			<li>Insgesamt 24 Stromanschlüsse für Field Replaceable Units (FRUs). Die Stromanschlüsse sind auf sechs Bänke unterteilt, die jeweils vier Wechselstromausgänge nach IEC 60320 C13 umfassen.</li>
+			<li>Jede Bank ist mit einzelnen Unterstromkreisen verbunden, die von einem zweipoligen 20-A-Schutzschalter geschützt werden. </li>
+			<li>Abhängig davon, welche PDU-Option ausgewählt wurde, gibt es unterschiedliche Eingangsanschlüsse für die einzelnen PDUs.</li>
+		</ul>
+	</span>
+</html>

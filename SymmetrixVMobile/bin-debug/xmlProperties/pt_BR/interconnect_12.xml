@@ -1,0 +1,11 @@
+﻿<html>
+	<title>Interconexão InfiniBand (IB) de 12 portas </title>
+
+<span>
+	<p>Esse componente de 1U está no centro da arquitetura do EMC Dynamic Virtual Matrix (TM). Usado somente no gabinete do sistema 1 em arrays 100K e 200K de mecanismos múltiplos, a interconexão IB permite o dimensionamento de recursos e a comunicação entre os múltiplos mecanismos VMAX. Cada mecanismo VMAX tem interfaces redundantes para a interconexão IB.</p>
+</span>
+<span>
+	<p>A interconexão IB contém 2 fontes de alimentação.</p>
+</span>	
+
+</html>

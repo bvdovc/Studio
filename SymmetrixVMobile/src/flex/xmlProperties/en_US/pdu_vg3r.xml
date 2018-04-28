@@ -1,0 +1,17 @@
+<html>
+	<title>POWER DISTRIBUTION UNIT</title>
+
+	<span>
+		<p>
+			System bays house two power distribution units (PDUs), one PDU for each power zone. PDU A is the primary, PDU B is the redundant PDU. Both PDUs are mechanically connected, including mounting brackets, to create a single 2U structure. The PDUs are integrated to support AC-line input connectivity and provide outlets for every component in the bay.
+		</p></span>
+	<span>
+			<p>Each PDU provides the following components:</p>
+			<ul>
+				<li>A total of 24 power outlets for field replaceable units (FRUs). The outlets are divided into six banks with each bank consisting of four IEC 60320 C13 individual AC outlets.</li>
+				<li>Each bank of outlets is connected to individual branch circuits that are protected by a single two pole 20 Amp circuit breaker.
+				</li>
+				<li>Depending on which PDU option selected there is a different input connector for each PDU</li>
+			</ul>
+	</span>
+</html>

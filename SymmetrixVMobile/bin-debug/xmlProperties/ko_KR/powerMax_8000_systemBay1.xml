@@ -1,0 +1,31 @@
+<html>
+	<title>시스템 베이 1</title>
+	
+	<span>
+		<p>PowerMax 8000 스토리지에서 시스템 베이 1에는 1개부터 최대 4개까지 Brick/zBrick이 장착됩니다. Brick/zBrick은 엔진, DAE, SPS 한 쌍으로 구성됩니다.</p>
+	</span>
+	<span>
+		<p>Brick과 zBrick의 차이점은 다음과 같습니다.</p>
+	</span>
+	<span>
+		<ul>
+			<li>기본 스토리지 용량이 Brick은 53TBu이고 zBrick은 13TBu입니다.</li>
+			<li>호스트 접속 구성을 제공하는 입출력 모듈은 Fibre Channel, iSCSI, Brick용 FICON(혼합 시스템만 해당)과 zBrick 전용 FICON입니다.</li>
+	   </ul>
+	</span>
+	 <span>
+		<p>시스템 베이 1에는 Brick/zBrick 구성 요소 외에 InfiniBand 상호 연결과 이더넷 스위치도 장착됩니다. 이들 구성 요소는 시스템 베이 1에만 장착됩니다.</p>
+	 </span>
+	 <span>
+		<p>후면에서 접근 가능한 전체 높이 수직형 PDU(Power Distribution Unit)가 랙의 양쪽 측면에 있습니다.</p>
+	</span>
+	<span>
+		<p>시스템 베이 1에는 맨 아래부터 엔진 1의 SPS, DAE 쌍, 엔진 1, 엔진 2의 SPS, 엔진 2가 차례로 마운트됩니다. 위쪽 절반에는 아래쪽과 반대로, 엔진 3, 엔진 3의 SPS, 엔진 4, DAE 쌍, 그리고 맨 위의 엔진 4의 SPS가 차례로 마운트됩니다.</p>
+	</span>
+	<span>
+		<p>각 Brick/zBrick은 DAE 중 하나를 소유하고 나머지 하나를 공유합니다. 따라서 완전히 채워진 DAE 3개는 Brick/zBrick 2개에 해당하는 스토리지 용량을 제공합니다. 공유된 DAE에는 전용 드라이브 슬롯에 범용 스페어 드라이브가 장착됩니다.</p>	
+	</span>	
+
+</html>
+
+

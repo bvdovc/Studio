@@ -1,0 +1,16 @@
+<html>
+	<title>
+		CONFIGURATION
+	</title>
+	<span>
+		<p>Current Configuration Details:</p>
+		<ul>
+			<li>Number of engines: {0}</li>
+			<li>Number of DAEs: {1}</li>
+			<li>Maximum number of drives: {2}</li>
+		</ul>
+	</span>
+	<span><p>The VMAX array configurations comprise of at least one system bay that can house from one to eight engines and a number of half- or fully populated storage bays, depending on the number of engines in the array.  Engines are the key I/O processing units that provide cache, CPU power, front-end (host) and back-end connectivity to drives in the array.</p></span>
+	<span><p>The maximum array size always includes the system bay and 10 storage bays, five on each side of the system bay. Disk Array Enclosures (DAEs) from dedicated storage bays and dedicated DAE locations connect to a dedicated engine in the system bay. Depending on the way the DAEs connect to the engine, they are referred to as direct-connect or daisy-chain DAEs. Storage bays include either direct-connect or daisy-chain DAEs.</p></span>
+	<span><p>Extended drive loop configurations support a maximum of four engines and a maximum of four levels of daisy-chain DAEs to allow a large amount of storage capacity configured to a single engine. The VMAX Series product supports single-engine VMAX SE arrays that cannot be upgraded to the enterprise-class VMAX arrays. The VMAX SE systems can have a maximum of two bays; of one system bay hosting the engine and Disk Array Enclosures (DAEs) and one fully populated storage bay.</p></span>
+</html>

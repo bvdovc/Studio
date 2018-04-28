@@ -1,0 +1,31 @@
+<html>
+	<title>Bahía de sistema 1</title>
+	
+	<span>
+		<p>La bahía de sistema 1 aloja de uno a máximo cuatro Bricks/zBricks en arreglos PowerMax 8000. Un Brick/zBrick consta de un motor, un par de DAE y un par de SPS.</p>
+	</span>
+	<span>
+		<p>Las diferencias entre los Bricks y los zBricks son las siguientes:</p>
+	</span>
+	<span>
+		<ul>
+			<li>La capacidad de almacenamiento base de los Bricks es de 53 TBu, y la de los zBricks es de13 TBu</li>
+			<li>Los módulos de I/O que proporcionan conectividad de host a los Bricks son Fibre Channel, iSCSI o FICON (solo sistemas combinados), y solo FICON los proporciona a zBricks.</li>
+	   </ul>
+	</span>
+	 <span>
+		<p>Además de los componentes Brick/zBrick, la bahía de sistema 1 aloja la interconexión de InfiniBand y los conmutadores Ethernet. Estos son los componentes específicos de la bahía de sistema 1.</p>
+	 </span>
+	 <span>
+		<p>Se puede acceder desde la parte posterior y hay una unidad de distribución de alimentación (PDU) vertical y de altura completa en cada lado del rack.</p>
+	</span>
+	<span>
+		<p>La población de la bahía de sistema 1 inicia en la parte inferior con SPS para el motor 1, seguido de los DAE, el motor 1, SPS para el motor 2 y luego el motor 2. La población en la mitad superior espejea la de la parte inferior comenzando con el motor 3, SPS para el motor 3, el motor 4, los DAE y SPS para el motor 4 en la parte superior del rack.</p>
+	</span>
+	<span>
+		<p>Cada Brick/zBrick posee uno y comparte un DAE. Por lo tanto, tres DAE completamente equipados proporcionan capacidad de almacenamiento para dos Bricks/zBricks. Los DAE compartidos alojan las unidades de repuesto universales que residen en los slots de unidades dedicadas.</p>	
+	</span>	
+
+</html>
+
+

@@ -1,0 +1,15 @@
+<html>
+	<title>BAIE SYSTÈME 1</title>
+	<span>
+		<p>La baie système 1 héberge un ou deux moteurs (selon le type de baie système) et des alimentations de secours Li-On pour alimenter les moteurs et l'interconnexion Virtual Matrix InfiniBand en cas de panne de courant, si la baie est configurée pour accueillir plusieurs moteurs.</p>
+	</span>
+	<span>
+		<p>Les baies système contiennent tous les câbles d'alimentation des boîtiers DAE et les câbles qui relient les moteurs à l'interconnexion InfiniBand. </p>
+	</span>
+	<span>
+		<p>Les baies système à un moteur hébergent un moteur et jusqu'à six boîtiers DAE. Les baies système à deux moteurs hébergent deux moteurs et jusqu'à quatre boîtiers DAE. Le switch Ethernet qui fournit les connexions Ethernet aux moteurs et le KVM (clavier, écran et souris) sont des composants propres à la baie système 1.</p>
+	</span>
+	<span>
+		<p>À l'instar des autres baies système, la baie système 1 inclut des unités d'alimentation qui alimentent les zones d'alimentation A et B.</p>
+	</span>
+</html>

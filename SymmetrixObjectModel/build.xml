@@ -1,0 +1,27 @@
+<project name="SymmetrixObjectModel Build" default="compile">
+ 
+	<property file="../build.properties" />
+	<taskdef resource="flexTasks.tasks" classpath="${FLEX_TASKS}" />
+	
+	<target name="clean">
+			<echo>----------------------------------------------</echo>
+			<echo message="Cleaning model bin..." />
+			<delete dir="${MODEL_BIN}" includeemptydirs="true" failonerror="false" />
+			<mkdir dir="${MODEL_BIN}" /> 
+	</target>
+	
+	<target name="compile" depends="clean">
+		<echo>----------------------------------------------</echo>
+		<echo message="Starting model compilation..."/>
+		<exec executable="${COMPC}" failonerror="true" failifexecutionfails="true">
+					<!-- Set the output path -->
+					<arg line="-output '${MODEL_BIN}/${MODEL_NAME}.swc'"/>
+					<!-- Include all of the AS3 files in LIBRARY -->
+					<arg line="-include-sources '${MODEL_SRC}'" />
+				</exec> 
+		
+		<echo message="Finished compiling object model..."/>
+	</target>
+	
+	
+</project>

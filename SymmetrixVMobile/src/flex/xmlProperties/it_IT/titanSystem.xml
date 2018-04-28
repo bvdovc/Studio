@@ -1,0 +1,30 @@
+<html>
+	<title> 		SYSTEM BAY TITAN
+	</title> 	<span>
+		<h>System bay 1</h>
+ 		<ul>
+			<li>Il system bay 1 contiene l'engine 1 e un numero massimo di 10 DAE.</li>
+			<li>Una coppia di moduli SPS nella parte inferiore del rack fornisce l'alimentazione di backup ai DAE vault.
+La seconda coppia di moduli SPS fornisce l'alimentazione di backup all'engine.</li> 
+			<li> Il system bay 1 contiene inoltre il service processor (server, KVM e gruppo di continuità) che fornisce le utility software richieste per la manutenzione dell'array.</li>
+			<li>I PDU (Power Distribution Unit) e PDP (Power Distribution Panels) sono su entrambi i lati del rack ed è possibile accedervi dal pannello posteriore.</li>
+		</ul> 	
+	</span>	 	 	<span>
+		<h>System bay 2</h>
+		<ul>	
+			<li>Il System bay 2 ospita l'Engine 2 e un massimo di 10 DAE (Disk Array Enclosure).</li>
+			<li>Una coppia di moduli SPS nella parte inferiore del rack fornisce l'alimentazione di backup ai DAE vault.
+La seconda coppia di moduli SPS fornisce l'alimentazione di backup all'engine.</li>
+			<li>Il System bay 2 include inoltre il MIBE (Matrix Interface Board Enclosure) che garantisce la connettività tra engine nell'array.</li>
+			<li>I PDU (Power Distribution Unit) e PDP (Power Distribution Panels) sono su entrambi i lati del rack ed è possibile accedervi dal pannello posteriore.</li>
+		</ul> 	
+	</span>	 	<span>
+		<h>System bay 3 e System bay 4 (comprendono gli stessi componenti)</h>
+		<ul>
+			<li>I System bay 3/4 ospitano gli Engine 3/4 e un massimo di 10 DAE (Disk Array Enclosure).</li>
+			<li>Una coppia di moduli SPS nella parte inferiore del rack fornisce l'alimentazione di backup ai DAE vault.
+La seconda coppia di moduli SPS fornisce l'alimentazione di backup all'engine.</li>
+			<li>I PDU (Power Distribution Unit) e PDP (Power Distribution Panels) sono su entrambi i lati del rack ed è possibile accedervi dal pannello posteriore.</li>
+		</ul> 	
+	</span>
+</html>  

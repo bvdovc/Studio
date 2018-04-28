@@ -1,0 +1,49 @@
+﻿<html>
+	<title>
+ 주 도움말 
+	</title>
+	<span><h>VMAX Studio 정보</h></span>
+		<span>
+			<p>VMAX Studio는 다음과 같은 기능을 제공하는 직관적인 시각화 툴입니다.</p>
+			<ul>
+				<li> 몇 단계로 간단하게 진행되는 구성 마법사에 따라 VMAX 250F 및 VMAX 950F 스토리지 구성을 시각화합니다.</li>
+				<li> 내부적으로, VMAX Studio 형식으로 스토리지 구성을 저장합니다. 저장된 구성은 필터링 창의 맨 아래에 아이콘으로 표시됩니다.</li>
+				<li> 구성이나 개별 구성 요소와 같은 객체를 PNG 그래픽 파일 형식으로 저장합니다.</li>
+				<li> 상황에 맞는 도움말과 드릴다운 구성 요소 뷰를 사용하여 스토리지 구성 및 하드웨어 구성 요소를 살펴봅니다.</li>
+			</ul>
+		</span>
+		<span>
+			<p> 툴</p>
+		</span>
+		<span>
+			<img src="Save.png" alt="버튼" heigth="50"/>
+			<p> 구성 저장 - 새로 생성한 구성을 저장하려면 클릭합니다. 저장된 구성은 고유 구성 ID를 포함하여 필터링 창에 아이콘으로 표시됩니다.</p>
+		</span>
+		<span>
+			<img src="Copy.png" alt="버튼" heigth="50"/>
+			<p>클립보드에 복사 - 표시 창의 컨텐츠를 클립보드에 복사하려면 클릭합니다.</p>
+		</span>
+		<span>
+			<img src="Export.png" alt="버튼" heigth="50"/>
+			<p>이미지로 내보내기 - 표시 창의 컨텐츠를 *.PNG 파일로 저장하려면 클릭합니다.</p>
+		</span>
+		<span>
+			<img src="Show.png" alt="버튼" heigth="50"/>
+			<p>강조 표시 - 스토리지 구성 뷰에서 주 전원 구성 요소를 강조 표시하려면 클릭합니다.</p>
+		</span>
+		<span>
+			<img src="Toggle.png" alt="버튼" heigth="50"/>
+			<p>뷰 변경 - 뷰(전면, 후면, 위쪽)를 전환하려면 클릭합니다.</p>
+		</span>
+		<span>
+			<img src="Property.png" alt="버튼" heigth="50"/>
+			<p>속성 패널 전환 - 표시 창에서 속성 정보를 표시하거나 숨깁니다.</p>
+		</span>
+		<span>
+			<img src="ConfW.png" alt="버튼" heigth="50"/>
+			<p>구성 마법사 - 새 VMAX All Flash 스토리지를 구성하려면 클릭합니다.</p>
+		</span>
+    <span>
+		<p>VMAX Studio와 관련해 궁금한 점이나 의견이 있습니까? SymmSystemViewers@emc.com으로 이메일을 보내 주시기 바랍니다.</p>
+	</span>
+</html>

@@ -1,0 +1,34 @@
+<html>
+	<title>VMAX 850F </title>
+	<span>
+		<h>Détails de la configuration actuelle :</h>
+		<ul>
+		    <li>Capacité utile de l’OS (To) : {0}</li>
+		    <li>Capacité utile du MF (To) : {4}</li>
+			<li>Nombre de modules v-Brick/z-Brick : {1}</li>
+			<li>Nombre de boîtiers DAE : {2} </li>
+			<li>Nombre maximal de disques : {3}</li>
+			<li>Nombre réel de disques : {5}</li>
+			<li>Nombre de ports FE : {6}</li>
+		</ul>
+	</span>
+	<span><h>Description :</h></span>
+	<span><p>La taille des baies VMAX 850F varie d’un à huit systèmes de modules v-Brick/z-Brick. Un module v-Brick pour les systèmes ouverts et un module z-Brick pour le mainframe sont des modules de base qui incluent : </p></span>
+		<span>
+			<ul>
+				<li>un moteur (unité de traitement du stockage de données redondantes) utilisant des CPU Intel Xeon E5-2650-v2 à 12 cœurs et de 2,7 GHz ;</li>
+				<li>une capacité de démarrage de 53 TBu des disques Flash répartis sur deux boîtiers DAE haute densité, chaque boîtier prenant en charge jusqu’à 120 disques de 2,5 pouces ;</li>
+				<li>des logiciels disponibles sous forme de deux options de commande simples : F/FX pour les systèmes ouverts, zF/zFX pour mainframe</li>
+			</ul>
+		</span>
+		<span><p> La configuration initiale des modules v-Brick/z-Brick de 53 TBu peut être : </p>
+			<ul>
+				<li>étendue en ajoutant des packs de capacité Flash de 13 To (systèmes ouverts)/zCapacity (mainfraime) qui réunissent tous logiciels et capacités Flash requis ;</li>
+				<li>déployée en ajoutant des modules v-Brick/z-Brick pour augmenter les performances, la connectivité et le débit.</li>
+			</ul>
+		</span>
+		<span><p>
+ Une évolutivité indépendante et linéaire de la capacité et des performances rend les baies VMAX 850F extrêmement flexibles pour la prise en charge de diverses charges applicatives.
+		</p></span>
+</html>
+

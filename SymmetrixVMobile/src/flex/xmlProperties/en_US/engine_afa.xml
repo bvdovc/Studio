@@ -1,0 +1,86 @@
+﻿<html>
+	<title>ENGINE</title>
+
+	<span>
+		<p> Engine is the central I/O processing unit, redundantly built for high availablity. It consists of redundant directors ( director A and director B) that each contain multi-core CPUs, memory modules, and attach interfaces to universal I/O modules, such as front-end, back-end, InfiniBand, compression, and flash I/O modules.</p>
+	</span>
+	<span>
+		<p> Engine cooling fans and power supplies can be accessed from the front, the I/O modules and the management module and control station can be accessed from the rear. Since the number of universal I/O modules used in the engine depends on the required functionality and the system storage capacity, some slots can remain unused.</p>
+	</span>
+	<span>
+		<p> The engine rear view, I/O module slots, the physical and logical port numbering are depicted below.</p>
+	</span>
+	<span>
+		<p>Physical port numbers</p>
+	</span>
+	<span><img src="phy_eng_ports.gif" ratio="0.41"/></span>
+	<span>
+		<p>Logical port numbers</p>
+	</span>
+	<span><img src="logical_eng_phy_ports.gif" ratio="0.398"/></span>
+	<span>
+		<p> The following table explains engine slot population rules:</p>
+		<table>
+			<tr>
+				<td>Engine Slot Number</td>
+				<td>Component</td>
+				<td>Description</td>
+			</tr>
+			<tr>
+				<td>0</td>
+				<td>Flash module</td>
+				<td>Always populated, reserved for flash.</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Flash module</td>
+				<td>Optional, depends on the array’s storage capacity. Reserved for flash. </td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Universal front-end module</td>
+				<td>Any Fibre Channel, FICON, Ethernet, or Compression I/O module can occupy this slot.</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Universal front-end module</td>
+				<td>Optional. Any Fibre Channel, FICON, Ethernet, or Compression I/O module can occupy this slot.</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Back-end I/O module</td>
+				<td>Always populated, reserved for back-end.</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Back-end I/O module</td>
+				<td>Always populated, reserved for back-end.</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Flash module</td>
+				<td>Optional, depends on the array's storage capacity, reserved for flash.</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>Flash module</td>
+				<td>Optional, depends on the array’s storage capacity, reserved for flash. </td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>Universal front-end module</td>
+				<td>Optional. Any Fibre Channel, FICON, Ethernet, or Compression I/0 module can occupy this slot.</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>Universal front-end module</td>
+				<td>Always occupied, reserved for compression I/O module.</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>InfiniBand I/O module</td>
+				<td>Occupied in a multi-engine system.</td>
+			</tr>
+		</table>
+	</span>
+</html>

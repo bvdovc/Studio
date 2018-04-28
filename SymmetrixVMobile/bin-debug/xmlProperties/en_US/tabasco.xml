@@ -1,0 +1,13 @@
+﻿<html>
+	<title>25-drive DAE</title>
+	<span><p>The 2U, 25-drive, 2.5" drive Disk Array Enclosures (DAEs) provide 12Gbs SAS connectivity to Back End IO Modules in the VMAX 250F engine. Two DAE’s in a V-Brick are directly connected to the engine.</p></span>
+	
+	<span>
+	<p>DAEs include the following main components:</p>
+		<ul>
+			<li>A maximum of 25 drives per enclosure</li>
+			<li>Two redundant DAE power supplycooling modules (accessible from the rear)</li>
+			<li>Two link control cards (LCCs) (accessible from the rear)</li>
+		</ul>
+	</span>
+</html> 

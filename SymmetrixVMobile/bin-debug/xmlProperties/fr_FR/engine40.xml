@@ -1,0 +1,23 @@
+<html> 
+    <title>
+		MOTEUR 
+	</title> 
+	<span>
+	<p>Le moteur VMAX 40K constitue le principal composant d’une baie système. Il fournit la mémoire physique, la puissance de traitement des CPU, l’hôte front-end, la connectivité de baie externe et SRDF, la connectivité back-end aux boîtiers DAE (Disk Array Enclosure) de même que la connectivité aux autres moteurs de la baie. Chaque moteur se compose des éléments suivants :</p>
+	   <ul> 
+	       <li>2 directeurs prenant en charge les connexions front-end, back-end, de baie externe et SRDF</li> 
+	       <li>48, 96, 192 ou 256 Go de mémoire physique</li> 
+	       <li>4 cartes d’interface système (SIB, System Interface Board) (2 par directeur) permettant de connecter le directeur aux boîtiers MIBE (Matrix Interface Board Enclosure)</li> 
+	       <li>4 modules d’E/S back-end (2 par directeur), disponibles avec ou sans fonction de chiffrement</li> 
+	       <li>4 modules d’E/S front-end (2 par directeur) offrant les connexions suivantes (par module) :</li> 
+	       <li indent="1">4 ports Fibre Channel (2, 4 ou 8 Gbit/s)</li> 
+	       <li indent="1">2 ports Fibre Channel SRDF (2, 4 ou 8 Gbit/s)</li> 
+	       <li indent="1">2 ports FCoE (Fibre Channel over Ethernet) (10 Gbit/s)</li> 
+	       <li indent="1">2 ports FICON (2, 4 ou 8 Gbit/s)</li> <li indent="1">2 ports iSCSI (1 Gbit/s)</li> 
+	       <li indent="1">2 ports iSCSI/FCoE (10 Gbit/s)</li> 
+	       <li indent="1">2 ports GbE SRDF (1 ou 10 Gbit/s)</li> 
+	       <li>2 modules de gestion assurant la surveillance de l'environnement</li> 
+	       <li>2 alimentations pour les moteurs</li> 
+        </ul>
+	</span> 
+</html>

@@ -1,0 +1,20 @@
+<html> 
+    <title>
+		MOTEUR 
+	</title> 
+	<span>
+	<p>Le moteur VMAX 10K constitue le principal composant d’une baie système. Il fournit la mémoire physique, les CPU, l’hôte front-end, la connectivité de baie externe et SRDF, la connectivité back-end aux boîtiers DAE (Disk Array Enclosure) de même que la connectivité aux autres moteurs de la baie. Chaque moteur se compose des éléments suivants :</p>
+	   <ul> 
+	       <li>2 directeurs prenant en charge les connexions front-end et back-end</li> 
+	       <li>96 Go et 128 Go de mémoire physique</li> <li>2 cartes d’interface système (SIB, System Interface Board) sur les systèmes équipés de plusieurs moteurs (le moteur 1 d’une baie à un seul moteur ne contenant pas de carte SIB)</li> 
+	       <li>4 modules d’E/S back-end (chacun doté de 4 ports, 4 Gbit/s)</li> 
+	       <li>4 modules d’E/S front-end offrant les connexions suivantes :</li>  
+	       <li indent="1">Jusqu'à 16 ports Fibre Channel (2, 4 ou 8 Gbit/s)</li> 
+	       <li indent="1">Jusqu'à 4 ports Fibre Channel SRDF (2, 4 ou 8 Gbit/s)</li> 
+	       <li indent="1">Jusqu'à 8 ports iSCSI/FCoE (10 Gbit/s)</li> 
+	       <li indent="1">Jusqu'à 8 ports iSCSI (1 Gbit/s)</li> 
+	       <li indent="1">Jusqu'à 4 ports GigE SRDF (1 ou 10 Gbit/s)</li> 
+	       <li>2 modules de gestion (1 par directeur)</li> 
+	       <li>4 alimentations pour les moteurs (2 par directeur)</li> 
+        </ul>
+	</span> </html>

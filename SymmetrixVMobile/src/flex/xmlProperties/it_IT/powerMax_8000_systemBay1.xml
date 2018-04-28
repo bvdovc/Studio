@@ -1,0 +1,31 @@
+<html>
+	<title>System bay 1</title>
+	
+	<span>
+		<p>Il system bay 1 ospita fino a un massimo di 4 Brick/zBrick negli array PowerMax 8000. Un Brick/zBrick è composto da un engine, più DAE e una coppia di SPS.</p>
+	</span>
+	<span>
+		<p>Le differenze tra Brick e zBrick sono:</p>
+	</span>
+	<span>
+		<ul>
+			<li>La capacità di storage di base è di 53 TBu per Brick e di 13 TBu per zBrick</li>
+			<li>I moduli I/O che offrono connettività host sono Fibre Channel, iSCSI e/o FICON (solo sistemi misti) per Brick e FICON solo per zBrick.</li>
+	   </ul>
+	</span>
+	 <span>
+		<p>Oltre ai componenti Brick/zBrick, il system bay 1 ospita interconnessione InfiniBand e switch Ethernet. Questi sono componenti specifici del system bay 1.</p>
+	 </span>
+	 <span>
+		<p>È accessibile dalla parte posteriore, con una Power Distribution Unit (PDU) full-height verticale su ogni lato del rack.</p>
+	</span>
+	<span>
+		<p>Il popolamento del system bay 1 inizia dal basso con gli SPS per l'engine 1, seguiti dai DAE, dall'engine 1, dagli SPS per l'engine 2 e infine dall'engine 2. Il popolamento della metà superiore riflette quello della metà inferiore, iniziando con l'engine 3, gli SPS per l'engine 3, l'engine 4, i DAE e gli SPS per l'engine 4 nella parte superiore del rack.</p>
+	</span>
+	<span>
+		<p>Ogni Brick/zBrick condivide un DAE e ne possiede uno. Tre DAE completamente popolati offrono quindi la capacità di storage per due Brick/zBrick. I DAE condivisi ospitano le unità spare universali che risiedono in slot unità dedicati.</p>	
+	</span>	
+
+</html>
+
+

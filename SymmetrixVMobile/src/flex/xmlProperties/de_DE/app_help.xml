@@ -1,0 +1,45 @@
+﻿<html>
+	<title>
+ Informationen zu VMAX Studio
+	</title>
+	<span>
+		<img src="buttons.png" alt="Schaltfläche" heigth="50"/>
+	</span>
+	<span>
+		<p>
+ VMAX Studio ist ein intuitives Visualisierungstool. Es ermöglicht Folgendes:
+		</p>
+		<ul>
+			<li>Das Anzeigen der Konfigurationen der VMAX 250F- und VMAX 950F-Arrays mithilfe eines nur wenige Schritte umfassenden Konfigurationsassistenten: Auswählen des Arraymodells, Bereitstellen der erforderlichen nutzbaren Kapazität und Auswählen einiger Systemeigenschaften zum Anzeigen Ihres angepassten Systems im VMAX Studio-Fenster </li>
+            <li> Internes Speichern der Arraykonfigurationen im VMAX Studio-Format – Gespeicherte Konfigurationen werden unten im Filterbereich als Symbole angezeigt. </li>
+			<li> Filtern gespeicherter Konfigurationen mithilfe des Filters und der Schaltfläche "Filter zurücksetzen".</li>
+			<li>Speichern von Objekten wie z. B. Konfigurationen oder Einzelkomponenten im PNG-Grafikdateiformat.</li>
+			<li>Anzeigen von Arraykonfigurationen und Hardwarekomponenten durch die Verwendung der kontextsensitiven Hilfe und der Drill-down-Komponentenansichten.</li>
+		</ul>
+	</span>
+		<span>
+			<p>VMAX Studio-Tools:</p>
+			<ul>
+				<li> Konfiguration speichern – auswählen, um eine neu erstellte Konfiguration zu speichern Gespeicherte Konfigurationen werden im Filterbereich als Symbole mit eindeutigen Konfigurations-IDs angezeigt.</li>
+				<li> In die Zwischenablage kopieren – anklicken, um den Inhalt des Anzeigefensters in die Zwischenablage zu kopieren. </li>
+				<li> Als Bild exportieren – anklicken, um den Inhalt des Anzeigefensters als *.PNG-Datei zu speichern. </li>
+				<li> Hervorheben – anklicken, um die Hauptstromversorgungskomponenten in der Arraykonfigurationsansicht hervorzuheben.</li>
+				<li> Ansicht ändern – anklicken, um eine andere Ansicht (z. B. Vorder- und Rückseite) anzuzeigen.</li>
+				<li> Eigenschaftsfenster ein-/ausschalten – Eigenschaftsinformationen der Inhalte im Anzeigefenster anzeigen/verbergen. </li>
+			</ul>
+		</span>
+	<span><p></p></span>
+	<span>
+		<h>Konfigurationsassistent</h>
+	</span> 
+	<span>
+		<img src="wizard.png" alt="Schaltfläche" heigth="50"/>
+	</span>
+	<span>
+	<p> Mit dem Konfigurationsassistenten können Sie ein VMAX 250F- und ein VMAX 950F-Array konfigurieren und anzeigen, indem Sie einige grundlegende Konfigurationsparameter für das entsprechende Arraymodell auswählen.</p>
+	</span>
+	<span><p></p></span>
+	<span>
+		<p>Fragen/Anmerkungen zu VMAX STUDIO? Senden Sie eine E-Mail an SymmSystemViewers@emc.com.</p>
+	</span>
+</html>

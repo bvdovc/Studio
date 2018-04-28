@@ -1,0 +1,54 @@
+<html>
+	<title>
+ Guida principale 
+	</title>
+	<span><h>Informazioni su PowerMax Studio</h></span>
+		<span>
+			<p>PowerMax Studio è uno strumento di visualizzazione intuitivo che consente di:</p>
+			<ul>
+				<li> Visualizzare PowerMax 2000 e PowerMax 8000, nonché le configurazioni degli array VMAX 250F e VMAX950F, seguendo una breve configurazione guidata.</li>
+				<li> Salvare le configurazioni degli array internamente nel formato PowerMax Studio. Le configurazioni salvate vengono visualizzate come icone nella parte inferiore del riquadro di filtraggio. </li>
+				<li> Salvare object quali configurazioni o singoli componenti nel formato di file grafico PNG.</li>
+				<li> Visualizzare le configurazioni esportate da VMAX Sizer tramite XML.</li>
+				<li> Esplorare le configurazioni degli array e i componenti hardware utilizzando la guida sensibile al contesto e le visualizzazioni dei componenti drill-down.</li>
+			</ul>
+		</span>
+		<span>
+			<p> Strumenti</p>
+		</span>
+		<span>
+			<img src="importXML.png" alt="button" heigth="50"/>
+			<p> Importa Sizer XML: fai clic per importare l'output XML da VMAX Sizer. Disponibile solo per la versione desktop dell'applicazione.</p>
+		</span>
+		<span>
+			<img src="Save.png" alt="button" heigth="50"/>
+			<p> Salva configurazione: fai clic per salvare una configurazione appena creata. Le configurazioni salvate vengono visualizzate nel riquadro di filtraggio come icone con ID di configurazione univoci.</p>
+		</span>
+		<span>
+			<img src="Copy.png" alt="button" heigth="50"/>
+			<p>Copia negli appunti: fai clic per copiare negli appunti il contenuto del riquadro di visualizzazione.</p>
+		</span>
+		<span>
+			<img src="Export.png" alt="button" heigth="50"/>
+			<p>Esporta come immagine: fai clic per salvare il contenuto del riquadro di visualizzazione in un file *.PNG.</p>
+		</span>
+		<span>
+			<img src="Show.png" alt="button" heigth="50"/>
+			<p>Evidenzia: fai clic per evidenziare l’engine e i suoi componenti di alimentazione nella vista della configurazione degli array.</p>
+		</span>
+		<span>
+			<img src="Toggle.png" alt="button" heigth="50"/>
+			<p>Cambia vista: fai clic per cambiare visualizzazione (anteriore, posteriore, superiore).</p>
+		</span>
+		<span>
+			<img src="Property.png" alt="button" heigth="50"/>
+			<p>Attiva/disattiva pannelli di proprietà: mostra o nascondi le informazioni di proprietà nel/dal riquadro di visualizzazione.</p>
+		</span>
+		<span>
+			<img src="ConfW.png" alt="button" heigth="50"/>
+			<p>Procedura guidata di configurazione: fai clic per configurare un nuovo array.</p>
+		</span>
+    <span>
+		<p>Per eventuali domande o commenti, invia un'email a SymmSystemViewers@emc.com</p>
+	</span>
+</html>

@@ -1,0 +1,26 @@
+<html>
+	<title>VMAX 400K</title>
+	<span>
+		<h>Configuration Details:</h> 
+		<ul>
+			<li>OS Usable Capacity (TB): {0}</li>
+			<li>MF Usable Capacity (TB): {4}</li>
+			<li>Number of engines: {1}</li>
+			<li>Number of DAEs: {2}</li>
+			<li>Maximum number of drives per system: {3}</li>
+			<li>Actual number of drives: {5}</li>
+			<li>Number of FE ports: {6}</li>
+		</ul>
+	</span>
+	<span><h>Description:</h></span>
+	<span>
+		<p>The VMAX 400K is configured with one-to-eight 2.7 GHz, 48-core Ivy Bridge (IVB) engines with 512 ,1024, or 2048 Gigabytes of memory per engine. With the maximum eight-engine configuration, the VMAX 400K supports up to (5760) 2.5" drives, or up to (2880) 3.5" drives, providing up to 4.27 Petabytes of usable capacity when using 4 Terabyte drives. Engines reside in system bays that support single- or dual-engine system bay type.
+		</p></span>
+	<span>
+		<p>
+			When fully configured, the 400K provides up to 256 front-end ports for host and/or SRDF connectivity. The internal fabric interconnect uses dual Infiniband 18-port switches for redundancy and availability.
+		</p></span>
+	<span>
+		<p> The 400K supports EFT, performance, and capacity disks to maximize array performance across all drive types. To enable the EMC Fully Automated Storage Tiering (FAST) technology fine tune your 400K performance while reducing cost by leveraging lightning fast speed of Flash drives combined with cost effective NL-SAS drives, the array needs to be populated with the drives of different technologies to meet your application workload requirements.
+		</p></span>
+</html>

@@ -1,0 +1,16 @@
+<html>
+	<title>
+ CONFIGURACIÓN
+	</title>
+	<span>
+		<p>Detalles de la configuración actual:</p>
+		<ul>
+			<li>Cantidad de motores: {0}</li>
+			<li>Cantidad de DAE: {1}</li>
+			<li>Cantidad máxima de unidades: {2}</li>
+		</ul>
+	</span>
+	<span><p>Las configuraciones del arreglo VMAX constan de al menos una bahía de sistema que puede alojar de uno a ocho motores, además de una gran cantidad de bahías de almacenamiento pobladas de forma total o parcial según la cantidad de motores con los que cuente el arreglo. Los motores son las unidades de procesamiento de I&amp;O esenciales, pues proporcionan almacenamiento en caché, potencia de CPU y conectividad de front-end (host) y back-end a las unidades del arreglo.</p></span>
+	<span><p>El tamaño máximo del arreglo siempre incluye la bahía del sistema y diez bahías de almacenamiento (cinco en cada lado de la bahía del sistema). Los gabinetes de arreglos de disco (DAE) de bahías de almacenamiento dedicadas y las ubicaciones de DAE dedicados se conectan a un motor específico en la bahía del sistema. Se los conoce como conexión directa o cadena margarita, según la manera en que los DAE se conecten al motor. Las bahías de almacenamiento incluyen DAE en conexión directa o cadena margarita.</p></span>
+	<span><p>Las configuraciones extendidas de loop de las unidades son compatibles con un máximo de cuatro motores y hasta cuatro niveles de DAE en cadena margarita, a fin de permitir la configuración de una gran de capacidad de almacenamiento en un solo motor. El producto de la serie VMAX es compatible con arreglos VMAX SE de un solo motor que no se pueden actualizar a los arreglos VMAX de clase empresarial. Los sistemas VMAX SE pueden tener un máximo de dos bahías: una bahía de sistema que aloje el motor y los gabinetes de arreglos de disco (DAE), y una bahía de almacenamiento completamente llena.</p></span>
+</html>

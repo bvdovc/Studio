@@ -1,0 +1,15 @@
+<html>
+	<title> 		CONFIGURAZIONE
+	</title> 	
+	<span>
+		<p>Dettagli della configurazione corrente:</p>
+		<ul>
+			<li>Numero di engine: {0}</li>
+			<li>Numero di DAE: {1}</li>
+			<li>Numero massimo di unità: {2}</li>
+		</ul> 	
+	</span>
+	<span><p>Le configurazioni degli array sono progettate per ambienti di storage di livello enterprise. Le configurazioni dell'array comprendono almeno un system bay in grado di ospitare da uno a otto engine e una serie di storage bay popolati completamente o a metà, a seconda del numero di engine nell'array. Gli engine sono le unità di elaborazione I/O chiave che forniscono cache, alimentazione della CPU e connettività front-end (host) e back-end alle unità dell'array.</p></span> 	
+	<span><p>Le dimensioni massime di configurazione dell'array dipendono dal tipo di Disk Array Enclosure (DAE) utilizzato. Se sono utilizzate solo DAE standard a 15 unità, la configurazione massima dell'array comprende un system bay con otto engine e dieci storage bay. Se sono configurate DAE a elevata densità a 25 unità, la configurazione massima comprende un system bay e otto storage bay. È possibile utilizzare entrambi i tipi di DAE nell'array ma non nello stesso storage bay.</p></span> 	
+	<span><p>DAE di storage bay dedicati e posizioni DAE dedicate collegano a un engine dedicato nel system bay. A seconda del modo in cui i DAE collegano all'engine, sono denominati DAE a connessione diretta o DAE daisy-chain.</p></span> 	
+</html>

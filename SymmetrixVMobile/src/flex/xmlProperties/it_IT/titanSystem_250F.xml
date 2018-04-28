@@ -1,0 +1,9 @@
+﻿<html>
+	<title>SYSTEM BAY </title>
+	<span><p>Il system bay VMAX 250F ospita fino a due V-Brick. Ciascun V-Brick include un engine, due Disk Array Enclosure (DAE) da 25 unità ad alta densità e due alimentatori di standby (SPS) agli ioni di litio per fornire alimentazione di backup per gli engine. Su ciascun lato del rack sono installati una PDU (Power Distribution Unit) e un PDP (Power Distribution Panel) che forniscono alimentazione a due power zone ridondanti (zona A e zona B). </p></span>
+	<span><p>Se installati in un rack EMC standard, i componenti di VMAX 250F occupano solo la metà inferiore del rack (2U inferiori del rack), lasciando il resto del rack disponibile per altri componenti. Se installati in un mini-rack, i componenti di VMAX 250F occupano completamente lo spazio del rack. </p>
+	
+	</span>
+</html>
+
+

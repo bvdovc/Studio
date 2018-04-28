@@ -1,0 +1,9 @@
+<html>
+	<title>
+		SYSTEM BAY
+	</title>
+	<span><p>The system bay houses from one to eight engines, MIBE, power components, Service Processor components (Server, UPS, KVM), and two Matrix Interface Boards (MIBE)  that provide connectivity among engines.</p></span>
+	<span><p>Engines are numbered based on their position in the system bay, from the bottom (Engine 1) to the top ( Engine 8). Engines are first added to the middle of the bay, starting with Engine 4. Engine 5, Engine 3, Engine 6, Engine 2, Engine 7, Engine 1, and Engine 8 with their designated storage bays can be added to match growing storage capacity requirements.</p></span>
+	<span><p>If the system bay dispersion placement is implemented, the array includes two physically separated system bays and the corresponding storage bays located at each system bay site.</p></span>
+</html>
+

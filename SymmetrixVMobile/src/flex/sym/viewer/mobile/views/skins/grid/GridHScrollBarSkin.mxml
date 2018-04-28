@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Skin xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+    xmlns:fb="http://ns.adobe.com/flashbuilder/2009" minWidth="35" minHeight="15" 
+    alpha.disabled="0.5" alpha.inactive="0.5">
+
+    <fx:Metadata>
+    <![CDATA[ 
+        /** 
+         * @copy spark.skins.spark.ApplicationSkin#hostComponent
+         */
+        [HostComponent("spark.components.HScrollBar")]
+    ]]>
+    </fx:Metadata> 
+    
+	<!-- states -->
+	<s:states>
+		<s:State name="inactive" />
+		<s:State name="disabled" />
+		<s:State name="normal" />
+	</s:states>
+		<fx:Script>
+			<![CDATA[
+				import spark.skins.spark.HScrollBarTrackSkin;
+				import spark.skins.spark.HSliderThumbSkin;
+			]]>
+		</fx:Script>
+	
+	<s:Button id="track"
+			  left="0"
+			  right="0"
+			  top="10"
+			  bottom="10"
+			  width="100%"
+			  alpha="0"
+			  focusEnabled="false"
+			  skinClass="spark.skins.spark.HScrollBarTrackSkin"/>
+	
+	<s:Button id="thumb"
+			  left="{(parent.width - thumb.width)/2}"
+			  focusEnabled="false"
+			  visible.inactive="false"
+			  skinClass="spark.skins.spark.HSliderThumbSkin"/>
+
+</s:SparkSkin>

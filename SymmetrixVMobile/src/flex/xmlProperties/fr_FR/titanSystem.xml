@@ -1,0 +1,27 @@
+<html>
+	<title> 		BAIE SYSTÈME TITAN
+	</title> 	<span>
+		<h>Baie système&nbsp;1</h>
+ 		<ul>
+			<li>La baie système&nbsp;1 héberge le moteur&nbsp;1 et un maximum de 10&nbsp;boîtiers DAE.</li>
+			<li>Deux modules d’alimentation auxiliaire, situés dans la partie inférieure du rack, assurent une alimentation de secours pour les boîtiers DAE en chambre forte. Deux modules d’alimentation auxiliaire supplémentaires fournissent l’alimentation de secours du moteur.</li> 
+			<li>La baie système&nbsp;1 héberge également le processeur de service (serveur, KVM et onduleur) qui procure les utilitaires nécessaires à la desserte de la baie.</li>
+			<li>Les unités d’alimentation et les panneaux de distribution de l’alimentation sont situés de part et d’autre du rack et sont accessibles par l’arrière.</li>
+		</ul> 	
+	</span>	 	 	<span>
+		<h>Baie système&nbsp;2</h>
+		<ul>	
+			<li>La baie système&nbsp;2 héberge le moteur&nbsp;2 et un maximum de 10&nbsp;boîtiers DAE.</li>
+			<li>Deux modules d’alimentation auxiliaire, situés dans la partie inférieure du rack, assurent une alimentation de secours pour les boîtiers DAE en chambre forte. Deux modules d’alimentation auxiliaire supplémentaires fournissent l’alimentation de secours du moteur.</li>
+			<li>La baie système&nbsp;2 contient également le boîtier Matrix Interface Board Enclosure (MIBE) qui assure les connexions entre les moteurs dans la baie.</li>
+			<li>Les unités d’alimentation et les panneaux de distribution de l’alimentation sont situés de part et d’autre du rack et sont accessibles par l’arrière.</li>
+		</ul> 	
+	</span>	 	<span>
+		<h>Baie système&nbsp;3 et baie système&nbsp;4 (contiennent les mêmes composants)</h>
+		<ul>
+			<li>La baie système&nbsp;3/4 héberge le moteur&nbsp;3/4 et un maximum de 10&nbsp;boîtiers DAE.</li>
+			<li>Deux modules d’alimentation auxiliaire, situés dans la partie inférieure du rack, assurent une alimentation de secours pour les boîtiers DAE en chambre forte. Deux modules d’alimentation auxiliaire supplémentaires fournissent l’alimentation de secours du moteur.</li>
+			<li>Les unités d’alimentation et les panneaux de distribution de l’alimentation sont situés de part et d’autre du rack et sont accessibles par l’arrière.</li>
+		</ul> 	
+	</span>
+</html>  

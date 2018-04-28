@@ -1,0 +1,25 @@
+<html>
+    <title>
+        SYSTEM BAY 1
+    </title>
+    <span>
+        <p>System Bay 1 houses Engine 1, a minimum of four, a maximum of 10 Disk Array Enclosures (DAEs) in standard or a maximum of 12 DAEs in high density array configurations. System Bay 1 also houses NAS Gateway components that provide file-level access to data in the array.</p>
+    </span> 
+    <span>
+        <p>Being part of every array configuration, System Bay 1 houses the Service Processor that is dedicated to service and maintenance of the entire array. The Service Processor comprises of the following components:</p>
+            <ul>
+                <li>Server that provides system monitoring, remote support, and status reporting capabilities</li>
+                <li>KVM (Keyboard, Video, Mouse)</li>
+                <li>Uninterruptible Power Supply (UPS) that provides backup power to the Server and the KVM</li>
+            </ul>
+    </span> 
+    <span>
+    	<p>The system bay power components include Standby Power Supply (SPS) modules, Power Distribution Units (PDUs), and Power Distribution Panels (PDPs).  Power components on each side of the bay belong to independent power zones that must be connected to independent AC power lines to guarantee power redundancy.</p>
+    </span>
+    <span>
+        <p>Two SPS modules at the bottom of the system bay provide backup power to the vault DAEs. Two SPS modules in the middle of the system bay provide backup power to the engine.</p>
+    </span> 
+    <span>
+        <p>The PDP and the PDU installed at each side of the bay can be accessed from the rear. They provide the centralized interface and distribution control for the input AC power. The PDPs connect to the input AC power lines, feature the main on/off power switch, and also connect to the PDPs within the same power zone. The PDPs further distribute power to individual components and also contain the on/off power switches.</p>
+    </span> 
+</html>

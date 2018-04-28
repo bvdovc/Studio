@@ -1,0 +1,15 @@
+<html>
+	<title>24-Slot Disk Array Enclosure (DAE 24) </title>
+	<span><p>DAE 24 is a 2U high, 19 deep enclosure that accomodates a maximum of 24 PCIe NVMe connected flash drives.
+	
+	</p></span>	
+	<span>
+	<p>The main features are:</p>
+		<ul>
+			<li>Redundant, hot-swap Link Control Cards (LCCs)</li>
+			<li>2 power supplies with separate power feeds that provide 25W per drive slot and N+1 power redundancy </li>
+			<li>Adaptive N+1 cooling</li>
+			<li>16 4-lane mini-SAS HD PCIe connectors</li>
+		</ul>
+	</span>
+</html> 

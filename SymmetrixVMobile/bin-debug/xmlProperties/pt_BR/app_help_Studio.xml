@@ -1,0 +1,49 @@
+﻿<html>
+	<title>
+ Ajuda principal 
+	</title>
+	<span><h>Sobre o VMAX STUDIO</h></span>
+		<span>
+			<p>O VMAX STUDIO é uma ferramenta de visualização intuitiva que permite:</p>
+			<ul>
+				<li> Visualizar as configurações de array do VMAX 250F e do VMAX 950F, seguindo algumas etapas em um Assistente de configuração.</li>
+				<li> Salvar as configurações de array internamente no formato VMAX Studio. As configurações salvas são exibidas como ícones na parte inferior do painel de filtragem. </li>
+				<li> Salvar objetos como configurações ou componentes individuais no formato de arquivo gráfico PNG.</li>
+				<li> Explore as configurações de array e os componentes de hardware usando a ajuda contextual e as exibições detalhadas do componente.</li>
+			</ul>
+		</span>
+		<span>
+			<p> Ferramentas</p>
+		</span>
+		<span>
+			<img src="Save.png" alt="botão" heigth="50"/>
+			<p> Salvar configuração – clique nessa opção para salvar uma configuração recém-criada. As configurações salvas são exibidas no painel de filtragem como ícones com IDs exclusivos de configuração.</p>
+		</span>
+		<span>
+			<img src="Copy.png" alt="botão" heigth="50"/>
+			<p>Copiar para a área de transferência — clique para copiar o conteúdo do painel de exibição para a área de transferência.</p>
+		</span>
+		<span>
+			<img src="Export.png" alt="botão" heigth="50"/>
+			<p>Exportar como imagem — clique para salvar o conteúdo do painel de exibição em um arquivo *.PNG.</p>
+		</span>
+		<span>
+			<img src="Show.png" alt="botão" heigth="50"/>
+			<p>Destaque — clique para destacar os componentes principais de alimentação na visualização de configuração de array.</p>
+		</span>
+		<span>
+			<img src="Toggle.png" alt="botão" heigth="50"/>
+			<p>Alterar visualização — clique para alternar a exibição (parte frontal, parte traseira, parte superior).</p>
+		</span>
+		<span>
+			<img src="Property.png" alt="botão" heigth="50"/>
+			<p>Alternar painéis de propriedade — exibir ou ocultar informações do conteúdo do painel de exibição.</p>
+		</span>
+		<span>
+			<img src="ConfW.png" alt="botão" heigth="50"/>
+			<p>Assistente de configuração – clique nessa opção para configurar um novo array do VMAX All Flash.</p>
+		</span>
+    <span>
+		<p>Perguntas ou comentários sobre o VMAX Studio? Envie um e-mail para SymmSystemViewers@emc.com</p>
+	</span>
+</html>

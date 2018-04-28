@@ -1,0 +1,16 @@
+<html>
+	<title>
+ CONFIGURAÇÃO
+	</title>
+	<span>
+		<p>Detalhes da configuração atual:</p>
+		<ul>
+			<li>Número de mecanismos: {0}</li>
+			<li>Número de DAEs: {1}</li>
+			<li>Número máximo de unidades: {2}</li>
+		</ul>
+	</span>
+	<span><p>As configurações do array VMAX são compostas de pelo menos um gabinete do sistema que pode conter de 1 a 8 mecanismos e um número de gabinetes de armazenamento preenchidos totalmente ou parcialmente, dependendo do número de mecanismos no array. Os mecanismos são as principais unidades de processamento de I/O que fornecem o cache, potência de CPU, front-end (host) e conectividade de back-end para as unidades no array.</p></span>
+	<span><p>O tamanho máximo de array sempre inclui os gabinetes do sistema e 10 gabinetes de armazenamento, cinco em cada lado do gabinete do sistema. As gavetas disk array (DAEs) dos gabinetes de armazenamento dedicado e locais de DAE dedicados conectam-se a um mecanismo dedicado no gabinete do sistema. Dependendo da maneira como as DAEs se conectam ao mecanismo, elas são chamadas de DAEs de conexão direta ou de encadeamento em série. Gabinetes de armazenamento incluem DAEs de conexão direta ou de encadeamento em série.</p></span>
+	<span><p>As configurações de loop de unidade estendida oferecem suporte a um máximo de quatro mecanismos e um máximo de quatro níveis de DAEs de encadeamento em série para permitir uma grande quantidade de capacidade de armazenamento configurada para um único mecanismo. O produto da série VMAX oferece suporte a arrays VMAX SE de mecanismo único que não podem receber upgrade para arrays VMAX de nível corporativo. Os sistemas VMAX SE podem ter no máximo dois gabinetes, em um gabinete do sistema hospedando o mecanismo e as gavetas disk array (DAEs) e um gabinete de armazenamento totalmente preenchido.</p></span>
+</html>

@@ -1,0 +1,17 @@
+﻿<html>
+	<title>UNIDADE DE DISTRIBUIÇÃO DE ENERGIA</title>
+
+	<span>
+		<p>
+			Os gabinetes do sistema contém duas unidades de distribuição de energia (PDUs), uma PDU para cada zona de alimentação. A PDU A é a principal, a PDU B é a PDU redundante. Ambas as PDUs estão conectadas mecanicamente, inclusive as presilhas de montagem, para criar uma só estrutura de 2U. As PDUs são integradas para dar suporte à conectividade de entrada de linha CA e fornecer tomadas para cada componente no gabinete.
+		</p></span>
+	<span>
+			<p>Cada PDU apresenta os componentes a seguir:</p>
+			<ul>
+				<li>Total de 24 tomadas de alimentação para FRUs (Fiel Replaceable Units, unidades substituíveis em campo). As tomadas são divididas em seis bancos em que cada um tem quatro tomadas CA IEC 60320 C13 individuais.</li>
+				<li>Cada banco de tomadas é conectado aos circuitos de unidade individuais que são protegidos por um disjuntor de dois polos de 20 amperes.
+				</li>
+			<li>Dependendo da opção da PDU selecionada há um conector de entrada diferente para cada PDU.</li>
+			</ul>
+	</span>
+</html>

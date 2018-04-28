@@ -1,0 +1,13 @@
+<html> <title>
+        SYSTEM-BAY 1 </title> <span>
+        <p>System-Bay 1 enthält Engine 1 und mindestens vier Disk Array Enclosures (DAEs). In standardmäßigen Arraykonfigurationen liegt das Maximum bei 10 DAEs, in Arraykonfigurationen mit hoher Dichte bei 12 DAEs. Außerdem umfasst System-Bay 1 die NAS-Komponenten, die Zugriff auf Dateiebene auf Daten im Array bereitstellen. </p>
+    </span> <span>
+        <p>System-Bay 1 ist Teil einer jeden Arraykonfiguration und enthält den Serviceprozessor, der für Service und Wartung des gesamten Arrays zuständig ist. Der Serviceprozessor enthält die folgenden Komponenten:</p>
+            <ul> <li>Server mit Funktionen für Systemüberwachung, Remote-Support und Status-Reporting</li> <li>KVM (Keyboard, Video, Mouse = Tastatur, Video, Maus)</li> <li>Unterbrechungsfreie Stromversorgung (USV), die Reservestrom für Server und KVM bereitstellt</li> </ul>
+    </span> <span>
+    	<p>Die Stromkomponenten des System-Bay enthalten Stand-by-Netzteilmodule (SPS-Module), Power Distribution Units (PDUs) und Power Distribution Panels (PDPs). Stromkomponenten zu beiden Seiten des Bay gehören zu unabhängigen Stromversorgungsbereichen, die für eine redundante Stromversorgung mit unabhängigen Wechselstromleitungen verbunden sein müssen.</p>
+    </span> <span>
+        <p>Zwei SPS-Module am unteren Ende des System-Bay liefern Reservestrom für die Vault-DAEs. Zwei SPS-Module in der Mitte des System-Bay liefern Reservestrom für die Engine.</p>
+    </span> <span>
+        <p>Das PDP und die PDU, die zu beiden Seiten des Bay installiert sind, sind über die Rückseite zugänglich. Sie verfügen über die zentrale Schnittstelle und Verteilungssteuerung für den eingehenden Wechselstrom. Die PDPs sind mit den Wechselstromeingängen verbunden und verfügen über den Hauptnetzschalter für die Stromversorgung. Darüber hinaus sind sie mit weiteren PDPs innerhalb desselben Stromversorgungsbereichs verbunden. Außerdem verteilen die PDPs Strom an einzelne Komponenten und enthalten weitere Netzschalter.</p>
+    </span> </html>

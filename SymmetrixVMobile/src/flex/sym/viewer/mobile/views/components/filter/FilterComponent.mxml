@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:BorderContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				   xmlns:s="library://ns.adobe.com/flex/spark"
+				   styleName="filterBorderContainerStyle" 
+				   skinClass="sym.viewer.mobile.views.skins.FilterComponentSkin" >
+	
+	<fx:Script>
+		<![CDATA[
+			[Bindable]
+			public var filterName:String;
+			
+			[Bindable]
+			public var filterValue:String;
+		]]>
+	</fx:Script>
+			
+	<s:Label id="filterNameLabel"
+			 styleName="filterNameLabelStyle"
+			 text="{filterName}"
+			 width="100%"
+			 textAlign="center"/>
+	<s:Label id="filterValueLabel"
+			 styleName="filterValueLabelStyle"
+			 text="{filterValue}"
+			 textAlign="center"
+			 width="100%"/>
+		
+</s:BorderContainer>

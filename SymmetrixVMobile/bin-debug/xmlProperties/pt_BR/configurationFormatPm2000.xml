@@ -1,0 +1,17 @@
+<html>
+	<title>PowerMax 2000</title>
+	<span>
+		<h>Detalhes da configuração atual:</h>
+		<ul>
+		    <li>Capacidade utilizável (TB) do SO: {0}</li>
+		    <li>Capacidade utilizável (TB) de MF: "{4}"</li>
+			<li>Número de Bricks: {1}</li>
+			<li>Número de DAEs: {2} </li>
+			<li>Nível de RAID: {7} </li>
+			<li>Número de unidades: {5}</li>
+			<li>Número de slots de unidade disponíveis: {3}</li>
+			<li>Número de portas FE: {6}</li>
+		</ul>
+	</span>
+</html>
+

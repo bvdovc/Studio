@@ -1,0 +1,30 @@
+<html>
+	<title> 		TITAN-SYSTEM-BAY
+	</title> 	<span>
+		<h>System-Bay 1</h>
+ 		<ul>
+			<li>System-Bay 1 umfasst Engine 1 und maximal 10 Disk Array Enclosures (DAEs).</li>
+			<li>Ein Paar Standby-Netzteil-Module ganz unten im Rack liefern Reservestrom für die Vault-DAEs.
+Das zweite Paar Standby-Netzteil-Module liefert Reservestrom für die Engine.</li> 
+			<li>System-Bay 1 umfasst außerdem den Serviceprozessor (Server, KVM und USV), der die zum Betreiben des Arrays erforderlichen Software-Dienstprogramme bietet.</li>
+			<li>Power Distribution Units (PDUs) und Power Distribution Panels (PDPs) befinden sich auf beiden Seiten des Racks, und der Zugriff erfolgt über die Rückseite.</li>
+		</ul> 	
+	</span>	 	 	<span>
+		<h>System-Bay 2</h>
+		<ul>	
+			<li>System-Bay 2 umfasst Engine 2 und maximal 10 Disk Array Enclosures (DAEs).</li>
+			<li>Ein Paar Standby-Netzteil-Module ganz unten im Rack liefern Reservestrom für die Vault-DAEs.
+Das zweite Paar Standby-Netzteil-Module liefert Reservestrom für die Engine.</li>
+			<li>System-Bay 2 umfasst zudem das Matrix Interface Board Enclosure (MIBE), das Verbindungen zwischen den Engines im Array ermöglicht.</li>
+			<li>Power Distribution Units (PDUs) und Power Distribution Panels (PDPs) befinden sich auf beiden Seiten des Racks, und der Zugriff erfolgt über die Rückseite.</li>
+		</ul> 	
+	</span>	 	<span>
+		<h>System-Bay 3 und System-Bay 4 (haben identische Komponenten)</h>
+		<ul>
+			<li>System-Bay 3/4 umfasst Engine 3/4 und maximal 10 Disk Array Enclosures (DAEs).</li>
+			<li>Ein Paar Standby-Netzteil-Module ganz unten im Rack liefern Reservestrom für die Vault-DAEs.
+Das zweite Paar Standby-Netzteil-Module liefert Reservestrom für die Engine.</li>
+			<li>Power Distribution Units (PDUs) und Power Distribution Panels (PDPs) befinden sich auf beiden Seiten des Racks, und der Zugriff erfolgt über die Rückseite.</li>
+		</ul> 	
+	</span>
+</html>  

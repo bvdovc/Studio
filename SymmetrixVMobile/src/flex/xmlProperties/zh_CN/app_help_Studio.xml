@@ -1,0 +1,49 @@
+﻿<html>
+	<title>
+ 主要帮助 
+	</title>
+	<span><h>VMAX STUDIO 简介</h></span>
+		<span>
+			<p>VMAX STUDIO 是一款直观的可视化工具，支持您：</p>
+			<ul>
+				<li> 根据配置向导指导，完成以下几个步骤，可视化 VMAX 250F 和 VMAX 950F 阵列配置。</li>
+				<li> 以 VMAX Studio 格式在内部保存阵列配置——已保存的配置以图标形式显示在筛选窗格底部。</li>
+				<li> 以 PNG 图形文件格式保存配置或各个组件之类的对象。</li>
+				<li> 借助上下文相关的帮助和深入查看组件视图，了解各项阵列配置和硬件组件。</li>
+			</ul>
+		</span>
+		<span>
+			<p> 工具</p>
+		</span>
+		<span>
+			<img src="Save.png" alt="按钮" heigth="50"/>
+			<p> 保存配置 — 单击以保存新创建的配置。已保存的配置以带有唯一的配置 ID 的图标形式显示在筛选窗格上。</p>
+		</span>
+		<span>
+			<img src="Copy.png" alt="按钮" heigth="50"/>
+			<p>拷贝到剪贴板 — 单击以将显示窗格中的内容拷贝到剪贴板。</p>
+		</span>
+		<span>
+			<img src="Export.png" alt="按钮" heigth="50"/>
+			<p>导出为图像 — 单击以将显示窗格中的内容保存为 *.PNG 格式的文件。</p>
+		</span>
+		<span>
+			<img src="Show.png" alt="按钮" heigth="50"/>
+			<p>高亮显示 — 单击以高亮显示阵列配置视图中的主要电源组件。</p>
+		</span>
+		<span>
+			<img src="Toggle.png" alt="按钮" heigth="50"/>
+			<p>更改视图 — 单击以切换视图（前部、后部、顶部）。</p>
+		</span>
+		<span>
+			<img src="Property.png" alt="按钮" heigth="50"/>
+			<p>切换属性面板 — 显示或隐藏显示窗格中的内容的属性信息。</p>
+		</span>
+		<span>
+			<img src="ConfW.png" alt="按钮" heigth="50"/>
+			<p>配置向导 — 单击以配置新的 VMAX 全闪存阵列。</p>
+		</span>
+    <span>
+		<p>对 VMAX STUDIO 有问题/意见吗？ 发送电子邮件至 SymmSystemViewers@emc.com</p>
+	</span>
+</html>

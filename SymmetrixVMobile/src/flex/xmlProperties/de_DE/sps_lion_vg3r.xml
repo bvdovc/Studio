@@ -1,0 +1,17 @@
+<html>
+	<title>Li-Ion-Stand-by-Netzteil (SPS)</title>
+	<span>
+		<p>Die Li-Ion-Stand-by-Netzteile stellen redundanten Gleichstrom für die Engines und InfiniBand (IB)-Verbindungen bereit und befinden sich nur in den System-Bays. Stand-by-Netzteile setzen sich aus den folgenden Komponenten zusammen: </p>
+		<ul>
+			<li>Wechselstromeingang </li>
+			<li>Akkus </li>
+			<li>Akkuladegerät</li>
+			<li>Gleichstromwandler</li>
+			<li>RS232-Port</li>
+			<li>4 Wechselstromausgänge </li>
+		</ul>
+	</span>
+	<span>
+		<p> Während des Onlinebetriebs liefert die SPS den Gleichstrom direkt aus dem Wechselstromeingang. Das Ladegerät lädt die Akkus bei Bedarf neu auf. Wenn kein Wechselstrom an Eingang anliegt, wird die Stromversorgung von den internen Akkus und dem Gleichstromwandler übernommen (Akkubetrieb). </p>
+	</span>
+</html>

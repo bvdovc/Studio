@@ -1,0 +1,14 @@
+<html> 
+    <title>
+		CONFIGURAZIONE 
+	</title> 
+	<span>
+	   <p>Dettagli configurazione corrente:</p>
+	   <ul> 
+	       <li>Numero di engine: {0}</li> 
+	       <li>Numero di DAE: {1}</li> 
+	       <li>Numero massimo di unità: {2}</li> 
+	   </ul>
+	</span> 
+	<span><p>Questa configurazione è progettata per i clienti che desiderano creare in futuro una configurazione degli array standard da 6 bay ma che attualmente utilizzano solo DAE ad alta densità.</p> </span> 
+</html>

@@ -1,0 +1,22 @@
+<html>
+	<title>Engine</title>
+
+	<span>
+		<p>Engine is the central I/O processing unit, redundantly built for high availability. Redundant directors (director A and director B) each contain cache, two 18-core Broadwell 2.8 GHz CPUs, and attach interfaces to the I/O modules, such as universal front-end, back-end NVMe, InfiniBand, compression and dedupe, and flash NVMe I/O modules. Engine provides 72 CPU cores and a maximum of 2TB cache.</p>
+	</span>	
+	<span>
+		<p>The following diagrams illustrate a rear view of a PowerMax 8000 engine in a single- and multi-engine configuration. The diagrams show the I/O module types, slot designations, and port numbering. Not all universal front-end and flash NVMe slots are occupied in a typical configuration.</p>
+	</span>
+	<span>
+		<p>Single-engine configuration:</p>
+	</span>
+		<span><img src="PowerMax8000_SingleEngine.jpg" ratio="0.57"/></span>
+	<span>
+		<p>Multi-engine configuration:</p>
+	</span>
+		<span><img src="PowerMax8000_MEngine.jpg" ratio="0.57"/></span>
+	<span>
+		<p>Most engine components are accessed from the rear. Only engine cooling fans and power supplies are accessed from the front.</p>
+	</span>
+		
+</html>

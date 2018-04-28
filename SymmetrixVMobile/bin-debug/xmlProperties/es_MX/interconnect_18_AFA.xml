@@ -1,0 +1,16 @@
+<html>
+<title>Interconexión InfiniBand (IB) de 18 puertos </title>
+
+<span><p>Este componente de 1U reside en la bahía de sistema 1 y se encuentra en el núcleo de la arquitectura de EMC Dynamic Virtual Matrix (TM). Permite la comunicación y los recursos compartidos en arreglos 450F y 850F de múltiples motores (V-Brick/Z-Brick). La interconexión de IB incluye los siguientes componentes</p></span>
+<span>
+	<ul>
+		<li> 18 puertos InfiniBand </li>
+		<li> Fuentes de alimentación redundantes, con conexión directa</li>
+		<li> Módulos de ventiladores redundantes, con conexión directa </li>
+		<li> 2 puertos Ethernet de administración RJ-45 de 1 Gb (conexiones a los switches Ethernet A y B) </li>
+	</ul>
+</span>
+<span><p> Cada motor brinda interfaces redundantes para la interconexión de IB. </p></span>
+
+</html>
+

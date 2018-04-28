@@ -1,0 +1,16 @@
+<html>
+	<title> 		CONFIGURAZIONE
+	</title> 	
+	<span>
+		<p>Dettagli della configurazione corrente:</p>
+		<ul>
+			<li>Numero di engine: {0}</li>
+			<li>Numero di DAE: {1}</li>
+			<li>Numero massimo di unità: {2}</li>
+		</ul> 	
+	</span>
+	<span><p>Le configurazioni degli array VMAX 10K vanno da array a engine singolo ad array a quattro engine. Gli engine sono le unità di elaborazione I/O chiave, ciascuna presente nel proprio system bay. Oltre all'engine, ciascun system bay ospita i componenti dell'alimentazione e un minimo di quattro DAE (Disk Array Enclosure). Nella configurazione dell'array possono essere inclusi uno o due storage bay (Storage Bay 1A e Storage Bay 1B) per ottimizzare la capacità dello storage dietro ciascun engine. Gli storage bay contengono i DAE e i componenti dell'alimentazione.</p></span> 	
+	<span><p>Ogni engine si connette a e controlla tutti i Disk Array Enclosure nel system bay. Se sono utilizzati degli storage bay, l'Engine 1 e l'Engine 2 collegano i DAE dedicati nello Storage Bay 1A e gli Engine 3 ed Engine 4 collegano i DAE dedicati nello Storage Bay 1B.</p></span> 	
+	<span><p>Le configurazioni standard supportano DAE standard (a 15 unità) DAE e DAE a elevata densità (a 25 unità). Le configurazioni degli array a elevata densità supportano solo DAE a 25 unità. La configurazione massima standard è basata su quattro sistemi e due storage bay mentre la configurazione massima a elevata densità è basata solo su quattro system bay. I system bay contengono un massimo di 10 DAE nella configurazione dell'array standard e un massimo di 12 DAE nella configurazione dell'array a elevata densità.</p></span> 	
+	<span><p>La dispersione del system bay è disponibile per le configurazioni a tre e quattro engine. La dispersione del system bay è un'opzione di posizionamento del bay che consente la separazione fisica tra il System Bay 2 e il System Bay 3 rispondendo in questo modo a potenziali limitazioni di ingombro. La distanza massima tra il System Bay 2 e il System Bay 4 è 10,0 m.</p></span> 	
+</html>

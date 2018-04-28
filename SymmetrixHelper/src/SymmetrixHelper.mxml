@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" 
+                       xmlns:s="library://ns.adobe.com/flex/spark" 
+                       xmlns:mx="library://ns.adobe.com/flex/mx">    
+    
+    <fx:Declarations>
+        <!-- Place non-visual elements (e.g., services, value objects) here -->
+    </fx:Declarations>
+    
+    <fx:Script source="sym\\helper\\SymmetrixHelper.as"/>
+    
+    <s:VGroup x="0" 
+			  y="0" 
+			  width="100%" 
+			  height="100%">
+        <s:DropDownList id="configFactorySelector" 
+						width="100%" 
+						height="10%"
+						dataProvider="{_configPlatformDP}"
+                        change="configFactorySelector_changeHandler(event)" 
+						fontSize="18" >
+			<s:layout>
+				<s:VerticalLayout requestedRowCount="{_configPlatformDP.length}"
+								  gap="0"
+								  horizontalAlign="contentJustify" />
+			</s:layout>
+		</s:DropDownList>	
+        <s:HGroup width="100%" 
+				  height="75%">
+            <s:List id="configSelector" 
+					width="20%" 
+					height="100%" 
+					allowMultipleSelection="true"
+                    change="configSelector_changeHandler(event)">
+			</s:List>
+            <s:VGroup width="80%" 
+					  height="100%" 
+					  paddingBottom="5" 
+					  paddingLeft="5" 
+					  paddingRight="5" 
+					  paddingTop="5" 
+					  gap="15">
+                <s:BorderContainer id="mainContainer" 
+								   width="100%" 
+								   height="60%" 
+								   borderVisible="false">
+                </s:BorderContainer>
+                <s:HGroup width="100%" 
+						  height="40%" 
+						  paddingBottom="5" 
+						  paddingLeft="5" 
+						  paddingRight="5" 
+						  paddingTop="5">
+                    <s:Label id="calcId" 
+							 width="30%"/>
+                    <s:BorderContainer id="iconContainer" 
+									   width="70%" 
+									   height="100%" 
+									   borderVisible="false" 
+									   backgroundAlpha="0"/>
+                </s:HGroup>
+            </s:VGroup>
+        </s:HGroup>
+        <s:HGroup width="100%" 
+				  height="5%" 
+				  verticalAlign="middle">
+            <s:Label width="17%" 
+					 fontSize="18" 
+					 text="Output directory:" 
+					 verticalAlign="middle"/>
+            <s:TextInput id="targetDir" 
+						 width="80%" 
+						 height="100%" 
+						 fontSize="18" 
+						 text="D:\\gen_output"/>
+        </s:HGroup>
+        <s:HGroup width="100%" 
+				  height="10%" 
+				  gap="32" 
+				  columnWidth="400" 
+				  requestedColumnCount="2"
+                  variableColumnWidth="false">
+            <s:Button height="100%" 
+					  label="Generate All" 
+					  click="generateAll_clickHandler(event)"
+                      fontSize="36"/>
+            <s:Button height="100%" 
+					  label="Generate Selected"
+                      click="generateSelected_clickHandler(event)" fontSize="36"/>
+        </s:HGroup>
+    </s:VGroup>
+</s:WindowedApplication>

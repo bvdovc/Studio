@@ -1,0 +1,15 @@
+<html>
+	<title>POWER DISTRIBUTION UNIT</title>
+	<span>
+		<p>
+			I system bay ospitano due unità PDU (Power Distribution Unit), una PDU per ogni power zone. La PDU A è quella principale, la PDU B è la PDU ridondante. Entrambe le PDU sono collegate meccanicamente, comprese le staffe di montaggio, per creare una singola struttura 2U. Le PDU sono integrate al fine di supportare la connettività di ingresso di linea CA e fornire le prese per ogni componente del bay. </p>
+	</span>
+	<span>
+		<p>Ciascuna PDU è costituita dai seguenti componenti:</p>
+		<ul>
+			<li>Un totale di 24 prese di alimentazione per le unità FRU (Field Replaceable Unit). Le prese sono suddivise in sei file con ciascuna fila costituita da quattro diverse prese CA IEC 60320 C13. </li>
+			<li>Ciascuna fila di prese è connessa a singoli circuiti derivati protetti da un singolo interruttore da 20 Amp bipolare. </li>
+			<li>A seconda di quale opzione PDU viene selezionata, esiste un connettore di ingresso diverso per ogni PDU</li>
+		</ul>
+	</span>
+</html>

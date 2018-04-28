@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                           xmlns:s="library://ns.adobe.com/flex/spark"
+                           initialize="onInitialize(event)"
+                           creationComplete="creationComplete(event)"
+                           skinClass="sym.viewer.mobile.views.skins.FileSaveLoadPopupSkin">
+    <fx:Script>
+        <![CDATA[
+            import mx.core.FlexGlobals;
+
+            import sym.viewer.mobile.script.ViewConstants;
+        ]]>
+    </fx:Script>
+    <fx:Declarations>
+        <s:DropShadowFilter id="shadow"
+                            alpha="0.3"
+                            distance="5"
+                            angle="90"/>
+    </fx:Declarations>
+    <fx:Metadata>
+        [ResourceBundle("main")]
+    </fx:Metadata>
+
+    <fx:Script source="../../../script/components/popups/engine10kMixPopup.as"/>
+
+    <s:layout>
+        <s:VerticalLayout gap="-10"/>
+    </s:layout>
+
+
+    <s:HGroup id="titleArea" 
+              width="100%"
+              verticalCenter="0"
+              verticalAlign="middle"
+              horizontalAlign="center"
+              height="15%">
+        <s:Label styleName="popupTitle"
+                 width="100%"
+                 textAlign="center"
+                 fontSize="{17 * FlexGlobals.topLevelApplication.height/ViewConstants.DEFAULT_APP_HEIGHT}"
+                 text="{getResString('main', 'FILTER_10K_ENGINES_TITLE')}"/>
+    </s:HGroup>
+
+    <s:VGroup id="mainContainer"
+              styleName="borderStyle"
+              width="100%"
+              height="100%"
+              depth="-1"
+              horizontalAlign="left"
+              gap="10"
+              paddingTop="20">
+        <s:VGroup paddingLeft="10"
+                  height="100%"
+                  width="100%">
+            <s:Label text="{getResString('main', 'FILTER_10K_ENGINES_MESSAGE1')}"/>
+            <s:HGroup width="100%"
+                      gap="5"
+                      verticalAlign="bottom">
+                <s:Label text="{_messagePart1}"/>
+                <s:Image source="@Embed('/images/toolbar/Wizard_off.png')"
+                         width="20"
+                         height="20"/>
+                <s:Label text="{_messagePart2}"/>
+            </s:HGroup>
+        </s:VGroup>
+        <s:HGroup id="actionBarGroup"
+                  height="15%"
+                  width="100%"
+                  paddingLeft="15"
+                  paddingRight="15"
+                  paddingBottom="10"
+                  verticalAlign="middle"
+                  gap="20"
+                  columnWidth="{(actionBarGroup.width - 50)/3}"
+                  fontSize="15">
+
+            <s:Button id="btnCancel"
+                      label="{getResString('main', 'BUTTON_CANCEL')}"
+                      skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"
+                      width="100%"
+                      height="100%"
+                      useHandCursor="true"
+                      buttonMode="true"
+                      click="close()"/>
+            <s:Button id="bntOpenWizard"
+                      label="{getResString('main', 'FILTER_10K_ENGINES_BTN_OPEN_WIZ')}"
+                      skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"
+                      width="100%"
+                      height="100%"
+                      buttonMode="true"
+                      useHandCursor="true"
+                      click="btnOpenWizard_Click(event)"/>
+            <s:Button id="btnOK"
+                      label="{getResString('main', 'BUTTON_CONTINUE')}"
+                      skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"
+                      width="100%"
+                      height="100%"
+                      buttonMode="true"
+                      useHandCursor="true"
+                      click="close(true, _engineFilterValue)"/>
+        </s:HGroup>
+
+    </s:VGroup>
+
+
+
+</s:SkinnablePopUpContainer>

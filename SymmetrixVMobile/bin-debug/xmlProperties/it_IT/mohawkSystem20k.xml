@@ -1,0 +1,4 @@
+<html>
+	<title> 		SYSTEM BAY
+	</title> 	<span><p>Il system bay ospita da uno a otto engine, i componenti di alimentazione, i componenti del service processor (Server, gruppo di continuità, KVM) e due schede MIBE (Matrix Interface Boards) che forniscono la connettività tra gli engine.</p></span> 	<span><p>Gli engine sono numerati in base alla relativa posizione nel system bay, dal basso (Engine 1) all'alto ( Engine 8). Gli engine vengono aggiunti prima al centro del bay, a partire dall'Engine 4. Engine 5, Engine 3, Engine 6, Engine 2, Engine 7, Engine 1 ed Engine 8 con gli storage bay designati possono quindi essere aggiunti per rispondere ai crescenti requisiti di capacità di storage.</p></span> 	<span><p>Se viene implementata la dispersione del system bay, l'array include due system bay separati fisicamente e gli storage bay corrispondenti situati in sito su ciascun system bay.</p></span>
+</html> 

@@ -1,0 +1,12 @@
+<html>
+	<title> 		STANDARD-DAE
+	</title> 	<span><p>Disk Array Enclosures (DAEs) bilden den Kern der Datenspeicherverarbeitung. Sie bieten Fibre-Channel-Verbindungen mit 4 Gbit/s für Back-End-I/O-Module in der Engine oder in anderen DAEs und für Laufwerk-Loops in den DAE-Gehäusen. DAEs können direkt mit der Engine verbunden oder in Reihe mit anderen DAEs geschaltet werden.</p></span> 	<span><p>DAEs sind als Standardmodell, als DAE mit 15 Laufwerken oder als DAEs mit hoher Dichte und 25 Laufwerken verfügbar. Die DAEs mit hoher Dichte können nur 2,5-Zoll-Laufwerke umfassen, während die Standard-DAEs Platz für sowohl 2,5-Zoll- als auch 3,5-Zoll-Laufwerke bieten.</p></span> 	<span>
+	<p>DAEs umfassen die folgenden Hauptkomponenten:</p>
+		<ul>
+			<li>Maximal 15 oder 25 Laufwerke pro Gehäuse, je nach DAE-Typ</li>
+			<li>Zwei redundante DAE-Netzteile/Kühlungsmodule (Zugriff über die Rückseite)</li>
+			<li>Zwei Link Control Cards (LCCs) (Zugriff über die Rückseite), die Laufwerks-Bypass- und Fibre-Channel-Loop-Failover-Funktionen bieten.</li>
+			<li>DAEs können direkt mit der Engine verbunden oder in Reihe mit anderen DAEs geschaltet werden.</li>
+		</ul> 	
+	</span>
+</html>

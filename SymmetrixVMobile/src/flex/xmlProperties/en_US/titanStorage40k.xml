@@ -1,0 +1,15 @@
+<html>
+	<title>
+		HIGH DENSITY STORAGE BAY
+	</title>
+	<span>
+		<p>The high density storage bays house a minimum of  eight and a maximum of 16 25-drive Disk Array Enclosures ( DAEs) and power components. The DAEs can house a minimum of four and a maximum of 25 drives.</p>
+	</span>
+	<span>
+		<p>The storage bay power components include Standby Power Supply (SPS) modules, Power Distribution Units (PDUs), and Power Distribution Panels (PDPs). Eight Standby Power Supply (SPS) modules provide backup power to 16 DAEs, two SPS modules per four DAEs.</p>
+	</span>
+	<span>
+		<p>The PDPs and PDUs can be accessed from the rear and provide the centralized interface and distribution control for the input AC power. The PDPs connect to the input AC power lines, provide the main on/off power switch, and also connect to the PDPs within the same power zone. The PDPs further distribute power to individual components and also contain the on/off power switches. Power components on each side of the bay belong to independent power zones that must be connected to independent AC power lines to ensure power redundancy.</p>
+	</span>
+</html>
+

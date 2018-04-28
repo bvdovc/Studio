@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="sym.objectmodel.common.ComponentBase"/>
+    <classEntry path="sym.objectmodel.common.Position"/>
+    <classEntry path="sym.objectmodel.common.Size"/>
+    <classEntry path="sym.objectmodel.common.D15"/>
+    <classEntry path="sym.objectmodel.common.Vanguard"/>
+    <classEntry path="sym.objectmodel.v20k.UPS"/>
+    <classEntry path="sym.objectmodel.v20k.Server"/>
+    <classEntry path="sym.objectmodel.common.Configuration"/>
+    <classEntry path="sym.objectmodel.v20k.Configuration"/>
+    <classEntry path="sym.objectmodel.common.DAE"/>
+    <classEntry path="sym.objectmodel.common.IPowerTypeManager"/>
+    <classEntry path="sym.objectmodel.common.EnginePort"/>
+    <classEntry path="sym.objectmodel.common.Constants"/>
+    <classEntry path="sym.objectmodel.common.ObjectCache"/>
+    <classEntry path="sym.objectmodel.common.ICloneableComponent"/>
+    <classEntry path="sym.objectmodel.common.DriveGroup"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

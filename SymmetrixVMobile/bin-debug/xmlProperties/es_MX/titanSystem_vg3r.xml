@@ -1,0 +1,15 @@
+<html>
+	<title>BAHÍA DE SISTEMA 1</title>
+	<span>
+		<p>La bahía de sistema 1 contiene uno o dos motores (según el tipo de bahía de sistema), unidades de fuentes de alimentación en standby (SPS) de iones de litio para proporcionar alimentación de respaldo a los motores y para la interconexión de matrices virtuales InfiniBand (IB), si el arreglo está configurado con más de un motor.</p>
+	</span>
+	<span>
+		<p>Las bahías de sistema contienen todos los cables de alimentación de DAE para los DAE y la conexión de motores para la interconexión de InfiniBand. </p>
+	</span>
+	<span>
+		<p>Las bahías de sistema de un solo motor contienen un motor y hasta seis gabinetes de arreglos de discos (DAE). Las bahías de sistema de dos motores contienen dos motores y hasta cuatro DAE. El switch Ethernet que proporciona conexiones Ethernet a los motores y al KVM (teclado, video y mouse) es un componente único de la bahía de sistema 1.</p>
+	</span>
+	<span>
+		<p>Como otras bahías de sistema, la bahía de sistema 1 incluye las unidades de distribución de alimentación (PDU) que proporcionan alimentación a dos zonas de energía, la zona A y la zona B.</p>
+	</span>
+</html>

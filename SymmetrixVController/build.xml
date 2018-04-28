@@ -1,0 +1,55 @@
+<project name="SymmetrixVController BUILD" default="compile">
+ 
+	<property file="../build.properties" />
+	<taskdef resource="flexTasks.tasks" classpath="${FLEX_TASKS}" />
+
+	<import file="../${CONFIG_NAME}/build.xml" as="confbuild"/>
+		
+	<target name="clean">
+		<echo>----------------------------------------------</echo>
+		<echo message="Cleaning controller bin..." />
+		<delete dir="${CTRL_BIN}" includeemptydirs="true" failonerror="false" />
+		<mkdir dir="${CTRL_BIN}" /> 
+	</target>
+	
+	<target name="compile_M" depends="clean">
+		<echo>----------------------------------------------</echo>
+		<echo message="Starting controller compilation..."/>
+		<antcall target="confbuild.compile" />
+		<exec executable="${COMPC}" failonerror="true" failifexecutionfails="true">
+							<!-- Set the output path -->
+							<arg line="-output '${CTRL_BIN}/${CTRL_NAME}.swc'"/>
+							<arg line="-define+=CONFIG::m_series,true"/>
+							<arg line="-define+=CONFIG::k_series,true"/>
+							<!-- Include all of the AS3 files in LIBRARY -->
+							<arg line="-include-sources '${CTRL_SRC}'" />
+							<arg line="-library-path+='${CONFIG_BIN}'"/>
+							<arg line="-library-path+='${MODEL_BIN}'"/> 
+							<arg line="-external-library-path+='${FLEX_LIBS}/core.swc'"/>
+						</exec> 
+		<echo message="Finished compiling controller ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	<target name="compile" depends="clean">
+		<echo>----------------------------------------------</echo>
+		<echo message="Starting controller compilation..."/>
+		
+		<antcall target="confbuild.compile" />
+		<exec executable="${COMPC}" failonerror="true" failifexecutionfails="true">
+							<!-- Set the output path -->
+							<arg line="-output '${CTRL_BIN}/${CTRL_NAME}.swc'"/>
+							<arg line="-define+=CONFIG::m_series,false"/>
+							<arg line="-define+=CONFIG::k_series,true"/>
+							<!-- Include all of the AS3 files in LIBRARY -->
+							<arg line="-include-sources '${CTRL_SRC}'" />
+							<arg line="-library-path+='${CONFIG_BIN}'"/>
+							<arg line="-library-path+='${MODEL_BIN}'"/> 
+							<arg line="-external-library-path+='${FLEX_LIBS}/core.swc'"/>
+						</exec> 
+		<echo message="Finished compiling controller ..."/>
+		<echo>----------------------------------------------</echo>
+	</target>
+	
+	
+</project>

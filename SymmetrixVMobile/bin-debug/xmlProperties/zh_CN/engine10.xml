@@ -1,0 +1,21 @@
+<html> 
+    <title>
+		引擎 
+	</title> 
+	<span>
+	   <p>VMAX 10K 引擎是关键的系统机架组件，它提供物理内存、CPU、前端主机连接、SRDF 连接、外部阵列连接、磁盘阵列存储模块 (DAE) 后端连接以及阵列中其他引擎的连接。 每个引擎包含：</p>
+	       <ul> 
+	           <li>两个支持前端和后端连接的控制器</li> 
+	           <li>96 和 128 GB 物理内存</li> 
+	           <li>多引擎系统中的两个系统接口板 (SIB)。单引擎阵列中的引擎 1 不包含 SIB。</li> 
+	           <li>四个后端 I/O 模块（各包含 4 个端口，4 Gb/s）</li> 
+	           <li>四个提供以下连接的前端 I/O 模块：</li>  
+	           <li indent="1">多达 16 个（2、4、8 Gb/s）光纤通道端口</li> 
+	           <li indent="1">多达 4 个光纤通道 SRDF（2、4、8 Gb/s）端口</li> 
+	           <li indent="1">多达 8 个 iSCSI/FCoE (10Gb/s) 端口</li> 
+	           <li indent="1">多达 8 个 iSCSI (1Gb/s) 端口</li> 
+	           <li indent="1">多达 4 个 GigE SRDF（1 Gb/s，10 Gb/s）端口</li> 
+	           <li>两个管理模块（每个控制器一个）</li> 
+	           <li>四个引擎电源（每个控制器两个）</li> 
+          </ul>
+	</span> </html>

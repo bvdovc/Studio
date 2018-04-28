@@ -1,0 +1,15 @@
+<html>
+	<title>UNIDAD DE DISTRIBUCIÓN DE ALIMENTACIÓN</title>
+	<span>
+		<p>
+			Las bahías de sistema contienen dos unidades de distribución de alimentación (PDU), una PDU para cada zona de energía. PDU A es la principal, PDU B es la PDU redundante. Ambas PDU están conectadas mecánicamente, incluidos los soportes de montaje, para generar una sola estructura de 2U. Las PDU están integradas para ser compatibles con conectividad con la entrada de la línea de CA y proporcionar salidas para cada componente de la bahía. </p>
+	</span>
+	<span>
+		<p>Cada PDU tiene los siguientes componentes:</p>
+		<ul>
+			<li>Un total de 24 tomas de alimentación para unidades de reemplazo en sitio (FRU). Las salidas se dividen en seis bancos; cada banco consta de cuatro salidas de CA individuales IEC 60320 C13.</li>
+			<li>Cada banco de salidas está conectado a circuitos de derivación individuales que están protegidos por un solo disyuntor bipolar de 20 A. </li>
+			<li>Según la opción de PDU seleccionada, hay un conector de entrada diferente para cada PDU.</li>
+		</ul>
+	</span>
+</html>

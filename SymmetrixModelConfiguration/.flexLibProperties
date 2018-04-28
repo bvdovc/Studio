@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="sym.configurationmodel.common.ConfigurationFilter"/>
+    <classEntry path="sym.configurationmodel.common.ConfigurationFactoryBase"/>
+    <classEntry path="sym.configurationmodel.utils.IntUtil"/>
+    <classEntry path="sym.configurationmodel.pm8000.ConfigurationFactory"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

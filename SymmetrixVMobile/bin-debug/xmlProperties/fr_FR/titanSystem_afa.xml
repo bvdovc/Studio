@@ -1,0 +1,14 @@
+﻿<html>
+	<title>BAIE SYSTÈME 1</title>
+	<span><p>Toutes les baies système VMAX All Flash hébergent un ou deux modules V-Brick/zBrick, constitués chacun d’un moteur, de deux boîtiers DAE de 120 disques haute densité, de deux alimentations auxiliaires Li-on pour assurer une alimentation de secours pour le moteur, et de deux unités d’alimentation (PDU) qui alimentent les zones d’alimentation redondantes (zones A et B).</p></span>
+	<span><p>Les composants suivants sont propres à la baie système 1 : </p>
+		<ul>
+			<li>Deux unités d’alimentation auxiliaire Li-On dans la partie inférieure de la baie qui assurent une alimentation de secours pour l’interconnexion Virtual Matrix InfiniBand (IB) si la baie est configurée avec plusieurs modules V-Brick/zBrick </li>
+			<li>Interconnexion InfiniBand (IB) si la baie est configurée avec plusieurs modules V-Brick/zBrick </li>
+			<li>Switch Ethernet </li>
+			<li>KVM (clavier, vidéo, souris) </li>
+		</ul>
+	</span>
+</html>
+
+

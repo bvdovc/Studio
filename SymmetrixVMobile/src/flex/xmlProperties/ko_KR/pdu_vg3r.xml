@@ -1,0 +1,15 @@
+<html>
+	<title>PDU(Power Distribution Unit)</title>
+	<span>
+		<p>
+			시스템 베이에는 각 파워존마다 하나씩 연결되는 PDU(Power Distribution Unit)가 2개 있습니다. PDU A는 운영 PDU이고 PDU B는 이중화된 PDU입니다. 두 PDU는 마운팅 브래킷을 포함해 기계적으로 연결되어 단일 2U 구조를 구성합니다. 두 PDU는 서로 통합되어 AC 라인 전원 입력 연결을 지원하고 베이 내의 모든 구성 요소를 위한 전원 출력을 제공합니다. </p>
+	</span>
+	<span>
+		<p>각 PDU에 포함된 구성 요소는 다음과 같습니다.</p>
+		<ul>
+			<li>FRU(Field Replaceable Unit)에 대한 총 24개의 전원 출력. 이 전원 출력은 각각 4개의 IEC 60320 C13 개별 AC 출력으로 구성된 6개의 뱅크로 나뉩니다.</li>
+			<li>각 출력 뱅크는 단일 2극 20A 회로 차단기로 보호되는 개별 분기 회로에 연결됩니다. </li>
+			<li>선택한 PDU 옵션에 따라 각 PDU에 사용하는 입력 커넥터가 달라집니다.</li>
+		</ul>
+	</span>
+</html>

@@ -1,0 +1,15 @@
+<html>
+	<title>24 插槽磁盘阵列存储模块 (DAE 24) </title>
+	<span><p>DAE 24 是一种高 2U，19 英寸深的存储模块，可适应多达 24 个 PCIe NVMe 连接的闪存驱动器。
+	
+	</p></span>	
+	<span>
+	<p>主要功能如下：</p>
+		<ul>
+			<li>冗余、热交换链路控制卡 (LCC)</li>
+			<li>2 个可独立供电的电源，为每个驱动器插槽提供 25W 和 N+1 电源冗余 </li>
+			<li>自适应 N+1 冷却</li>
+			<li>16 个 4 通道微型 SAS HD PCIe 连接器</li>
+		</ul>
+	</span>
+</html> 

@@ -1,0 +1,12 @@
+<html>
+	<title> 		BOÎTIERS DAE STANDARD
+	</title> 	<span><p>Les boîtiers DAE sont au coeur du traitement de stockage de données. Ils assurent la connectivité Fibre Channel 4&nbsp;Gbit/s des modules d’E/S back-end dans le moteur ou les autres boîtiers DAE et des boucles de disques dans les boîtiers DAE. Il est possible de relier les boîtiers DAE directement au moteur ou de les relier en cascade à d’autres boîtiers DAE.</p></span> 	<span><p>Les boîtiers DAE sont disponibles sous leur forme standard avec 15&nbsp;disques ou sous leur forme haute densité avec 25&nbsp;disques. Les boîtiers DAE haute densité ne peuvent héberger que des disques 2,5&nbsp;pouces, alors que les boîtiers DAE standard peuvent accueillir à la fois des disques 2,5&nbsp;et 3,5&nbsp;pouces.</p></span> 	<span>
+	<p>Les boîtiers DAE comprennent les composants principaux suivants&nbsp;:</p>
+		<ul>
+			<li>15 ou 25&nbsp;disques au maximum par boîtier, selon le type de boîtier DAE&nbsp;;</li>
+			<li>deux modules d’alimentation/refroidissement de boîtier DAE redondants (accessibles par l’arrière)&nbsp;;</li>
+			<li>deux cartes LCC (accessibles par l’arrière) assurant la dérivation de disque et le basculement sur incident de boucle Fibre Channel.</li>
+			<li>Il est possible de relier les boîtiers DAE directement au moteur ou de les relier en cascade à d’autres boîtiers DAE.</li>
+		</ul> 	
+	</span>
+</html>

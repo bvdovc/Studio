@@ -1,0 +1,26 @@
+<html> 
+	<title>
+		MOTOR 
+	</title> 
+	<span>
+	<p>El motor VMAX/VMAX 20K es el componente clave de la bahía del sistema que proporciona memoria física, potencia de procesamiento de CPU, host de front-end, conectividad de arreglo externo y SRDF, conectividad de back-end a gabinetes de arreglos de discos (DAE), y conectividad con otros motores del arreglo.
+Cada motor incluye lo siguiente:</p>
+		<ul> 
+			<li>Dos directores que admiten conexiones de front-end, back-end, arreglo externo y SRDF.</li> 
+			<li>Memoria física de 32, 64 o 128 GB.</li> 
+			<li>Dos tarjetas de interfaz de sistema (SIB) (una por director) que conectan el director y el gabinete de tarjeta de interfaz de matriz (MIBE).</li> 
+			<li>Cuatro módulos de I/O de back-end (dos por director). </li> 
+			<li>Cuatro módulos de I/O de front-end (dos por director) que proporcionan las siguientes conexiones (por módulo):</li> 
+			<li indent="1">Cuatro puertos Fibre Channel (2, 4 u 8 Gb/s).</li> 
+			<li indent="1">Dos puertos Fibre Channel SRDF (2, 4 u 8 Gb/s).</li> 
+			<li indent="1">Dos puertos Fibre Channel mediante Ethernet (FCoE) (10 Gb/s).</li> 
+			<li indent="1">Dos puertos FICON (2, 4 u 8 Gb/s).</li> 
+			<li indent="1">Dos puertos iSCSI (1 Gb/s).</li> 
+			<li indent="1">Dos puertos iSCSI/FCoE (10 Gb/s).</li> 
+			<li indent="1">Dos puertos GbE SRDF (1 Gb/s y 10 Gb/s).</li> 
+			<li>Dos módulos de administración que proporcionan monitoreo del ambiente.</li>
+			<li>Dos fuentes de alimentación de motor.</li> 
+			<li>Cuatro ventiladores de enfriamiento de motor.</li> 
+		</ul>
+	</span> 
+</html>

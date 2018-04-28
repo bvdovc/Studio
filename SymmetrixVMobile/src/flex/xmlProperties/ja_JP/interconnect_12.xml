@@ -1,0 +1,9 @@
+<html>
+	<title>12ポートIB（InfiniBand）相互接続 </title>
+	<span>
+		<p>この1Uコンポーネントは、EMC Dynamic Virtual Matrix（TM）アーキテクチャの中核となります。 IB相互接続は、複数エンジンの100Kおよび200Kアレイにおけるシステム ベイ1のみで使用され、リソースの拡張と複数のVMAXエンジン間の通信を可能にします。 各VMAXエンジンはIB相互接続への冗長インターフェイスを備えています。</p>
+	</span>
+	<span>
+		<p>IB相互接続は電源を2台備えています。</p>
+	</span>
+</html>

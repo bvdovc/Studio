@@ -1,0 +1,33 @@
+<html>
+	<title> 		BAHÍA DE SISTEMA TITAN
+	</title> 	
+	<span>
+		<h>Bahía de sistema 1</h>
+ 		<ul>
+			<li>La bahía de sistema 1 aloja el motor 1 y un máximo de 10 gabinetes de arreglos de discos (DAE).</li>
+			<li>Un par de módulos de fuente de alimentación en standby (SPS) ubicados en la parte inferior del rack proporciona alimentación de respaldo a los DAE de vault.
+El segundo par de módulos SPS proporciona alimentación de respaldo al motor.</li> 
+			<li>La bahía de sistema 1 también aloja el procesador de servicio (servidor, KVM y UPS) Procesador que proporciona las utilerías de software necesarias para el servicio del arreglo.</li>
+			<li>Hay unidades de distribución de alimentación (PDU) y paneles de distribución de alimentación (PDP) ubicados en ambos lados del rack y se puede acceder a ellos desde la parte posterior.</li>
+		</ul> 	
+	</span>	 	 	
+	<span>
+		<h>Bahía de sistema 2</h>
+		<ul>	
+			<li>La bahía de sistema 2 aloja el motor 2 y un máximo de 10 gabinetes de arreglos de discos (DAE).</li>
+			<li>Un par de módulos de fuente de alimentación en standby (SPS) ubicados en la parte inferior del rack proporciona alimentación de respaldo a los DAE de vault.
+El segundo par de módulos SPS proporciona alimentación de respaldo al motor.</li>
+			<li>La bahía de sistema 2 también incluye el gabinete de placa de interfaz matriz (MIBE), que proporciona conectividad entre los motores del arreglo.</li>
+			<li>Hay unidades de distribución de alimentación (PDU) y paneles de distribución de alimentación (PDP) ubicados en ambos lados del rack y se puede acceder a ellos desde la parte posterior.</li>
+		</ul> 	
+	</span>	 	
+	<span>
+		<h>Bahía de sistema 3 y bahía de sistema 4 (incluyen componentes idénticos)</h>
+		<ul>
+			<li>La bahía de sistema 3/4 aloja el motor 3/4 y un máximo de 10 gabinetes de arreglos de discos (DAE).</li>
+			<li>Un par de módulos de fuente de alimentación en standby (SPS) ubicados en la parte inferior del rack proporciona alimentación de respaldo a los DAE de vault.
+El segundo par de módulos SPS proporciona alimentación de respaldo al motor.</li>
+			<li>Hay unidades de distribución de alimentación (PDU) y paneles de distribución de alimentación (PDP) ubicados en ambos lados del rack y se puede acceder a ellos desde la parte posterior.</li>
+		</ul> 	
+	</span>
+</html>  

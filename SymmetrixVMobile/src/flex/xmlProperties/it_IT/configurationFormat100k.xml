@@ -1,0 +1,19 @@
+<html>
+	<title>VMAX	 100K</title>
+	<span>
+		<p>Dettagli configurazione corrente:</p>
+		<ul>
+			<li>Capacità utilizzabile (TB): {0}</li>
+			<li>Numero di engine: {1}</li>
+			<li>Numero di DAE: {2} </li>
+			<li>Numero massimo di unità: {3}</li>
+		</ul>
+	</span>
+	<span><p>VMAX 100K è configurato con uno o quattro engine Ivy Bridge (IVB) a 24 core da 2,1 GHz con 512 o 1024 GB di memoria per engine distribuita in quattro system bay. Con la configurazione massima con quattro engine, VMAX 100K supporta fino a (1440) unità da 2,5" o fino a (720) unità da 3,5", offendo una capacità di utilizzo massima di 1.1 PB durante l'utilizzo di unità da 4 TB. Gli engine risiedono in system bay che supportano tipi di system bay a engine singolo o doppio.</p></span>
+		<span>
+			<p> Con la configurazione completa, la versione 100K fornisce fino a 64 porte front-end per la connettività host. La tecnologia Fabric Interconnect interna utilizza due switch InfiniBand a 12 porte per la ridondanza e l'availability.</p>
+		</span>
+		<span><p>
+			100k supporta EFT, prestazioni e dischi di capacità per massimizzare le prestazioni dell'array con tutti i tipi di unità. Per abilitare la messa a punto della tecnologia Fully Automated Storage Tiering (FAST) per le prestazioni del 100K a costi ridotti, sfruttando l'altissima velocità delle flash drive insieme alle unità Near-Line SAS a costi contenuti, l'array necessita di essere popolato con le unità di tecnologia differenti per rispettare i requisiti del carico di lavoro dell'applicazione.
+		</p></span>
+</html>

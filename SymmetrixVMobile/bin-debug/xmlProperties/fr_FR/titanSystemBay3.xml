@@ -1,0 +1,16 @@
+<html>
+    <title>         BAIE SYSTÈME&nbsp;3
+    </title>     <span>
+        <p>La baie système&nbsp;3 et la baie système&nbsp;4 hébergent uniquement les composants de de base résidant dans toute baie système.</p>     
+    </span>      <span>
+        <p>La baie système&nbsp;3 héberge le moteur&nbsp;3, et la baie système&nbsp;4 héberge le moteur&nbsp;4. Chaque baie système peut accueillir un maximum de 10&nbsp;boîtiers DAE dans les configurations de baies standard ou un maximum de 12&nbsp;boîtiers DAE dans les configurations de baies haute densité. Toute baie système comprend au moins quatre boîtiers DAE, quel que soit le type de configuration des baies. Ces quatre boîtiers DAE sont DAE&nbsp;1, DAE&nbsp;2, DAE&nbsp;5, et DAE&nbsp;6, aussi connus sous le nom de boîtiers DAE en chambre forte.</p>     
+    </span>      <span>
+        <p>Les composants d’alimentation de la baie système comprennent des modules d’alimentation auxiliaire (SPS), des unités d’alimentation (PDU) et des panneaux de distribution de l’alimentation (PDP).</p>     
+    </span>      <span>
+        <p>Les composants d’alimentation situés de chaque côté de la baie appartiennent à des zones d’alimentation indépendantes, qui doivent être connectées à des lignes d’alimentation CA indépendantes dans le but d’assurer une redondance de l’alimentation.</p>     
+    </span>      <span>
+        <p>Deux modules d’alimentation auxiliaire, situés dans la partie inférieure de la baie système, assurent une alimentation de secours pour les boîtiers DAE en chambre forte. Deux modules d’alimentation auxiliaire situés au centre de la baie système assurent une alimentation de secours pour le moteur.</p>     
+    </span>      <span>
+        <p>Les panneaux de distribution de l’alimentation et les unités d’alimentation installés de chaque côté de la baie sont accessibles par l’arrière. Ils fournissent l’interface centralisée et assurent le contrôle de distribution de l’alimentation CA en entrée. Les panneaux de distribution de l’alimentation sont branchés sur les lignes d’alimentation CA en entrée. Ils comportent l’interrupteur marche/arrêt principal et sont reliés également aux panneaux de distribution de l’alimentation au sein de la même zone d’alimentation. Les panneaux de distribution de l’alimentation distribuent l’alimentation à chaque composant et comprennent également les interrupteurs marche/arrêt.</p>     
+    </span> 
+</html>

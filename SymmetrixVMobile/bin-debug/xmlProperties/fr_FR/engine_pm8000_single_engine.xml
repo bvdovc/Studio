@@ -1,0 +1,20 @@
+<html>
+	<title>Moteur</title>
+
+	<span>
+		<p>Le moteur est l’unité de traitement d’E/S centrale conçue de manière redondante pour assurer une haute disponibilité. Des directeurs redondants (directeur A et directeur B) sont dotés chacun de cache, de deux processeurs à 18 cœurs Broadwell de 2,8 GHz, ainsi que des interfaces de connexion à des modules d’E/S, tels que les modules front-end et back-end universels, InfiniBand, de compression et de déduplication, ainsi que d’E/S NVMe Flash. Le moteur fournit 72 cœurs de CPU et un maximum de 2 To de cache.</p>
+	</span>	
+	<span>
+		<p>Les schémas suivants illustrent une vue arrière d’un moteur PowerMax 8000 dans une configuration à un et plusieurs moteurs. Les schémas illustrent les types de modules d’E/S, les désignations des emplacements et la numérotation des ports. Tous les emplacements NVMe Flash et front-end universels ne sont pas occupés dans une configuration classique.</p>
+	</span>
+	<span>
+		<p>Configuration à moteur unique :</p>
+	</span>
+		<span><img src="PowerMax8000_SingleEngine.jpg" ratio="0.57"/></span>
+	<span>
+		<p>La plupart des composants du moteur sont accessibles par l’arrière. Seuls les ventilateurs de refroidissement et les alimentations sont accessibles depuis l’avant.</p>
+	</span>
+		
+</html>
+
+

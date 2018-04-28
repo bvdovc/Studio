@@ -1,0 +1,13 @@
+<html> <title>
+        BAIE SYSTÈME 1 </title> <span>
+        <p>La baie système 1 héberge le moteur 1, quatre boîtiers DAE (Disk Array Enclosure) au minimum et 10 au maximum en standard ou 12 au maximum dans les configurations de baies haute densité. La baie système 1 contient également les composants NAS (stockage rattaché au réseau) qui offrent un accès en mode fichier aux données stockées sur la baie. </p>
+    </span> <span>
+        <p>Disponible dans toutes les configurations de baies de disques, la baie système 1 héberge le processeur de service dédié à l’entretien et à la maintenance de la baie de disques complète. Le processeur de service comprend les composants suivants :</p>
+            <ul> <li>un serveur offrant des fonctions de surveillance système, de support à distance et de reporting d’état ;</li> <li>des fonctions KVM (Keyboard, Video, Mouse) ;</li> <li>un onduleur assurant l’alimentation de secours du serveur et des fonctions KVM.</li> </ul>
+    </span> <span>
+    	<p>Les composants d’alimentation de la baie système comprennent des modules d’alimentation de secours, des unités d’alimentation et des tableaux électriques. Les composants d’alimentation situés des deux côtés de la baie font partie de zones d’alimentation autonomes, devant être raccordées à des lignes électriques CA indépendantes afin de garantir la redondance de l’alimentation.</p>
+    </span> <span>
+        <p>Les deux modules d’alimentation de secours situés au bas de la baie système sont destinés à fournir l’alimentation auxiliaire des boîtiers DAE en chambre forte. Les deux modules d’alimentation de secours situés au niveau intermédiaire de la baie système sont destinés à fournir l’alimentation auxiliaire du moteur.</p>
+    </span> <span>
+        <p>Le tableau électrique et l’unité d’alimentation installés de chaque côté de la baie sont accessibles par l’arrière. Ils offrent une interface centralisée et le contrôle de la distribution pour l’alimentation CA d’entrée. Les tableaux électriques sont raccordés aux lignes électriques CA d’entrée, disposent de l’interrupteur d’alimentation marche/arrêt principal et permettent d’établir des connexions avec les tableaux électriques situés dans la même zone d’alimentation. Les tableaux électriques distribuent ensuite l’alimentation aux différents composants ; ils sont également équipés d’interrupteurs marche/arrêt.</p>
+    </span> </html>

@@ -1,0 +1,86 @@
+﻿<html>
+	<title>MOTOR</title>
+
+	<span>
+		<p> El motor es la unidad central de procesamiento de I/O, diseñada de manera redundante para garantizar alta disponibilidad. Consta de directores redundantes (el director A y el director B); cada uno de estos contiene CPU multi-core, módulos de memoria e interfaces de conexión a módulos de I/O universales, como módulos de I/O front-end, back-end, InfiniBand, de compresión y flash.</p>
+	</span>
+	<span>
+		<p> A los ventiladores y las fuentes de alimentación del motor se puede acceder desde la parte delantera; a los módulos de I/O y al módulo de administración se puede acceder desde la parte posterior. Debido a que la cantidad de módulos universales de I/O usados en el motor depende de la funcionalidad requerida y de la capacidad de almacenamiento del sistema, algunos slots pueden permanecer sin utilizar.</p>
+	</span>
+	<span>
+		<p> La vista posterior del motor, los slots de módulos de I/O, y la numeración de los puertos físicos y lógicos se describen a continuación.</p>
+	</span>
+	<span>
+		<p>Números de puertos físicos</p>
+	</span>
+	<span><img src="phy_eng_ports_250f.gif" ratio="0.41"/></span>
+	<span>
+		<p>Números de puertos lógicos</p>
+	</span>
+	<span><img src="logical_eng_phy_ports_250f.gif" ratio="0.398"/></span>
+	<span>
+		<p> La siguiente tabla explica las reglas de ocupación de los slots de motor:</p>
+		<table>
+			<tr>
+				<td>Número de slot del motor</td>
+				<td>Componente</td>
+				<td>Descripción</td>
+			</tr>
+			<tr>
+				<td>0</td>
+				<td>Módulo flash</td>
+				<td>Siempre ocupado, reservado para flash.</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Módulo flash</td>
+				<td>Opcional; depende de la capacidad de almacenamiento del arreglo. Reservado para flash. </td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Módulo universal de front-end</td>
+				<td>Cualquier módulo de I/O de Fibre Channel o Ethernet puede ocupar este slot.</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Módulo universal de front-end</td>
+				<td>Opcional. Cualquier módulo de I/O de Fibre Channel o Ethernet puede ocupar este slot.</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Módulo de I/O de back-end</td>
+				<td>Siempre ocupado, reservado para back-end.</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Vacío</td>
+
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Módulo flash</td>
+				<td>Opcional; depende de la capacidad de almacenamiento del arreglo, reservado para flash.</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>Módulo de compresión</td>
+				<td>Siempre ocupado</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>Módulo universal de front-end</td>
+				<td>Opcional. Cualquier módulo de I/O de Fibre Channel o Ethernet puede ocupar este slot.</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>Módulo universal de front-end</td>
+				<td>Opcional. Cualquier módulo de I/O de Fibre Channel, Ethernet o compresión puede ocupar este slot.</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>Módulo de I/O InfiniBand</td>
+				<td>Ocupado en un sistema de múltiples motores.</td>
+			</tr>
+		</table>
+	</span>
+</html>

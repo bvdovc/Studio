@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009"
+          xmlns:s="library://ns.adobe.com/flex/spark"
+          mouseDownOutside="onMouseDownOut(event)"
+          useHandCursor="true"
+          buttonMode="true"
+		  preinitialize="dropDown_preinitializeHandler(event)" >
+	
+    <fx:Declarations>
+        <!-- Place non-visual elements (e.g., services, value objects) here -->
+    </fx:Declarations>
+
+    <fx:Metadata>
+        [Event(name="change", type="spark.events.IndexChangeEvent")]
+    </fx:Metadata>
+    <fx:Script source="../../../script/components/dropdown/dropDown.as"/>
+
+    <s:Button id="btnDrop"
+              height="100%"
+			  minWidth="{this.width}"
+              click="clickHandler(event)"
+              label="{_selectedLabel}"
+              skinClass="sym.viewer.mobile.views.skins.DropDownSkin"/>
+    <s:PopUpAnchor id="dropListAnchor"
+                   displayPopUp="false" >
+
+        <s:List id="bindingList"
+                dataProvider="{_dataProvider}"
+                change="onListIndexChanged(event)"
+                labelField="{_labelField}"
+                labelFunction="{_labelFunction}"
+                click="listClickHandler(event)"
+				allowMultipleSelection="{allowMultipleSelection}"
+				minWidth="{btnDrop.width}"
+                borderVisible="true"
+				selectionColor="0xa5c9d9"
+                mouseDownOutside="onListMouseDownOutside(event)"
+				skinClass="sym.viewer.mobile.views.skins.DropDownListSkin" >
+			<s:layout>
+				<s:VerticalLayout gap="0"
+								  horizontalAlign="contentJustify"
+								  requestedMaxRowCount="{!maxRowCount ? dataProvider.length : maxRowCount}"/>
+			</s:layout>
+			
+		</s:List>
+		
+    </s:PopUpAnchor>
+</s:VGroup>

@@ -1,0 +1,5 @@
+<html> <title>
+		CONFIGURAÇÃO </title> <span>
+		<p>Detalhes de configuração atual:</p>
+		<ul> <li>Número de mecanismos: {0}</li> <li>Número de DAEs: {1}</li> <li>Número máximo de drives: {2}</li> </ul>
+	</span> <span><p>Esta configuração é destinada a clientes que querem criar uma configuração de array padrão de 6 gabinetes no futuro, mas estão atualmente usando apenas DAEs de alta densidade.</p> </span> </html>

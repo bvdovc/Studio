@@ -1,0 +1,9 @@
+﻿<html>
+	<title>GABINETE DO SISTEMA </title>
+	<span><p>O gabinete do sistema VMAX 250F abriga 1 ou 2 V-Bricks. Cada V-Brick consiste em 1 mecanismo, 2 gavetas Disk Array Enclosure de alta densidade com 25 unidades e 2 SPSs (Standby Power Supply, fonte de alimentação em standby) que fornecem energia reserva para os mecanismos. Uma PDU (Power Distribution Unit, unidade de distribuição de energia) e um PDP (Power Distribution Panel, painel de distribuição de energia) que fornecem energia às zonas redundantes de alimentação (zona A e zona B) estão instaladas em cada lado do rack. </p></span>
+	<span><p>Se instalados em um rack padrão da EMC, os componentes do VMAX 250F ocupam apenas a metade inferior do rack (as 2U inferiores do rack), deixando o restante do rack disponível para outros componentes. Se instalado em um minirrack, os componentes do VMAX 250F ocupam totalmente o espaço em rack. </p>
+	
+	</span>
+</html>
+
+

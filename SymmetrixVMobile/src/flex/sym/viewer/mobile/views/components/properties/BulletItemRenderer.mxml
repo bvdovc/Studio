@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                xmlns:s="library://ns.adobe.com/flex/spark"
+                width="100%"
+                autoDrawBackground="false">
+    <fx:Declarations>
+        <fx:Number id="bulletPadding">20</fx:Number>
+    </fx:Declarations>
+    <s:layout>
+        <s:HorizontalLayout gap="5"
+							paddingTop="1"
+                            verticalAlign="top" 
+                            paddingLeft="{data.indent * bulletPadding}"
+                            horizontalAlign="left"/>
+    </s:layout>         
+    <s:VGroup verticalAlign="top" height="14" width="11" paddingTop="0" paddingBottom="0">
+        <s:Image source="@Embed('/images/triangleBullet.PNG')" width="10" height="10"/>
+    </s:VGroup> 
+    <s:Label text="{data.value}" width="100%" styleName="propertyParagraph"/>
+    
+</s:ItemRenderer>

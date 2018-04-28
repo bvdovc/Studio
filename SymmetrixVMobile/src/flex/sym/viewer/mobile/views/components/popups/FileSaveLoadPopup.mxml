@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                           xmlns:s="library://ns.adobe.com/flex/spark"
+						   width="{FlexGlobals.topLevelApplication.width * 0.4}"
+						   height="{FlexGlobals.topLevelApplication.height * 0.3}"
+						   minWidth="400"
+						   minHeight="230"
+                           skinClass="sym.viewer.mobile.views.skins.FileSaveLoadPopupSkin"
+						   updateComplete="fileSaveLoadPopUpUpdateCompleteHandler(event)" 
+						   visible="{isVisible}"
+						   open="onPopUpOpened(event)" >
+	<fx:Script>
+		<![CDATA[
+			
+			import sym.viewer.mobile.script.ViewConstants;
+			
+		]]>
+	</fx:Script>
+    <fx:Declarations>
+        <!-- Place non-visual elements (e.g., services, value objects) here -->
+		<s:DropShadowFilter id="shadow"
+							alpha="0.3"
+							distance="5"
+							angle="90"/>
+    </fx:Declarations>
+
+    <fx:Script source="../../../script/components/popups/fileSaveLoadPopup.as"/>
+
+	<s:HGroup id="titleArea" 
+			  verticalCenter="0"
+			  verticalAlign="middle"
+			  horizontalAlign="center"
+			  height="15%">
+		<s:Label styleName="popupTitle"
+				 fontSize="{17 * FlexGlobals.topLevelApplication.height/ViewConstants.DEFAULT_APP_HEIGHT}"
+				 text="{title}"/>
+	</s:HGroup>
+	
+	<s:VGroup width="90%"
+			  height="100%" 
+			  verticalAlign="middle">
+		<s:Label text="{getResString('main', 'SAVE_FILE')}"
+				 fontSize="{17 * FlexGlobals.topLevelApplication.height/ViewConstants.DEFAULT_APP_HEIGHT}"
+				 width="100%"/> 
+        <s:TextInput id="fileNameTextInput"
+                     prompt="{prompt}"
+                     width="100%"
+                     minHeight="35"
+                     styleName="textInputBackground"
+                     fontFamily="Helvetica Nueu"/>
+	</s:VGroup>
+	<s:HGroup id="btnGroup"
+			  width="90%" 
+			  variableColumnWidth="false"
+			  gap="10" 
+			  height="10%"
+			  verticalAlign="middle"
+			  horizontalAlign="right"
+			  columnWidth="{(btnGroup.width/2 - btnGroup.gap)/2}"
+			  fontSize="15" >
+	    <s:Button label="{getResString('main', 'EXPORT_YES_BTN')}"
+				  width="100%"
+				  height="100%"
+	              click="yesButtonClicked(event)"
+				  buttonMode="true"
+				  useHandCursor="true"
+				  skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"/>
+	    <s:Button id="noButton" 
+				  label="{getResString('main', 'EXPORT_NO_BTN')}"
+				  width="100%"
+				  height="100%"
+                  click="closePopUp(event)"
+				  buttonMode="true"
+				  useHandCursor="true"
+				  skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"/>
+	</s:HGroup>
+
+</s:SkinnablePopUpContainer>

@@ -1,0 +1,14 @@
+<html>
+    <title>         GABINETE DO SISTEMA 2
+    </title>     <span>
+        <p>O Gabinete do Sistema 2 hospeda o Mecanismo 2, com no máximo 10 DAEs (Disk Array Enclosures) padrão ou no máximo 12 DAEs em configurações de array de alta densidade. O número mínimo de DAEs em qualquer gabinete de sistema é 4, independentemente do tipo de configuração do array. Essas 4 DAEs são DAE 1, DAE 2, DAE 5 e DAE 6, também conhecidas como as DAEs do compartimento.</p>     
+    </span>      <span>
+        <p>Os principais componentes de hardware localizados apenas no Gabinete do Sistema 2 são 2 MIBEs (Matrix Interface Board Enclosures, compartimentos para placa de interface matriz) redundantes que garantem alta disponibilidade em arrays de vários mecanismos fornecendo conectividade entre os mecanismos.</p>     
+    </span>      <span>
+        <p>Os componentes de alimentação do gabinete do sistema incluem módulos SPS (Standby Power Supply, fonte de alimentação em standby), PDUs (Power Distribution Units, unidades de distribuição de energia) e PDPs (Power Distribution Panels, painéis de distribuição de energia). Os componentes de alimentação em cada lado do gabinete pertencem a zonas de alimentação independentes que devem ser conectadas a linhas independentes da fonte de alimentação CA para assegurar a redundância de energia.</p>     
+    </span>      <span>
+        <p>Dois módulos SPS na parte inferior do gabinete do sistema fornecem energia reserva para as DAEs do compartimento. Os 2 módulos SPS no meio do gabinete do sistema fornecem energia reserva para o mecanismo.</p>     
+    </span>      <span>
+        <p>As PDUs e os PDPs instalados em todos os lados do gabinete podem ser acessados pela parte traseira. Eles fornecem a interface centralizada e o controle de distribuição para a fonte de alimentação CA de entrada. Os PDPs se conectam às linhas da fonte de alimentação CA de entrada, fornecem o principal interruptor de alimentação liga/desliga e também se conectam aos PDPs que estão dentro da mesma zona de alimentação. Os PDPs distribuem ainda mais energia para os componentes individuais e também contêm os interruptores de alimentação liga/desliga.</p>     
+    </span> 
+</html>

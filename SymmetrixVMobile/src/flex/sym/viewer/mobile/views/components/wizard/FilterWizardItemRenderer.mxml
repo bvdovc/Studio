@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                xmlns:s="library://ns.adobe.com/flex/spark"
+                preinitialize="preinitializeHandler(event)"
+                autoDrawBackground="false"
+                xmlns:breadcrumb="sym.viewer.mobile.views.components.breadcrumb.*">
+    <fx:Script>
+        <![CDATA[
+            import mx.core.FlexGlobals;
+            
+            import sym.viewer.mobile.script.ViewConstants;
+            
+            [Bindable]
+            private var ctrl:SymmController = SymmController.instance;
+        ]]>
+    </fx:Script>
+    <fx:Declarations>
+        <s:DropShadowFilter id="shadow"
+                            alpha="0.3"
+                            distance="5"
+                            angle="90"/>
+    </fx:Declarations>
+
+    <fx:Script source="../../../script/components/wizard/filterWizardItemRenderer.as"/>
+
+	<s:BorderContainer id="backgroundArrowContent"
+					   width="50%"
+					   height="{titleContent.height}"
+					   borderVisible="false">
+		<s:backgroundFill>
+			<s:LinearGradient rotation="90">
+				<s:GradientEntry color="#77CBF8" />
+				<s:GradientEntry color="#49A1E0"/>
+			</s:LinearGradient>
+		</s:backgroundFill>
+	</s:BorderContainer>
+    <breadcrumb:BreadCrumbArrowedShape id="titleContent"
+                                       width="90%"
+                                       height="100%"
+									   left="10"
+                                       arrowSharpness="4"
+                                       isStartingLink="false"
+                                       colorIndex="3" 
+                                       colors="{[0xFFFFFF, 0xD6D6D6]}"
+                                       useHandCursor="false"
+                                       buttonMode="false"/>  
+	<s:HGroup height="100%"
+			  verticalAlign="middle"
+			  paddingLeft="25"
+			  horizontalAlign="left"
+			  paddingRight="{this.width * 0.1}"
+              enabled="{!(data.toString() == getResString('main', FilterController.STATE_DISPERSED_VG3R) &amp;&amp; ctrl.dispersionDisabled)}">
+        <s:Label id="stepItem"
+                 fontSize="{16 * FlexGlobals.topLevelApplication.height/ViewConstants.DEFAULT_APP_HEIGHT}"
+                 paddingTop="2" 
+                 verticalAlign="middle"
+                 buttonMode="true"
+                 useHandCursor="true"
+                 click="labelClickedHandler(event)"/>
+        
+    </s:HGroup>
+</s:ItemRenderer>

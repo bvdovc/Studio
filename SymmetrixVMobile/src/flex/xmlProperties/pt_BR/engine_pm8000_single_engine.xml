@@ -1,0 +1,20 @@
+<html>
+	<title>Mecanismo</title>
+
+	<span>
+		<p>O mecanismo é a unidade central de processamento de I/O, redundantemente criado para alta disponibilidade. Directors redundantes (director A e director B) e cada um deles contém cache, duas CPUs Broadwell com 18 núcleos a 2,8 GHz e interfaces de conexão a módulos de I/O, como os módulos universais de NVMe front-end e back-end, InfiniBand, compactação e desduplicação e de I/O de NVMe flash. O mecanismo fornece 72 núcleos de CPU e um máximo de 2 TB de cache.</p>
+	</span>	
+	<span>
+		<p>As figuras a seguir ilustram a visão posterior de um mecanismo do PowerMax 8000 em uma configuração de mecanismo único e de vários mecanismos. As figuras mostram os tipos de módulo de I/O, as designações de slot e o número de portas. Nem todos os slots universais de NVMe front-end e flash são preenchidos em uma configuração típica.</p>
+	</span>
+	<span>
+		<p>Configuração de mecanismo único:</p>
+	</span>
+		<span><img src="PowerMax8000_SingleEngine.jpg" ratio="0.57"/></span>
+	<span>
+		<p>A maioria dos componentes dos mecanismos são acessados pela parte traseira. Apenas os ventiladores de refrigeração e as fontes de alimentação dos mecanismos são acessados pela parte frontal.</p>
+	</span>
+		
+</html>
+
+

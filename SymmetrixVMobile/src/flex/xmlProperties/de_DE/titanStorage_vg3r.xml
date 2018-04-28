@@ -1,0 +1,10 @@
+<html>
+	<title>
+		SPEICHER-BAY </title>
+	<span>
+		<p>Speicher-Bays sind optional und werden nur bei System-Bays mit zwei Engines unterstützt. Ein Speicher-Bay muss im System-Bay verschraubt sein und kann nicht verteilt werden. Die Speicher-Bays unterstützen dieselben DAE-Typen wie das System-Bay und maximal acht (8) DAEs in einer beliebigen Kombination. In Speicher-Bays sind bis zu 8 DAEs (4 pro Engine im zugehörigen System-Bay) untergebracht.</p>
+	</span>
+	<span>
+		<p>Die Speicher-Bays benötigen eine drei- oder einphasige Stromversorgung und unterstützen Schaltungen in Dreieckkonfiguration (4 Adern; USA) oder Sternkonfiguration (5 Adern; international). Jedes Bay mit dreiphasiger Stromversorgung unterstützt zwei Stromanschlüsse. Jedes Bay mit einphasiger Stromversorgung benötigt mindestens vier Stromanschlüsse.</p>
+	</span>
+</html>

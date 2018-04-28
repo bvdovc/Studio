@@ -1,0 +1,26 @@
+<html> 
+	<title>
+		MECANISMO 
+	</title> 
+	<span>
+	<p>O VMAX 20K/VMAX Engine é o componente principal do gabinete do sistema que fornece conectividade de memória física, capacidade de processamento da CPU, host front-end, SRDF e array externo, conectividade back-end com DAEs e conectividade com outros mecanismos no array. 
+Cada mecanismo inclui:</p>
+		<ul> 
+			<li>2 directors que aceitam conexões front-end, back-end, de array externo e SRDF</li> 
+			<li>32, 64, ou 128 GB de memória física</li> 
+			<li>2 SIBs (System Interface Boards, placas de interface do sistema) (1 por director) que conectam o director e a MIBE (Matrix Interface Board Enclosure, compartimento para placa de interface matriz)</li> 
+			<li>4 módulos de I/O de back-end (2 por director) </li> 
+			<li>4 módulos de I/O de front-end (2 por director) que fornecem as seguintes conexões (por módulo):</li> 
+			<li indent="1">4 portas Fibre Channel (de 2, 4 ou 8 Gb/s)</li> 
+			<li indent="1">2 portas SRDF Fibre Channel (de 2, 4 ou 8 Gb/s)</li>
+			<li indent="1">2 portas FCoE (Fibre Channel over Ethernet ) (10 Gb/s)</li> 
+			<li indent="1">2 portas FICON (de 2, 4 ou 8 Gb/s)</li>
+			<li indent="1">2 portas iSCSI (1 Gb/s)</li> 
+			<li indent="1">2 portas iSCSI/FCoE (10 Gb/s)</li>
+			<li indent="1">2 portas SRDF GbE (1 Gb/s ou 10 Gb/s)</li> 
+			<li>2 módulos de gerenciamento que fornecem monitoramento ambiental</li> 
+			<li>2 fontes de alimentação de mecanismos</li> 
+			<li>4 ventiladores de refrigeração do mecanismo</li> 
+		</ul>
+	</span> 
+</html>

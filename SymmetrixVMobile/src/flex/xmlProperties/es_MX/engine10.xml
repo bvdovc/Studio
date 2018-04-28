@@ -1,0 +1,23 @@
+<html>
+	<title>
+		MOTOR
+	</title>
+	<span>
+	<p>El motor VMAX 10K es el componente clave de la bahía del sistema que proporciona memoria física, CPU, host de front-end, conectividad de arreglo externo y SRDF, conectividad de back-end a gabinetes de arreglos de almacenamiento (DAE), y conectividad con otros motores del arreglo. 
+Cada motor incluye lo siguiente:</p>
+		<ul>
+			<li>Dos directores que admiten conexiones de front-end y de back-end.</li>
+			<li>Memoria física de 96 y 128 GB.</li>
+			<li>Dos tarjetas de interfaz de sistema (SIB) en sistemas de varios motores. El motor 1, en un arreglo de un motor, no contiene SIB.</li>
+			<li>Cuatro módulos de I/O de back-end (cada uno de los cuales contiene cuatro puertos de 4 Gb/s).</li>
+			<li>Cuatro módulos de I/O de front-end que proporcionan las siguientes conexiones:</li>
+			<li indent="1">Hasta 16 puertos Fibre Channel (2, 4 y 8 Gb/s).</li>
+			<li indent="1">Hasta cuatro puertos Fibre Channel SRDF (2, 4 y 8 Gb/s).</li>
+			<li indent="1">Hasta ocho puertos iSCSI/FCoE (10 Gb/s).</li>
+			<li indent="1">Hasta ocho puertos iSCSI (1 Gb/s).</li>
+			<li indent="1">Hasta cuatro puertos GigE SRDF (1 Gb/s y 10 Gb/s).</li>
+			<li>Dos módulos de administración (uno por director).</li>
+			<li>Cuatro fuentes de alimentación de motor (dos por director).</li>
+	    </ul>
+	</span> 
+</html>

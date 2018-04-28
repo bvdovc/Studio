@@ -1,0 +1,4 @@
+<html>
+	<title> 		BAHÍA DE SISTEMA
+	</title> 	<span><p>La bahía de sistema aloja de uno a ocho motores, MIBE, componentes de alimentación, componentes del procesador de servicio (servidor, UPS, KVM) y dos placas de interfaz matriz (MIBE) que proporcionan conectividad entre los motores.</p></span> 	<span><p>Se asignan números a los motores en función de su posición en la bahía de sistema, desde la parte inferior (motor 1) hacia la parte superior (motor 8). Los motores primero se agregan en el medio de la bahía, a partir del motor 4. Pueden agregarse los motores 5, 3, 6, 2, 7, 1 y 8 con sus bahías de almacenamiento designadas para adaptarse a los crecientes requisitos de capacidad de almacenamiento.</p></span> 	<span><p>Si se implementa la ubicación de dispersión de bahías de sistema, el arreglo incluye dos bahías de sistema separadas físicamente y las bahías de almacenamiento correspondientes ubicadas en cada site de bahía de sistema.</p></span>
+</html>    

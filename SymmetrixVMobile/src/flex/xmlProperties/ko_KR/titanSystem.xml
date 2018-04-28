@@ -1,0 +1,30 @@
+<html>
+	<title> 		TITAN 시스템 베이
+	</title> 	<span>
+		<h>시스템 베이 1</h>
+ 		<ul>
+			<li>시스템 베이 1은 엔진 1과 최대 10개의 DAE(Disk Array Enclosure)를 수용합니다.</li>
+			<li>랙 하단에 있는 한 쌍의 SPS(대기 전원 공급 장치) 모듈은 볼트 DAE에 예비 전력을 공급합니다.
+두 번째 SPS 모듈 쌍은 엔진에 예비 전력을 공급합니다.</li> 
+			<li>또한 시스템 베이 1은 스토리지 서비스 작업에 필요한 소프트웨어 유틸리티를 제공하는 서비스 프로세서(서버, KVM 및 UPS)를 수용합니다.</li>
+			<li>PDU(Power Distribution Unit) 및 PDP(Power Distribution Panel)는 랙의 양쪽에 있으며 후면에서 접근할 수 있습니다.</li>
+		</ul> 	
+	</span>	 	 	<span>
+		<h>시스템 베이 2</h>
+		<ul>	
+			<li>시스템 베이 2는 엔진 2와 최대 10개의 DAE(Disk Array Enclosure)를 수용합니다.</li>
+			<li>랙 하단에 있는 한 쌍의 SPS(대기 전원 공급 장치) 모듈은 볼트 DAE에 예비 전력을 공급합니다.
+두 번째 SPS 모듈 쌍은 엔진에 예비 전력을 공급합니다.</li>
+			<li>또한 시스템 베이 2는 스토리지의 엔진 내부 접속을 제공하는 MIBE(Matrix Interface Board Enclosure)를 포함합니다.</li>
+			<li>PDU(Power Distribution Unit) 및 PDP(Power Distribution Panel)는 랙의 양쪽에 있으며 후면에서 접근할 수 있습니다.</li>
+		</ul> 	
+	</span>	 	<span>
+		<h>시스템 베이 3 및 시스템 베이 4(동일한 구성 요소 포함)</h>
+		<ul>
+			<li>시스템 베이 3/4는 엔진 3/4와 최대 10개의 DAE(Disk Array Enclosure)를 수용합니다.</li>
+			<li>랙 하단에 있는 한 쌍의 SPS(대기 전원 공급 장치) 모듈은 볼트 DAE에 예비 전력을 공급합니다.
+두 번째 SPS 모듈 쌍은 엔진에 예비 전력을 공급합니다.</li>
+			<li>PDU(Power Distribution Unit) 및 PDP(Power Distribution Panel)는 랙의 양쪽에 있으며 후면에서 접근할 수 있습니다.</li>
+		</ul> 	
+	</span>
+</html>  

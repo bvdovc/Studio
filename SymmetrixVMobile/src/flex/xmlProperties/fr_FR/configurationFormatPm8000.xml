@@ -1,0 +1,17 @@
+<html>
+	<title>PowerMax 8000</title>
+	<span>
+		<h>Détails de la configuration actuelle :</h>
+		<ul>
+		    <li>Capacité utile de l’OS (To) : {0}</li>
+		    <li>Capacité utile du MF (To) : {4}</li>
+			<li>Nombre de Brick : {1}</li>
+			<li>Nombre de boîtiers DAE : {2} </li>
+			<li>Niveau RAID : {7} </li>
+			<li>Nombre de disques : {5}</li>
+			<li>Nombre d’emplacements de disque disponibles : {3}</li>
+			<li>Nombre de ports FE : {6}</li>
+		</ul>
+	</span>
+</html>
+

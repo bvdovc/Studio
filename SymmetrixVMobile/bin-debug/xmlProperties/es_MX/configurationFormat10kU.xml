@@ -1,0 +1,19 @@
+<html> 
+	<title>
+		CONFIGURACIÓN 
+	</title> 
+	<span>
+		<p>Detalles de la configuración actual:</p>
+		<ul> 
+			<li>Cantidad de motores: {0}</li> 
+			<li>Cantidad de DAE: {1}</li> 
+			<li>Cantidad máxima de unidades: {2}</li> 
+		</ul>
+	</span> 
+	<span><p>Las configuraciones de los arreglos varían de sistemas de una a seis bahías y de uno a cuatro motores. Los motores son las unidades de procesamiento de I/O clave y cada uno reside en su propia bahía del sistema. Cada bahía del sistema contiene componentes de alimentación, un mínimo de cuatro gabinetes de arreglos de discos (DAE), y un máximo de ocho DAE en las configuraciones estándares y de 12 DAE en las configuraciones de arreglos de alta densidad.</p></span> 
+	<span><p>Las configuraciones estándares admiten DAE estándares (de 15 unidades) y DAE de alta densidad (de 25 unidades). Las configuraciones de arreglos de alta densidad admiten solo DAE de 25 unidades. La configuración estándar máxima consta de cuatro bahías del sistema y dos bahías de almacenamiento, mientras que la configuración de alta densidad máxima consta de cuatro bahías del sistema solamente. </p></span> 
+	<span><p>La configuración de arreglo estándar admite una o dos bahías de almacenamiento (bahía de almacenamiento 1A y bahía de almacenamiento 1B) a fin de maximizar la capacidad de almacenamiento para cada motor. Las bahías de almacenamiento contienen DAE y los componentes de alimentación.</p></span> 
+	<span><p>Cada motor se conecta a todos los gabinetes de arreglos de discos de la bahía del sistema y los controla. Si se utilizan bahías de almacenamiento, el motor 1 y el motor 2 se conectan a los DAE dedicados de la bahía de almacenamiento 1A, y el motor 3 y el motor 4 se conectan a los DAE dedicados de la bahía de almacenamiento 1B.</p></span> 
+	<span><p>Los componentes del gateway de NAS que proporcionan acceso a los datos a nivel de archivo en el arreglo siempre residen en la bahía del sistema 1 en las configuraciones de arreglos de alta densidad y en la bahía de almacenamiento 1A en las configuraciones de arreglos estándares.</p></span> 
+	<span><p>La dispersión de las bahías del sistema está disponible para las configuraciones de tres y de cuatro motores. La dispersión de las bahías del sistema es una opción para la ubicación de bahías que permite la separación física entre la bahía del sistema 2 y la bahía del sistema 3 a fin de satisfacer posibles restricciones de superficie. La distancia máxima entre la bahía del sistema 2 y la bahía del sistema 4 es de 10.0 m (32.8 ft).</p></span> 
+</html>

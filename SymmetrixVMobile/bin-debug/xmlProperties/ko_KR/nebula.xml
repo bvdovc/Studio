@@ -1,0 +1,15 @@
+<html>
+	<title>DAE 24(24슬롯 Disk Array Enclosure) </title>
+	<span><p>DAE 24는 높이 2U, 깊이 19의 엔클로저로, 플래시 드라이브에 연결된 PCIe NVMe를 최대 24개까지 장착할 수 있습니다.
+	
+	</p></span>	
+	<span>
+	<p>주요 기능은 다음과 같습니다.</p>
+		<ul>
+			<li>이중화된 핫 스왑 LCC(Link Control Card)</li>
+			<li>각각 별도로 전원을 공급받으며 드라이브 슬롯당 25W의 전력과 N+1 전원 이중화를 제공하는 전원 공급 장치 2개 </li>
+			<li>N+1 냉각 팬 자동 조절</li>
+			<li>4레인 미니 SAS HD PCIe 커넥터 16개</li>
+		</ul>
+	</span>
+</html> 

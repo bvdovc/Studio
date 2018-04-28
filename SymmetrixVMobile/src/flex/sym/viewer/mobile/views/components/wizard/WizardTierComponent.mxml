@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:VGroup xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark"
+		  xmlns:dropdown="sym.viewer.mobile.views.components.dropdown.*" 
+		  xmlns:validation="sym.viewer.mobile.validation.*"
+		  xmlns:utils="sym.objectmodel.utils.*"
+		  paddingLeft="10" 
+		  paddingRight="15"
+		  paddingTop="40"
+		  paddingBottom="20"
+		  gap="{allFlashArraysSelected ? 20 :10}"
+		  width="100%"
+		  height="100%"
+		  preinitialize="onPreinitialize(event)"
+		  resize="resizeHandler(event)"
+		  creationComplete="onCreationComplete(event)" >
+	
+	<fx:Script source="../../../script/components/wizard/wizardTierComponent.as" />
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		
+		<s:NumberValidator id="capacityValidator" 
+						   allowNegative="false"
+						   domain="real" 
+						   decimalSeparator="."
+						   fractionalDigits="1" 
+						   required="true"
+						   valid="capacityValidationHandler(event)"
+						   invalid="capacityValidationHandler(event)"
+						   minValue="{_minUsableCapacity}"
+						   maxValue="{_maxUsableCapacity}"
+                           requiredFieldError="{getResString('main', 'VALIDATION_REQUIRED_FIELD')}"
+						   lessThanMinError="{StringUtil.substitute(getResString('main', 'STATE_USABLE_CAPACITY_VALIDATION_ERROR'), _minUsableCapacity, _maxUsableCapacity)}"
+						   greaterThanMaxError="{capacityValidator.lessThanMinError}"
+						   source="{capacityField}" 
+						   property="text"
+						   triggerEvent="change" />
+		
+		<s:NumberValidator id="mfCapValidator" 
+						   allowNegative="false"
+						   domain="int" 
+						   required="false"
+						   minValue="1"
+						   maxValue="100"
+						   lessThanMinError="{StringUtil.substitute(getResString('main', 'STATE_USABLE_CAPACITY_VALIDATION_ERROR'), MAINFRAME_MIN_CAPACITY_PERCENT, MAINFRAME_MAX_CAPACITY_PERCENT)}"
+						   greaterThanMaxError="{mfCapValidator.lessThanMinError}"
+						   valid="mfCapValidationHandler(event)"
+						   invalid="mfCapValidationHandler(event)"
+						   source="{mfCapacityField}" 
+						   property="text"
+						   triggerEvent="change" />
+        
+        <validation:NumberModuloValidator id="driveCountModuloValidator"
+                                          required="true"
+										  valid="driveCountModuloValidationHandler(event)"
+										  invalid="driveCountModuloValidationHandler(event)"
+                                          requiredFieldError="{getResString('main', 'VALIDATION_REQUIRED_FIELD')}"
+                                          source="{driveCountField}"
+                                          property="text"
+                                          triggerEvent="change"/>
+                                          
+		<utils:CapacityNumberFormatter id="capacityFormatter"/>
+		
+		<s:NumberFormatter id="mfCapFormatter" 
+						   leadingZero="false"
+						   fractionalDigits="0"/>
+		
+
+	</fx:Declarations>
+	
+	<s:HGroup id="tierSelectionGroup"
+			  verticalAlign="baseline" 
+			  horizontalAlign="left" 
+			  width="100%"
+			  gap="10"
+			  height="60"
+			  visible="{!allFlashArraysSelected}"
+			  includeInLayout="{!allFlashArraysSelected}" >
+		
+		<s:Label id="tierLabel"
+				 textAlign="left" 
+				 fontWeight="bold"
+				 minWidth="{capacityLabel.minWidth}"
+				 text="{getResString('main', 'STATE_TIER_DESCRIPTION')}" />
+		
+		<dropdown:DropDown id="tierDrop"
+						   dataProvider="{_tierSolutionDP}"
+						   width="200"
+						   change="onListChange(event)" />
+		
+	</s:HGroup>
+	
+	<s:Label id="afaCapacityInfo"
+			 width="100%"
+			 height="{(isPM2000() || isPM8000()) ? 15 : 45}"
+			 visible="{allFlashArraysSelected}"
+			 includeInLayout="{allFlashArraysSelected}"
+			 text="{getResString('main', 'STATE_USABLE_CAPACITY_DESCRIPTION')}"/>
+	
+	<s:HGroup id="hostTypeGroup"
+			  gap="{(isPM8000()) ? 40 : 20}"
+			  width="100%"
+			  verticalAlign="baseline"
+			  visible="{allFlashArraysSelected}"
+			  includeInLayout="{allFlashArraysSelected}">
+		
+		<s:Label id="hostTypeLbl" 
+				 textAlign="right"
+				 fontWeight="bold"
+				 paddingRight="{isPM8000() ? -20 : 0}"
+				 minWidth="{capacityLabel.width}"
+				 text="{getResString('main', 'HOST_CONNECTIVITY_TYPE')}"/>
+		
+		<dropdown:DropDown id="hostTypeDrop"
+						   minWidth="140"
+						   change="hostTypeChangeHandler(event)" />
+	</s:HGroup>
+	
+	<s:VGroup width="100%"
+			  height="{allFlashArraysSelected ? 40 : 90}"
+			  gap="90"
+			  visible="{!_customConfigSelected}"
+			  includeInLayout="{!_customConfigSelected}" >
+		<s:HGroup id="capacityGroup"
+				  horizontalAlign="left"
+				  verticalAlign="baseline"
+				  gap="{isPM8000() ? 40 : allFlashArraysSelected ? 20 : 10}"
+				  width="100%">
+			
+			<s:Label id="capacityLabel"
+					 textAlign="left"
+					 fontWeight="bold"
+					 paddingRight="-20"
+					 width="325"
+					 text="{StringUtil.substitute(getResString('main', 'STATE_TIER_USABLE_CAPACITY'), _minUsableCapacity, _maxUsableCapacity)}" />
+			
+			<s:TextInput id="capacityField"
+						 editable="true"
+						 height="30"
+						 width="{allFlashArraysSelected ? hostTypeDrop.width : 200}"
+						 restrict="0-9."
+						 interactionMode="touch"
+						 maxChars="8"
+						 toolTipShown="{CustomToolTip.hideCurrent()}"
+						 styleName="wizardTextInputStyle"
+						 focusOut="onCapacityValueChanged(event)"
+						 enter="onCapacityValueChanged(event)"/>
+		</s:HGroup>
+		<s:HGroup id="mfCapacityGroup"
+				  horizontalAlign="left"
+				  verticalAlign="baseline"
+				  includeInLayout="{!is250F() &amp;&amp; !isPM2000()}"
+				  visible = "false"
+				  gap="{isPM8000() ? 40 : allFlashArraysSelected ? 20 : 10}"
+				  width="100%" >
+			
+			<s:Label id="mfCapacityLabel"
+					 textAlign="right"
+					 fontWeight="bold"
+					 paddingRight="{isPM8000() ? -20 : 0}"
+					 minWidth="{allFlashArraysSelected ? capacityLabel.width : capacityLabel.minWidth}"
+					 text="{StringUtil.substitute(getResString('main', 'STATE_TIER_MAINFRAME_CAPACITY'), mfCapValidator.minValue, mfCapValidator.maxValue)}" />
+			
+			<s:TextInput id="mfCapacityField"
+						 editable="true" 
+						 height="30"
+						 width="{allFlashArraysSelected ? 140 : 200}"
+						 restrict="0-9"
+						 maxChars="3"
+						 focusOut="mfCapValueChanged(event)"
+						 enter="mfCapValueChanged(event)"
+						 styleName="wizardTextInputStyle"/>
+		</s:HGroup>		
+	</s:VGroup>
+	
+	<s:HGroup id="afaRaidGroup"
+			  gap="{isPM8000() ? 40 : 20}"
+			  width="100%"
+			  height="70"
+			  verticalAlign="baseline"
+			  visible="{allFlashArraysSelected}"
+			  includeInLayout="{allFlashArraysSelected}">
+		
+		<s:Label id="afaRaidLbl" 
+				 textAlign="right"
+				 fontWeight="bold"
+				 paddingRight="{isPM8000() ? -20 : 0}"
+				 minWidth="{capacityLabel.width}"
+				 text="{getResString('main', 'WIZARD_DRIVE_RAID')}"/>
+		
+		<dropdown:DropDown id="afaRaidDrop"
+						   minWidth="{hostTypeDrop.width}"
+						   change="raidChangeHandler(event)" />
+	</s:HGroup>
+	
+	<s:HGroup id="driveSelectionGroup"
+			  gap="10" 
+			  width="100%"
+			  height="50"
+			  verticalAlign="middle" 
+			  horizontalAlign="left"
+			  visible="{_customConfigSelected}"
+			  includeInLayout="{_customConfigSelected}" >
+		
+		<s:VGroup id="driveTypeGroup"
+				  verticalAlign="middle"
+				  height="100%"
+				  width="100%"
+				  horizontalAlign="left">
+			<s:Label id="driveTypeLabel"
+					 textAlign="left" 
+					 fontWeight="bold"
+					 minWidth="100" 
+					 text="{getResString('main', 'WIZARD_DRIVE_TYPE')}" />
+			<dropdown:DropDown id="driveTypeDrop"
+							   dataProvider="{_driveTypeDP_family}"
+							   minWidth="120"
+							   maxRowCount="{Constants.WIZARD_DROP_DOWN_MAX_ROWS}"
+							   prompt="{getResString('main', 'WIZARD_DROPDOWN_DEFAULT_SELECTION')}"
+							   change="onListChange(event)"  />
+		</s:VGroup>	
+		<s:VGroup id="driveSizeGroup"
+				  verticalAlign="middle"
+				  height="100%"
+				  width="100%"
+				  horizontalAlign="left">
+			<s:Label id="driveSizeLabel"
+					 fontWeight="bold"
+					 textAlign="left" 
+					 minWidth="100" 
+					 text="{getResString('main', 'WIZARD_DRIVE_SIZE')}" />
+			<dropdown:DropDown id="driveSizeDrop"
+							   dataProvider="{_driveSizeDP}"
+							   minWidth="120"
+							   maxRowCount="{Constants.WIZARD_DROP_DOWN_MAX_ROWS}"
+							   prompt="{getResString('main', 'WIZARD_DROPDOWN_DEFAULT_SELECTION')}"
+							   change="onListChange(event)"  />
+			
+		</s:VGroup>	
+		<s:VGroup id="raidGroup"
+				  verticalAlign="middle"
+				  width="100%"
+				  height="100%"
+				  horizontalAlign="left">
+			<s:Label id="driveRaidLabel"
+					 textAlign="left" 
+					 fontWeight="bold"
+					 minWidth="100" 
+					 text="{getResString('main', 'WIZARD_DRIVE_RAID')}" />
+			<dropdown:DropDown id="driveRaidDrop"
+							   dataProvider="{_driveRaidDP}"
+							   minWidth="120"
+							   maxRowCount="{Constants.WIZARD_DROP_DOWN_MAX_ROWS}"
+							   prompt="{getResString('main', 'WIZARD_DROPDOWN_DEFAULT_SELECTION')}"
+							   change="onListChange(event)"  />
+			
+		</s:VGroup>	
+		<s:VGroup id="driveCountGroup"
+				  width="100%"
+				  height="100%"
+				  verticalAlign="middle"
+				  horizontalAlign="left"
+				  paddingBottom="5" >
+			<s:Label id="driveCountLabel" 
+					 textAlign="left" 
+					 minWidth="100" 
+					 fontWeight="bold"
+					 text="{getResString('main', 'WIZARD_DRIVE_COUNT')}" />
+			<s:TextInput id="driveCountField"
+						 editable="true" 
+						 height="30"
+						 width="120"
+						 restrict="0-9"
+						 maxChars="4"
+						 toolTipShown="{CustomToolTip.hideCurrent()}"
+						 styleName="wizardTextInputStyle"
+						 change="driveCountField_changeHandler(event)"
+						 enter="driveCountField_changeHandler(null)" /> 
+		</s:VGroup>
+		
+		<s:VGroup width="100%"
+				  height="100%"
+				  verticalAlign="bottom"
+				  horizontalAlign="left" >
+			<s:Button id="addBtn"
+					  label="{getResString('main', 'WIZARD_DRIVE_ADD_BTN')}"
+					  minWidth="100"
+					  skinClass="sym.viewer.mobile.views.skins.FilterWizardButtonSkin"
+					  buttonMode="true"
+					  useHandCursor="true"
+					  enabled="{_inputFieldsSelected}"
+					  click="composeTierLine(event)" />
+		
+		</s:VGroup>	
+	</s:HGroup>
+	
+	<s:DataGrid id="tierDG" 
+				dataProvider="{_dgDataProvider}"
+				width="100%"
+				height="100%"
+				editable="{_customConfigSelected}"
+				itemEditor="sym.viewer.mobile.views.components.wizard.WizardTierItemEditor"
+				selectionColor="{WizardDataGridSkin.defaultSelectionColor}"
+				requestedColumnCount="6"
+				sortableColumns="false"
+				resizableColumns="true"
+				skinClass="sym.viewer.mobile.views.skins.grid.WizardDataGridSkin" 
+				chromeColor="0xffffff" 
+				visible="{!allFlashArraysSelected}"
+				includeInLayout="{!allFlashArraysSelected}">
+		<s:columns>
+			<s:ArrayList >
+				<s:GridColumn id="tier"
+							  dataField="{Constants.WIZARD_DATA_GRID_TIER_COLUMN}"
+							  labelFunction="{tierTypeLabelFunction}"
+							  editable="false"
+							  headerText="{getResString('main', 'STATE_TIER')}"
+							  width="{this.tierDG.width * 0.2}" />
+				<s:GridColumn id="driveType" 
+							  dataField="{Constants.WIZARD_DATA_GRID_DRIVE_TYPE_COLUMN}"							  
+							  labelFunction="{driveTypeDataGridLabelFunction}"
+							  headerText="{getResString('main', 'WIZARD_DRIVE_TYPE')}" />
+				<s:GridColumn id="driveRaid"
+							  dataField="{Constants.WIZARD_DATA_GRID_RAID_COLUMN}"
+							  labelFunction="{raidDataGridLabelFunction}"
+							  headerText="{getResString('main', 'WIZARD_DRIVE_RAID')}"
+							  width="{_customConfigSelected ? this.tierDG.width * 0.2 : this.tierDG.width * 0.14}" />
+				<s:GridColumn id="driveSize" 
+							  dataField="{Constants.WIZARD_DATA_GRID_SIZE_COLUMN}"
+							  labelFunction="{sizeDataGridLabelFunction}"
+							  headerText="{getResString('main', 'WIZARD_DRIVE_SIZE')}" 
+							  width="{_customConfigSelected ? this.tierDG.width * 0.14 : this.tierDG.width * 0.13}"/>
+				<s:GridColumn id="driveCount"
+							  dataField="{Constants.WIZARD_DATA_GRID_DRIVE_COUNT_COLUMN}"
+							  headerText="{getResString('main', 'WIZARD_DRIVE_COUNT')}"
+							  itemEditor="sym.viewer.mobile.views.components.wizard.WizardTextInputItemEditor" 
+							  width="{this.tierDG.width * 0.14}" />
+				<s:GridColumn id="driveAction"
+							  headerText="{getResString('main', 'WIZARD_DRIVE_ACTION')}"
+							  editable="false"
+							  itemRenderer="sym.viewer.mobile.views.components.wizard.WizardTierActionItemRenderer"
+							  visible="{_customConfigSelected}" 
+							  width="{this.tierDG.width * 0.07}"/>
+				<s:GridColumn id="percent" 
+							  dataField="{Constants.WIZARD_DATA_GRID_PERCENT_COLUMN}"
+							  headerText="{getResString('main', 'WIZARD_USABLE_CAPACITY_COLUMN')}" 
+							  labelFunction="{percentLabelFunction}"
+							  visible="{!_customConfigSelected}"
+							  width="{this.tierDG.width * 0.2}" />
+			</s:ArrayList>
+		</s:columns>
+		
+	</s:DataGrid >
+		
+</s:VGroup>

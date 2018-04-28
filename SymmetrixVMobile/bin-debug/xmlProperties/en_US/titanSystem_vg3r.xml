@@ -1,0 +1,9 @@
+<html>
+	<title>SYSTEM BAY 1</title>
+	<span><p>System bay 1 houses one or two engines (depending on the system bay type), Li-ON standalone power supply (SPS) units to provide backup power for the engine(s) and for the virtual matrix InfiniBand (IB) interconnect, if the array is configured with more than one engine.</p></span>
+	<span><p>System bays contain all DAE power cables for DAEs and the connection of engines to the InfiniBand interconnect. </p></span>
+	<span><p>Single-engine system bays house one engine and up to six disk array enclosures (DAEs). Dual-engine system bays house two engines and up to four DAEs. The Ethernet switch that provides Ethernet connections to the engines and the KVM (keyboard, video, and mouse) are components unique to system bay 1.</p></span>
+    <span><p>Like other system bays, system bay 1 includes power distribution units (PDUs) that supply power to two power zones, zone A and zone B.</p></span>
+</html>
+
+

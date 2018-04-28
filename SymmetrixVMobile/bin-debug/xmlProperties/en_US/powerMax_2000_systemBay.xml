@@ -1,0 +1,15 @@
+<html>
+	<title>System Bay</title>
+	<span>
+		<p>A single PowerMax 2000 array consists of one or two Bricks that populate the bottom half of the System Bay. The top half of the rack is available for another PowerMax 2000 array or for the third-party components. A PowerMax 2000 Brick consists of an engine, a pair of DAEs, and a pair of SPS-es.</p>
+	</span>
+	<span>
+		<p>Accessible from the rear, there is a full-height, vertical Power Distribution Unit (PDU) on each side of the rack.</p>
+	</span>
+	<span>
+		<p>System bay population starts at the bottom with SPS-es for Engine 1, Engine 1, and Engine 1 DAE pair that are followed by SPS-es for Engine 2, Engine 2, and Engine 2 DAEs.</p>	
+	</span>	
+
+</html>
+
+

@@ -1,0 +1,31 @@
+<html>
+	<title>Systemschacht 1</title>
+	
+	<span>
+		<p>Systemschacht 1 bietet Platz für 1 bis maximal 4 Brick-/zBrick-Bausteine in PowerMax 8000-Arrays. Ein Brick-/zBrick-Baustein umfasst eine Engine, DAEs und zwei SPS.</p>
+	</span>
+	<span>
+		<p>Zwischen Brick- und zBrick-Bausteinen gibt es folgende Unterschiede:</p>
+	</span>
+	<span>
+		<ul>
+			<li>Die grundlegende Speicherkapazität beträgt bei Brick-Bausteinen 53 TBu und bei zBrick-Bausteinen 13 TBu.</li>
+			<li>Die I/O-Module für die Hostverbindung sind Fibre Channel, iSCSI und/oder FICON (nur bei gemischten Systemen) bei Brick-Bausteinen und ausschließlich FICON bei zBrick-Bausteinen.</li>
+	   </ul>
+	</span>
+	 <span>
+		<p>Zusätzlich zu den Brick-/zBrick-Bausteinen ist Systemschacht 1 mit InfiniBand-Verbindung und Ethernetswitchen ausgestattet. Diese Komponenten sind spezifisch für Systemschacht 1.</p>
+	 </span>
+	 <span>
+		<p>Von der Rückseite aus können Sie auf eine vertikale Netzverteilereinheit (Power Distribution Unit, PDU) in voller Höhe auf jeder Seite des Racks zugreifen.</p>
+	</span>
+	<span>
+		<p>Die Bestückung des Systemschachts 1 beginnt an der Unterseite mit Stand-by-Netzteilen für Engine 1, gefolgt von DAEs, Engine 1, Stand-by-Netzteilen für Engine 2 und dann Engine 2. Die Bestückung der oberen Hälfte ist eine Spiegelung der unteren Hälfte mit Engine 3, Stand-by-Netzteilen für Engine 3, Engine 4, DAEs und Stand-by-Netzteilen für Engine 4 am oberen Ende des Racks.</p>
+	</span>
+	<span>
+		<p>Jeder Brick-/zBrick-Baustein besitzt ein DAE und teilt ein DAE. Deshalb bieten drei vollständig bestückte DAEs die Speicherkapazität für zwei Brick-/zBrick-Bausteine. Die geteilten DAEs sind mit universellen Ersatzlaufwerken ausgestattet, die sich in dedizierten Laufwerksteckplätzen befinden.</p>	
+	</span>	
+
+</html>
+
+

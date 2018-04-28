@@ -1,0 +1,16 @@
+<html>
+	<title> 		KONFIGURATION
+	</title> 
+	<span>
+		<p>Details zur aktuellen Konfiguration:</p>
+		<ul>
+			<li>Anzahl der Engines: {0}</li>
+			<li>Anzahl der DAEs: {1}</li>
+			<li>Maximale Anzahl Laufwerke: {2}</li>
+		</ul> 	
+	</span>
+	<span><p>Die VMAX-40K-Array-Konfigurationen sind für Unternehmensspeicherumgebungen ausgelegt. Die Array-Konfigurationen umfassen mindestens ein System-Bay, in dem eine bis acht Engines und je nach Anzahl der Engines im Array einige halb oder vollständig gefüllte Speicher-Bays untergebracht sein können. Engines sind die wichtigsten I/O-Verarbeitungseinheiten, die Cache, CPU-Leistung sowie Front-End- (Host-) und Back-End-Verbindungen zu Laufwerken im Array bieten.</p></span> 	
+	<span><p>Die maximale Array-Konfigurationsgröße hängt von dem verwendeten Typ der Disk Array Enclosures (DAEs) ab. Wenn nur Standard DAEs mit 15 Laufwerken verwendet werden, umfasst die maximale Array-Konfiguration ein System-Bay mit acht Engines und 10 Speicher-Bays. Wenn DAEs mit hoher Dichte und 25 Laufwerken konfiguriert sind, bestehen die maximalen Konfigurationen aus einem System-Bay und acht Speicher-Bays. Beide DAE-Typen können im Array verwendet werden, jedoch nicht in demselben Speicher-Bay.</p></span> 	
+	<span><p>DAEs von dedizierten Speicher-Bays und dedizierten DAE-Positionen sind mit einer dedizierten Engine im System-Bay verbunden. Je nach der Methode, mit der die DAEs mit der Engine verbunden sind, werden sie als direkt verbundene oder in Reihe geschaltete DAEs bezeichnet.</p></span> 	
+	<span><p>Verteilte System-Bays sind eine Option der Array-Platzierung, die für Arrays mit drei oder mehr Engines verfügbar sind. Das zweite, physisch separate System-Bay wird hinzugefügt, wenn dem Array eine dritte (Engine 3), fünfte (Engine 2) oder siebte (Engine 1) Engine hinzugefügt wird. Diese Engine und alle nachfolgenden Engines werden dem zweiten System-Bay hinzugefügt. Die Platzierung in verteilten System-Bays ist geeignet für Rechenzentren, die keinen Platz für große, zusammenhängende Array-Platzierungen bieten. Der maximale Abstand zwischen den beiden System-Bays beträgt 20,0 m.</p></span> 	
+</html>

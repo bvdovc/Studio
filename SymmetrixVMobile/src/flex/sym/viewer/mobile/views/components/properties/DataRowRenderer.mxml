@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+                xmlns:s="library://ns.adobe.com/flex/spark"
+                width="100%"
+                autoDrawBackground="false" 
+                styleName="propertyParagraph">
+    <fx:Script source="../../../script/components/properties/dataRowRenderer.as"/>
+    <s:BorderContainer id="content" width="100%" borderAlpha="0.2"> 
+        <s:layout> 
+            <s:HorizontalLayout gap="2" paddingTop="4" paddingBottom="4" paddingLeft="4" paddingRight="4"/>
+        </s:layout>
+    </s:BorderContainer>
+</s:ItemRenderer>

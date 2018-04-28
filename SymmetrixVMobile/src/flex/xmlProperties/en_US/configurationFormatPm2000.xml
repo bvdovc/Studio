@@ -1,0 +1,17 @@
+<html>
+	<title>PowerMax 2000</title>
+	<span>
+		<h>Current Configuration Details:</h>
+		<ul>
+		    <li>OS Usable Capacity (TBu): {0}</li>
+		    <li>MF Usable Capacity (TBu): {4}</li>
+			<li>Number of Bricks: {1}</li>
+			<li>Number of DAEs: {2} </li>
+			<li>RAID level: {7} </li>
+			<li>Number of drives: {5}</li>
+			<li>Number of available drive slots: {3}</li>
+			<li>Number of FE ports: {6}</li>
+		</ul>
+	</span>
+</html>
+

@@ -1,0 +1,17 @@
+<html>
+	<title>리튬 이온 SPS(Stanby Power Supply)</title>
+	<span>
+		<p>리튬 이온 SPS는 엔진과 IB(InfiniBand) 상호 연결에 이중 DC 전원을 공급하고 시스템 베이 내에만 상주합니다. SPS의 구성 요소는 다음과 같습니다. </p>
+		<ul>
+			<li>AC 라인 전원 입력 </li>
+			<li>배터리 </li>
+			<li>배터리 충전기</li>
+			<li>DC-DC 변환기</li>
+			<li>RS232 포트</li>
+			<li>AC 출력 4개 </li>
+		</ul>
+	</span>
+	<span>
+		<p> SPS는 온라인 운영 중에 AC 라인 입력에서 직접 DC 출력 로드를 제공합니다. 충전기는 배터리에서 부동 충전을 유지하고 필요할 경우 배터리를 재충전합니다. AC 라인 입력에 장애가 발생하면 AC 라인 입력과 출력 간 연결은 끊기고, 대신 내장 배터리와 DC-DC 변환기에서 전원이 공급됩니다(배터리 작동 상태). </p>
+	</span>
+</html>

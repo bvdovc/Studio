@@ -1,0 +1,15 @@
+<html>
+	<title>시스템 베이 1</title>
+	<span>
+		<p>시스템 베이 1에는 시스템 베이 유형에 따라 1~2개의 엔진을 포함해 해당 엔진 및 Virtual Matrix IB(InfiniBand) 상호 연결(스토리지에 둘 이상의 엔진이 구성된 경우)에 백업 전력을 제공하는 리튬 이온 SPS 유닛이 장착됩니다.</p>
+	</span>
+	<span>
+		<p>시스템 베이에는 DAE(Disk Array Enclosure)에 대한 모든 DAE 전원 케이블과 InfiniBand 상호 연결에 대한 엔진 연결이 포함됩니다. </p>
+	</span>
+	<span>
+		<p>단일 엔진 시스템 베이에는 1개의 엔진과 최대 6개의 DAE가 장착됩니다. 이중 엔진 시스템 베이에는 2개의 엔진과 최대 4개의 DAE가 장착됩니다. 엔진 및 KVM(keyboard, Video, Mouse)에 이더넷 연결을 제공하는 이더넷 스위치는 시스템 베이 1에만 있는 구성 요소입니다.</p>
+	</span>
+	<span>
+		<p>다른 시스템 베이와 마찬가지로, 시스템 베이 1에는 2개의 파워존인 존 A 및 존 B에 전력을 공급하는 PDU(Power Distribution Unit)가 포함되어 있습니다.</p>
+	</span>
+</html>

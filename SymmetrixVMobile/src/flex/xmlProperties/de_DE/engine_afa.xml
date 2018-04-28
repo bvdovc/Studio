@@ -1,0 +1,86 @@
+﻿<html>
+	<title>ENGINE</title>
+
+	<span>
+		<p> Die Engine ist die zentrale I/O-Verarbeitungseinheit, die durch ihre Redundanz für eine hohe Verfügbarkeit sorgt. Sie besteht aus redundanten Directors (Director A und B), die jeweils Multicore-CPUs, Speichermodule und Schnittstellen zu universellen I/O-Modulen wie Front-end-, Back-end-, InfiniBand-, Komprimierungs- und Flash-I/O-Modulen enthalten.</p>
+	</span>
+	<span>
+		<p> Der Zugang zu den Engine-Lüftern und -Netzteilen ist an der Vorderseite, zu den I/O-Modulen, zum Managementmodul und zur Control Station an der Rückseite möglich. Da die Zahl der in der Engine verwendeten universellen I/O-Module von den erforderlichen Funktionen und der Systemspeicherkapazität abhängt, können einige Steckplätze ungenutzt bleiben.</p>
+	</span>
+	<span>
+		<p> Die Rückansicht der Engine, die I/O-Modulsteckplätze sowie die physischen und logischen Portnummern sind unten abgebildet.</p>
+	</span>
+	<span>
+		<p>Physische Portnummern</p>
+	</span>
+	<span><img src="phy_eng_ports.gif" ratio="0.41"/></span>
+	<span>
+		<p>Logische Portnummern</p>
+	</span>
+	<span><img src="logical_eng_phy_ports.gif" ratio="0.398"/></span>
+	<span>
+		<p> Aus der folgenden Tabelle geht hervor, wie die Engine-Steckplätze belegt sein müssen:</p>
+		<table>
+			<tr>
+				<td>Nummer des Engine-Steckplatzes</td>
+				<td>Komponente</td>
+				<td>Beschreibung</td>
+			</tr>
+			<tr>
+				<td>0</td>
+				<td>Flash-Modul</td>
+				<td>Immer belegt, reserviert für Flash.</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Flash-Modul</td>
+				<td>Optional, hängt von der Speicherkapazität des Arrays ab. Reserviert für Flash. </td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Universelles Front-end-Modul</td>
+				<td>Jedes Fibre Channel-, FICON-, Ethernet- oder Komprimierungs-I/O-Modul kann diesen Steckplatz belegen.</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Universelles Front-end-Modul</td>
+				<td>Optional. Jedes Fibre Channel-, FICON-, Ethernet- oder Komprimierungs-I/O-Modul kann diesen Steckplatz belegen.</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Back-end-I/O-Modul</td>
+				<td>Immer belegt, reserviert für Back-end.</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Back-end-I/O-Modul</td>
+				<td>Immer belegt, reserviert für Back-end.</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Flash-Modul</td>
+				<td>Optional, hängt von der Speicherkapazität des Arrays ab, reserviert für Flash.</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>Flash-Modul</td>
+				<td>Optional, hängt von der Speicherkapazität des Arrays ab, reserviert für Flash. </td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>Universelles Front-end-Modul</td>
+				<td>Optional. Jedes beliebige Fibre Channel-, FICON-, Ethernet- oder Komprimierungs-I/O-Modul kann diesen Steckplatz belegen.</td>
+			</tr>
+			<tr>
+				<td>9</td>
+				<td>Universelles Front-end-Modul</td>
+				<td>Immer belegt, reserviert für Komprimierungs-I/O-Modul.</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>InfiniBand-I/O-Modul</td>
+				<td>In einem System mit mehreren Engines belegt.</td>
+			</tr>
+		</table>
+	</span>
+</html>

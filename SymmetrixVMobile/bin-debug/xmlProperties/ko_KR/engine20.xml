@@ -1,0 +1,26 @@
+<html> 
+	<title>
+		엔진 
+	</title> 
+	<span>
+	<p>VMAX 20K/VMAX 엔진은 물리적 메모리, CPU 처리 성능 및 프런트엔드 호스트를 제공하고, SRDF 및 외부 스토리지 접속, DAE(Disk Array Enclosure)에 대한 백엔드 접속 및 스토리지의 다른 엔진에 대한 접속을 담당하는 시스템 베이 핵심 구성 요소입니다. 
+각 엔진은 다음과 같이 구성됩니다.</p>
+		<ul> 
+			<li>프런트엔드, 백엔드, 외부 스토리지 및 SRDF 접속을 지원하는 디렉터 2개</li> 
+			<li>32GB, 64GB 또는 128GB의 물리적 메모리</li> 
+			<li>디렉터와 MIBE(Matrix Interface Board Enclosure)의 접속을 담당하는 SIB(System Interface Board) 2개(디렉터당 1개씩)</li> 
+			<li>백엔드 입출력 모듈 4개(디렉터당 2개씩) </li> 
+			<li>다음과 같은 접속 기능을 (모듈별로) 제공하는 프런트엔드 입출력 모듈 4개(디렉터당 2개씩):</li> 
+			<li indent="1">Fibre Channel 포트(2, 4, 8Gb/s) 4개</li> 
+			<li indent="1">Fibre Channel SRDF(2, 4, 8Gb/s) 2개</li> 
+			<li indent="1">FCoE(Fibre Channel over Ethernet) 포트(10Gb/s) 2개</li> 
+			<li indent="1">FICON 포트(2, 4, 8Gb/s) 2개</li>
+			<li indent="1">iSCSI 포트(1Gb/s) 2개</li> 
+			<li indent="1">iSCSI/FCoE 포트(10Gb/s) 2개</li> 
+			<li indent="1">GbE SRDF 포트(1Gb/s, 10Gb/s) 2개</li> 
+			<li>운영 환경 모니터링 기능을 제공하는 관리 모듈 2개</li> 
+			<li>엔진 전원 공급 장치 2개</li> 
+			<li>엔진 냉각 팬 4개</li> 
+		</ul>
+	</span> 
+</html>

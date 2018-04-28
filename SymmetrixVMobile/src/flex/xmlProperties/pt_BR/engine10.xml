@@ -1,0 +1,22 @@
+<html> 
+    <title>
+		MECANISMO 
+	</title> 
+	<span>
+	<p>O VMAX 10K Engine é o componente principal do gabinete do sistema que fornece conectividade de memória física, CPUs, host front-end, SRDF e array externo, conectividade back-end com DAEs e conectividade com outros mecanismos no array. Cada mecanismo inclui:</p>
+		<ul> 
+		  <li>Dois directors que aceitam conexões front-end e back-end</li> 
+		  <li>96 e 128 GB de memória física</li> 
+		  <li>2 SIBs (System Interface Boards, placas de interface do sistema) em sistema com múltiplos mecanismos. O Mecanismo 1 em um array com mecanismo único não contém SIBs.</li> 
+		  <li>Quatro módulos de I/O de back-end (cada um contém 4 portas, 4 Gb/s)</li> 
+		  <li>4 módulos de I/O de front-end que fornecem as seguintes conexões:</li>  
+		  <li indent="1">Até 16 portas Fibre Channel (de 2, 4 ou 8 Gb/s)</li> 
+		  <li indent="1">Até 4 portas SRDF Fibre Channel (de 2, 4 ou 8 Gb/s)</li> 
+		  <li indent="1">Até 8 portas iSCSI/FCoE (10 Gb/s)</li> 
+		  <li indent="1">Até 8 portas iSCSI (1 Gb/s)</li> 
+		  <li indent="1">Até 4 portas SRDF GigE (1 Gb/s ou 10 Gb/s)</li> 
+		  <li>Dois módulos de gerenciamento (um por director)</li> 
+		  <li>Quatro fontes de alimentação de mecanismo (duas por director)</li> 
+        </ul>
+	</span> 
+</html>

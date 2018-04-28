@@ -1,0 +1,45 @@
+﻿<html>
+	<title>
+ À propos de VMAX Studio
+	</title>
+	<span>
+		<img src="buttons.png" alt="bouton" heigth="50"/>
+	</span>
+	<span>
+		<p>
+ VMAX Studio est un outil de visualisation intuitif qui vous permet de :
+		</p>
+		<ul>
+			<li>Visualiser les configurations des baies VMAX 250F et VMAX 950F grâce à un assistant de configuration incluant quelques étapes simples : sélectionnez le modèle de la baie, saisissez la capacité utile requise puis sélectionnez quelques propriétés système pour afficher votre système personnalisé dans la fenêtre VMAX Studio. </li>
+            <li> Enregistrer les configurations de la baie en interne au format VMAX Studio : les configurations enregistrées sont affichées sous forme d’icônes en bas, dans le volet de filtrage. </li>
+			<li> Filtrer les configurations enregistrées en utilisant le filtre et le bouton Réinitialiser le filtre.</li>
+			<li>Enregistrer des objets tels que des configurations ou des composants individuels au format PNG.</li>
+			<li>Découvrir les configurations de baie et les composants matériels grâce à l’aide contextuelle et aux vues de composant de recherche verticale.</li>
+		</ul>
+	</span>
+		<span>
+			<p>Outils VMAX Studio :</p>
+			<ul>
+				<li> Enregistrer la configuration : cliquez ici pour enregistrer une configuration nouvellement créée. Les configurations enregistrées sont affichées sous la forme d’icônes avec ID de configuration unique dans le volet de filtrage.</li>
+				<li> Copier dans le Presse-papiers : cliquez ici pour copier le contenu du volet d’affichage dans le Presse-papiers. </li>
+				<li> Exporter en tant qu’image : cliquez ici pour enregistrer le contenu du volet d’affichage d’un fichier *.PNG. </li>
+				<li> Mettre en surbrillance : cliquez ici pour mettre en évidence les composants de l’alimentation principale dans la vue de configuration de baie.</li>
+				<li> Changer de vue : cliquez ici pour afficher une autre vue (par exemple, avant et arrière).</li>
+				<li> Activer ou désactiver des panneaux de propriétés : afficher ou masquer les informations de propriété pour le contenu du volet d’affichage. </li>
+			</ul>
+		</span>
+	<span><p></p></span>
+	<span>
+		<h>Assistant de configuration</h>
+	</span> 
+	<span>
+		<img src="wizard.png" alt="bouton" heigth="50"/>
+	</span>
+	<span>
+	<p> L’assistant de configuration vous permet de configurer et d’afficher une baie VMAX 205F ou VMAX 950F en choisissant parmi les quelques paramètres de configuration de base disponibles pour le modèle de baie de votre choix.</p>
+	</span>
+	<span><p></p></span>
+	<span>
+		<p>Vous avez des questions/commentaires concernant le VMAX STUDIO ? Envoyez un e-mail à SymmSystemViewers@emc.com</p>
+	</span>
+</html>

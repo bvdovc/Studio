@@ -1,0 +1,16 @@
+<html>
+<title>18 端口 InfiniBand (IB) 互连 </title>
+
+<span><p>此 1U 组件驻留于系统托架 1 中，位于 EMC Dynamic Virtual Matrix(TM) 体系结构的中心。它能够实现多引擎 400K 阵列中的沟通和资源共享。IB 互连包含以下组件</p></span>
+<span>
+	<ul>
+		<li> 18 个 InfiniBand 端口 </li>
+		<li> 可热插拔冗余电源</li>
+		<li> 可热插拔冗余风扇模块 </li>
+		<li> 2 个 1 Gb 以太网 RJ-45 管理端口（连接到以太网交换机 A 和 B） </li>
+	</ul>
+</span>
+<span><p> 每个引擎均设有针对 IB 互连的冗余接口。</p></span>
+</html>
+
+

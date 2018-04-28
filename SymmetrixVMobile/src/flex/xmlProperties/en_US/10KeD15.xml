@@ -1,0 +1,16 @@
+<html>
+	<title>
+		STANDARD DAE
+	</title>
+	<span><p>Disk Array Enclosures (DAEs) are at the heart of data storage processing.  They provide 4Gb/s Fibre Channel connectivity to Back End I/O Modules in the engine or other DAEs and to drive loops in the DAE enclosures. DAE’s can be connected directly to the engine or daisy-chained to other DAEs.</p></span>
+	<span><p>DAEs are available as standard, 15-drive DAE, or as high density, 25-drive DAE types. The high density DAEs can house only 2.5” drives while the standard DAEs can accommodate both, 2.5” and 3.5” drives.</p></span>
+	<span>
+	<p>DAEs include the following main components:</p>
+		<ul>
+			<li>A maximum of 15 or 25 drives per enclosure, depending on the DAE type</li>
+			<li>Two redundant DAE power supply/cooling modules (accessible from the rear)</li>
+			<li>Two link control cards (LCCs) (accessible from the rear) that provide the drive bypass and the Fibre Channel loop failover functionality.</li>
+			<li>DAE’s can be connected directly to the engine or daisy-chained to other DAEs.</li>
+		</ul>
+	</span>
+</html> 

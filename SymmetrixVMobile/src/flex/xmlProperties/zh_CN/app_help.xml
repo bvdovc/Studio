@@ -1,0 +1,45 @@
+﻿<html>
+	<title>
+ VMAX Studio 简介
+	</title>
+	<span>
+		<img src="buttons.png" alt="按钮" heigth="50"/>
+	</span>
+	<span>
+		<p>
+ VMAX Studio 是一款直观的可视化工具，支持您：
+		</p>
+		<ul>
+			<li>按照以下几步配置向导，即可直观地显示 VMAX 250F 和 VMAX 950F 阵列配置：选择阵列型号，提供所需的可用容量，选择几个系统属性以在 VMAX Studio 窗口中显示您的自定义系统 </li>
+            <li> 以 VMAX Studio 格式在内部保存阵列配置——已保存的配置以图标形式显示在筛选窗格底部。</li>
+			<li> 使用筛选和重置筛选按钮，即可筛选已保存的配置。</li>
+			<li>以 PNG 图形文件格式保存配置或各个组件之类的对象。</li>
+			<li>借助上下文相关的帮助和深入查看组件视图，了解各项阵列配置和硬件组件。</li>
+		</ul>
+	</span>
+		<span>
+			<p>VMAX Studio 工具：</p>
+			<ul>
+				<li> 保存配置 — 单击以保存新创建的配置。已保存的配置以带有唯一的配置 ID 的图标形式显示在筛选窗格上。</li>
+				<li> 拷贝到剪贴板 — 单击以将显示窗格中的内容拷贝到剪贴板。</li>
+				<li> 导出为图像 — 单击以将显示窗格中的内容保存为 *.PNG 格式的文件。</li>
+				<li> 高亮显示 — 单击以高亮显示阵列配置视图中的主要电源组件。</li>
+				<li> 更改视图 — 单击以显示其他视图（例如前视图和后视图）。</li>
+				<li> 切换属性面板 — 显示或隐藏显示窗格中的内容的属性信息。</li>
+			</ul>
+		</span>
+	<span><p></p></span>
+	<span>
+		<h>配置向导</h>
+	</span> 
+	<span>
+		<img src="wizard.png" alt="按钮" heigth="50"/>
+	</span>
+	<span>
+	<p> 借助配置向导，您可以在用于所选阵列型号的几个基本配置参数之间进行选择，从而对 VMAX 250F 或 VMAX 950F 阵列进行配置和显示。</p>
+	</span>
+	<span><p></p></span>
+	<span>
+		<p>对 VMAX STUDIO 有问题/意见吗？ 发送电子邮件至 SymmSystemViewers@emc.com</p>
+	</span>
+</html>

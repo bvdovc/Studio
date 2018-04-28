@@ -1,0 +1,11 @@
+﻿<html>
+<title>12-Port InfiniBand(IB) Interconnect </title>
+
+<span>
+	<p>This 1U component is at the heart of the EMC Dynamic Virtual Matrix(TM) architecture. Used only in system bay 1 in multiple-engine 100K and 200K arrays, the IB interconnect enables scaling of resources and communication among multiple VMAX engines. Each VMAX engine has redundant interfaces to the IB interconnect.</p>
+</span>
+<span>
+	<p>The IB interconnect contains 2 power supplies.</p>
+</span>	
+
+</html>

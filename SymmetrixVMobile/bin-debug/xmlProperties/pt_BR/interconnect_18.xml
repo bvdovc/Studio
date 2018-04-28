@@ -1,0 +1,16 @@
+<html>
+<title>interconexão InfiniBand (IB) de 18 portas </title>
+
+<span><p>Esse componente de 1U reside no gabinete de systrem 1 e está no centro da arquitetura do EMC Dynamic Virtual Matrix (TM). Ele permite a comunicação e o compartilhamento de recursos em arrays 400k de vários mecanismos. A interconexão IB inclui os seguintes componentes</p></span>
+<span>
+	<ul>
+		<li> InfiniBand de 18 portas </li>
+		<li> Fontes de alimentação redundantes, hot pluggable</li>
+		<li> Módulos de ventiladores redundantes, hot pluggable </li>
+		<li> 2 portas de gerenciamento Ethernet RJ-45 de 1Gb (conexões com switches Ethernet A e B) </li>
+	</ul>
+</span>
+<span><p> Cada mecanismo oferece interfaces redundantes para a interconexão IB. </p></span>
+</html>
+
+

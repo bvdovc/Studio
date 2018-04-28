@@ -1,0 +1,17 @@
+<html>
+	<title>PowerMax 8000</title>
+	<span>
+		<h>Details zur aktuellen Konfiguration:</h>
+		<ul>
+		    <li>Nutzbare Kapazität (TB) Betriebssystem: {0}</li>
+		    <li>Nutzbare Kapazität (TB) MF: {4}</li>
+			<li>Anzahl der Brick-Bausteine: {1}</li>
+			<li>Anzahl der DAEs: {2} </li>
+			<li>RAID-Level: {7} </li>
+			<li>Anzahl der Laufwerke: {5}</li>
+			<li>Anzahl der verfügbaren Laufwerksteckplätze: {3}</li>
+			<li>Anzahl der FE-Ports: {6}</li>
+		</ul>
+	</span>
+</html>
+

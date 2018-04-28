@@ -1,0 +1,45 @@
+﻿<html>
+	<title>
+ Acerca de VMAX Studio
+	</title>
+	<span>
+		<img src="buttons.png" alt="botón" heigth="50"/>
+	</span>
+	<span>
+		<p>
+ VMAX Studio es una herramienta de visualización intuitiva que le permite hacer lo siguiente:
+		</p>
+		<ul>
+			<li>Visualizar las configuraciones de los arreglos VMAX 250F y VMAX 950F siguiendo un asistente de configuración en unos pocos pasos: seleccionar el modelo de arreglo, proporcionar la capacidad útil requerida y seleccionar algunas propiedades del sistema para mostrar su sistema personalizado en la ventana de VMAX Studio. </li>
+            <li> Guardar las configuraciones del arreglo de manera interna en el formato de VMAX Studio: las configuraciones guardadas aparecen como íconos en la parte inferior en el panel de filtrado. </li>
+			<li> Filtrar las configuraciones guardadas mediante el filtro y el botón para restablecer filtro.</li>
+			<li>Guardar diversos objetos, como configuraciones o componentes individuales en el formato de archivo de gráficos PNG.</li>
+			<li>Explorar las configuraciones de arreglos y los componentes de hardware mediante el uso de la ayuda contextual y las vistas de componentes de desglose.</li>
+		</ul>
+	</span>
+		<span>
+			<p>Herramientas de VMAX Studio:</p>
+			<ul>
+				<li> Guardar configuración: haga clic para guardar una configuración recién creada. Las configuraciones guardadas aparecen en el panel de filtrado como íconos con ID de configuración únicos.</li>
+				<li> Copiar al portapapeles: haga clic para copiar el contenido del panel de visualización en el portapapeles. </li>
+				<li> Exportar como imagen: haga clic para guardar el contenido del panel de visualización en un archivo *.PNG. </li>
+				<li> Resaltar: haga clic para destacar los componentes de alimentación principales en la vista de configuración de arreglos.</li>
+				<li> Cambiar vista: haga clic para mostrar otra vista (por ejemplo, frontal y posterior).</li>
+				<li> Alternar entre los paneles de propiedades: mostrar u ocultar información de propiedades en el contenido del panel de visualización. </li>
+			</ul>
+		</span>
+	<span><p></p></span>
+	<span>
+		<h>Asistente de configuración</h>
+	</span> 
+	<span>
+		<img src="wizard.png" alt="botón" heigth="50"/>
+	</span>
+	<span>
+	<p> El asistente de configuración le permite configurar y visualizar un arreglo VMAX 250F o VMAX 950F eligiendo entre unos pocos parámetros de configuración básica disponibles para el modelo del arreglo seleccionado.</p>
+	</span>
+	<span><p></p></span>
+	<span>
+		<p>¿Tiene alguna pregunta o comentario acerca de VMAX STUDIO? Envíe un correo electrónico a SymmSystemViewers@emc.com</p>
+	</span>
+</html>

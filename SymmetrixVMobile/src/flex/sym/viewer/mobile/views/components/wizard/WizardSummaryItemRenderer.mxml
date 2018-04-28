@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009"
+				xmlns:s="library://ns.adobe.com/flex/spark"
+				autoDrawBackground="false"
+				xmlns:skins="sym.viewer.mobile.views.skins.*">
+
+	<fx:Script>
+		<![CDATA[
+			import sym.viewer.mobile.script.ViewConstants;
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+
+		<s:HGroup id="summaryGroup"
+				  width="100%"
+				  gap="10"
+				  >
+				<s:Label id="summaryState"
+						 fontWeight="bold"
+						 text="{data.label}:"
+						 width="{ViewConstants.WIZARD_SUMMARY_LABEL_DEFAULT_WIDTH}" />
+				<s:RichEditableText id="summaryStateValue"
+						 text="{data.value}"
+						 width="100%"
+						 editable = "false"
+						 selectable="false" 
+						 />
+		</s:HGroup>
+</s:ItemRenderer>

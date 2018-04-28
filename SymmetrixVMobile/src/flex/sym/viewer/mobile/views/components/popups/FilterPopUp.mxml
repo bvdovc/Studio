@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnablePopUpContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
+						   xmlns:s="library://ns.adobe.com/flex/spark"
+						   horizontalCenter="0"
+						   verticalCenter="0"
+						   skinClass="sym.viewer.mobile.views.skins.FilterPopUpSkin"
+						   mouseDownOutside="clickOutside(event)"
+						   initialize="onInit(event)"
+						   creationComplete="onCreationComplete(event)">
+	<fx:Script>
+		<![CDATA[
+			import mx.events.ResizeEvent;
+
+			import spark.skins.mobile160.assets.ButtonBarLastButton_selected;
+
+			import sym.viewer.mobile.views.ConfigurationView;
+			import sym.viewer.mobile.views.components.filter.FilterComponent;
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+
+	<fx:Metadata>
+		[ResourceBundle("main")]
+	</fx:Metadata>
+
+	<fx:Script source="../../../script/components/popups/filterPopUp.as"/>
+
+	<s:layout>
+		<s:VerticalLayout horizontalAlign="center"
+						  verticalAlign="middle"
+						  paddingLeft="5"
+						  paddingRight="5"
+						  paddingBottom="5"/>
+	</s:layout>
+
+	<s:HGroup id="titleArea"
+			  height="40"
+			  width="100%"
+			  verticalCenter="0"
+			  verticalAlign="middle"
+			  horizontalAlign="center">
+		<s:Label id="titleLabel"
+				 text="{title}"
+				 styleName="labelStyle"
+				 fontWeight="bold"
+				 fontSize="{17 * FlexGlobals.topLevelApplication.height/ViewConstants.DEFAULT_APP_HEIGHT}"/>
+	</s:HGroup>
+	<!--
+	selectedIndices="{_selectedIndices}"-->
+	<s:List id="filterList"
+			dataProvider="{_dataProvider}"
+			selectedIndex="{_selectedIndex}"
+			width="100%"
+			height="100%"
+			allowMultipleSelection="{allowMultipleSelection}"
+			alternatingItemColors="[#ffffff,#EEEEEE]"
+			contentBackgroundAlpha="0"
+			selectionColor="#CDD0D1"
+			fontFamily="RobotoFont"
+			change="onListChange(event)">
+		<s:layout>
+			<s:VerticalLayout horizontalAlign="contentJustify"
+							  gap="0"
+							  paddingBottom="5"
+							  variableRowHeight="false"
+							  requestedMinRowCount="1"
+							  requestedMaxRowCount="5"/>
+		</s:layout>
+	</s:List>
+
+</s:SkinnablePopUpContainer>

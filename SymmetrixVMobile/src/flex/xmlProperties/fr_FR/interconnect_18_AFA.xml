@@ -1,0 +1,16 @@
+<html>
+<title>Interconnexion InfiniBand 18 ports </title>
+
+<span><p>Ce composant 1U est situé dans la baie système 1 ; il est au cœur de l’architecture Dynamic Virtual Matrix(TM) d’EMC. Il permet de communiquer et de partager des ressources dans les baies 450F et 850F à plusieurs moteurs (V-Brick/Z-Brick). L’interconnexion InfiniBand inclut les composants suivants</p></span>
+<span>
+	<ul>
+		<li> 18 ports InfiniBand </li>
+		<li> Alimentations redondantes, remplaçables à chaud</li>
+		<li> Ventilateurs redondants, remplaçables à chaud </li>
+		<li> 2 ports de gestion RJ-45 Ethernet 1 Go (connexions aux switches Ethernet A et B) </li>
+	</ul>
+</span>
+<span><p> Chaque moteur fournit des interfaces redondantes vers l’interconnexion InfiniBand. </p></span>
+
+</html>
+
