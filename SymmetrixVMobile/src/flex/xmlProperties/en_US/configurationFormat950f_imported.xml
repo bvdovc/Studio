@@ -1,0 +1,16 @@
+<html>
+	<title>VMAX 950F</title>
+	<span>
+		<h>Current Configuration Details:</h>
+		<ul>
+		    <li>OS Usable Capacity (TBu): {0}</li>
+		    <li>MF Usable Capacity (TBu): {4}</li>
+			<li>Number of V-Bricks/zBricks: {1}</li>
+			<li>Number of DAEs: {2} </li>
+			<li>RAID level: {7} </li>
+			<li>Number of drives: {5}</li>
+			<li>Number of available drive slots: {3}</li>
+		</ul>
+	</span>
+</html>
+

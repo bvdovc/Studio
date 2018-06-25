@@ -8,7 +8,6 @@ package sym.configurationmodel.common
 	import mx.collections.ArrayCollection;
 	import mx.collections.IList;
 	import mx.collections.Sort;
-	import mx.controls.ComboBase;
 	
 	import flashx.textLayout.elements.Configuration;
 	

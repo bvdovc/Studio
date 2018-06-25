@@ -1,0 +1,16 @@
+<html>
+	<title>PowerMax 8000</title>
+	<span>
+		<h>Detalles de la configuración actual:</h>
+		<ul>
+		    <li>Capacidad útil del SO (TB): {0}</li>
+		    <li>Capacidad útil de MF (TB): {4}</li>
+			<li>Cantidad de Bricks: {1}</li>
+			<li>Cantidad de DAE: {2} </li>
+			<li>Nivel de RAID: {7} </li>
+			<li>Cantidad de unidades: {5}</li>
+			<li>Cantidad de slots de unidad disponibles: {3}</li>
+		</ul>
+	</span>
+</html>
+

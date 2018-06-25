@@ -2,19 +2,19 @@
 	<title>System Bay 1</title>
 	
 	<span>
-		<p>System Bay 1 houses from one to a maximum of 4 Bricks/zBricks in PowerMax 8000 arrays. A Brick/zBrick consists of an engine, DAEs, and a pair of SPS-es.</p>
+		<p>System Bay 1 houses from one to a maximum of 4 PowerMax bricks/PowerMax zbricks in PowerMax 8000 arrays. A PowerMax brick/PowerMax zbrick consists of an engine, DAEs, and a pair of SPS-es.</p>
 	</span>
 	<span>
-		<p>The difference between Bricks and zBricks are:</p>
+		<p>The difference between PowerMax bricks and PowerMax zbricks are:</p>
 	</span>
 	<span>
 		<ul>
-			<li>The base storage capacity is 53 TBu for Brick and 13 TBu for zBricks</li>
-			<li>The I/O modules that provide host connectivity are Fibre Channel, iSCSI, and/or FICON (mixed systems only) for Bricks and FICON only for zBricks.</li>
+			<li>The base storage capacity is 53 TBu for PowerMax brick and 13 TBu for PowerMax zbricks</li>
+			<li>The I/O modules that provide host connectivity are Fibre Channel, iSCSI, and/or FICON (mixed systems only) for PowerMax bricks and FICON only for PowerMax zbricks.</li>
 	   </ul>
 	</span>
 	 <span>
-		<p>In addition to the Brick/zBrick components, System Bay 1 houses the InfiniBand interconnect and Ethernet switches. These are components specific to System Bay 1.</p>
+		<p>In addition to the PowerMax brick/PowerMax zbrick components, System Bay 1 houses the InfiniBand interconnect and Ethernet switches. These are components specific to System Bay 1.</p>
 	 </span>
 	 <span>
 		<p>Accessible from the rear, there is a full-height, vertical Power Distribution Unit (PDU) on each side of the rack.</p>
@@ -23,7 +23,7 @@
 		<p>The System Bay 1 population starts at the bottom with SPS-es for Engine 1, followed by DAEs, Engine 1, SPS-es for Engine 2, then Engine 2. The population in the top half mirrors that at the bottom by starting with Engine 3, SPS-es for Engine 3, Engine 4, DAEs, and SPS-es for Engine 4 at the top of the rack.</p>
 	</span>
 	<span>
-		<p>Each Brick/zBrick owns one and shares one DAE. Three fully populated DAEs therefore provide the storage capacity for two Bricks/zBricks. The shared DAEs house universal spare drives that reside in dedicated drive slots.</p>	
+		<p>Each PowerMax brick/PowerMax zbrick owns one and shares one DAE. Three fully populated DAEs therefore provide the storage capacity for two PowerMax bricks/PowerMax zbricks. The shared DAEs house universal spare drives that reside in dedicated drive slots.</p>	
 	</span>	
 
 </html>

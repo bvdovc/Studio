@@ -75,19 +75,19 @@ package sym.controller.utils
 				switch( (component as Configuration_VG3R).factory)
 				{
 					case SymmController.instance.configFactory250F:
-						parse(ResourceManager.getInstance().getString("component", "CONFIGURATION_250F_XML"));
+						parse(ResourceManager.getInstance().getString("component", (component as Configuration_VG3R).isSizerImported ? "CONFIGURATION_250F_XML_IMPORTED" : "CONFIGURATION_250F_XML"));
 						break;
 					case SymmController.instance.configFactory450F:
 						parse(ResourceManager.getInstance().getString("component", "CONFIGURATION_450F_XML"));
 						break;
 					case SymmController.instance.configFactory950F:
-						parse(ResourceManager.getInstance().getString("component", "CONFIGURATION_850F_XML"));
+						parse(ResourceManager.getInstance().getString("component", (component as Configuration_VG3R).isSizerImported ? "CONFIGURATION_950F_XML_IMPORTED" : "CONFIGURATION_950F_XML"));
 						break;
 					case SymmController.instance.configFactoryPM2000:
-						parse(ResourceManager.getInstance().getString("component", "CONFIGURATION_PM2000_XML"));
+						parse(ResourceManager.getInstance().getString("component", (component as Configuration_VG3R).isSizerImported ? "CONFIGURATION_PM2000_XML_IMPORTED" : "CONFIGURATION_PM2000_XML"));
 						break;
 					case SymmController.instance.configFactoryPM8000:
-						parse(ResourceManager.getInstance().getString("component", "CONFIGURATION_PM8000_XML"));
+						parse(ResourceManager.getInstance().getString("component", (component as Configuration_VG3R).isSizerImported ? "CONFIGURATION_PM8000_XML_IMPORTED" : "CONFIGURATION_PM8000_XML"));
 						break;
 					default:
 						parse(ResourceManager.getInstance().getString("component", "NOT_AVAILABLE_XML"));

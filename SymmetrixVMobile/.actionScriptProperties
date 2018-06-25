@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <actionScriptProperties analytics="false" mainApplicationPath="SymmetrixVMobile.mxml" projectUUID="c9c17fd6-b0f9-485b-8c37-7713f27bbc72" version="11">
-  <compiler additionalCompilerArguments="-locale=en_US,de_DE,it_IT,ja_JP,es_MX,pt_BR,ko_KR,ru_RU,zh_CN,fr_FR  -source-path=../locales/{locale} -define+=OS::desktop,false -define+=INCLUDE::unified,false -define+=SERIES::k_series,false -define+=SERIES::m_series,false -define+=SERIES::afa_series,true -define+=SERIES::pm_series,true" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="false" htmlHistoryManagement="false" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" removeUnusedRSL="true" sourceFolderPath="src/flex" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="true" useDebugRSLSwfs="true" useFlashSDK="false" verifyDigests="true" warn="true">
+  <compiler additionalCompilerArguments="-locale=en_US,de_DE,it_IT,ja_JP,es_MX,pt_BR,ko_KR,ru_RU,zh_CN,fr_FR  -source-path=../locales/{locale} -define+=OS::desktop,false -define+=INCLUDE::unified,false -define+=SERIES::k_series,false -define+=SERIES::m_series,false -define+=SERIES::afa_series,true -define+=SERIES::pm_series,true -swf-version=35" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="false" htmlHistoryManagement="false" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" removeUnusedRSL="true" sourceFolderPath="src/flex" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="true" useDebugRSLSwfs="true" useFlashSDK="false" verifyDigests="true" warn="true">
     <compilerSourcePath>
       <compilerSourcePathEntry kind="1" linkType="1" path="src/assets"/>
     </compilerSourcePath>
@@ -48,6 +48,7 @@
   <flashCatalyst validateFlashCatalystCompatibility="false"/>
   <buildTargets>
     <buildTarget buildTargetName="device" iosSettingsVersion="2" isCurrent="true" platformId="com.adobe.flexide.multiplatform.ios.platform" provisioningFile="D:/Build exports/Dell_EMC_Vmax_Studio.mobileprovision" releasePackageType="ipa-ad-hoc">
+      <multiPlatformSettings enabled="true" hideAneLibSymbols="0" includePlatformLibs="false" platformID="com.adobe.flexide.multiplatform.ios.platform" reducedSizePackaging="false" version="2"/>
       <airSettings airCertificatePath="D:/Build exports/vmaxStudio.p12" airTimestamp="true" anePathSet="true" version="1">
         <airExcludes/>
         <anePaths/>
@@ -56,12 +57,10 @@
         <newPackagingParams/>
         <modifiedPackagingParams/>
       </airSettings>
-      <multiPlatformSettings enabled="true" hideAneLibSymbols="0" includePlatformLibs="false" platformID="com.adobe.flexide.multiplatform.ios.platform" reducedSizePackaging="false" version="2"/>
       <actionScriptSettings version="1"/>
     </buildTarget>
     <buildTarget airDownloadURL="https://market.android.com/details?id=com.adobe.air" androidSettingsVersion="2" buildTargetName="device" isCurrent="false" platformId="com.adobe.flexide.multiplatform.android.platform">
-      <multiPlatformSettings enabled="true" hideAneLibSymbols="0" includePlatformLibs="false" platformID="com.adobe.flexide.multiplatform.android.platform" reducedSizePackaging="false" version="2"/>
-      <airSettings airCertificatePath="D:/Build exports/vmaxStudio.p12" airTimestamp="true" anePathSet="true" version="1">
+      <airSettings airCertificatePath="D:/Dell EMC/Desktop Release build/emc_idd.pfx" airTimestamp="true" anePathSet="true" version="1">
         <airExcludes/>
         <anePaths/>
         <newLaunchParams/>
@@ -69,9 +68,11 @@
         <newPackagingParams/>
         <modifiedPackagingParams/>
       </airSettings>
+      <multiPlatformSettings enabled="true" hideAneLibSymbols="0" includePlatformLibs="false" platformID="com.adobe.flexide.multiplatform.android.platform" reducedSizePackaging="false" version="2"/>
       <actionScriptSettings version="1"/>
     </buildTarget>
     <buildTarget buildTargetName="default" isCurrent="false" platformId="default">
+      <multiPlatformSettings enabled="false" hideAneLibSymbols="0" includePlatformLibs="false" platformID="default" reducedSizePackaging="false" version="2"/>
       <airSettings airCertificatePath="D:/Dell EMC/Desktop Release build/emc_idd.pfx" airTimestamp="false" anePathSet="true" version="1">
         <airExcludes/>
         <anePaths/>
@@ -80,7 +81,6 @@
         <newPackagingParams/>
         <modifiedPackagingParams/>
       </airSettings>
-      <multiPlatformSettings enabled="false" hideAneLibSymbols="0" includePlatformLibs="false" platformID="default" reducedSizePackaging="false" version="2"/>
       <actionScriptSettings version="1"/>
     </buildTarget>
   </buildTargets>

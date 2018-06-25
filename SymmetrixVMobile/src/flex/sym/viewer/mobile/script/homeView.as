@@ -21,6 +21,7 @@ import mx.events.FlexEvent;
 import mx.managers.ToolTipManager;
 import mx.resources.ResourceManager;
 import mx.utils.StringUtil;
+import flash.permissions.PermissionStatus;
 
 import spark.components.Button;
 import spark.events.IndexChangeEvent;
@@ -157,6 +158,34 @@ protected function homeView_preinitializeHandler(event:FlexEvent):void
     }
 }
 
+/**
+ * Creation complete event handler
+ */
+protected function homeView_creationCompleteHandler(event:FlexEvent):void
+{
+		//Android storage permission - checks if permission is granted otherwise asks for permission
+		if(CommonUtility.OPERATING_SYSTEM == CommonUtility.ANDROID)
+		{
+			var checkForPermissionFile:File = new File();		
+			checkForPermissionFile.addEventListener(PermissionEvent.PERMISSION_STATUS, function(e:PermissionEvent):void{
+				if(e.status == PermissionStatus.GRANTED)
+					trace("Permission is granted!");
+				else
+					trace("Permission is not granted!");
+			});
+				
+			try
+			{
+				checkForPermissionFile.requestPermission();		
+			}
+			catch(e:Error)
+			{
+				trace("Permission is not granted!");
+			}	
+					
+		}
+}
+	
 protected function onLanguageListCreation(event:FlexEvent):void
 {
     if (!Settings.instance.loaded)

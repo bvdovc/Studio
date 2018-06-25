@@ -532,12 +532,24 @@ package sym.controller.utils
 			
 			var sprite:Sprite = new Sprite();
 			
-			if(renderDriveFlag && (component is DAE))
+			if(renderDriveFlag && (component is DAE) && viewSide == Constants.FRONT_VIEW_PERSPECTIVE)
 			{					
 				sprite.graphics.beginFill(_drawingRenderer.getComponentColor(component, true), 0.5);
 				sprite.graphics.drawRect(0, 0, parentPosition.width / 2, parentPosition.height);
 				sprite.graphics.endFill();
 				sprite.graphics.beginFill(_drawingRenderer.getComponentColor(component), 0.5);
+				sprite.graphics.drawRect(parentPosition.width / 2, 0, parentPosition.width / 2, parentPosition.height);
+				sprite.graphics.endFill();
+				
+				resetDriveCounter = true;
+				renderDriveFlag = false;
+			}
+			else if (renderDriveFlag && (component is DAE) && viewSide == Constants.REAR_VIEW_PERSPECTIVE)
+			{
+				sprite.graphics.beginFill(_drawingRenderer.getComponentColor(component), 0.5);
+				sprite.graphics.drawRect(0, 0, parentPosition.width / 2, parentPosition.height);
+				sprite.graphics.endFill();
+				sprite.graphics.beginFill(_drawingRenderer.getComponentColor(component, true), 0.5);
 				sprite.graphics.drawRect(parentPosition.width / 2, 0, parentPosition.width / 2, parentPosition.height);
 				sprite.graphics.endFill();
 				

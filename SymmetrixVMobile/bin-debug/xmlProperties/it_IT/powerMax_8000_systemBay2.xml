@@ -2,7 +2,7 @@
 	<title>System bay 2</title>
 	
 	<span>
-		<p>Il system bay 2 ospita fino a un massimo di 4 Brick/zBrick negli array PowerMax 8000 con 5 o più engine. Lo stack-up è uguale a quello del system bay 1. A differenza del system bay 1, il system bay 2 non include switch Ethernet e interconnessione InfiniBand.</p>
+		<p>Il system bay 2 ospita fino a un massimo di 4 PowerMax brick/PowerMax zbrick negli array PowerMax 8000 con 5 o più engine. Lo stack-up è uguale a quello del system bay 1. A differenza del system bay 1, il system bay 2 non include switch Ethernet e interconnessione InfiniBand.</p>
 	</span>	
 
 </html>

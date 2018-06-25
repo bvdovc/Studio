@@ -12,7 +12,6 @@ package sym.controller.utils
     import flash.ui.Keyboard;
     
     import mx.collections.ArrayCollection;
-    import mx.controls.Button;
     import mx.core.UIComponent;
     import mx.effects.easing.Back;
     import mx.events.ToolTipEvent;

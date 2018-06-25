@@ -1,0 +1,16 @@
+<html>
+	<title>PowerMax 8000</title>
+	<span>
+		<h>現在の構成の詳細：</h>
+		<ul>
+		    <li>OSの有効容量（TB）：{0}</li>
+		    <li>MFの有効容量（TB）：{4}</li>
+			<li>Brick数：{1}</li>
+			<li>DAEの数：{2} </li>
+			<li>RAIDレベル：{7} </li>
+			<li>ドライブ数：{5}</li>
+			<li>利用可能なドライブ スロット数：{3}</li>
+		</ul>
+	</span>
+</html>
+

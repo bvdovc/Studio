@@ -2,7 +2,7 @@
 	<title>Systemschacht 2</title>
 	
 	<span>
-		<p>Systemschacht 2 bietet Platz für 1 bis maximal 4 Brick-/zBrick-Bausteine in PowerMax 8000-Arrays mit 5 oder mehr Engines. Die Reihenfolge der Bestückung entspricht der von Systemschacht 1. Im Gegensatz zu Systemschacht 1 beinhaltet Systemschacht 2 weder die Ethernetswitche noch die InfiniBand-Verbindung.</p>
+		<p>Systemschacht 2 bietet Platz für 1 bis maximal 4 PowerMax brick-/PowerMax zbrick-Bausteine in PowerMax 8000-Arrays mit 5 oder mehr Engines. Die Reihenfolge der Bestückung entspricht der von Systemschacht 1. Im Gegensatz zu Systemschacht 1 beinhaltet Systemschacht 2 weder die Ethernetswitche noch die InfiniBand-Verbindung.</p>
 	</span>	
 
 </html>

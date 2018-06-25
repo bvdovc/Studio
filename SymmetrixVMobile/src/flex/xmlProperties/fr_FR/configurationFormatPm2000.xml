@@ -5,7 +5,7 @@
 		<ul>
 		    <li>Capacité utile de l’OS (To) : {0}</li>
 		    <li>Capacité utile du MF (To) : {4}</li>
-			<li>Nombre de Brick : {1}</li>
+			<li>Nombre de PowerMax brick : {1}</li>
 			<li>Nombre de boîtiers DAE : {2} </li>
 			<li>Niveau RAID : {7} </li>
 			<li>Nombre de disques : {5}</li>

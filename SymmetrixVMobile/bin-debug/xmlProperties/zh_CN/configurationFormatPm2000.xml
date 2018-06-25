@@ -5,7 +5,7 @@
 		<ul>
 		    <li>操作系统可用容量 (TB)：{0}</li>
 		    <li>大型机可用容量 (TB)：{4}</li>
-			<li>Brick 数量：{1}</li>
+			<li>PowerMax brick 数量：{1}</li>
 			<li>DAE 数量：{2} </li>
 			<li>RAID 级别：{7} </li>
 			<li>驱动器数量：{5}</li>

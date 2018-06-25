@@ -2,7 +2,7 @@
 	<title>システム ベイ2</title>
 	
 	<span>
-		<p>システム ベイ2は、5台以上のエンジンを搭載するPowerMax 8000アレイで1台から4台のBrick/zBrickを格納します。スタックはシステム ベイ1と同じになります。システム ベイ1とは異なり、システム ベイ2にはEthernetスイッチやInfiniBandインターコネクトは含まれません。</p>
+		<p>システム ベイ2は、5台以上のエンジンを搭載するPowerMax 8000アレイで1台から4台のPowerMax brick/PowerMax zbrickを格納します。スタックはシステム ベイ1と同じになります。システム ベイ1とは異なり、システム ベイ2にはEthernetスイッチやInfiniBandインターコネクトは含まれません。</p>
 	</span>	
 
 </html>

@@ -5,7 +5,7 @@
 		<ul>
 		    <li>Capacidad útil del SO (TB): {0}</li>
 		    <li>Capacidad útil de MF (TB): {4}</li>
-			<li>Cantidad de Bricks: {1}</li>
+			<li>Cantidad de PowerMax bricks: {1}</li>
 			<li>Cantidad de DAE: {2} </li>
 			<li>Nivel de RAID: {7} </li>
 			<li>Cantidad de unidades: {5}</li>

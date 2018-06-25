@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/26.0">
+<application xmlns="http://ns.adobe.com/air/application/29.0">
 
 	<!-- Adobe AIR Application Descriptor File Template. Specifies parameters 
 		for identifying, installing, and launching AIR applications. xmlns - The 
@@ -26,11 +26,11 @@
 		can also be 1-part or 2-part. It is not necessary to have a 3-part value. 
 		An updated version of application must have a versionNumber value higher 
 		than the previous version. Required for namespace >= 2.5 . -->
-	<versionNumber>2.0</versionNumber>
+	<versionNumber>2.2</versionNumber>
 
 	<!-- A string value (such as "v1", "2.5", or "Alpha 1") that represents 
 		the version of the application, as it should be shown to users. Optional. -->
-	<versionLabel>2.0</versionLabel>
+	<versionLabel>2.2</versionLabel>
 
 	<!-- Description, displayed in the AIR application installer. May have multiple 
 		values for each language. See samples or xsd schema file. Optional. -->
@@ -204,7 +204,7 @@
 	<!-- End of the schema for adding the android specific tags in AndroidManifest.xml 
 		file -->
 
-	<android>
+	<android> 
 		<colorDepth>32bit</colorDepth>
 		<manifestAdditions><![CDATA[
 			<manifest android:installLocation="auto">

@@ -2,7 +2,7 @@
 	<title>系统机架 2</title>
 	
 	<span>
-		<p>系统机架 2 在 PowerMax 8000 阵列中包含 1 至多达多 4 个 Brick/zBrick，带有五个或以上引擎。其堆栈方式与系统机架 1 中相同。系统机架 2 与系统机架 1 的不同之处在于，其不包括以太网交换机，亦不包括 Infiniband 互连。</p>
+		<p>系统机架 2 在 PowerMax 8000 阵列中包含 1 至多达多 4 个 PowerMax brick/PowerMax zbrick，带有五个或以上引擎。其堆栈方式与系统机架 1 中相同。系统机架 2 与系统机架 1 的不同之处在于，其不包括以太网交换机，亦不包括 Infiniband 互连。</p>
 	</span>	
 
 </html>

@@ -5,7 +5,7 @@
 		<ul>
 		    <li>OS 가용 용량(TB): {0}</li>
 		    <li>MF 가용 용량(TB): {4}</li>
-			<li>Brick 수: {1}</li>
+			<li>PowerMax brick 수: {1}</li>
 			<li>DAE 수: {2} </li>
 			<li>RAID 레벨: {7} </li>
 			<li>드라이브 수: {5}</li>

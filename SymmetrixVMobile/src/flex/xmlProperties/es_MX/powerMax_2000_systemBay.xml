@@ -1,7 +1,7 @@
 <html>
 	<title>Bahía de sistema</title>
 	<span>
-		<p>Un solo arreglo PowerMax 2000 consta de uno o dos Bricks que completan la mitad inferior de la bahía de sistema. La mitad superior del rack está disponible para otro arreglo PowerMax 2000 o para los componentes de otros fabricantes. Un Brick de PowerMax 2000 consta de un motor, un par de DAE y un par de SPS.</p>
+		<p>Un solo arreglo PowerMax 2000 consta de uno o dos PowerMax bricks que completan la mitad inferior de la bahía de sistema. La mitad superior del rack está disponible para otro arreglo PowerMax 2000 o para los componentes de otros fabricantes. Un PowerMax brick de PowerMax 2000 consta de un motor, un par de DAE y un par de SPS.</p>
 	</span>
 	<span>
 		<p>Se puede acceder desde la parte posterior y hay una unidad de distribución de alimentación (PDU) vertical y de altura completa en cada lado del rack.</p>

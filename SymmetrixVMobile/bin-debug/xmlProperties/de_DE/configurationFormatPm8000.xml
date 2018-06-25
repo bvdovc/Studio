@@ -5,7 +5,7 @@
 		<ul>
 		    <li>Nutzbare Kapazität (TB) Betriebssystem: {0}</li>
 		    <li>Nutzbare Kapazität (TB) MF: {4}</li>
-			<li>Anzahl der Brick-Bausteine: {1}</li>
+			<li>Anzahl der PowerMax brick-Bausteine: {1}</li>
 			<li>Anzahl der DAEs: {2} </li>
 			<li>RAID-Level: {7} </li>
 			<li>Anzahl der Laufwerke: {5}</li>

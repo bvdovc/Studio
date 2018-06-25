@@ -7,19 +7,9 @@
 		xmlns:titleBar="sym.viewer.mobile.views.components.titleBar.*"
 		xmlns:mx="library://ns.adobe.com/flex/mx"
 		preinitialize="homeView_preinitializeHandler(event)" 
+		creationComplete="homeView_creationCompleteHandler(event)"
 		styleName="home"
 		destructionPolicy="never">
-	
-	<fx:Script>
-		<![CDATA[
-			import flashx.textLayout.formats.BackgroundColor;
-			
-			import sym.objectmodel.common.Constants;
-			import sym.viewer.mobile.utils.CommonUtility;
-			import sym.viewer.mobile.views.skins.FilterWizardButtonSkin;
-			
-		]]>
-	</fx:Script>
 	
 	
 	<fx:Declarations>

@@ -1,0 +1,15 @@
+<html>
+	<title>PowerMax 8000</title>
+	<span>
+		<h>현재 구성 세부 정보</h>
+		<ul>
+		    <li>OS 가용 용량(TB): {0}</li>
+		    <li>MF 가용 용량(TB): {4}</li>
+			<li>Brick 수: {1}</li>
+			<li>DAE 수: {2} </li>
+			<li>RAID 레벨: {7} </li>
+			<li>드라이브 수: {5}</li>
+			<li>사용 가능한 드라이브 슬롯 수: {3}</li>
+		</ul>
+	</span>
+</html>

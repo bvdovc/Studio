@@ -5,7 +5,7 @@
 		<ul>
 		    <li>Capacità utilizzabile OS (TB): {0}</li>
 		    <li>Capacità utilizzabile MF (TB): {4}</li>
-			<li>Numero di Brick: {1}</li>
+			<li>Numero di PowerMax brick: {1}</li>
 			<li>Numero di DAE: {2} </li>
 			<li>Livello RAID: {7} </li>
 			<li>Numero di unità: {5}</li>

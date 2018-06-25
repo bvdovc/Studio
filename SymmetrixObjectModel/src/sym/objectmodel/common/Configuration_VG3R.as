@@ -25,6 +25,7 @@ package sym.objectmodel.common
         private var _driveGroups:Array;
         private var _driveGroupStructure:String = "";
 		private var _enginePortsStructure:String = "";
+		private var _isSizerImported:Boolean = false;
 		
 		private var _fileName:String;
 		
@@ -39,6 +40,16 @@ package sym.objectmodel.common
 		public function Configuration_VG3R(id:String = null)
 		{
 			super(id);
+		}
+		
+        public function get isSizerImported():Boolean
+		{
+			return _isSizerImported;
+		}
+		
+		public function set isSizerImported(value:Boolean):void
+		{
+			_isSizerImported = value;
 		}
 		
 		public override function get totalDaeNumber():int

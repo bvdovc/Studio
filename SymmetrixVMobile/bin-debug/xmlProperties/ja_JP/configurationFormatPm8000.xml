@@ -5,7 +5,7 @@
 		<ul>
 		    <li>OSの有効容量（TB）：{0}</li>
 		    <li>MFの有効容量（TB）：{4}</li>
-			<li>Brick数：{1}</li>
+			<li>PowerMax brick数：{1}</li>
 			<li>DAEの数：{2} </li>
 			<li>RAIDレベル：{7} </li>
 			<li>ドライブ数：{5}</li>

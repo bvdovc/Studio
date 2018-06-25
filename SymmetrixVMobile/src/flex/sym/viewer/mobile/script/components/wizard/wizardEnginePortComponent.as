@@ -1,3 +1,4 @@
+
 import flash.events.Event;
 
 import mx.collections.ArrayCollection;
@@ -33,7 +34,7 @@ import sym.viewer.mobile.views.skins.grid.WizardDataGridSkin;
 
 
 // wizard grid port types
-public static const FIBRE_CHANNEL_TYPE:String = "Fibre Channel";
+public static const FIBRE_CHANNEL_TYPE:String = "FC/FC SRDF";
 public static const MAINFRAME_TYPE:String = "FICON";
 public static const ISCSI_TYPE:String = "iSCSI";
 public static const GIGE_SRDF_TYPE:String = "GigE SRDF";

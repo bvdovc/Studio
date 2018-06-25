@@ -433,7 +433,7 @@ package sym.configurationmodel.pm8000
 				
 				for(var q:int = 0; q < ddids.length; q++)
 				{
-					// for Tabasco it should be always one drive definition (same RAID, same drive Type)
+					// for Nebula it should be always one drive definition (same RAID, same drive Type)
 					var driveDef:DriveDef = DriveRegister.getById(int(ddids[q]));
 					var actives:int = int(driveMap[driveDef.id].active);
 					var spares:int = int(driveMap[driveDef.id].spare);
@@ -466,12 +466,19 @@ package sym.configurationmodel.pm8000
 					{
 						var driveIndex:int = 25;
 						driveNo += remainingDrivesForSecondDAE;
-						for(var i:int = 0; i < actives - remainingDrivesForSecondDAE; i++)
+						driveNo++; // added because we added second spare in previuos DAE
+						var driveNumbersForLastDae:int;
+						
+						if(actives - remainingDrivesForSecondDAE == 0)
+							driveNumbersForLastDae = remainingDrivesForSecondDAE;
+						else
+							driveNumbersForLastDae = actives - remainingDrivesForSecondDAE;
+						
+						for(var i:int = 0; i < driveNumbersForLastDae; i++)
 						{
 							(daes[numberOfDAEs] as DAE).addChild(new Drive(new Position(posType, positionIndexArray[driveIndex--]), driveDef, false));
 							driveNo++;
 						}
-						driveNo++; // added because we added second spare in previuos DAE
 						remainingDrivesForSecondDAE = 0;
 
 					}
@@ -514,7 +521,7 @@ package sym.configurationmodel.pm8000
 								{
 									(daes[numberOfDAEs] as DAE).addChild(new Drive(new Position(posType, positionIndexArray[driveIndex+1]), driveDef, false));
 									driveNo++;
-									if(driveIndex <= 8)
+									if(driveIndex < 8)
 										remainingDrivesForSecondDAE++;
 								}
 								if(engineIndicator)
@@ -525,11 +532,11 @@ package sym.configurationmodel.pm8000
 										(daes[numberOfDAEs] as DAE).addChild(new Drive(new Position(posType, positionIndexArray[indexForSecondEngine--]), driveDef, false));
 										driveNo++;
 									}
-									(daes[numberOfDAEs] as DAE).addChild(new Drive(new Position(posType, positionIndexArray[12]), driveDef, true));
+									(daes[numberOfDAEs] as DAE).addChild(new Drive(new Position(posType, positionIndexArray[13]), driveDef, true));
 
 										
 								}
-								(daes[numberOfDAEs] as DAE).addChild(new Drive(new Position(posType, positionIndexArray[13]), driveDef, true));
+								(daes[numberOfDAEs] as DAE).addChild(new Drive(new Position(posType, positionIndexArray[14]), driveDef, true));
 								driveNo++;
 							}
 						}

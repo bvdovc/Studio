@@ -1,7 +1,7 @@
 <html>
 	<title>Gabinete do sistema</title>
 	<span>
-		<p>Um único array do PowerMax 2000 consiste em um ou dois Bricks que preenchem a metade da parte inferior do gabinete do sistema. A metade da parte superior do rack está disponível para outro array do PowerMax 2000 ou para componentes de terceiros. Um Brick do Brick 2000 consiste em um mecanismo, um par de DAEs e um par de SPSs.</p>
+		<p>Um único array do PowerMax 2000 consiste em um ou dois PowerMax bricks que preenchem a metade da parte inferior do gabinete do sistema. A metade da parte superior do rack está disponível para outro array do PowerMax 2000 ou para componentes de terceiros. Um PowerMax brick do PowerMax brick 2000 consiste em um mecanismo, um par de DAEs e um par de SPSs.</p>
 	</span>
 	<span>
 		<p>Acessível a partir da parte traseira, há uma PDU (Power Distribution Unit, unidade de distribuição de energia) vertical com altura total em cada lado do rack.</p>

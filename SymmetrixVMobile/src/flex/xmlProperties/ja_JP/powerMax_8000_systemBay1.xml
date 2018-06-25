@@ -2,19 +2,19 @@
 	<title>システム ベイ1</title>
 	
 	<span>
-		<p>システム ベイ1は、PowerMax 8000アレイで1台から4台のBrick/zBrickを格納します。Brick/zBrickは、エンジン、DAE、SPSのペアで構成されます。</p>
+		<p>システム ベイ1は、PowerMax 8000アレイで1台から4台のPowerMax brick/PowerMax zbrickを格納します。PowerMax brick/PowerMax zbrickは、エンジン、DAE、SPSのペアで構成されます。</p>
 	</span>
 	<span>
-		<p>BrickとzBrickの違いは次のとおりです。</p>
+		<p>PowerMax brickとPowerMax zbrickの違いは次のとおりです。</p>
 	</span>
 	<span>
 		<ul>
-			<li>ベース ストレージ容量はBrickで53 TBu、zBrickで13 TBuになります。</li>
-			<li>ホスト接続性を提供するI/Oモジュールは、BrickではFibre Channel、iSCSI、FICON（混在システムのみ）、zBrickではFICONのみになります。</li>
+			<li>ベース ストレージ容量はPowerMax brickで53 TBu、PowerMax zbrickで13 TBuになります。</li>
+			<li>ホスト接続性を提供するI/Oモジュールは、PowerMax brickではFibre Channel、iSCSI、FICON（混在システムのみ）、PowerMax zbrickではFICONのみになります。</li>
 	   </ul>
 	</span>
 	 <span>
-		<p>システム ベイ1には、Brick/zBrickコンポーネントのほか、InfiniBandインターコネクトとEthernetスイッチが格納されます。これらはシステム ベイ1専用のコンポーネントです。</p>
+		<p>システム ベイ1には、PowerMax brick/PowerMax zbrickコンポーネントのほか、InfiniBandインターコネクトとEthernetスイッチが格納されます。これらはシステム ベイ1専用のコンポーネントです。</p>
 	 </span>
 	 <span>
 		<p>ラックの両側には背面からアクセスできるフル ハイトの垂直PDU（配電ユニット）があります。</p>
@@ -23,7 +23,7 @@
 		<p>システム ベイ1の装備は下からエンジン1用のSPS-es、DAE、エンジン1、エンジン2用のSPS-es、エンジン2となります。上半分の装備は下からエンジン3、エンジン3用SPS-es、エンジン4、DAE、エンジン4用SPS-es（ラック上部）となります。</p>
 	</span>
 	<span>
-		<p>各Brick/zBrickは、1台のDAEを所有し、1台のDAEを共有します。したがって、3台のフル装備のDAEで、2台のBrick/zBrickにストレージ容量を提供します。共有されるDAEには、専用のドライブ スロットに存在するユニバーサル スペア ドライブが格納されます。</p>	
+		<p>各PowerMax brick/PowerMax zbrickは、1台のDAEを所有し、1台のDAEを共有します。したがって、3台のフル装備のDAEで、2台のPowerMax brick/PowerMax zbrickにストレージ容量を提供します。共有されるDAEには、専用のドライブ スロットに存在するユニバーサル スペア ドライブが格納されます。</p>	
 	</span>	
 
 </html>

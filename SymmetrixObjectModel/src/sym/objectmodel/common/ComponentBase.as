@@ -715,6 +715,7 @@
 					cfg.mfUsableCapacity = null;
 				}
 				
+				cfg.isSizerImported = true;
 				return cfg;
 			}
             

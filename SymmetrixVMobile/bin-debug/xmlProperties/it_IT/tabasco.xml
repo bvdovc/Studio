@@ -1,0 +1,13 @@
+<html>
+	<title>25-dischi DAEs</title>
+	<span><p>25-dischi Disk Array Enclosures (DAEs) supporta una connectivita` di 12Gbs SAS ai Moduli back-end nel VMAX 250F engine. Due DAE’s in un V-Brick sono direttamente collegati all’ engine.</p></span>
+	
+	<span>
+	<p>Le DAEs contengongo i seguenti componenti principali:</p>
+		<ul>
+			<li>Un massimo di 25 dischi</li>
+			<li>Due alimentatori/moduli di raffreddamento redondanti accessibili dal retro</li>
+			<li>Due Link Control Cards (LCCs)  accessibili dal retro</li>
+		</ul>
+	</span>
+</html> 

@@ -1,7 +1,7 @@
 <html>
 	<title>系统机架</title>
 	<span>
-		<p>单个 PowerMax 2000 阵列包含一个或两个 Brick，填充系统机架下半部分的空间。机架的上半部分可用于另一个 PowerMax 2000 的阵列或第三方组件。PowerMax 2000 Brick 包含一个引擎、一对 DAE 和一对 SPS。</p>
+		<p>单个 PowerMax 2000 阵列包含一个或两个 PowerMax brick，填充系统机架下半部分的空间。机架的上半部分可用于另一个 PowerMax 2000 的阵列或第三方组件。PowerMax 2000 PowerMax brick 包含一个引擎、一对 DAE 和一对 SPS。</p>
 	</span>
 	<span>
 		<p>可从背面访问，机架每侧分别带有一个全高、垂直的配电装置 (PDU)。</p>

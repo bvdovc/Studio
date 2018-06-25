@@ -5,7 +5,6 @@ package sym.controller
 	import flash.utils.Dictionary;
 	
 	import mx.collections.ArrayCollection;
-	import mx.controls.Alert;
 	import mx.messaging.errors.MessagingError;
 	import mx.messaging.events.MessageEvent;
 	import mx.messaging.messages.ErrorMessage;
